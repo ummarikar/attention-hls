@@ -29,52 +29,52 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/.apc/.src</location>
+			<location>/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/.apc/.tb</location>
+			<location>/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/.tcls</location>
+			<location>/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/myproject.cpp</name>
 			<type>1</type>
-			<location>/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/myproject.cpp</location>
+			<location>/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/myproject.cpp</location>
 		</link>
 		<link>
 			<name>testbench/myproject_test.cpp</name>
 			<type>1</type>
-			<location>/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_test.cpp</location>
+			<location>/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_test.cpp</location>
 		</link>
 		<link>
 			<name>testbench/tb_data</name>
 			<type>2</type>
-			<location>/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/tb_data</location>
+			<location>/mnt/ccnas2/bdp/umm20/attention-hls/template-test/tb_data</location>
 		</link>
 		<link>
 			<name>testbench/weights</name>
 			<type>2</type>
-			<location>/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/weights</location>
+			<location>/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/weights</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/solution1.directive</location>
+			<location>/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/directives.tcl</location>
+			<location>/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/script.tcl</location>
+			<location>/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

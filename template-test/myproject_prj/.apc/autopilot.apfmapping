@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="myproject.cpp" path="/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/myproject.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="myproject_test.cpp" path="/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_test.cpp"/>
+    <originFiles name="tb_data" path="/mnt/ccnas2/bdp/umm20/attention-hls/template-test/tb_data"/>
+    <originFiles name="weights" path="/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/weights"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
