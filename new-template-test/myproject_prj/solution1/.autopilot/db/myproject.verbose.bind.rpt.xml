@@ -1,0 +1,50 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'myproject'" level="0">
+<item name = "Date">Sat Apr 24 23:35:08 2021
+</item>
+<item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
+<item name = "Project">myproject_prj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">kintexu</item>
+<item name = "Target device">xcku115-flvb2104-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 4.320 ns, 0.62 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">324, 325, 1.620 us, 1.625 us, 308, 308, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_Loop_LSTM_TS_proc234_fu_114">Loop_LSTM_TS_proc234, 313, 314, 1.565 us, 1.570 us, 308, 308, loop rewind(delay=0 initiation interval(s))</column>
+<column name="grp_softmax_fu_176">softmax, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
+<column name="grp_dense_simple_0_0_1_fu_214">dense_simple_0_0_1, 2, 2, 10.000 ns, 10.000 ns, 1, 1, function</column>
+<column name="call_ret2_Block_preheader_i_0_fu_250">Block_preheader_i_0, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ln0_Block_preheader139_s_fu_286">Block_preheader139_s, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

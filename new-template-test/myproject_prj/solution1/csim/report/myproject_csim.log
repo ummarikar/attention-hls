@@ -1,0 +1,9 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../firmware/myproject.cpp in debug mode
+   Generating csim.exe
+INFO: Unable to open input/predictions file, using default input.
+0.0449219 0.37207 0.0888672 0.0595703 0.101563 0.0722656 0.0615234 0.0898438 0.0498047 0.0634766 
+INFO: Saved inference results to file: tb_data/csim_results.log
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
