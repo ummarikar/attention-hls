@@ -8,7 +8,6 @@ def print_array_to_cpp(var, name, odir, write_txt_file=True):
     ## Print weight array to C++
     #######################################
     
-    var = var.flatten()
     definition_cpp = 'model_default_t ' + str(name) + '[' + str(var.size) + ']'
 
     h_file = open("{}/firmware/weights/{}.h".format(odir, name),"w")
@@ -17,7 +16,7 @@ def print_array_to_cpp(var, name, odir, write_txt_file=True):
 
     #meta data
     h_file.write("//Numpy array shape {}\n".format(var.shape))
-    print(var.size)
+    var = var.flatten()
     h_file.write("//Min {:.12f}\n".format(var.min()))
     h_file.write("//Max {:.12f}\n".format(np.max(var.max())))
     h_file.write("//Number of zeros {}\n".format(np.count_nonzero(var==0)))
