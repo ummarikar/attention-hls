@@ -62,10 +62,22 @@ void myproject(
     #pragma HLS ARRAY_PARTITION variable=layer2_out complete dim=0
     nnet::lstm_05_025<input_t, input_t, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2>(input_1, w2, wr2, b2, layer2_out);
 
-    layer3_t layer3_out[N_LAYER_3];
-    #pragma HLS ARRAY_PARTITION variable=layer3_out complete dim=0
-    nnet::dense_simple<layer2_t, layer3_t, config3>(layer2_out, layer3_out, w3, b3);
+    
 
-    nnet::softmax<layer3_t, result_t, softmax_config5>(layer3_out, layer5_out);
+    layer3_t layer3_out[N_SEQUENCE_OUT_3*N_LAYER_3];
+    #pragma HLS ARRAY_PARTITION variable=layer3_out complete dim=0
+    nnet::repeat_vector<layer2_t, layer3_t, config3>(layer2_out, layer3_out, w3, b3);
+
+    layer4_t layer4_out[N_SEQUENCE_OUT_4*N_LAYER_4];
+    #pragma HLS ARRAY_PARTITION variable=layer4_out complete dim=0
+    nnet::lstm<layer2_t, layer3_t, config3>(layer2_out, layer3_out, w3, b3);
+
+    layer5_t layer5_out[N_SEQUENCE_OUT_5*N_LAYER_5];
+    #pragma HLS ARRAY_PARTITION variable=layer5_out complete dim=0
+    nnet::attention<layer2_t, layer3_t, config3>(layer2_out, layer3_out, w3, b3);
+
+    layer6_t layer6_out[N_SEQUENCE_OUT_6*N_LAYER_6];
+    #pragma HLS ARRAY_PARTITION variable=layer6_out complete dim=0
+    nnet::td_dense<layer2_t, layer3_t, config3>(layer2_out, layer3_out, w3, b3);
 
 }

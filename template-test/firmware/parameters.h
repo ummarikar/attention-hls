@@ -76,10 +76,6 @@ struct config3 : nnet::dense_config {
 
 };
 
-struct softmax_config5: nnet::activ_config {
-    static const unsigned n_in = N_LAYER_3;
-    typedef ap_fixed<18,8> table_t;
-    typedef model_default_t constant_t;
-};
+
 
 #endif

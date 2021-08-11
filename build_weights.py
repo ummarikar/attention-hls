@@ -37,9 +37,9 @@ def print_array_to_cpp(var, name, odir, write_txt_file=True):
     #not including internal brackets for multidimensional case
     sep = ''
     for x in var:
-        h_file.write(sep + str(x))
+        h_file.write(sep + '{:.4f}'.format(x))
         if write_txt_file:
-            txt_file.write(sep + str(x))
+            txt_file.write(sep + '{:.4f}'.format(x))
         sep = ", "
     h_file.write("};\n")
     if write_txt_file:
