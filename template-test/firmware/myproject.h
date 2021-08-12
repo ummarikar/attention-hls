@@ -30,7 +30,7 @@
 // Prototype of top level function for C-synthesis
 void myproject(
     input_t input_1[N_INPUT_1_1*N_INPUT_2_1],
-    result_t layer5_out[N_LAYER_3],
+    result_t layer6_out[N_INPUT_1_1*N_INPUT_2_1],
     unsigned short &const_size_in_1,
     unsigned short &const_size_out_1
 );

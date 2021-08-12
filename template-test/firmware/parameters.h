@@ -71,7 +71,7 @@ struct config_h_lstm2 : nnet::dense_config {
 struct config3 : nnet::repeat_vector_config {
     // Layer Sizes
     static const unsigned h = N_LAYER_2;
-    static const unsigned t = N_SEQUENCE_OUT_2;
+    static const unsigned t = N_INPUT_1_1;
 
 };
 

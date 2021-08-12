@@ -41,11 +41,14 @@ void myproject(
     static bool loaded_weights = false;
     if (!loaded_weights) {
         //hls-fpga-machine-learning insert load weights
-        nnet::load_weights_from_txt<model_default_t, 3584>(w2, "w2.txt");
-        nnet::load_weights_from_txt<model_default_t, 128>(b2, "b2.txt");
-        nnet::load_weights_from_txt<model_default_t, 4096>(wr2, "wr2.txt");
-        nnet::load_weights_from_txt<model_default_t, 320>(w3, "w3.txt");
-        nnet::load_weights_from_txt<model_default_t, 10>(b3, "b3.txt");
+        nnet::load_weights_from_txt<model_default_t, 128>(lstm1, "lstm1.txt");
+        nnet::load_weights_from_txt<model_default_t, 4096>(lstm2, "lstm2.txt");
+        nnet::load_weights_from_txt<model_default_t, 128>(lstm3, "lstm3.txt");
+        nnet::load_weights_from_txt<model_default_t, 4096>(lstm_11, "lstm_11.txt");
+        nnet::load_weights_from_txt<model_default_t, 4096>(lstm_12, "lstm_12.txt");
+        nnet::load_weights_from_txt<model_default_t, 128>(lstm_13, "lstm_13.txt");
+        nnet::load_weights_from_txt<model_default_t, 32>(time_distributed1, "time_distributed1.txt");
+        nnet::load_weights_from_txt<model_default_t, 1>(time_distributed2, "time_distributed2.txt");
         loaded_weights = true;
     }
 #endif
