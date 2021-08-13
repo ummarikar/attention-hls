@@ -76,7 +76,7 @@ void attention(
 			temp[itmp] = acc[index_acc];
 		}
 
-		softmax<typename CONFIG_T::accum_t, data_T, CONFIG_A> (acc, temp_dist);
+		softmax<typename CONFIG_T::accum_t, data_T, CONFIG_A> (temp, temp_dist);
 
 		for (int jj = 0; jj < CONFIG_T::value_h; jj++) {
 			int index_dist = ii*CONFIG_T::value_h+jj;
@@ -122,3 +122,5 @@ void attention(
 	}
 }
 }
+
+#endif

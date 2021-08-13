@@ -57,6 +57,8 @@
                                     									
                                     <listOptionValue builtIn="false" value="/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
                                     									
+                                    <listOptionValue builtIn="false" value="/mnt/ccnas2/bdp/umm20/attention-hls/template-test"/>
+                                    									
                                     <listOptionValue builtIn="false" value="/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/etc"/>
                                     									
                                     <listOptionValue builtIn="false" value="/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/systemc/include"/>
@@ -90,6 +92,8 @@
                                     <listOptionValue builtIn="false" value="/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/ap_sysc"/>
                                     									
                                     <listOptionValue builtIn="false" value="/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/mnt/ccnas2/bdp/umm20/attention-hls/template-test"/>
                                     									
                                     <listOptionValue builtIn="false" value="/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/etc"/>
                                     									
@@ -289,6 +293,8 @@
                                     									
                                     <listOptionValue builtIn="false" value="/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
                                     									
+                                    <listOptionValue builtIn="false" value="/mnt/ccnas2/bdp/umm20/attention-hls/template-test"/>
+                                    									
                                     <listOptionValue builtIn="false" value="/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/etc"/>
                                     									
                                     <listOptionValue builtIn="false" value="/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/systemc/include"/>
@@ -312,6 +318,8 @@
                                     <listOptionValue builtIn="false" value="/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/ap_sysc"/>
                                     									
                                     <listOptionValue builtIn="false" value="/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/mnt/ccnas2/bdp/umm20/attention-hls/template-test"/>
                                     									
                                     <listOptionValue builtIn="false" value="/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/etc"/>
                                     									

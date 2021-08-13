@@ -75,7 +75,7 @@ void myproject(
 
     layer5_t layer5_out[N_INPUT_1_1*N_LAYER_2];
     #pragma HLS ARRAY_PARTITION variable=layer5_out complete dim=0
-    nnet::attention<layer4_t, layer5_t, config5>(layer4_out, layer5_out);
+    nnet::attention<layer4_t, layer5_t, config5, config_softmax3>(layer4_out, layer2_out, layer5_out);
 
     nnet::td_dense<layer5_t, result_t, config6>(layer5_out, layer6_out, time_distributed1, time_distributed2);
 

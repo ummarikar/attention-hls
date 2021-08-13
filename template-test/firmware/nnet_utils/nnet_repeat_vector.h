@@ -31,3 +31,5 @@ void repeat_vector(
 	}
 }
 }
+
+#endif

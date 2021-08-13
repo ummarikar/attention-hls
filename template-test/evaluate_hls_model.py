@@ -10,7 +10,7 @@ from tensorflow.keras.layers import Input, Dense, LSTM, Activation
 
 import numpy as np
 from sklearn.metrics import accuracy_score
-from sklean import metrics
+from sklearn import metrics
 
 _top_function_lib = None
 def compile():
@@ -83,34 +83,33 @@ def mnist_lstm(x):
     output = Activation('softmax')(L2)
     model = Model(inputs=inputs, outputs=output)
     return model
-
-# input dimension 
-n_input = 28
-# timesteps
-n_step = 28
-# output dimension
-n_classes = 10
-
-# load the dataset
-(_, _), (x_test, y_test) = mnist.load_data()
-
-# prepare the dataset for training and testing
-# reshape input to be  [samples, time steps, features]
-x_test = x_test.reshape(-1, n_step, n_input)
-x_test = x_test.astype('float32')
-x_test /= 255
- 
-y_test  = to_categorical(y_test,  n_classes)
-
-# load the mnist model 
-model = load_model('../lstm_mnist.h5')
-
-print('Predicting the test set with Keras...')
-y_keras = model.predict(x_test)
-
-print('Predicting the test set with the hls model...')
-y_hls = predict(x_test)
-
-print("Keras Accuracy: {}".format(accuracy_score(np.argmax(y_test, axis=1), np.argmax(y_keras, axis=1))))
-print("hls   Accuracy: {}".format(accuracy_score(np.argmax(y_test, axis=1), np.argmax(y_hls, axis=1))))
-
+#
+## input dimension 
+#n_input = 28
+## timesteps
+#n_step = 28
+## output dimension
+#n_classes = 10
+#
+## load the dataset
+#(_, _), (x_test, y_test) = mnist.load_data()
+#
+## prepare the dataset for training and testing
+## reshape input to be  [samples, time steps, features]
+#x_test = x_test.reshape(-1, n_step, n_input)
+#x_test = x_test.astype('float32')
+#x_test /= 255
+# 
+#y_test  = to_categorical(y_test,  n_classes)
+#
+## load the mnist model 
+#model = load_model('../lstm_mnist.h5')
+#
+#print('Predicting the test set with Keras...')
+#y_keras = model.predict(x_test)
+#
+#print('Predicting the test set with the hls model...')
+#y_hls = predict(x_test)
+#
+#print("Keras Accuracy: {}".format(accuracy_score(np.argmax(y_test, axis=1), np.argmax(y_keras, axis=1))))
+#print("hls   Accuracy: {}".format(accuracy_score(np.argmax(y_test, axis=1), np.argmax(y_hls, axis=1))))

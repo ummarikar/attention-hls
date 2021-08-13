@@ -75,6 +75,12 @@ struct config3 : nnet::repeat_vector_config {
 
 };
 
+struct config_softmax3 : nnet::activ_config {
+   	static const unsigned n_in = N_LAYER_2;
+    typedef ap_fixed<18,8> table_t;
+    typedef model_default_t constant_t; 
+};
+
 struct config1_lstm4 : nnet::lstm_config {
     static const unsigned length_x = N_LAYER_2;
     static const unsigned length_h = N_LAYER_2;
@@ -121,7 +127,7 @@ struct config_h_lstm4 : nnet::dense_config {
     static const unsigned n_out = N_LAYER_2 * 4;
 };
 
-struct config5 : nnet:attention_config {
+struct config5 : nnet::attention_config {
     typedef model_default_t mult_t;
     typedef model_default_t accum_t;
 
@@ -131,7 +137,7 @@ struct config5 : nnet:attention_config {
 	static const unsigned value_x = N_LAYER_2;
 };
 
-struct config6 : nnet:time_distributed_dense_config {
+struct config6 : nnet::time_distributed_dense_config {
 	typedef model_default_t weight_t;
     typedef model_default_t bias_t;
     typedef model_default_t accum_t;
