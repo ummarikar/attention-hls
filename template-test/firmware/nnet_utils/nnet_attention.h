@@ -56,7 +56,7 @@ void attention(
 	// accumulate the multiplications
 	for (int ii = 0; ii < CONFIG_T::query_h; ii++) {
 		for (int jj = 0; jj < CONFIG_T::value_h; jj++) {
-			for (int ff = 0; ff < CONFIG_T::value_x; ff) {
+			for (int ff = 0; ff < CONFIG_T::value_x; ff++) {
 				int index_acc = ii*CONFIG_T::value_h+jj;
 				int index_mult = ii*CONFIG_T::query_x*CONFIG_T::value_h+ff*CONFIG_T::value_h+jj;
 
@@ -107,7 +107,7 @@ void attention(
 	// accumulate the multiplications
 	for (int ii = 0; ii < CONFIG_T::query_h; ii++) {
 		for (int jj = 0; jj < CONFIG_T::value_x; jj++) {
-			for (int ff = 0; ff < CONFIG_T::value_h; ff) {
+			for (int ff = 0; ff < CONFIG_T::value_h; ff++) {
 				int index_acc = ii*CONFIG_T::value_h+jj;
 				int index_mult = ii*CONFIG_T::value_h*CONFIG_T::value_x+ff*CONFIG_T::value_x+jj;
 
