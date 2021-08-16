@@ -29,7 +29,7 @@ struct time_distributed_dense_config
     // partitioning arrays cyclically to go with roll factors?
 };
 
-template<class data_T, class res_T, typename CONFIG_T>
+template<class data_T, class res_T, typename CONFIG_T, typename CONFIG_A>
 void td_dense(
 	data_T input[CONFIG_T::n_in*CONFIG_T::t],
 	res_T res[CONFIG_T::n_out*CONFIG_T::t],
@@ -50,13 +50,15 @@ void td_dense(
 		}
 
 		typename CONFIG_T::accum_t dense_acc[CONFIG_T::n_out];
+		typename CONFIG_T::accum_t tanh_acc[CONFIG_T::n_out];
 
-		dense_simple<data_T, typename CONFIG_T::accum_t, CONFIG_T>(dense_input, dense_acc, weights, biases);
+		dense_simple<typename CONFIG_T::accum_t, typename CONFIG_T::accum_t, CONFIG_T>(dense_input, dense_acc, weights, biases);
+		tanh<typename CONFIG_T::accum_t, typename CONFIG_T::accum_t, CONFIG_A>(dense_acc, tanh_acc);
 
 		for (int jj = 0; jj < CONFIG_T::n_out; jj++) {
 			int index = ii*CONFIG_T::n_out+jj;
 
-			acc[index] = dense_acc[jj];
+			acc[index] = tanh_acc[jj];
 		}
 	}
 

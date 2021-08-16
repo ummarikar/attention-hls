@@ -1,6 +1,6 @@
 //Numpy array shape (1,)
-//Min 0.095037370920
-//Max 0.095037370920
+//Min -0.009794324636
+//Max -0.009794324636
 //Number of zeros 0
 
 #ifndef TIME_DISTRIBUTED2_H_
@@ -9,7 +9,7 @@
 #ifndef __SYNTHESIS__
 model_default_t time_distributed2[1];
 #else
-model_default_t time_distributed2[1] = {0.0950};
+model_default_t time_distributed2[1] = {-0.0098};
 #endif
 
 #endif
