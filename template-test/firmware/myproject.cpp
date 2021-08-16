@@ -47,7 +47,7 @@ void myproject(
         nnet::load_weights_from_txt<model_default_t, 4096>(lstm_11, "lstm_11.txt");
         nnet::load_weights_from_txt<model_default_t, 4096>(lstm_12, "lstm_12.txt");
         nnet::load_weights_from_txt<model_default_t, 128>(lstm_13, "lstm_13.txt");
-        nnet::load_weights_from_txt<model_default_t, 32>(time_distributed1, "time_distributed1.txt");
+        nnet::load_weights_from_txt<model_default_t, 64>(time_distributed1, "time_distributed1.txt");
         nnet::load_weights_from_txt<model_default_t, 1>(time_distributed2, "time_distributed2.txt");
         loaded_weights = true;
     }

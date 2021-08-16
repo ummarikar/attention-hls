@@ -98,12 +98,58 @@ def predict(x):
 #    return bp_data.value
 #
 
-def TPR_FPR_arrays_hls(noise_array, injection_array, steps):
+def TPR_FPR_arrays_hls(noise_array, injection_array, steps, num_events):
 	noise_array = noise_array.reshape(-1, steps, 1)
 	injection_array = injection_array.reshape(-1, steps, 1)
 
-	print('Evaluating hls model on train data')
-	X_pred_noise = predict(noise_array)
+	print("noise_array shape",noise_array.shape)
+    
+    ### Evaluating on training data to find threshold ### 
+    X_pred_noise = model.predict(noise_array)
+
+    print('Finished evaluating model on train data')
+    
+    #n_noise_events = 10000
+    n_noise_events = num_events
+    # Determine thresholds for FPR quantiles
+    loss_fn = MeanSquaredError(reduction='none')
+    losses = loss_fn(noise_array, X_pred_noise).numpy()
+    print("losses",len(losses))
+    averaged_losses = np.mean(losses, axis=1).reshape(n_noise_events, -1)
+    print(len(averaged_losses))
+    print(averaged_losses.shape)
+    max_losses = [np.max(event) for event in averaged_losses]
+    print("max_lossess", max_losses)
+
+    roc_steps = num_entries
+    FPRs = np.logspace(-3, 0, roc_steps)
+    thresholds = [np.quantile(max_losses, 1.0-fpr) for fpr in FPRs]
+    print("thresholds", thresholds)
+    
+    print('Evaluating Model on test data. This make take a while...')
+    X_pred_injection = model.predict(injection_array)
+    print('Finished evaluating model on test data')
+    
+    n_injection_events = num_events
+    losses = loss_fn(injection_array, X_pred_injection).numpy()
+    averaged_losses = np.mean(losses, axis=1).reshape(n_injection_events, -1)
+    
+    # For each event determine whether GW was detected at a given FPR threshold
+    gw_pred = [[] for i in range(roc_steps)]
+    print("gw_pred length",len(gw_pred) )
+    for i in range(len(averaged_losses)):
+        batch_loss = averaged_losses[i]
+
+        for fpr in range(len(FPRs)):
+            if np.max(batch_loss) > thresholds[fpr]: 
+                gw_pred[fpr].append(1)
+            else: 
+                gw_pred[fpr].append(0)
+
+    # Calculate corresponding TPR
+    TPRs = [float(np.sum(gw_pred[fpr]))/n_injection_events for fpr in range(len(FPRs))]
+    print(TPRs)
+    return(TPRs, FPRs)
 
 def TPR_FPR_arrays(noise_array, injection_array, model_outdir, steps, num_events=500, num_entries=400): 
     # load the autoencoder network model
@@ -342,8 +388,8 @@ def main(args):
         print('Determining performance for: %s'%(name))
         if timestep == 100: 
             #TPR, FPR = TPR_FPR_arrays_doubledetector(X_train_L1[:, :16000], X_test_L1[:, :16000], X_train_H1[:, :16000], X_test_H1[:, :16000], directory, timestep)
-            TPR_FPR_arrays_hls(X_train_H1[:, :16000], X_test_H1[:, :16000], timestep)
-            TPR, FPR = TPR_FPR_arrays(X_train_H1[:, :16000], X_test_H1[:, :16000], directory, timestep, len(X_test_H1))
+            TPR, FPR = TPR_FPR_arrays_hls(X_train_H1[:, :16000][:10000], X_test_H1[:, :16000][:10000], timestep)
+            #TPR, FPR = TPR_FPR_arrays(X_train_H1[:, :16000], X_test_H1[:, :16000], directory, timestep, len(X_test_H1))
         else: 
             #TPR, FPR = TPR_FPR_arrays_doubledetector(X_train_L1, X_test_L1, X_train_H1, X_test_H1, directory, timestep)
             TPR, FPR = TPR_FPR_arrays(X_train_H1, X_test_H1, directory, timestep, len(X_test_H1))
