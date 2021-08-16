@@ -23,15 +23,15 @@
 
 void myproject(
     input_t input_1[N_INPUT_1_1*N_INPUT_2_1],
-    result_t layer6_out[N_INPUT_1_1*N_INPUT_2_1],
+    result_t layer7_out[N_INPUT_1_1*N_INPUT_2_1],
     unsigned short &const_size_in_1,
     unsigned short &const_size_out_1
 ) {
 
     //hls-fpga-machine-learning insert IO
     //#pragma HLS ARRAY_RESHAPE variable=input_1 complete dim=0
-    #pragma HLS ARRAY_PARTITION variable=layer6_out complete dim=0
-    #pragma HLS INTERFACE ap_vld port=input_1,layer6_out 
+    #pragma HLS ARRAY_PARTITION variable=layer7_out complete dim=0
+    #pragma HLS INTERFACE ap_vld port=input_1,layer7_out
     #pragma HLS DATAFLOW 
 
     const_size_in_1 = N_INPUT_1_1*N_INPUT_2_1;
@@ -77,6 +77,10 @@ void myproject(
     #pragma HLS ARRAY_PARTITION variable=layer5_out complete dim=0
     nnet::attention<layer4_t, layer5_t, config5, config_softmax3>(layer4_out, layer2_out, layer5_out);
 
-    nnet::td_dense<layer5_t, result_t, config6>(layer5_out, layer6_out, time_distributed1, time_distributed2);
+    layer6_t layer6_out[N_INPUT_1_1*N_LAYER_2*2];
+	#pragma HLS ARRAY_PARTITION variable=layer6_out complete dim=0
+    nnet::concatenate<layer5_t, layer6_t, config_concatenate6>(layer4_out, layer5_out, layer6_out);
+
+    nnet::td_dense<layer5_t, result_t, config7, config_tanh7>(layer6_out, layer7_out, time_distributed1, time_distributed2);
 
 }

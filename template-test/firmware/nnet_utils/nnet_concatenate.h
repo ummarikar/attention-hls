@@ -8,7 +8,7 @@
 
 namespace nnet {
 
-struct repeat_vector_config
+struct concatenate_config
 {
 	
 	typedef float accum_t;
@@ -21,7 +21,7 @@ struct repeat_vector_config
 template<class data_T, class res_T, typename CONFIG_T>
 void concatenate(
 	data_T input1[CONFIG_T::h*CONFIG_T::t],
-	data_T input2[CONFIG_T::h*CONFIG_T::t]
+	data_T input2[CONFIG_T::h*CONFIG_T::t],
 	res_T res[CONFIG_T::h*2*CONFIG_T::t]
 ){
 	for (int ii = 0; ii < CONFIG_T::t; ii++) {

@@ -17,6 +17,7 @@ typedef ap_fixed<16,6> layer2_t;
 typedef ap_fixed<16,6> layer3_t;
 typedef ap_fixed<16,6> layer4_t;
 typedef ap_fixed<16,6> layer5_t;
+typedef ap_fixed<16,6> layer6_t;
 typedef ap_fixed<16,6> result_t;
 
 #endif

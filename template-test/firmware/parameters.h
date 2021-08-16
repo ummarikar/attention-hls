@@ -11,6 +11,7 @@
 #include "nnet_utils/nnet_dense.h"
 #include "nnet_utils/nnet_repeat_vector.h"
 #include "nnet_utils/nnet_attention.h"
+#include "nnet_utils/nnet_concatenate.h"
 #include "nnet_utils/nnet_time_distributed_dense.h"
 
 #include "weights/lstm1.h"
@@ -137,7 +138,13 @@ struct config5 : nnet::attention_config {
 	static const unsigned value_x = N_LAYER_2;
 };
 
-struct config6 : nnet::time_distributed_dense_config {
+struct config_concatenate6 : nnet::concatenate_config {
+	typedef model_default_t accum_t;
+	static const unsigned h = N_LAYER_2;
+	static const unsigned t = N_INPUT_1_1;
+};
+
+struct config7 : nnet::time_distributed_dense_config {
 	typedef model_default_t weight_t;
     typedef model_default_t bias_t;
     typedef model_default_t accum_t;
@@ -145,9 +152,15 @@ struct config6 : nnet::time_distributed_dense_config {
 
     // Layer Sizes
     static const unsigned reuse_factor = 1;
-    static const unsigned n_in = N_LAYER_2;
+    static const unsigned n_in = N_LAYER_2*2;
     static const unsigned n_out = N_INPUT_2_1;
 	static const unsigned t = N_INPUT_1_1;
+};
+
+struct config_tanh7 : nnet::activ_config {
+   	static const unsigned n_in = N_LAYER_2*2;
+    typedef ap_fixed<18,8> table_t;
+    typedef model_default_t constant_t;
 };
 
 #endif
