@@ -99,12 +99,12 @@ def predict(x):
 #
 
 def TPR_FPR_arrays_hls(noise_array, injection_array, steps, num_events):
-	noise_array = noise_array.reshape(-1, steps, 1)
-	injection_array = injection_array.reshape(-1, steps, 1)
+    noise_array = noise_array.reshape(-1, steps, 1)
+    injection_array = injection_array.reshape(-1, steps, 1)
+    print("noise_array shape",noise_array.shape)
 
-	print("noise_array shape",noise_array.shape)
-    
     ### Evaluating on training data to find threshold ### 
+    print('Evaluating Model on train data. This make take a while...')
     X_pred_noise = model.predict(noise_array)
 
     print('Finished evaluating model on train data')
