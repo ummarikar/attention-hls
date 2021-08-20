@@ -71,7 +71,7 @@ void attention(
 		typename CONFIG_T::accum_t temp_dist[CONFIG_T::value_h];
 
 		for (int itmp = 0; itmp < CONFIG_T::value_h; itmp++) {
-			int index_acc = ii*CONFIG_T::value_h;
+			int index_acc = ii*CONFIG_T::value_h+itmp;
 
 			temp[itmp] = acc[index_acc];
 		}
