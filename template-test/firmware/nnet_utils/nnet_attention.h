@@ -90,7 +90,7 @@ void attention(
 		for (int jj = 0; jj < CONFIG_T::value_h; jj++) {
 			for (int ff = 0; ff < CONFIG_T::value_x; ff++) {
 				int index_dist = ii*CONFIG_T::value_h+jj;
-				int index_value = ii*CONFIG_T::value_x+ff;
+				int index_value = jj*CONFIG_T::value_x+ff;
 				int index_mult = ii*CONFIG_T::value_h*CONFIG_T::value_x+jj*CONFIG_T::value_x+ff;
 
 				mult_final[index_mult] = dist[index_dist] * value[index_value];
@@ -108,7 +108,7 @@ void attention(
 	for (int ii = 0; ii < CONFIG_T::query_h; ii++) {
 		for (int jj = 0; jj < CONFIG_T::value_x; jj++) {
 			for (int ff = 0; ff < CONFIG_T::value_h; ff++) {
-				int index_acc = ii*CONFIG_T::value_h+jj;
+				int index_acc = ii*CONFIG_T::value_x+jj;
 				int index_mult = ii*CONFIG_T::value_h*CONFIG_T::value_x+ff*CONFIG_T::value_x+jj;
 
 				acc_final[index_acc] += mult_final[index_mult];
