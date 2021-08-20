@@ -111,7 +111,7 @@ void attention(
 				int index_acc = ii*CONFIG_T::value_h+jj;
 				int index_mult = ii*CONFIG_T::value_h*CONFIG_T::value_x+ff*CONFIG_T::value_x+jj;
 
-				acc[index_acc] += mult_final[index_mult];
+				acc_final[index_acc] += mult_final[index_mult];
 			}
 		}
 	}

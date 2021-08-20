@@ -76,7 +76,7 @@ def predict(x):
         for i in range(n_samples):
             predictions = np.zeros(100, dtype=ctype)
             top_function(x[i], predictions, ctypes.byref(ctypes.c_ushort()), ctypes.byref(ctypes.c_ushort()))
-            output.append(predictions)
+            output.append(predictions.reshape(-1,1))
             #print(int((i/n_samples)*100))
             print('{:.2f}% complete'.format((i/n_samples)*100), end='\r')
 
@@ -98,14 +98,18 @@ def predict(x):
 #    return bp_data.value
 #
 
-def TPR_FPR_arrays_hls(noise_array, injection_array, steps, num_events):
+def TPR_FPR_arrays_hls(noise_array, injection_array, steps, num_events, num_entries=400):
+
+
+    print('number of events: ', num_events)
     noise_array = noise_array.reshape(-1, steps, 1)
+    print('noise array format: ', noise_array[:1])
     injection_array = injection_array.reshape(-1, steps, 1)
     print("noise_array shape",noise_array.shape)
 
     ### Evaluating on training data to find threshold ### 
     print('Evaluating Model on train data. This make take a while...')
-    X_pred_noise = model.predict(noise_array)
+    X_pred_noise = predict(noise_array)
 
     print('Finished evaluating model on train data')
     
@@ -113,6 +117,9 @@ def TPR_FPR_arrays_hls(noise_array, injection_array, steps, num_events):
     n_noise_events = num_events
     # Determine thresholds for FPR quantiles
     loss_fn = MeanSquaredError(reduction='none')
+
+    print('needed: {}'.format(noise_array.shape))
+    print('got: {}'.format(X_pred_noise.shape))
     losses = loss_fn(noise_array, X_pred_noise).numpy()
     print("losses",len(losses))
     averaged_losses = np.mean(losses, axis=1).reshape(n_noise_events, -1)
@@ -127,7 +134,7 @@ def TPR_FPR_arrays_hls(noise_array, injection_array, steps, num_events):
     print("thresholds", thresholds)
     
     print('Evaluating Model on test data. This make take a while...')
-    X_pred_injection = model.predict(injection_array)
+    X_pred_injection = predict(injection_array)
     print('Finished evaluating model on test data')
     
     n_injection_events = num_events
@@ -155,7 +162,7 @@ def TPR_FPR_arrays(noise_array, injection_array, model_outdir, steps, num_events
     # load the autoencoder network model
     #model = load_model('%s/best_model.hdf5'%(model_outdir))
     #model = load_model('%s/best_model_H1.hdf5'%(model_outdir))
-    model = load_model('%s/best_model.hdf5'%(model_outdir))
+    model = load_model('../%s/best_model.hdf5'%(model_outdir))
         
     '''
     x = []
@@ -174,7 +181,9 @@ def TPR_FPR_arrays(noise_array, injection_array, model_outdir, steps, num_events
     '''
      
     noise_array = noise_array.reshape(-1, steps, 1)
+    noise_array = noise_array[:10000]
     injection_array = injection_array.reshape(-1, steps, 1)
+    injection_array = injection_array[:10000]
     print("noise_array shape",noise_array.shape)
     
     ### Evaluating on training data to find threshold ### 
@@ -388,7 +397,8 @@ def main(args):
         print('Determining performance for: %s'%(name))
         if timestep == 100: 
             #TPR, FPR = TPR_FPR_arrays_doubledetector(X_train_L1[:, :16000], X_test_L1[:, :16000], X_train_H1[:, :16000], X_test_H1[:, :16000], directory, timestep)
-            TPR, FPR = TPR_FPR_arrays_hls(X_train_H1[:, :16000][:10000], X_test_H1[:, :16000][:10000], timestep)
+            print('length: ', len(X_test_H1))
+            TPR, FPR = TPR_FPR_arrays_hls(X_train_H1[:, :16000], X_test_H1[:, :16000], timestep, len(X_test_H1))
             #TPR, FPR = TPR_FPR_arrays(X_train_H1[:, :16000], X_test_H1[:, :16000], directory, timestep, len(X_test_H1))
         else: 
             #TPR, FPR = TPR_FPR_arrays_doubledetector(X_train_L1, X_test_L1, X_train_H1, X_test_H1, directory, timestep)
