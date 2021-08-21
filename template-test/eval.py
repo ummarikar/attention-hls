@@ -78,6 +78,8 @@ def predict(x):
             top_function(x[i], predictions, ctypes.byref(ctypes.c_ushort()), ctypes.byref(ctypes.c_ushort()))
             output.append(predictions.reshape(-1,1))
             #print(int((i/n_samples)*100))
+            if i == 0:
+                print(predictions)
             print('{:.2f}% complete'.format((i/n_samples)*100), end='\r')
 
         output = np.asarray(output)
@@ -103,8 +105,10 @@ def TPR_FPR_arrays_hls(noise_array, injection_array, steps, num_events, num_entr
 
     print('number of events: ', num_events)
     noise_array = noise_array.reshape(-1, steps, 1)
+    noise_array = noise_array[:10000]
     print('noise array format: ', noise_array[:1])
     injection_array = injection_array.reshape(-1, steps, 1)
+    injection_array = injection_array[:10000]
     print("noise_array shape",noise_array.shape)
 
     ### Evaluating on training data to find threshold ### 
@@ -114,30 +118,28 @@ def TPR_FPR_arrays_hls(noise_array, injection_array, steps, num_events, num_entr
     print('Finished evaluating model on train data')
     
     #n_noise_events = 10000
-    n_noise_events = num_events
+    n_noise_events = 10000
     # Determine thresholds for FPR quantiles
     loss_fn = MeanSquaredError(reduction='none')
 
     print('needed: {}'.format(noise_array.shape))
     print('got: {}'.format(X_pred_noise.shape))
     losses = loss_fn(noise_array, X_pred_noise).numpy()
-    print("losses",len(losses))
     averaged_losses = np.mean(losses, axis=1).reshape(n_noise_events, -1)
-    print(len(averaged_losses))
-    print(averaged_losses.shape)
+    print('LOSS: ', np.mean(averaged_losses))
     max_losses = [np.max(event) for event in averaged_losses]
-    print("max_lossess", max_losses)
+    #print("max_lossess", max_losses)
 
     roc_steps = num_entries
     FPRs = np.logspace(-3, 0, roc_steps)
     thresholds = [np.quantile(max_losses, 1.0-fpr) for fpr in FPRs]
-    print("thresholds", thresholds)
+    #print("thresholds", thresholds)
     
     print('Evaluating Model on test data. This make take a while...')
     X_pred_injection = predict(injection_array)
     print('Finished evaluating model on test data')
     
-    n_injection_events = num_events
+    n_injection_events = 10000
     losses = loss_fn(injection_array, X_pred_injection).numpy()
     averaged_losses = np.mean(losses, axis=1).reshape(n_injection_events, -1)
     
@@ -193,27 +195,28 @@ def TPR_FPR_arrays(noise_array, injection_array, model_outdir, steps, num_events
     print('Finished evaluating model on train data')
     
     #n_noise_events = 10000
-    n_noise_events = num_events
+    n_noise_events = 10000
     # Determine thresholds for FPR quantiles
     loss_fn = MeanSquaredError(reduction='none')
     losses = loss_fn(noise_array, X_pred_noise).numpy()
-    print("losses",len(losses))
+    #print("losses",len(losses))
     averaged_losses = np.mean(losses, axis=1).reshape(n_noise_events, -1)
-    print(len(averaged_losses))
-    print(averaged_losses.shape)
+    print('LOSS: ', np.mean(averaged_losses))
+    #print(len(averaged_losses))
+    #print(averaged_losses.shape)
     max_losses = [np.max(event) for event in averaged_losses]
-    print("max_lossess", max_losses)
+    #print("max_lossess", max_losses)
 
     roc_steps = num_entries
     FPRs = np.logspace(-3, 0, roc_steps)
     thresholds = [np.quantile(max_losses, 1.0-fpr) for fpr in FPRs]
-    print("thresholds", thresholds)
+    #print("thresholds", thresholds)
     
     print('Evaluating Model on test data. This make take a while...')
     X_pred_injection = model.predict(injection_array)
     print('Finished evaluating model on test data')
     
-    n_injection_events = num_events
+    n_injection_events = 10000
     losses = loss_fn(injection_array, X_pred_injection).numpy()
     averaged_losses = np.mean(losses, axis=1).reshape(n_injection_events, -1)
     

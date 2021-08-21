@@ -158,7 +158,7 @@ struct config7 : nnet::time_distributed_dense_config {
 };
 
 struct config_tanh7 : nnet::activ_config {
-   	static const unsigned n_in = N_LAYER_2*2;
+   	static const unsigned n_in = N_INPUT_2_1;
     typedef ap_fixed<18,8> table_t;
     typedef model_default_t constant_t;
 };
