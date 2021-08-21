@@ -26,7 +26,7 @@ void repeat_vector(
 			int index_input = CONFIG_T::h*CONFIG_T::t-CONFIG_T::h+jj;
 			int index_res = ii*CONFIG_T::h+jj;
 			
-			res[index_res] = input[jj];
+			res[index_res] = input[index_input];
 		}
 	}
 }
