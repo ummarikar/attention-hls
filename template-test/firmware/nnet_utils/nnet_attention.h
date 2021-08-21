@@ -32,7 +32,7 @@ void attention(
 	typename CONFIG_T::accum_t acc[CONFIG_T::query_h*CONFIG_T::value_h];
 	typename CONFIG_T::accum_t mult_final[CONFIG_T::query_h*CONFIG_T::value_h*CONFIG_T::value_x];
 	typename CONFIG_T::accum_t acc_final[CONFIG_T::query_h*CONFIG_T::value_x];
-	data_T dist[CONFIG_T::query_h*CONFIG_T::value_h];
+	typename CONFIG_T::mult_t dist[CONFIG_T::query_h*CONFIG_T::value_h];
 
 	
 	// matrix multiplication with value transposed
@@ -76,7 +76,7 @@ void attention(
 			temp[itmp] = acc[index_acc];
 		}
 
-		softmax<typename CONFIG_T::accum_t, data_T, CONFIG_A> (temp, temp_dist);
+		softmax<typename CONFIG_T::accum_t, typename CONFIG_T::accum_t, CONFIG_A> (temp, temp_dist);
 
 		for (int jj = 0; jj < CONFIG_T::value_h; jj++) {
 			int index_dist = ii*CONFIG_T::value_h+jj;

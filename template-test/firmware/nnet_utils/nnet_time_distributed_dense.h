@@ -41,7 +41,7 @@ void td_dense(
 
 	for (int ii = 0; ii < CONFIG_T::t; ii++) {
 
-		data_T dense_input[CONFIG_T::n_in];
+		typename CONFIG_T::accum_t dense_input[CONFIG_T::n_in];
 
 		for (int jj = 0; jj < CONFIG_T::n_in; jj++) {
 			int index = ii*CONFIG_T::n_in+jj;
