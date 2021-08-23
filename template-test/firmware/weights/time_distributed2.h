@@ -9,7 +9,7 @@
 #ifndef __SYNTHESIS__
 model_default_t time_distributed2[1];
 #else
-model_default_t time_distributed2[1] = {-0.0098};
+model_default_t time_distributed2[1] = {-0.00979432463645935};
 #endif
 
 #endif

@@ -79,7 +79,7 @@ void myproject(
 
     layer6_t layer6_out[N_INPUT_1_1*N_LAYER_2*2];
 	#pragma HLS ARRAY_PARTITION variable=layer6_out complete dim=0
-    nnet::concatenate<layer5_t, layer6_t, config_concatenate6>(layer4_out, layer5_out, layer6_out);
+    nnet::concatenate2d_1<layer4_t, layer5_t, layer6_t, config_concatenate6>(layer4_out, layer5_out, layer6_out);
 
     nnet::td_dense<layer6_t, result_t, config7, config_tanh7>(layer6_out, layer7_out, time_distributed1, time_distributed2);
 
