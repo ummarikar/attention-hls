@@ -77,7 +77,7 @@ struct config3 : nnet::repeat_vector_config {
 };
 
 struct config_softmax3 : nnet::activ_config {
-   	static const unsigned n_in = N_LAYER_2;
+   	static const unsigned n_in = N_INPUT_1_1;
     typedef ap_fixed<18,8> table_t;
     typedef model_default_t constant_t; 
 };

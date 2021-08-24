@@ -23,7 +23,7 @@ void repeat_vector(
 ){
 	for (int ii = 0; ii < CONFIG_T::t; ii++) {
 		for (int jj = 0; jj < CONFIG_T::h; jj++) {
-			int index_input = CONFIG_T::h*CONFIG_T::t-CONFIG_T::h+jj;
+			int index_input = (CONFIG_T::h*CONFIG_T::t)-CONFIG_T::h+jj;
 			int index_res = ii*CONFIG_T::h+jj;
 			
 			res[index_res] = (res_T) input[index_input];
