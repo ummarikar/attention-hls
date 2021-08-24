@@ -14,22 +14,15 @@ struct time_distributed_dense_config
     typedef float bias_t;
     typedef float weight_t;
     typedef float accum_t;
-    typedef float mult_t;
 
     // Layer Sizes
+
+    static const unsigned t = 10;
     static const unsigned n_in = 10;
     static const unsigned n_out = 10;
-    static const unsigned t = 10;
-
-    // Resource reuse info
-    static const unsigned io_type = io_parallel;
-    static const unsigned reuse_factor = 1;
-    static const bool store_weights_in_bram = false;
-    static const unsigned n_zeros = 0;
-    // partitioning arrays cyclically to go with roll factors?
 };
 
-template<class data_T, class res_T, typename CONFIG_T, typename CONFIG_A>
+template<class data_T, class res_T, typename CONFIG_T, typename CONFIG_A, typename CONFIG_D>
 void td_dense(
 	data_T input[CONFIG_T::n_in*CONFIG_T::t],
 	res_T res[CONFIG_T::n_out*CONFIG_T::t],
@@ -52,7 +45,7 @@ void td_dense(
 		typename CONFIG_T::accum_t dense_acc[CONFIG_T::n_out];
 		typename CONFIG_T::accum_t tanh_acc[CONFIG_T::n_out];
 
-		dense_simple<typename CONFIG_T::accum_t, typename CONFIG_T::accum_t, CONFIG_T>(dense_input, dense_acc, weights, biases);
+		dense_simple<typename CONFIG_T::accum_t, typename CONFIG_T::accum_t, CONFIG_D>(dense_input, dense_acc, weights, biases);
 		tanh<typename CONFIG_T::accum_t, typename CONFIG_T::accum_t, CONFIG_A>(dense_acc, tanh_acc);
 
 		for (int jj = 0; jj < CONFIG_T::n_out; jj++) {

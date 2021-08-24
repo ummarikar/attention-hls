@@ -76,11 +76,6 @@ struct config3 : nnet::repeat_vector_config {
 
 };
 
-struct config_softmax3 : nnet::activ_config {
-   	static const unsigned n_in = N_INPUT_1_1;
-    typedef ap_fixed<18,8> table_t;
-    typedef model_default_t constant_t; 
-};
 
 struct config1_lstm4 : nnet::lstm_config {
     static const unsigned length_x = N_LAYER_2;
@@ -138,6 +133,12 @@ struct config5 : nnet::attention_config {
 	static const unsigned value_x = N_LAYER_2;
 };
 
+struct config_softmax5 : nnet::activ_config {
+   	static const unsigned n_in = N_INPUT_1_1;
+    typedef ap_fixed<18,8> table_t;
+    typedef model_default_t constant_t; 
+};
+
 struct config_concatenate6 : nnet::concat_config {
 	static const unsigned n_elem1_0 = N_INPUT_1_1;
 	static const unsigned n_elem1_1 = N_LAYER_2;
@@ -149,13 +150,23 @@ struct config7 : nnet::time_distributed_dense_config {
 	typedef model_default_t weight_t;
     typedef model_default_t bias_t;
     typedef model_default_t accum_t;
-    typedef model_default_t mult_t;
 
-    // Layer Sizes
-    static const unsigned reuse_factor = 1;
-    static const unsigned n_in = N_LAYER_2*2;
-    static const unsigned n_out = N_INPUT_2_1;
 	static const unsigned t = N_INPUT_1_1;
+	static const unsigned n_in = N_LAYER_2*2;
+	static const unsigned n_out = N_INPUT_2_1;
+};
+
+struct config_dense7 : nnet::dense_config {
+	// Internal data type definitions
+	typedef model_default_t weight_t;
+	typedef model_default_t bias_t;
+	typedef model_default_t accum_t;
+	typedef model_default_t mult_t;
+
+	// Layer Sizes
+	static const unsigned reuse_factor = 1;
+	static const unsigned n_in = N_LAYER_2*2;
+	static const unsigned n_out = N_INPUT_2_1;
 };
 
 struct config_tanh7 : nnet::activ_config {
