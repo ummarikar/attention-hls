@@ -34,6 +34,12 @@ void attention(
 	typename CONFIG_T::accum_t acc_final[CONFIG_T::query_h*CONFIG_T::value_x];
 	typename CONFIG_T::mult_t dist[CONFIG_T::query_h*CONFIG_T::value_h];
 
+	#pragma HLS ARRAY_PARTITION variable=mult complete dim=0
+	#pragma HLS ARRAY_PARTITION variable=acc complete dim=0
+	#pragma HLS ARRAY_PARTITION variable=mult_final complete dim=0
+	#pragma HLS ARRAY_PARTITION variable=acc_final complete dim=0
+	#pragma HLS ARRAY_PARTITION variable=dist complete dim=0
+
 	
 	// matrix multiplication with value transposed
 	for(int ii = 0; ii < CONFIG_T::query_h; ii++) {
@@ -69,6 +75,10 @@ void attention(
 	for (int ii = 0; ii < CONFIG_T::query_h; ii++) {
 		typename CONFIG_T::accum_t temp[CONFIG_T::value_h];
 		typename CONFIG_T::accum_t temp_dist[CONFIG_T::value_h];
+
+		#pragma HLS ARRAY_PARTITION variable=temp complete dim=0
+		#pragma HLS ARRAY_PARTITION variable=temp_dist complete dim=0
+
 
 		for (int itmp = 0; itmp < CONFIG_T::value_h; itmp++) {
 			int index_acc = ii*CONFIG_T::value_h+itmp;

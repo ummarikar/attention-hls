@@ -8406,3 +8406,110 @@ INFO: [RTMG 210-285] Implementing FIFO 'h_pre_V_15_0_loc_cha_U(fifo_w16_d2_A)' u
 INFO: [RTMG 210-285] Implementing FIFO 'h_pre_V_14_0_loc_cha_U(fifo_w16_d2_A)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'h_pre_V_13_0_loc_cha_U(fifo_w16_d2_A)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'h_pre_V_12_0_loc_cha_U(fifo_w16_d2_A)' using Shift Registers.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xcku115-flvb2104-2-i'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:66:109
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:66:113
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:66:118
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:69:112
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:69:116
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:69:121
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:71:5
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:82:114
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:82:129
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:82:154
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:92:102
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:92:127
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:37:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:38:5
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:72:2
+WARNING: [HLS 200-471] Dataflow form checks found 15 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:28 ; elapsed = 00:00:57 . Memory (MB): peak = 949.012 ; gain = 527.242 ; free physical = 95857 ; free virtual = 190436
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:28 ; elapsed = 00:00:57 . Memory (MB): peak = 949.012 ; gain = 527.242 ; free physical = 95857 ; free virtual = 190436
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-489] Unrolling loop 'INPUT_X' (firmware/nnet_utils/nnet_lstm.h:382) in function 'void nnet::lstm_06_025<float, float, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2>(FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*, FORWARD_REFERENCE*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'INUTT_X' (firmware/nnet_utils/nnet_lstm.h:466) in function 'void nnet::lstm_05_025<float, float, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2>(FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*, FORWARD_REFERENCE*)' completely with a factor of 1.
+INFO: [XFORM 203-603] Inlining function 'nnet::lstm_06_025<float, float, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2>' into 'myproject' (firmware/myproject.cpp:66).
+INFO: [XFORM 203-603] Inlining function 'nnet::lstm_05_025<float, float, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2>' into 'myproject' (firmware/myproject.cpp:69).
+INFO: [XFORM 203-603] Inlining function 'nnet::lstm_06_025<float, float, config1_lstm4, config2_lstm4, config_x_lstm4, config_h_lstm4>' into 'myproject' (firmware/myproject.cpp:82).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:02:47 ; elapsed = 00:03:18 . Memory (MB): peak = 1173.020 ; gain = 751.250 ; free physical = 95506 ; free virtual = 190121
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' into 'generic_cast_IEEE754<int, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, double>' into '__hls_fptosi_double_i32' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:55) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_simple<float, float, config_x_lstm2>' (firmware/nnet_utils/nnet_dense.h:77) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_simple<float, float, config_h_lstm2>' (firmware/nnet_utils/nnet_dense.h:77) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'nnet::sigmoid<float, float, config2_lstm2>' (firmware/nnet_utils/nnet_activation.h:169) automatically.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xcku115-flvb2104-2-i'
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:66:109
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:66:113
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:66:118
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:74:114
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:74:129
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:74:154
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:84:102
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:84:127
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:37:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:38:5
+WARNING: [HLS 200-471] Dataflow form checks found 10 issue(s) in file firmware/myproject.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 949.012 ; gain = 527.242 ; free physical = 95794 ; free virtual = 190434
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 949.012 ; gain = 527.242 ; free physical = 95794 ; free virtual = 190434
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-489] Unrolling loop 'INPUT_X' (firmware/nnet_utils/nnet_lstm.h:382) in function 'void nnet::lstm_06_025<float, float, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2>(FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*, FORWARD_REFERENCE*)' completely with a factor of 1.
+INFO: [XFORM 203-603] Inlining function 'nnet::lstm_06_025<float, float, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2>' into 'myproject' (firmware/myproject.cpp:66).
+INFO: [XFORM 203-603] Inlining function 'nnet::lstm_06_025<float, float, config1_lstm4, config2_lstm4, config_x_lstm4, config_h_lstm4>' into 'myproject' (firmware/myproject.cpp:74).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:02:16 ; elapsed = 00:02:27 . Memory (MB): peak = 1173.020 ; gain = 751.250 ; free physical = 95480 ; free virtual = 190121
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' into 'generic_cast_IEEE754<int, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, double>' into '__hls_fptosi_double_i32' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:55) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_simple<float, float, config_x_lstm2>' (firmware/nnet_utils/nnet_dense.h:77) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_simple<float, float, config_h_lstm2>' (firmware/nnet_utils/nnet_dense.h:77) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'nnet::sigmoid<float, float, config2_lstm2>' (firmware/nnet_utils/nnet_activation.h:169) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::lstm_tail_02<float, config1_lstm2, config2_lstm2>' (firmware/nnet_utils/nnet_lstm.h:95) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_simple<float, float, config_x_lstm4>' (firmware/nnet_utils/nnet_dense.h:77) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_simple<float, float, config_h_lstm4>' (firmware/nnet_utils/nnet_dense.h:77) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'nnet::sigmoid<float, float, config2_lstm4>' (firmware/nnet_utils/nnet_activation.h:169) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::lstm_tail_02<float, config1_lstm4, config2_lstm4>' (firmware/nnet_utils/nnet_lstm.h:95) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'nnet::softmax<float, float, config_softmax5>' (firmware/nnet_utils/nnet_activation.h:253) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_simple<float, float, config_dense7>' (firmware/nnet_utils/nnet_dense.h:77) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'nnet::tanh<float, float, config_tanh7>' (firmware/nnet_utils/nnet_activation.h:319) automatically.

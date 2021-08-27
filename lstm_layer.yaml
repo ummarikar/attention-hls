@@ -11,5 +11,5 @@ MaxLoop: 20
 IOType: io_parallel # options: io_serial/io_parallel
 HLSConfig:
     Model:
-        Precision: ap_fixed<16,6>
+        Precision: float
         ReuseFactor: 1

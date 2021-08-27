@@ -47,6 +47,7 @@ IFLAG += -I "${AUTOPILOT_TECH}/generic/SystemC"
 IFLAG += -I "${AUTOPILOT_TECH}/generic/SystemC/AESL_FP_comp"
 IFLAG += -I "${AUTOPILOT_TECH}/generic/SystemC/AESL_comp"
 IFLAG += -I "${AUTOPILOT_TOOL}/auto_cc/include"
+IFLAG += -I "/usr/include/x86_64-linux-gnu"
 IFLAG += -D__SIM_FPO__
 
 IFLAG += -D__HLS_FPO_v6_1__

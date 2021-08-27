@@ -6,10 +6,9 @@
 #include "ap_fixed.h"
 
 //hls-fpga-machine-learning insert numbers
-#define N_INPUT_1_1 100
+#define N_INPUT_1_1 32
 #define N_INPUT_2_1 1
-#define N_LAYER_2 32
-#define N_CONCAT 64
+#define N_LAYER_2 8
 
 //hls-fpga-machine-learning insert layer-precision
 typedef float model_default_t;

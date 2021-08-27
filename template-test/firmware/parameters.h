@@ -14,6 +14,9 @@
 #include "nnet_utils/nnet_merge.h"
 #include "nnet_utils/nnet_time_distributed_dense.h"
 
+#include "weights/w2.h"
+#include "weights/wr2.h"
+#include "weights/b2.h"
 #include "weights/lstm_kernel.h"
 #include "weights/lstm_recurrent_kernel.h"
 #include "weights/lstm_bias.h"

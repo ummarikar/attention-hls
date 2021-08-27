@@ -161,11 +161,7 @@
                         						
                         <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.694001860.1838454397" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.694001860">
                             							
-                            <option id="gnu.cpp.compiler.option.preprocessor.def.1491544578" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
-                                								
-                                <listOptionValue builtIn="false" value="RTL_SIM"/>
-                                							
-                            </option>
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.1491544578" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
                             							
                             <option id="gnu.cpp.compiler.option.include.paths.248723623" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
                                 								
@@ -373,11 +369,7 @@
                         						
                         <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.336507982.184833412" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.336507982">
                             							
-                            <option id="gnu.cpp.compiler.option.preprocessor.def.929752556" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
-                                								
-                                <listOptionValue builtIn="false" value="RTL_SIM"/>
-                                							
-                            </option>
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.929752556" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
                             							
                             <option id="gnu.cpp.compiler.option.include.paths.839128440" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
                                 								

@@ -20,7 +20,7 @@ struct config2_mult1 : nnet::dense_config {
     static const unsigned n_in = N_INPUT_2_1;
     static const unsigned n_out = N_LAYER_2 * 4;
     static const unsigned reuse_factor = 1;
-    typedef ap_fixed<16,6> accum_t;
+    typedef float accum_t;
     typedef model_default_t bias_t;
     typedef model_default_t weight_t;
 };
@@ -29,7 +29,7 @@ struct config2_mult2 : nnet::dense_config {
     static const unsigned n_in = N_LAYER_2;
     static const unsigned n_out = N_LAYER_2 * 4;
     static const unsigned reuse_factor = 1;
-    typedef ap_fixed<16,6> accum_t;
+    typedef float accum_t;
     typedef model_default_t bias_t;
     typedef model_default_t weight_t;
 };
@@ -51,7 +51,7 @@ struct tanh_config2 : nnet::activ_config {
 };
 
 struct config2 : nnet::lstm_config {
-    typedef ap_fixed<16,6> accum_t;
+    typedef float accum_t;
     typedef model_default_t weight_t;  // Matrix
     typedef model_default_t bias_t;  // Vector
     typedef config2_mult1 mult_config1;

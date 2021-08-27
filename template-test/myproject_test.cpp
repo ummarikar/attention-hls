@@ -73,30 +73,30 @@ int main(int argc, char **argv)
       in_end = in_begin + (N_INPUT_1_1*N_INPUT_2_1);
       std::copy(in_begin, in_end, input_1);
       in_begin = in_end;
-      result_t layer5_out[N_LAYER_3]{};
-      std::fill_n(layer5_out, 10, 0.);
+      result_t layer7_out[N_INPUT_1_1*N_INPUT_2_1]{};
+      std::fill_n(layer7_out, 10, 0.);
 
       //hls-fpga-machine-learning insert top-level-function
       unsigned short size_in1,size_out1;
-      myproject(input_1,layer5_out,size_in1,size_out1);
+      myproject(input_1,layer7_out,size_in1,size_out1);
 
       //hls-fpga-machine-learning insert tb-output
-      for(int i = 0; i < N_LAYER_3; i++) {
-        fout << layer5_out[i] << " ";
+      for(int i = 0; i < N_INPUT_1_1*N_INPUT_2_1; i++) {
+        fout << layer7_out[i] << " ";
       }
       fout << std::endl;
 
       if (e % CHECKPOINT == 0) {
         std::cout << "Predictions" << std::endl;
         //hls-fpga-machine-learning insert predictions
-        for(int i = 0; i < N_LAYER_3; i++) {
+        for(int i = 0; i < N_INPUT_1_1*N_INPUT_2_1; i++) {
           std::cout << pr[i] << " ";
         }
         std::cout << std::endl;
         std::cout << "Quantized predictions" << std::endl;
         //hls-fpga-machine-learning insert quantized
-        for(int i = 0; i < N_LAYER_3; i++) {
-          std::cout << layer5_out[i] << " ";
+        for(int i = 0; i < N_INPUT_1_1*N_INPUT_2_1; i++) {
+          std::cout << layer7_out[i] << " ";
         }
         std::cout << std::endl;
       }
@@ -108,22 +108,22 @@ int main(int argc, char **argv)
     //hls-fpga-machine-learning insert zero
     input_t input_1[N_INPUT_1_1*N_INPUT_2_1];
     std::fill_n(input_1, N_INPUT_1_1*N_INPUT_2_1, 0.);
-    result_t layer5_out[N_LAYER_3]{};
-      std::fill_n(layer5_out, 10, 0.);
+    result_t layer7_out[N_INPUT_1_1*N_INPUT_2_1]{};
+      std::fill_n(layer7_out, 10, 0.);
 
     //hls-fpga-machine-learning insert top-level-function
     unsigned short size_in1,size_out1;
-    myproject(input_1,layer5_out,size_in1,size_out1);
+    myproject(input_1,layer7_out,size_in1,size_out1);
 
     //hls-fpga-machine-learning insert output
-    for(int i = 0; i < N_LAYER_3; i++) {
-      std::cout << layer5_out[i] << " ";
+    for(int i = 0; i < N_INPUT_1_1*N_INPUT_2_1; i++) {
+      std::cout << layer7_out[i] << " ";
     }
     std::cout << std::endl;
 
     //hls-fpga-machine-learning insert tb-output
-    for(int i = 0; i < N_LAYER_3; i++) {
-      fout << layer5_out[i] << " ";
+    for(int i = 0; i < N_INPUT_1_1*N_INPUT_2_1; i++) {
+      fout << layer7_out[i] << " ";
     }
     fout << std::endl;
   }

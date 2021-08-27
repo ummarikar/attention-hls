@@ -6,9 +6,9 @@
 open_project myproject_prj
 set_top myproject
 add_files firmware/myproject.cpp -cflags "-std=c++0x"
-add_files -tb myproject_test.cpp -cflags "-std=c++0x -DRTL_SIM -Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 add_files -tb tb_data -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 add_files -tb firmware/weights -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
+add_files -tb myproject_test.cpp -cflags "-std=c++0x -Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1"
 set_part {xcku115-flvb2104-2-i}
 create_clock -period 5 -name default

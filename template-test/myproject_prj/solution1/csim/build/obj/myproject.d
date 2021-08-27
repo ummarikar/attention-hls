@@ -28,6 +28,17 @@ obj/myproject.o: ../../../../firmware/myproject.cpp \
  ../../../../firmware/nnet_utils/nnet_dense.h \
  ../../../../firmware/nnet_utils/nnet_activation.h \
  ../../../../firmware/nnet_utils/nnet_dense.h \
- ../../../../firmware/weights/w2.h ../../../../firmware/weights/b2.h \
- ../../../../firmware/weights/wr2.h ../../../../firmware/weights/w3.h \
- ../../../../firmware/weights/b3.h
+ ../../../../firmware/nnet_utils/nnet_repeat_vector.h \
+ ../../../../firmware/nnet_utils/nnet_attention.h \
+ ../../../../firmware/nnet_utils/nnet_merge.h \
+ ../../../../firmware/nnet_utils/nnet_time_distributed_dense.h \
+ ../../../../firmware/weights/w2.h ../../../../firmware/weights/wr2.h \
+ ../../../../firmware/weights/b2.h \
+ ../../../../firmware/weights/lstm_kernel.h \
+ ../../../../firmware/weights/lstm_recurrent_kernel.h \
+ ../../../../firmware/weights/lstm_bias.h \
+ ../../../../firmware/weights/lstm_1_kernel.h \
+ ../../../../firmware/weights/lstm_1_recurrent_kernel.h \
+ ../../../../firmware/weights/lstm_1_bias.h \
+ ../../../../firmware/weights/time_distributed_kernel.h \
+ ../../../../firmware/weights/time_distributed_bias.h

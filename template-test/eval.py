@@ -56,7 +56,7 @@ def get_top_function(x):
     return top_function, ctype
 
 def compute_n_samples(x):
-    expected_size = 100*1
+    expected_size = 32*1
     x_size = np.prod(x.shape)
     n_samples, rem = divmod(x_size, expected_size)
     if rem != 0:
@@ -76,7 +76,7 @@ def predict(x):
     try:
         for i in range(n_samples):
             print('input: ', x[i])
-            predictions = np.zeros(100, dtype=ctype)
+            predictions = np.zeros(32, dtype=ctype)
             top_function(x[i], predictions, ctypes.byref(ctypes.c_ushort()), ctypes.byref(ctypes.c_ushort()))
             output.append(predictions.reshape(-1,1))
             #print(int((i/n_samples)*100))
@@ -411,20 +411,20 @@ def main(args):
     #names = ['CNN Autoencoder']
     #names = ['GRU Autoencoder']
     #timesteps = [100, 108, 100]
-    timesteps = [100]
+    timesteps = [32]
     FPR_set = []
     TPR_set = []
     AUC_set = []
     
-    debug_hls_model(X_train_H1[:, 16000], 100)
-'''    
+    #debug_hls_model(X_train_H1[:, 16000], 32)
+   
     for name, directory, timestep in zip(names, directory_list, timesteps): 
         print('Determining performance for: %s'%(name))
         if timestep == 100: 
             #TPR, FPR = TPR_FPR_arrays_doubledetector(X_train_L1[:, :16000], X_test_L1[:, :16000], X_train_H1[:, :16000], X_test_H1[:, :16000], directory, timestep)
             print('length: ', len(X_test_H1))
-            TPR, FPR = TPR_FPR_arrays_hls(X_train_H1[:, :16000], X_test_H1[:, :16000], timestep, len(X_test_H1))
-            #TPR, FPR = TPR_FPR_arrays(X_train_H1[:, :16000], X_test_H1[:, :16000], directory, timestep, len(X_test_H1))
+            #TPR, FPR = TPR_FPR_arrays_hls(X_train_H1[:, :16000], X_test_H1[:, :16000], timestep, len(X_test_H1))
+            TPR, FPR = TPR_FPR_arrays(X_train_H1[:, :16000], X_test_H1[:, :16000], directory, timestep, len(X_test_H1))
         else: 
             #TPR, FPR = TPR_FPR_arrays_doubledetector(X_train_L1, X_test_L1, X_train_H1, X_test_H1, directory, timestep)
             TPR, FPR = TPR_FPR_arrays(X_train_H1, X_test_H1, directory, timestep, len(X_test_H1))
@@ -484,7 +484,7 @@ def main(args):
         #plt.axhline(threshold, label='GW event threshold', color='red')
         plt.legend(loc='upper left')
         plt.savefig('%s/batchloss_%s.jpg'%(outdir,time))
-        
+'''        
         X_pred_test = np.array(model.predict(event))
         
         fig, ax = plt.subplots(figsize=(14, 6), dpi=80)
@@ -510,9 +510,9 @@ def main(args):
         plt.axvline(5.5*2048, label='actual GW event', color='green') #Sampling rate of 2048 Hz with the event occuring 5.5 seconds into sample
         plt.legend(loc='upper left')
         plt.savefig('%s/test_threshold_%s_8sec.jpg'%(outdir, time))
-
-    sys.exit()
 '''
+    sys.exit()
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
