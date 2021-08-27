@@ -9,6 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import h5py as h5
 import tensorflow as tf
+from tensorflow import keras
 #from gwpy.timeseries import TimeSeries
 from tensorflow.keras.models import load_model
 from tensorflow.keras.losses import mean_absolute_error, MeanAbsoluteError, mean_squared_error, MeanSquaredError
@@ -74,12 +75,11 @@ def predict(x):
 
     try:
         for i in range(n_samples):
+            print('input: ', x[i])
             predictions = np.zeros(100, dtype=ctype)
             top_function(x[i], predictions, ctypes.byref(ctypes.c_ushort()), ctypes.byref(ctypes.c_ushort()))
             output.append(predictions.reshape(-1,1))
             #print(int((i/n_samples)*100))
-            if i == 0:
-                print(predictions)
             print('{:.2f}% complete'.format((i/n_samples)*100), end='\r')
 
         output = np.asarray(output)
@@ -91,7 +91,6 @@ def predict(x):
 
 
 #sns.set(color_codes=True)
-
 #def filters(array, sample_frequency):
 #    """ Apply preprocessing such as whitening and bandpass """
 #    strain = TimeSeries(array, sample_rate=int(sample_frequency))
@@ -99,6 +98,27 @@ def predict(x):
 #    bp_data = white_data.bandpass(50, 250)
 #    return bp_data.value
 #
+
+def debug_hls_model(noise_array, steps):
+    noise_array = noise_array.reshape(-1, steps, 1)
+    noise_array = noise_array[:1]
+
+    predict(np.ascontiguousarray(noise_array))
+
+def debug_model(noise_array, model_outdir, steps):
+    noise_array = noise_array.reshape(-1, steps, 1)
+    noise_array = noise_array[:1]
+
+    print(noise_array)
+
+    model = load_model('../%s/best_model.hdf5'%(model_outdir))
+
+    extractor = keras.Model(inputs=model.inputs,
+                            outputs=[layer.output for layer in model.layers])
+
+    features = extractor(noise_array)
+
+    print(features)
 
 def TPR_FPR_arrays_hls(noise_array, injection_array, steps, num_events, num_entries=400):
 
@@ -396,6 +416,8 @@ def main(args):
     TPR_set = []
     AUC_set = []
     
+    debug_hls_model(X_train_H1[:, 16000], 100)
+'''    
     for name, directory, timestep in zip(names, directory_list, timesteps): 
         print('Determining performance for: %s'%(name))
         if timestep == 100: 
@@ -463,7 +485,6 @@ def main(args):
         plt.legend(loc='upper left')
         plt.savefig('%s/batchloss_%s.jpg'%(outdir,time))
         
-        '''
         X_pred_test = np.array(model.predict(event))
         
         fig, ax = plt.subplots(figsize=(14, 6), dpi=80)
@@ -489,9 +510,9 @@ def main(args):
         plt.axvline(5.5*2048, label='actual GW event', color='green') #Sampling rate of 2048 Hz with the event occuring 5.5 seconds into sample
         plt.legend(loc='upper left')
         plt.savefig('%s/test_threshold_%s_8sec.jpg'%(outdir, time))
-        '''
 
     sys.exit()
+'''
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 

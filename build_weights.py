@@ -52,6 +52,9 @@ def write_weights(model):
     for layer in model.layers:
         i = 1 
         for weights in layer.get_weights():
+            print(layer.name)
+            if (layer.name == "lstm" or layer.name == "lstm_1") and (i == 1 or i == 2):
+                weights = np.transpose(weights)
             print_array_to_cpp(weights, layer.name + str(i), './template-test')
             i += 1
 

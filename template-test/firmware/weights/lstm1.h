@@ -1,4 +1,4 @@
-//Numpy array shape (1, 128)
+//Numpy array shape (128, 1)
 //Min -0.688286840916
 //Max 1.001553654671
 //Number of zeros 0

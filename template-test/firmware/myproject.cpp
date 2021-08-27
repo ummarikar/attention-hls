@@ -65,6 +65,14 @@ void myproject(
     #pragma HLS ARRAY_PARTITION variable=layer2_out complete dim=0
     nnet::lstm_06_025<input_t, input_t, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2>(input_1, lstm1, lstm2, lstm3, layer2_out);
 
+    layer2_t layer21_out[N_LAYER_2];
+    nnet::lstm_05_025<input_t, input_t, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2>(input_1, lstm1, lstm2, lstm3, layer21_out);
+
+    std::cout <<"\n LSTM layer 1 output ";
+	for(int ff = 0; ff < N_LAYER_2; ff++) {
+		std::cout <<", "<< layer21_out[ff];
+	}
+
     layer3_t layer3_out[N_INPUT_1_1*N_LAYER_2];
     #pragma HLS ARRAY_PARTITION variable=layer3_out complete dim=0
     nnet::repeat_vector<layer2_t, layer3_t, config3>(layer2_out, layer3_out);
