@@ -1,0 +1,17 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/lib/x86_64-linux-gnu/libc.so.6(+0x354b0) [0x7f01438e54b0]
+/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lib/lnx64.o/libtcl8.5.so(+0xb9519) [0x7f013f197519]
+/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lib/lnx64.o/libtcl8.5.so(Tcl_ResetResult+0x10) [0x7f013f197f20]
+/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lib/lnx64.o/libtcl8.5.so(+0x34429) [0x7f013f112429]
+/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lib/lnx64.o/libtcl8.5.so(Tcl_EvalEx+0x13) [0x7f013f1130a3]
+/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lib/lnx64.o/libtcl8.5.so(Tcl_Eval+0x15) [0x7f013f1130c5]
+/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lib/lnx64.o/libhls_support.so(+0x75ac0) [0x7f013ab9cac0]
+/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lib/lnx64.o/libtcl8.5.so(Tcl_Finalize+0x49) [0x7f013f152199]
+/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lib/lnx64.o/libtcl8.5.so(Tcl_Exit+0x4a) [0x7f013f15234a]
+/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lib/lnx64.o/libtcl8.5.so(Tcl_Main+0x24e) [0x7f013f17e28e]
+/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lib/lnx64.o/librdi_common.so(+0x8b30cb) [0x7f0144cd10cb]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x76ba) [0x7f013d1336ba]
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x6d) [0x7f01439b741d]

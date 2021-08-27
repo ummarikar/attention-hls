@@ -51,11 +51,13 @@ def print_array_to_cpp(var, name, odir, write_txt_file=True):
 def write_weights(model):
     for layer in model.layers:
         i = 1 
-        for weights in layer.get_weights():
-            print(layer.name)
-            if (layer.name == "lstm" or layer.name == "lstm_1") and (i == 1 or i == 2):
-                weights = np.transpose(weights)
-            print_array_to_cpp(weights, layer.name + str(i), './template-test')
+        for i, w in enumerate(layer.weights):
+            if 'kernel' in w.name and 'recurrent_kernel' not in w.name:
+                print_array_to_cpp(w.numpy(), layer.name + '_kernel', './template-test')
+            elif 'recurrent_kernel' in w.name:
+                print_array_to_cpp(np.transpose(w.numpy()), layer.name + '_recurrent_kernel', './template-test')
+            elif 'bias' in w.name:
+                print_array_to_cpp(w.numpy(), layer.name + '_bias', './template-test')
             i += 1
 
 write_weights(model)

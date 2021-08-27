@@ -41,14 +41,14 @@ void myproject(
     static bool loaded_weights = false;
     if (!loaded_weights) {
         //hls-fpga-machine-learning insert load weights
-        nnet::load_weights_from_txt<model_default_t, 128>(lstm1, "lstm1.txt");
-        nnet::load_weights_from_txt<model_default_t, 4096>(lstm2, "lstm2.txt");
-        nnet::load_weights_from_txt<model_default_t, 128>(lstm3, "lstm3.txt");
-        nnet::load_weights_from_txt<model_default_t, 4096>(lstm_11, "lstm_11.txt");
-        nnet::load_weights_from_txt<model_default_t, 4096>(lstm_12, "lstm_12.txt");
-        nnet::load_weights_from_txt<model_default_t, 128>(lstm_13, "lstm_13.txt");
-        nnet::load_weights_from_txt<model_default_t, 64>(time_distributed1, "time_distributed1.txt");
-        nnet::load_weights_from_txt<model_default_t, 1>(time_distributed2, "time_distributed2.txt");
+        nnet::load_weights_from_txt<model_default_t, 128>(lstm_kernel, "lstm_kernel.txt");
+        nnet::load_weights_from_txt<model_default_t, 4096>(lstm_recurrent_kernel, "lstm_recurrent_kernel.txt");
+        nnet::load_weights_from_txt<model_default_t, 128>(lstm_bias, "lstm_bias.txt");
+        nnet::load_weights_from_txt<model_default_t, 4096>(lstm_1_kernel, "lstm_1_kernel.txt");
+        nnet::load_weights_from_txt<model_default_t, 4096>(lstm_1_recurrent_kernel, "lstm_1_recurrent_kernel.txt");
+        nnet::load_weights_from_txt<model_default_t, 128>(lstm_1_bias, "lstm_1_bias.txt");
+        nnet::load_weights_from_txt<model_default_t, 64>(time_distributed_kernel, "time_distributed_kernel.txt");
+        nnet::load_weights_from_txt<model_default_t, 1>(time_distributed_bias, "time_distributed_bias.txt");
         loaded_weights = true;
     }
 #endif
@@ -63,10 +63,10 @@ void myproject(
 
     layer2_t layer2_out[N_INPUT_1_1*N_LAYER_2];
     #pragma HLS ARRAY_PARTITION variable=layer2_out complete dim=0
-    nnet::lstm_06_025<input_t, input_t, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2>(input_1, lstm1, lstm2, lstm3, layer2_out);
+    nnet::lstm_06_025<input_t, input_t, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2>(input_1, lstm_kernel, lstm_recurrent_kernel, lstm_bias, layer2_out);
 
     layer2_t layer21_out[N_LAYER_2];
-    nnet::lstm_05_025<input_t, input_t, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2>(input_1, lstm1, lstm2, lstm3, layer21_out);
+    nnet::lstm_05_025<input_t, input_t, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2>(input_1, lstm_kernel, lstm_recurrent_kernel, lstm_bias, layer21_out);
 
     std::cout <<"\n LSTM layer 1 output ";
 	for(int ff = 0; ff < N_LAYER_2; ff++) {
@@ -79,7 +79,7 @@ void myproject(
 
     layer4_t layer4_out[N_INPUT_1_1*N_LAYER_2];
     #pragma HLS ARRAY_PARTITION variable=layer4_out complete dim=0
-    nnet::lstm_06_025<layer3_t, layer4_t, config1_lstm4, config2_lstm4, config_x_lstm4, config_h_lstm4>(layer3_out, lstm_11, lstm_12, lstm_13, layer4_out);
+    nnet::lstm_06_025<layer3_t, layer4_t, config1_lstm4, config2_lstm4, config_x_lstm4, config_h_lstm4>(layer3_out, lstm_1_kernel, lstm_1_recurrent_kernel, lstm_1_bias, layer4_out);
 
     layer5_t layer5_out[N_INPUT_1_1*N_LAYER_2];
     #pragma HLS ARRAY_PARTITION variable=layer5_out complete dim=0
@@ -89,6 +89,6 @@ void myproject(
 	#pragma HLS ARRAY_PARTITION variable=layer6_out complete dim=0
     nnet::concatenate2d_1<layer4_t, layer5_t, layer6_t, config_concatenate6>(layer4_out, layer5_out, layer6_out);
 
-    nnet::td_dense<layer6_t, result_t, config7, config_tanh7, config_dense7>(layer6_out, layer7_out, time_distributed1, time_distributed2);
+    nnet::td_dense<layer6_t, result_t, config7, config_tanh7, config_dense7>(layer6_out, layer7_out, time_distributed_kernel, time_distributed_bias);
 
 }

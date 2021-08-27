@@ -14,14 +14,14 @@
 #include "nnet_utils/nnet_merge.h"
 #include "nnet_utils/nnet_time_distributed_dense.h"
 
-#include "weights/lstm1.h"
-#include "weights/lstm2.h"
-#include "weights/lstm3.h"
-#include "weights/lstm_11.h"
-#include "weights/lstm_12.h"
-#include "weights/lstm_13.h"
-#include "weights/time_distributed1.h"
-#include "weights/time_distributed2.h"
+#include "weights/lstm_kernel.h"
+#include "weights/lstm_recurrent_kernel.h"
+#include "weights/lstm_bias.h"
+#include "weights/lstm_1_kernel.h"
+#include "weights/lstm_1_recurrent_kernel.h"
+#include "weights/lstm_1_bias.h"
+#include "weights/time_distributed_kernel.h"
+#include "weights/time_distributed_bias.h"
 
 struct config1_lstm2 : nnet::lstm_config {
     static const unsigned length_x = N_INPUT_2_1;
