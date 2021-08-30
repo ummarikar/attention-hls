@@ -4,7 +4,7 @@
 // ==============================================================
 
 extern void AESL_WRAP_myproject (
-ap_fixed<16, 6, (ap_q_mode) 5, (ap_o_mode)3, 0> input_1[784],
-ap_fixed<16, 6, (ap_q_mode) 5, (ap_o_mode)3, 0> layer5_out[10],
+ap_fixed<16, 6, (ap_q_mode) 5, (ap_o_mode)3, 0> input_1[8],
+ap_fixed<16, 6, (ap_q_mode) 5, (ap_o_mode)3, 0> layer7_out[8],
 unsigned short (&const_size_in_1),
 unsigned short (&const_size_out_1));

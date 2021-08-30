@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Loop_TIMESTEP_proc34_1'
 ================================================================
-* Date:           Mon Aug 30 19:38:22 2021
+* Date:           Mon Aug 30 20:46:14 2021
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
 * Project:        myproject_prj
@@ -1003,7 +1003,7 @@ The critical path consists of the following:
  <State 13>: 3.57ns
 The critical path consists of the following:
 	'call' operation ('call_ret', firmware/nnet_utils/nnet_lstm.h:405->firmware/myproject.cpp:70) to 'lstm_tail_02' [524]  (3.57 ns)
-	'store' operation ('store_ln412', firmware/nnet_utils/nnet_lstm.h:412->firmware/myproject.cpp:70) of variable 'layer4_out[7].V', firmware/nnet_utils/nnet_lstm.h:405->firmware/myproject.cpp:70 on local variable 'layer4_out[63].V' [726]  (0 ns)
+	'store' operation ('store_ln412', firmware/nnet_utils/nnet_lstm.h:412->firmware/myproject.cpp:70) of variable 'layer4_out[6].V', firmware/nnet_utils/nnet_lstm.h:405->firmware/myproject.cpp:70 on local variable 'layer4_out[62].V' [706]  (0 ns)
 
  <State 14>: 2.19ns
 The critical path consists of the following:

@@ -19,16 +19,16 @@
       "type": {
         "kinds": ["array"],
         "dataType": "ap_fixed",
-        "arraySizes": ["784"],
+        "arraySizes": ["8"],
         "interfaceRef": "input_1_V"
       }
     },
-    "layer5_out": {
+    "layer7_out": {
       "index": "1",
       "type": {
         "kinds": ["array"],
         "dataType": "ap_fixed",
-        "arraySizes": ["10"]
+        "arraySizes": ["8"]
       }
     },
     "const_size_in_1": {
@@ -213,7 +213,7 @@
       "dir": "out",
       "width": "16",
       "ctype": {"DATA": {
-          "Type": "null",
+          "Type": "integer unsigned",
           "Width": "16"
         }},
       "bundle_name": "const_size_in_1",
@@ -224,7 +224,7 @@
       "dir": "out",
       "width": "16",
       "ctype": {"DATA": {
-          "Type": "null",
+          "Type": "integer unsigned",
           "Width": "16"
         }},
       "bundle_name": "const_size_out_1",
@@ -235,8 +235,9 @@
       "dir": "in",
       "width": "128",
       "ctype": {"DATA": {
-          "Type": "null",
-          "Width": "128"
+          "Type": "real fixed signed 10",
+          "Width": "16",
+          "Bits": "128"
         }},
       "bundle_name": "input_1_V",
       "bundle_role": "default"
@@ -246,7 +247,7 @@
       "dir": "out",
       "width": "16",
       "ctype": {"DATA": {
-          "Type": "null",
+          "Type": "real fixed signed 10",
           "Width": "16"
         }},
       "bundle_name": "layer7_out_0_V",
@@ -257,7 +258,7 @@
       "dir": "out",
       "width": "16",
       "ctype": {"DATA": {
-          "Type": "null",
+          "Type": "real fixed signed 10",
           "Width": "16"
         }},
       "bundle_name": "layer7_out_1_V",
@@ -268,7 +269,7 @@
       "dir": "out",
       "width": "16",
       "ctype": {"DATA": {
-          "Type": "null",
+          "Type": "real fixed signed 10",
           "Width": "16"
         }},
       "bundle_name": "layer7_out_2_V",
@@ -279,7 +280,7 @@
       "dir": "out",
       "width": "16",
       "ctype": {"DATA": {
-          "Type": "null",
+          "Type": "real fixed signed 10",
           "Width": "16"
         }},
       "bundle_name": "layer7_out_3_V",
@@ -290,7 +291,7 @@
       "dir": "out",
       "width": "16",
       "ctype": {"DATA": {
-          "Type": "null",
+          "Type": "real fixed signed 10",
           "Width": "16"
         }},
       "bundle_name": "layer7_out_4_V",
@@ -301,7 +302,7 @@
       "dir": "out",
       "width": "16",
       "ctype": {"DATA": {
-          "Type": "null",
+          "Type": "real fixed signed 10",
           "Width": "16"
         }},
       "bundle_name": "layer7_out_5_V",
@@ -312,7 +313,7 @@
       "dir": "out",
       "width": "16",
       "ctype": {"DATA": {
-          "Type": "null",
+          "Type": "real fixed signed 10",
           "Width": "16"
         }},
       "bundle_name": "layer7_out_6_V",
@@ -323,7 +324,7 @@
       "dir": "out",
       "width": "16",
       "ctype": {"DATA": {
-          "Type": "null",
+          "Type": "real fixed signed 10",
           "Width": "16"
         }},
       "bundle_name": "layer7_out_7_V",
@@ -1512,7 +1513,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2021-08-30 19:41:50 BST",
+    "Time": "2021-08-30 20:49:35 BST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

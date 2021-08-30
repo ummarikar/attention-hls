@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Loop_TIMESTEP_proc34'
 ================================================================
-* Date:           Mon Aug 30 19:37:55 2021
+* Date:           Mon Aug 30 20:45:47 2021
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
 * Project:        myproject_prj
@@ -793,7 +793,7 @@ The critical path consists of the following:
  <State 4>: 2.49ns
 The critical path consists of the following:
 	'phi' operation ('its') with incoming values : ('its', firmware/nnet_utils/nnet_lstm.h:377->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62) [137]  (0 ns)
-	'sub' operation ('sub_ln203_1', firmware/nnet_utils/nnet_lstm.h:385->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62) [171]  (1.2 ns)
+	'sub' operation ('sub_ln203', firmware/nnet_utils/nnet_lstm.h:385->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62) [169]  (1.2 ns)
 	'select' operation ('select_ln203', firmware/nnet_utils/nnet_lstm.h:385->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62) [172]  (0 ns)
 	'sub' operation ('sub_ln203_2', firmware/nnet_utils/nnet_lstm.h:385->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62) [175]  (1.28 ns)
 
@@ -847,7 +847,7 @@ The critical path consists of the following:
  <State 16>: 3.57ns
 The critical path consists of the following:
 	'call' operation ('call_ret', firmware/nnet_utils/nnet_lstm.h:405->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62) to 'lstm_tail_02.1' [284]  (3.57 ns)
-	'store' operation ('store_ln412', firmware/nnet_utils/nnet_lstm.h:412->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62) of variable 'layer2_out[2].V', firmware/nnet_utils/nnet_lstm.h:405->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62 on local variable 'layer2_out[58].V' [365]  (0 ns)
+	'store' operation ('store_ln412', firmware/nnet_utils/nnet_lstm.h:412->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62) of variable 'layer2_out[7].V', firmware/nnet_utils/nnet_lstm.h:405->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62 on local variable 'layer2_out[63].V' [498]  (0 ns)
 
  <State 17>: 2.19ns
 The critical path consists of the following:

@@ -2,11 +2,11 @@
 # Webtalk v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sat Apr 24 23:44:56 2021
-# Process ID: 12387
-# Current directory: /mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog
-# Command line: wbtcv -mode batch -source /mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/xsim_webtalk.tcl -notrace
-# Log file: /mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/webtalk.log
-# Journal file: /mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/webtalk.jou
+# Start of session at: Mon Aug 30 20:51:28 2021
+# Process ID: 183864
+# Current directory: /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog
+# Command line: wbtcv -mode batch -source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/webtalk.log
+# Journal file: /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/webtalk.jou
 #-----------------------------------------------------------
-source /mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/xsim_webtalk.tcl -notrace
+source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/xsim_webtalk.tcl -notrace

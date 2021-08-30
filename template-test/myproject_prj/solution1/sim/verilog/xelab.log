@@ -3,162 +3,198 @@ Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
 Running: /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_myproject_top glbl -prj myproject.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s myproject -debug wave 
 Multi-threading is on. Using 70 slave threads.
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/softmax_invert_tacud.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module softmax_invert_tacud_rom
-INFO: [VRFC 10-311] analyzing module softmax_invert_tacud
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_9_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_9_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_0_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_0_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_7_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_7_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/hard_tanh.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hard_tanh
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/fifo_w16_d2_A.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/fifo_w128_d2_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w128_d2_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w128_d2_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_128kbM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_mux_128kbM
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/hard_tanh_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hard_tanh_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/start_for_myprojemb6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_myprojemb6_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_myprojemb6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/softmax_invert_tag8j.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module softmax_invert_tag8j_rom
+INFO: [VRFC 10-311] analyzing module softmax_invert_tag8j
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/td_dense.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module td_dense
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/softmax.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module softmax
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/Block_preheader138_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Block_preheader138_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/fifo_w16_d3_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w16_d3_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w16_d3_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/fifo_w16_d4_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w16_d4_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w16_d4_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dense_simple_0_0_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/lstm_tail_02_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lstm_tail_02_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/repeat_vector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module repeat_vector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/concatenate2d_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module concatenate2d_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/hard_tanh_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hard_tanh_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/lstm_tail_02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lstm_tail_02
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/sigmoid.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sigmoid
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/fifo_w16_d2_A.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module fifo_w16_d2_A_shiftReg
 INFO: [VRFC 10-311] analyzing module fifo_w16_d2_A
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_21_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_21_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/lstm_tail_02.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module lstm_tail_02
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_26_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_26_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_13_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_13_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_14_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_14_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_6_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_6_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_1_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_1_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_8_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_8_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/Loop_LSTM_TS_proc234.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Loop_LSTM_TS_proc234
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dense_simple_0_0_0_0
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dense_simple_0_0
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_15_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_15_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_12_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_12_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/Block_preheader139_s.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Block_preheader139_s
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_27_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_27_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_20_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_20_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_646dEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_mux_646dEe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module dense_simple_0_0_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/myproject.autotb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module apatb_myproject_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_18_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_18_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_11_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_11_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_16_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_16_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_23_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_23_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_24_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_24_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_2_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_2_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_5_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_5_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/sigmoid.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sigmoid
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/softmax_exp_table2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module softmax_exp_table2_rom
-INFO: [VRFC 10-311] analyzing module softmax_exp_table2
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_25_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_25_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_22_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_22_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_17_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_17_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_10_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_10_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_19_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_19_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/Block_preheader_i_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Block_preheader_i_0
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/hard_tanh_1.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/start_for_repeat_ocq.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_repeat_ocq_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_repeat_ocq
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/start_for_Loop_TIncg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_Loop_TIncg_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_Loop_TIncg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dense_simple_0_0_0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/start_for_attentipcA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_attentipcA_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_attentipcA
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/hard_tanh_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module hard_tanh_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/sigmoid_sigmoid_tbkb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sigmoid_sigmoid_tbkb_rom
-INFO: [VRFC 10-311] analyzing module sigmoid_sigmoid_tbkb
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/myproject.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module myproject
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/softmax.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module softmax
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_4_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_4_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_3_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_3_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/attention_mult_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module attention_mult_V_ram
+INFO: [VRFC 10-311] analyzing module attention_mult_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_entry343.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_entry343
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_0_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dense_simple_0_0_0_0_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/Loop_TIMESTEP_proc34.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loop_TIMESTEP_proc34
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/attention.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module attention
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/Loop_TIMESTEP_proc34_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loop_TIMESTEP_proc34_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_entry3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_entry3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/tanh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tanh
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_83_fYi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_mux_83_fYi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_646cud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_mux_646cud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/softmax_exp_table10.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module softmax_exp_table10_rom
+INFO: [VRFC 10-311] analyzing module softmax_exp_table10
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/sigmoid_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sigmoid_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/td_dense_acc_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module td_dense_acc_V_ram
+INFO: [VRFC 10-311] analyzing module td_dense_acc_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dense_simple_0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_128jbC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_mux_128jbC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/tanh_tanh_table9.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tanh_tanh_table9_rom
+INFO: [VRFC 10-311] analyzing module tanh_tanh_table9
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/sigmoid_1_sigmoidbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sigmoid_1_sigmoidbkb_rom
+INFO: [VRFC 10-311] analyzing module sigmoid_1_sigmoidbkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_myproject_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/td_dense_dense_inlbW.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module td_dense_dense_inlbW_ram
+INFO: [VRFC 10-311] analyzing module td_dense_dense_inlbW
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/hard_tanh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hard_tanh
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mul_mulibs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_mul_mulibs_DSP48_0
+INFO: [VRFC 10-311] analyzing module myproject_mul_mulibs
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Block_preheader139_s
+Compiling module xil_defaultlib.myproject_entry3
+Compiling module xil_defaultlib.myproject_entry343
+Compiling module xil_defaultlib.Block_preheader138_s
+Compiling module xil_defaultlib.dense_simple_0_0_0_0_1
+Compiling module xil_defaultlib.sigmoid_1_sigmoidbkb_rom
+Compiling module xil_defaultlib.sigmoid_1_sigmoidbkb(DataWidth=1...
+Compiling module xil_defaultlib.sigmoid_1
+Compiling module xil_defaultlib.dense_simple_0_0_1
+Compiling module xil_defaultlib.hard_tanh_2
+Compiling module xil_defaultlib.lstm_tail_02_1
+Compiling module xil_defaultlib.hard_tanh_3
+Compiling module xil_defaultlib.Loop_TIMESTEP_proc34
+Compiling module xil_defaultlib.myproject_mux_646cud(ID=1,din0_W...
+Compiling module xil_defaultlib.myproject_mux_646dEe(ID=1,din0_W...
+Compiling module xil_defaultlib.repeat_vector
 Compiling module xil_defaultlib.dense_simple_0_0_0_0
 Compiling module xil_defaultlib.dense_simple_0_0
-Compiling module xil_defaultlib.sigmoid_sigmoid_tbkb_rom
-Compiling module xil_defaultlib.sigmoid_sigmoid_tbkb(DataWidth=1...
 Compiling module xil_defaultlib.sigmoid
 Compiling module xil_defaultlib.hard_tanh
 Compiling module xil_defaultlib.lstm_tail_02
 Compiling module xil_defaultlib.hard_tanh_1
-Compiling module xil_defaultlib.Loop_LSTM_TS_proc234
-Compiling module xil_defaultlib.Block_preheader_i_0
-Compiling module xil_defaultlib.dense_simple_0_0_1
-Compiling module xil_defaultlib.softmax_exp_table2_rom
-Compiling module xil_defaultlib.softmax_exp_table2(DataWidth=18,...
-Compiling module xil_defaultlib.softmax_invert_tacud_rom
-Compiling module xil_defaultlib.softmax_invert_tacud(DataWidth=1...
+Compiling module xil_defaultlib.myproject_mux_83_fYi(ID=1,din0_W...
+Compiling module xil_defaultlib.Loop_TIMESTEP_proc34_1
+Compiling module xil_defaultlib.attention_mult_V_ram
+Compiling module xil_defaultlib.attention_mult_V(DataWidth=16,Ad...
+Compiling module xil_defaultlib.softmax_exp_table10_rom
+Compiling module xil_defaultlib.softmax_exp_table10(DataWidth=18...
+Compiling module xil_defaultlib.softmax_invert_tag8j_rom
+Compiling module xil_defaultlib.softmax_invert_tag8j(DataWidth=1...
 Compiling module xil_defaultlib.softmax
+Compiling module xil_defaultlib.myproject_mul_mulibs_DSP48_0
+Compiling module xil_defaultlib.myproject_mul_mulibs(ID=1,NUM_ST...
+Compiling module xil_defaultlib.attention
+Compiling module xil_defaultlib.myproject_mux_128jbC(ID=1,din0_W...
+Compiling module xil_defaultlib.myproject_mux_128kbM(ID=1,din0_W...
+Compiling module xil_defaultlib.concatenate2d_1
+Compiling module xil_defaultlib.td_dense_acc_V_ram
+Compiling module xil_defaultlib.td_dense_acc_V(DataWidth=11,Addr...
+Compiling module xil_defaultlib.td_dense_dense_inlbW_ram
+Compiling module xil_defaultlib.td_dense_dense_inlbW(DataWidth=1...
+Compiling module xil_defaultlib.dense_simple_0_0_2
+Compiling module xil_defaultlib.tanh_tanh_table9_rom
+Compiling module xil_defaultlib.tanh_tanh_table9(DataWidth=11,Ad...
+Compiling module xil_defaultlib.tanh
+Compiling module xil_defaultlib.td_dense
+Compiling module xil_defaultlib.fifo_w128_d2_A_shiftReg
+Compiling module xil_defaultlib.fifo_w128_d2_A
+Compiling module xil_defaultlib.fifo_w16_d4_A_shiftReg
+Compiling module xil_defaultlib.fifo_w16_d4_A
 Compiling module xil_defaultlib.fifo_w16_d2_A_shiftReg
 Compiling module xil_defaultlib.fifo_w16_d2_A
+Compiling module xil_defaultlib.fifo_w16_d3_A_shiftReg
+Compiling module xil_defaultlib.fifo_w16_d3_A
+Compiling module xil_defaultlib.start_for_myprojemb6_shiftReg
+Compiling module xil_defaultlib.start_for_myprojemb6
+Compiling module xil_defaultlib.start_for_Loop_TIncg_shiftReg
+Compiling module xil_defaultlib.start_for_Loop_TIncg
+Compiling module xil_defaultlib.start_for_repeat_ocq_shiftReg
+Compiling module xil_defaultlib.start_for_repeat_ocq
+Compiling module xil_defaultlib.start_for_attentipcA_shiftReg
+Compiling module xil_defaultlib.start_for_attentipcA
 Compiling module xil_defaultlib.myproject
-Compiling module xil_defaultlib.AESL_automem_input_1_0_V
-Compiling module xil_defaultlib.AESL_automem_input_1_1_V
-Compiling module xil_defaultlib.AESL_automem_input_1_2_V
-Compiling module xil_defaultlib.AESL_automem_input_1_3_V
-Compiling module xil_defaultlib.AESL_automem_input_1_4_V
-Compiling module xil_defaultlib.AESL_automem_input_1_5_V
-Compiling module xil_defaultlib.AESL_automem_input_1_6_V
-Compiling module xil_defaultlib.AESL_automem_input_1_7_V
-Compiling module xil_defaultlib.AESL_automem_input_1_8_V
-Compiling module xil_defaultlib.AESL_automem_input_1_9_V
-Compiling module xil_defaultlib.AESL_automem_input_1_10_V
-Compiling module xil_defaultlib.AESL_automem_input_1_11_V
-Compiling module xil_defaultlib.AESL_automem_input_1_12_V
-Compiling module xil_defaultlib.AESL_automem_input_1_13_V
-Compiling module xil_defaultlib.AESL_automem_input_1_14_V
-Compiling module xil_defaultlib.AESL_automem_input_1_15_V
-Compiling module xil_defaultlib.AESL_automem_input_1_16_V
-Compiling module xil_defaultlib.AESL_automem_input_1_17_V
-Compiling module xil_defaultlib.AESL_automem_input_1_18_V
-Compiling module xil_defaultlib.AESL_automem_input_1_19_V
-Compiling module xil_defaultlib.AESL_automem_input_1_20_V
-Compiling module xil_defaultlib.AESL_automem_input_1_21_V
-Compiling module xil_defaultlib.AESL_automem_input_1_22_V
-Compiling module xil_defaultlib.AESL_automem_input_1_23_V
-Compiling module xil_defaultlib.AESL_automem_input_1_24_V
-Compiling module xil_defaultlib.AESL_automem_input_1_25_V
-Compiling module xil_defaultlib.AESL_automem_input_1_26_V
-Compiling module xil_defaultlib.AESL_automem_input_1_27_V
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
 Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
 Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
 Compiling module xil_defaultlib.AESL_deadlock_report_unit(PROC_N...
