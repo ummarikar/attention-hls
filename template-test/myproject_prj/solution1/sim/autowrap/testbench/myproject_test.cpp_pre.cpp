@@ -1,10 +1,10 @@
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_test.cpp"
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_test.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 1 "<command-line>" 2
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_test.cpp"
-# 19 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_test.cpp"
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_test.cpp"
+# 19 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_test.cpp"
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/fstream" 1 3
 # 36 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/fstream" 3
        
@@ -28730,7 +28730,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 1082 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/fstream" 2 3
-# 20 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_test.cpp" 2
+# 20 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_test.cpp" 2
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/iostream" 1 3
 # 36 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/iostream" 3
        
@@ -28762,7 +28762,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 21 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_test.cpp" 2
+# 21 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_test.cpp" 2
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/algorithm" 1 3
 # 58 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/algorithm" 3
        
@@ -35863,7 +35863,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 63 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/algorithm" 2 3
-# 22 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_test.cpp" 2
+# 22 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_test.cpp" 2
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/vector" 1 3
 # 58 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/vector" 3
        
@@ -39387,7 +39387,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 70 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/vector" 2 3
-# 23 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_test.cpp" 2
+# 23 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_test.cpp" 2
 
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/stdlib.h" 1 3
 # 36 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/stdlib.h" 3
@@ -39441,7 +39441,7 @@ using std::system;
 
 using std::wcstombs;
 using std::wctomb;
-# 25 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_test.cpp" 2
+# 25 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_test.cpp" 2
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
 # 36 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 3
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cmath" 1 3
@@ -42016,10 +42016,10 @@ using std::scalbln;
 using std::scalbn;
 using std::tgamma;
 using std::trunc;
-# 26 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_test.cpp" 2
+# 26 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_test.cpp" 2
 
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/myproject.h" 1
-# 23 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/myproject.h"
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/myproject.h" 1
+# 23 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/myproject.h"
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/complex" 1 3
 # 39 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/complex" 3
        
@@ -44516,7 +44516,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 1971 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/complex" 3
 
 }
-# 24 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/myproject.h" 2
+# 24 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/myproject.h" 2
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/ap_int.h" 1
 # 54 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/ap_int.h"
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/ap_common.h" 1
@@ -72181,33 +72181,36 @@ inline bool operator!=(
 }
 # 399 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/ap_fixed.h" 2
 # 368 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/ap_int.h" 2
-# 25 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/myproject.h" 2
+# 25 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/myproject.h" 2
 
 
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/defines.h" 1
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/defines.h" 1
 
 
 
 
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/ap_int.h" 1
-# 6 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/defines.h" 2
-# 16 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/defines.h"
+# 6 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/defines.h" 2
+# 14 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/defines.h"
 typedef ap_fixed<16,6> model_default_t;
 typedef ap_fixed<16,6> input_t;
 typedef ap_fixed<16,6> layer2_t;
 typedef ap_fixed<16,6> layer3_t;
+typedef ap_fixed<16,6> layer4_t;
+typedef ap_fixed<16,6> layer5_t;
+typedef ap_fixed<16,6> layer6_t;
 typedef ap_fixed<16,6> result_t;
-# 28 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/myproject.h" 2
+# 28 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/myproject.h" 2
 
 
 
 void myproject(
-    input_t input_1[28*28],
-    result_t layer5_out[10],
+    input_t input_1[8*1],
+    result_t layer7_out[8*1],
     unsigned short &const_size_in_1,
     unsigned short &const_size_out_1
 );
-# 28 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_test.cpp" 2
+# 28 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_test.cpp" 2
 
 
 
@@ -72238,64 +72241,64 @@ int main(int argc, char **argv)
       std::vector<float> in;
       current=strtok(cstr," ");
       while(current!=
-# 57 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_test.cpp" 3 4
+# 57 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_test.cpp" 3 4
                     __null
-# 57 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_test.cpp"
+# 57 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_test.cpp"
                         ) {
         in.push_back(atof(current));
         current=strtok(
-# 59 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_test.cpp" 3 4
+# 59 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_test.cpp" 3 4
                       __null
-# 59 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_test.cpp"
+# 59 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_test.cpp"
                           ," ");
       }
       cstr=const_cast<char*>(pline.c_str());
       std::vector<float> pr;
       current=strtok(cstr," ");
       while(current!=
-# 64 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_test.cpp" 3 4
+# 64 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_test.cpp" 3 4
                     __null
-# 64 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_test.cpp"
+# 64 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_test.cpp"
                         ) {
         pr.push_back(atof(current));
         current=strtok(
-# 66 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_test.cpp" 3 4
+# 66 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_test.cpp" 3 4
                       __null
-# 66 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/myproject_test.cpp"
+# 66 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_test.cpp"
                           ," ");
       }
 
 
       std::vector<float>::const_iterator in_begin = in.cbegin();
       std::vector<float>::const_iterator in_end;
-      input_t input_1[28*28];
-      in_end = in_begin + (28*28);
+      input_t input_1[8*1];
+      in_end = in_begin + (8*1);
       std::copy(in_begin, in_end, input_1);
       in_begin = in_end;
-      result_t layer5_out[10]{};
-      std::fill_n(layer5_out, 10, 0.);
+      result_t layer7_out[8*1]{};
+      std::fill_n(layer7_out, 10, 0.);
 
 
       unsigned short size_in1,size_out1;
-      myproject(input_1,layer5_out,size_in1,size_out1);
+      myproject(input_1,layer7_out,size_in1,size_out1);
 
 
-      for(int i = 0; i < 10; i++) {
-        fout << layer5_out[i] << " ";
+      for(int i = 0; i < 8*1; i++) {
+        fout << layer7_out[i] << " ";
       }
       fout << std::endl;
 
       if (e % 5000 == 0) {
         std::cout << "Predictions" << std::endl;
 
-        for(int i = 0; i < 10; i++) {
+        for(int i = 0; i < 8*1; i++) {
           std::cout << pr[i] << " ";
         }
         std::cout << std::endl;
         std::cout << "Quantized predictions" << std::endl;
 
-        for(int i = 0; i < 10; i++) {
-          std::cout << layer5_out[i] << " ";
+        for(int i = 0; i < 8*1; i++) {
+          std::cout << layer7_out[i] << " ";
         }
         std::cout << std::endl;
       }
@@ -72305,24 +72308,24 @@ int main(int argc, char **argv)
   } else {
     std::cout << "INFO: Unable to open input/predictions file, using default input." << std::endl;
 
-    input_t input_1[28*28];
-    std::fill_n(input_1, 28*28, 0.);
-    result_t layer5_out[10]{};
-      std::fill_n(layer5_out, 10, 0.);
+    input_t input_1[8*1];
+    std::fill_n(input_1, 8*1, 0.);
+    result_t layer7_out[8*1]{};
+      std::fill_n(layer7_out, 10, 0.);
 
 
     unsigned short size_in1,size_out1;
-    myproject(input_1,layer5_out,size_in1,size_out1);
+    myproject(input_1,layer7_out,size_in1,size_out1);
 
 
-    for(int i = 0; i < 10; i++) {
-      std::cout << layer5_out[i] << " ";
+    for(int i = 0; i < 8*1; i++) {
+      std::cout << layer7_out[i] << " ";
     }
     std::cout << std::endl;
 
 
-    for(int i = 0; i < 10; i++) {
-      fout << layer5_out[i] << " ";
+    for(int i = 0; i < 8*1; i++) {
+      fout << layer7_out[i] << " ";
     }
     fout << std::endl;
   }

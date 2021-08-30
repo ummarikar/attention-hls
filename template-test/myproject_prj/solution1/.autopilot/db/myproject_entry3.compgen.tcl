@@ -18,7 +18,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_input_1_V \
     op interface \
-    ports { input_1_V { I 12544 vector } input_1_V_ap_vld { I 1 bit } } \
+    ports { input_1_V { I 128 vector } input_1_V_ap_vld { I 1 bit } } \
 } "
 }
 
@@ -33,7 +33,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_input_1_V_out \
     op interface \
-    ports { input_1_V_out_din { O 12544 vector } input_1_V_out_full_n { I 1 bit } input_1_V_out_write { O 1 bit } } \
+    ports { input_1_V_out_din { O 128 vector } input_1_V_out_full_n { I 1 bit } input_1_V_out_write { O 1 bit } } \
 } "
 }
 

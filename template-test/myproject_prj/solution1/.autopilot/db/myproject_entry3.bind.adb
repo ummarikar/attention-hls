@@ -28,7 +28,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>12544</bitwidth>
+					<bitwidth>128</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -54,9 +54,9 @@
 						</inlineStackInfo>
 						<originalName></originalName>
 						<rtlName></rtlName>
-						<coreName>FIFO_SRL</coreName>
+						<coreName>FIFO</coreName>
 					</Obj>
-					<bitwidth>12544</bitwidth>
+					<bitwidth>128</bitwidth>
 				</Value>
 				<direction>1</direction>
 				<if_type>3</if_type>
@@ -88,7 +88,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>12544</bitwidth>
+					<bitwidth>128</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -110,35 +110,14 @@
 					<Obj>
 						<type>0</type>
 						<id>5</id>
-						<name>input_1_V_out_write_ln423</name>
-						<fileName>firmware/nnet_utils/nnet_lstm.h</fileName>
-						<fileDirectory>/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test</fileDirectory>
-						<lineNumber>423</lineNumber>
-						<contextFuncName>lstm_05_025&amp;lt;ap_fixed&amp;lt;16, 6, 5, 3, 0&amp;gt;, ap_fixed&amp;lt;16, 6, 5, 3, 0&amp;gt;, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2&amp;gt;</contextFuncName>
+						<name>input_1_V_out_write_ln0</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
 						<inlineStackInfo>
-							<count>1</count>
+							<count>0</count>
 							<item_version>0</item_version>
-							<item class_id="11" tracking_level="0" version="0">
-								<first>/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test</first>
-								<second class_id="12" tracking_level="0" version="0">
-									<count>2</count>
-									<item_version>0</item_version>
-									<item class_id="13" tracking_level="0" version="0">
-										<first class_id="14" tracking_level="0" version="0">
-											<first>firmware/myproject.cpp</first>
-											<second>myproject</second>
-										</first>
-										<second>61</second>
-									</item>
-									<item>
-										<first>
-											<first>firmware/nnet_utils/nnet_lstm.h</first>
-											<second>lstm_05_025&amp;lt;ap_fixed&amp;lt;16, 6, 5, 3, 0&amp;gt;, ap_fixed&amp;lt;16, 6, 5, 3, 0&amp;gt;, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2&amp;gt;</second>
-										</first>
-										<second>423</second>
-									</item>
-								</second>
-							</item>
 						</inlineStackInfo>
 						<originalName></originalName>
 						<rtlName></rtlName>
@@ -167,35 +146,14 @@
 					<Obj>
 						<type>0</type>
 						<id>6</id>
-						<name>_ln423</name>
-						<fileName>firmware/nnet_utils/nnet_lstm.h</fileName>
-						<fileDirectory>/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test</fileDirectory>
-						<lineNumber>423</lineNumber>
-						<contextFuncName>lstm_05_025&amp;lt;ap_fixed&amp;lt;16, 6, 5, 3, 0&amp;gt;, ap_fixed&amp;lt;16, 6, 5, 3, 0&amp;gt;, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2&amp;gt;</contextFuncName>
+						<name>_ln0</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
 						<inlineStackInfo>
-							<count>1</count>
+							<count>0</count>
 							<item_version>0</item_version>
-							<item>
-								<first>/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test</first>
-								<second>
-									<count>2</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>firmware/myproject.cpp</first>
-											<second>myproject</second>
-										</first>
-										<second>61</second>
-									</item>
-									<item>
-										<first>
-											<first>firmware/nnet_utils/nnet_lstm.h</first>
-											<second>lstm_05_025&amp;lt;ap_fixed&amp;lt;16, 6, 5, 3, 0&amp;gt;, ap_fixed&amp;lt;16, 6, 5, 3, 0&amp;gt;, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2&amp;gt;</second>
-										</first>
-										<second>423</second>
-									</item>
-								</second>
-							</item>
 						</inlineStackInfo>
 						<originalName></originalName>
 						<rtlName></rtlName>
@@ -217,14 +175,14 @@
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 		</nodes>
-		<consts class_id="15" tracking_level="0" version="0">
+		<consts class_id="11" tracking_level="0" version="0">
 			<count>0</count>
 			<item_version>0</item_version>
 		</consts>
-		<blocks class_id="16" tracking_level="0" version="0">
+		<blocks class_id="12" tracking_level="0" version="0">
 			<count>1</count>
 			<item_version>0</item_version>
-			<item class_id="17" tracking_level="1" version="0" object_id="_6">
+			<item class_id="13" tracking_level="1" version="0" object_id="_6">
 				<Obj>
 					<type>3</type>
 					<id>7</id>
@@ -250,24 +208,24 @@
 				</node_objs>
 			</item>
 		</blocks>
-		<edges class_id="18" tracking_level="0" version="0">
+		<edges class_id="14" tracking_level="0" version="0">
 			<count>3</count>
 			<item_version>0</item_version>
-			<item class_id="19" tracking_level="1" version="0" object_id="_7">
+			<item class_id="15" tracking_level="1" version="0" object_id="_7">
 				<id>10</id>
 				<edge_type>1</edge_type>
 				<source_obj>1</source_obj>
 				<sink_obj>3</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="19" object_id="_8">
+			<item class_id_reference="15" object_id="_8">
 				<id>13</id>
 				<edge_type>1</edge_type>
 				<source_obj>2</source_obj>
 				<sink_obj>5</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="19" object_id="_9">
+			<item class_id_reference="15" object_id="_9">
 				<id>14</id>
 				<edge_type>1</edge_type>
 				<source_obj>3</source_obj>
@@ -276,10 +234,10 @@
 			</item>
 		</edges>
 	</cdfg>
-	<cdfg_regions class_id="20" tracking_level="0" version="0">
+	<cdfg_regions class_id="16" tracking_level="0" version="0">
 		<count>1</count>
 		<item_version>0</item_version>
-		<item class_id="21" tracking_level="1" version="0" object_id="_10">
+		<item class_id="17" tracking_level="1" version="0" object_id="_10">
 			<mId>1</mId>
 			<mTag>myproject.entry3</mTag>
 			<mType>0</mType>
@@ -302,31 +260,31 @@
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
 	</cdfg_regions>
-	<fsm class_id="23" tracking_level="1" version="0" object_id="_11">
-		<states class_id="24" tracking_level="0" version="0">
+	<fsm class_id="19" tracking_level="1" version="0" object_id="_11">
+		<states class_id="20" tracking_level="0" version="0">
 			<count>1</count>
 			<item_version>0</item_version>
-			<item class_id="25" tracking_level="1" version="0" object_id="_12">
+			<item class_id="21" tracking_level="1" version="0" object_id="_12">
 				<id>1</id>
-				<operations class_id="26" tracking_level="0" version="0">
+				<operations class_id="22" tracking_level="0" version="0">
 					<count>4</count>
 					<item_version>0</item_version>
-					<item class_id="27" tracking_level="1" version="0" object_id="_13">
+					<item class_id="23" tracking_level="1" version="0" object_id="_13">
 						<id>3</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="27" object_id="_14">
+					<item class_id_reference="23" object_id="_14">
 						<id>4</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="27" object_id="_15">
+					<item class_id_reference="23" object_id="_15">
 						<id>5</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="27" object_id="_16">
+					<item class_id_reference="23" object_id="_16">
 						<id>6</id>
 						<stage>1</stage>
 						<latency>1</latency>
@@ -334,18 +292,18 @@
 				</operations>
 			</item>
 		</states>
-		<transitions class_id="28" tracking_level="0" version="0">
+		<transitions class_id="24" tracking_level="0" version="0">
 			<count>0</count>
 			<item_version>0</item_version>
 		</transitions>
 	</fsm>
 	<res class_id="-1"></res>
-	<node_label_latency class_id="30" tracking_level="0" version="0">
+	<node_label_latency class_id="26" tracking_level="0" version="0">
 		<count>3</count>
 		<item_version>0</item_version>
-		<item class_id="31" tracking_level="0" version="0">
+		<item class_id="27" tracking_level="0" version="0">
 			<first>3</first>
-			<second class_id="32" tracking_level="0" version="0">
+			<second class_id="28" tracking_level="0" version="0">
 				<first>0</first>
 				<second>0</second>
 			</second>
@@ -365,25 +323,25 @@
 			</second>
 		</item>
 	</node_label_latency>
-	<bblk_ent_exit class_id="33" tracking_level="0" version="0">
+	<bblk_ent_exit class_id="29" tracking_level="0" version="0">
 		<count>1</count>
 		<item_version>0</item_version>
-		<item class_id="34" tracking_level="0" version="0">
+		<item class_id="30" tracking_level="0" version="0">
 			<first>7</first>
-			<second class_id="35" tracking_level="0" version="0">
+			<second class_id="31" tracking_level="0" version="0">
 				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 	</bblk_ent_exit>
-	<regions class_id="36" tracking_level="0" version="0">
+	<regions class_id="32" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</regions>
-	<dp_fu_nodes class_id="37" tracking_level="0" version="0">
+	<dp_fu_nodes class_id="33" tracking_level="0" version="0">
 		<count>2</count>
 		<item_version>0</item_version>
-		<item class_id="38" tracking_level="0" version="0">
+		<item class_id="34" tracking_level="0" version="0">
 			<first>22</first>
 			<second>
 				<count>1</count>
@@ -400,7 +358,7 @@
 			</second>
 		</item>
 	</dp_fu_nodes>
-	<dp_fu_nodes_expression class_id="40" tracking_level="0" version="0">
+	<dp_fu_nodes_expression class_id="36" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_fu_nodes_expression>
@@ -411,7 +369,7 @@
 	<dp_fu_nodes_io>
 		<count>2</count>
 		<item_version>0</item_version>
-		<item class_id="41" tracking_level="0" version="0">
+		<item class_id="37" tracking_level="0" version="0">
 			<first>input_1_V_read_read_fu_22</first>
 			<second>
 				<count>1</count>
@@ -420,7 +378,7 @@
 			</second>
 		</item>
 		<item>
-			<first>write_ln423_write_fu_28</first>
+			<first>write_ln0_write_fu_28</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -432,7 +390,7 @@
 		<count>0</count>
 		<item_version>0</item_version>
 	</return_ports>
-	<dp_mem_port_nodes class_id="42" tracking_level="0" version="0">
+	<dp_mem_port_nodes class_id="38" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_mem_port_nodes>
@@ -452,10 +410,10 @@
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_regname_phi>
-	<dp_port_io_nodes class_id="43" tracking_level="0" version="0">
+	<dp_port_io_nodes class_id="39" tracking_level="0" version="0">
 		<count>2</count>
 		<item_version>0</item_version>
-		<item class_id="44" tracking_level="0" version="0">
+		<item class_id="40" tracking_level="0" version="0">
 			<first>input_1_V</first>
 			<second>
 				<count>1</count>
@@ -486,12 +444,12 @@
 			</second>
 		</item>
 	</dp_port_io_nodes>
-	<port2core class_id="45" tracking_level="0" version="0">
+	<port2core class_id="41" tracking_level="0" version="0">
 		<count>1</count>
 		<item_version>0</item_version>
-		<item class_id="46" tracking_level="0" version="0">
+		<item class_id="42" tracking_level="0" version="0">
 			<first>2</first>
-			<second>FIFO_SRL</second>
+			<second>FIFO</second>
 		</item>
 	</port2core>
 	<node2core>

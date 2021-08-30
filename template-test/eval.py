@@ -31,8 +31,9 @@ def compile():
             raise Exception('Failed to compile myproject')
         lib_name = 'firmware/myproject-9F6EE130.so'
         _top_function_lib = ctypes.cdll.LoadLibrary(lib_name)
-    finally:
         print('Compiled Successfully')
+    except:
+        print('An error occurred')
 
 def get_top_function(x):
     if not isinstance(x, np.ndarray):
@@ -75,7 +76,6 @@ def predict(x):
 
     try:
         for i in range(n_samples):
-            print('input: ', x[i])
             predictions = np.zeros(32, dtype=ctype)
             top_function(x[i], predictions, ctypes.byref(ctypes.c_ushort()), ctypes.byref(ctypes.c_ushort()))
             output.append(predictions.reshape(-1,1))
@@ -117,11 +117,11 @@ def debug_model(noise_array, model_outdir, steps):
                             outputs=[layer.output for layer in model.layers])
 
     features = extractor(noise_array)
-
-    print(features)
+    
+    print(features[:3])
 
 def TPR_FPR_arrays_hls(noise_array, injection_array, steps, num_events, num_entries=400):
-
+    print('evaluating hls model')
 
     print('number of events: ', num_events)
     noise_array = noise_array.reshape(-1, steps, 1)
@@ -416,15 +416,16 @@ def main(args):
     TPR_set = []
     AUC_set = []
     
-    #debug_hls_model(X_train_H1[:, 16000], 32)
-   
+    #debug_model(X_train_H1[:, :16000], 'model', 32)
+    debug_hls_model(X_train_H1[:, :16000], 32)
+'''   
     for name, directory, timestep in zip(names, directory_list, timesteps): 
         print('Determining performance for: %s'%(name))
-        if timestep == 100: 
+        if timestep == 32: 
             #TPR, FPR = TPR_FPR_arrays_doubledetector(X_train_L1[:, :16000], X_test_L1[:, :16000], X_train_H1[:, :16000], X_test_H1[:, :16000], directory, timestep)
             print('length: ', len(X_test_H1))
-            #TPR, FPR = TPR_FPR_arrays_hls(X_train_H1[:, :16000], X_test_H1[:, :16000], timestep, len(X_test_H1))
-            TPR, FPR = TPR_FPR_arrays(X_train_H1[:, :16000], X_test_H1[:, :16000], directory, timestep, len(X_test_H1))
+            TPR, FPR = TPR_FPR_arrays_hls(X_train_H1[:, :16000], X_test_H1[:, :16000], timestep, len(X_test_H1))
+            #TPR, FPR = TPR_FPR_arrays(X_train_H1[:, :16000], X_test_H1[:, :16000], directory, timestep, len(X_test_H1))
         else: 
             #TPR, FPR = TPR_FPR_arrays_doubledetector(X_train_L1, X_test_L1, X_train_H1, X_test_H1, directory, timestep)
             TPR, FPR = TPR_FPR_arrays(X_train_H1, X_test_H1, directory, timestep, len(X_test_H1))
@@ -484,6 +485,9 @@ def main(args):
         #plt.axhline(threshold, label='GW event threshold', color='red')
         plt.legend(loc='upper left')
         plt.savefig('%s/batchloss_%s.jpg'%(outdir,time))
+
+        sys.exit()
+'''
 '''        
         X_pred_test = np.array(model.predict(event))
         
@@ -511,7 +515,6 @@ def main(args):
         plt.legend(loc='upper left')
         plt.savefig('%s/test_threshold_%s_8sec.jpg'%(outdir, time))
 '''
-    sys.exit()
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

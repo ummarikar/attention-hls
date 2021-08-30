@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'myproject_entry3'
 ================================================================
-* Date:           Tue Apr 13 22:22:59 2021
+* Date:           Mon Aug 30 19:37:42 2021
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
 * Project:        myproject_prj
@@ -75,10 +75,10 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 2.18>
-ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%input_1_V_read = call i12544 @_ssdm_op_Read.ap_auto.i12544P(i12544* %input_1_V)"   --->   Operation 2 'read' 'input_1_V_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 3 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i12544* %input_1_V_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 3 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 4 [1/1] (2.18ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i12544P(i12544* %input_1_V_out, i12544 %input_1_V_read)" [firmware/nnet_utils/nnet_lstm.h:423->firmware/myproject.cpp:61]   --->   Operation 4 'write' <Predicate = true> <Delay = 2.18> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 12544> <Depth = 2> <FIFO>
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "ret void" [firmware/nnet_utils/nnet_lstm.h:423->firmware/myproject.cpp:61]   --->   Operation 5 'ret' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%input_1_V_read = call i128 @_ssdm_op_Read.ap_auto.i128P(i128* %input_1_V)"   --->   Operation 2 'read' 'input_1_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %input_1_V_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 3 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (2.18ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i128P(i128* %input_1_V_out, i128 %input_1_V_read)"   --->   Operation 4 'write' <Predicate = true> <Delay = 2.18> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 2> <FIFO>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 5 'ret' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -89,7 +89,7 @@ Target clock period: 5ns, clock uncertainty: 0.625ns.
  <State 1>: 2.19ns
 The critical path consists of the following:
 	wire read on port 'input_1_V' [3]  (0 ns)
-	fifo write on port 'input_1_V_out' (firmware/nnet_utils/nnet_lstm.h:423->firmware/myproject.cpp:61) [5]  (2.19 ns)
+	fifo write on port 'input_1_V_out' [5]  (2.19 ns)
 
 
 ============================================================

@@ -1,10 +1,10 @@
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/myproject.cpp"
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/myproject.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 1 "<command-line>" 2
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/myproject.cpp"
-# 19 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/myproject.cpp"
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/myproject.cpp"
+# 19 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/myproject.cpp"
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/iostream" 1 3
 # 36 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/iostream" 3
        
@@ -26410,10 +26410,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 20 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/myproject.cpp" 2
+# 20 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/myproject.cpp" 2
 
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/myproject.h" 1
-# 23 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/myproject.h"
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/myproject.h" 1
+# 23 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/myproject.h"
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/complex" 1 3
 # 39 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/complex" 3
        
@@ -31402,7 +31402,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 1971 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/complex" 3
 
 }
-# 24 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/myproject.h" 2
+# 24 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/myproject.h" 2
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/ap_int.h" 1
 # 54 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/ap_int.h"
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/ap_common.h" 1
@@ -66816,48 +66816,51 @@ inline bool operator!=(
 }
 # 399 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/ap_fixed.h" 2
 # 368 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/ap_int.h" 2
-# 25 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/myproject.h" 2
+# 25 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/myproject.h" 2
 
 
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/defines.h" 1
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/defines.h" 1
 
 
 
 
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/ap_int.h" 1
-# 6 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/defines.h" 2
-# 16 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/defines.h"
+# 6 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/defines.h" 2
+# 14 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/defines.h"
 typedef ap_fixed<16,6> model_default_t;
 typedef ap_fixed<16,6> input_t;
 typedef ap_fixed<16,6> layer2_t;
 typedef ap_fixed<16,6> layer3_t;
+typedef ap_fixed<16,6> layer4_t;
+typedef ap_fixed<16,6> layer5_t;
+typedef ap_fixed<16,6> layer6_t;
 typedef ap_fixed<16,6> result_t;
-# 28 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/myproject.h" 2
+# 28 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/myproject.h" 2
 
 
 
 void myproject(
-    input_t input_1[28*28],
-    result_t layer5_out[10],
+    input_t input_1[8*1],
+    result_t layer7_out[8*1],
     unsigned short &const_size_in_1,
     unsigned short &const_size_out_1
 );
-# 22 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/myproject.cpp" 2
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/parameters.h" 1
+# 22 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/myproject.cpp" 2
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/parameters.h" 1
 
 
 
 
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/ap_int.h" 1
-# 6 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/parameters.h" 2
+# 6 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/parameters.h" 2
 
 
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h" 1
-# 24 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h"
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h" 1
+# 24 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h"
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/stdlib.h" 1 3
-# 25 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h" 2
+# 25 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h" 2
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
-# 26 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h" 2
+# 26 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h" 2
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/fstream" 1 3
 # 36 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/fstream" 3
        
@@ -68699,7 +68702,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 1082 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/fstream" 2 3
-# 27 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h" 2
+# 27 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h" 2
 
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/map" 1 3
 # 58 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/map" 3
@@ -71904,7 +71907,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 63 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/map" 2 3
-# 29 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h" 2
+# 29 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h" 2
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/hls_stream.h" 1
 # 79 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/include/hls_stream.h"
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/queue" 1 3
@@ -79205,7 +79208,7 @@ class stream
 };
 
 }
-# 30 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h" 2
+# 30 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h" 2
 
 namespace nnet {
 
@@ -79409,17 +79412,17 @@ void save_layer_output(data_T *data, const char *layer_name, size_t layer_size) 
         std::fstream out;
         out.open(filename.str(), std::ios::app);
         
-# 232 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h" 3 4
+# 232 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h" 3 4
        ((
-# 232 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h"
+# 232 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h"
        out.is_open()
-# 232 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h" 3 4
+# 232 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h" 3 4
        ) ? static_cast<void> (0) : __assert_fail (
-# 232 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h"
+# 232 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h"
        "out.is_open()"
-# 232 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h" 3 4
-       , "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h", 232, __PRETTY_FUNCTION__))
-# 232 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h"
+# 232 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h" 3 4
+       , "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h", 232, __PRETTY_FUNCTION__))
+# 232 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h"
                             ;
         for(int i = 0; i < layer_size; i++) {
             out << float(data[i]) << " ";
@@ -79451,17 +79454,17 @@ void save_layer_output(hls::stream<data_T> &data, const char *layer_name, size_t
         std::fstream out;
         out.open(filename.str(), std::ios::app);
         
-# 262 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h" 3 4
+# 262 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h" 3 4
        ((
-# 262 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h"
+# 262 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h"
        out.is_open()
-# 262 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h" 3 4
+# 262 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h" 3 4
        ) ? static_cast<void> (0) : __assert_fail (
-# 262 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h"
+# 262 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h"
        "out.is_open()"
-# 262 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h" 3 4
-       , "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h", 262, __PRETTY_FUNCTION__))
-# 262 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_helpers.h"
+# 262 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h" 3 4
+       , "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h", 262, __PRETTY_FUNCTION__))
+# 262 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h"
                             ;
         for (size_t i = 0; i < layer_size / data_T::size; i++) {
             data_T ctype = data.read();
@@ -79615,8 +79618,8 @@ constexpr int pow2(int x){
 }
 
 }
-# 9 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/parameters.h" 2
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_lstm.h" 1
+# 9 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/parameters.h" 2
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_lstm.h" 1
 
 
 
@@ -79626,46 +79629,79 @@ constexpr int pow2(int x){
 # 39 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cstdlib" 3
        
 # 40 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cstdlib" 3
-# 7 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_lstm.h" 2
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_activation.h" 1
-# 23 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_activation.h"
+# 7 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_lstm.h" 2
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_activation.h" 1
+# 23 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_activation.h"
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cmath" 1 3
 # 39 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cmath" 3
        
 # 40 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cmath" 3
-# 24 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_activation.h" 2
+# 24 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_activation.h" 2
 
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_common.h" 1
-# 29 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_common.h"
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_common.h" 1
+# 29 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_common.h"
 namespace nnet {
 
 
-enum io_type {io_parallel = 0, io_serial};
-
-
-enum activ_type {activ_relu = 0, activ_sigmoid, activ_tanh, activ_softmax};
-
-
-typedef ap_fixed<16,4> weight_t_def;
-typedef ap_fixed<16,4> bias_t_def;
-typedef ap_fixed<32,10> accum_t_def;
-
- template<class data_T, int NIN1, int NIN2>
-   void merge(
-       data_T data1[NIN1],
-       data_T data2[NIN2],
-       data_T res[NIN1+NIN2])
+enum io_type {io_parallel = 0, io_serial, io_stream};
+enum strategy { latency, resource };
+# 43 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_common.h"
+ template<class T, int N, class Op>
+ T reduce(const T* x, Op op)
  {
-   for(int ii=0; ii<NIN1; ii++){
-     res[ii] = data1[ii];
-   }
-   for(int ii=0; ii<NIN2; ii++){
-     res[NIN1+ii] = data2[ii];
-   }
+     static constexpr int leftN = pow2(floorlog2(N - 1)) > 0 ? pow2(floorlog2(N - 1)) : 0;
+     static constexpr int rightN = N - leftN > 0 ? N - leftN : 0;
+     if (N == 1){
+         return x[0];
+     }
+     if (N == 2){
+         return op(x[0],x[1]);
+     }
+     return op(reduce<T,leftN,Op>(x, op), reduce<T,rightN,Op>(x+leftN, op));
  }
 
+ template<class T>
+ class Op_add{
+ public:
+  T operator()(T a, T b){
+   return a + b;
+  }
+ };
+
+ template<class T>
+ class Op_and{
+ public:
+  T operator()(T a, T b){
+   return a && b;
+  }
+ };
+
+ template<class T>
+ class Op_or{
+ public:
+  T operator()(T a, T b){
+   return a || b;
+  }
+ };
+
+ template<class T>
+ class Op_max{
+ public:
+     T operator()(T a, T b){
+        return a >= b ? a : b;
+     }
+ };
+
+ template<class T>
+ class Op_min{
+ public:
+     T operator()(T a, T b){
+        return a <= b ? a : b;
+     }
+ };
+
 }
-# 26 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_activation.h" 2
+# 26 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_activation.h" 2
 
 
 
@@ -80380,11 +80416,590 @@ void ternary_tanh(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in])
 }
 
 }
-# 8 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_lstm.h" 2
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_dense.h" 1
-# 26 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_dense.h"
+# 8 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_lstm.h" 2
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense.h" 1
+
+
+
+
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_mult.h" 1
+
+
+
+
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_helpers.h" 1
+# 6 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_mult.h" 2
+
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
-# 27 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_dense.h" 2
+# 8 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_mult.h" 2
+
+namespace nnet {
+
+namespace product{
+
+
+
+
+
+
+template<class x_T, class w_T, class y_T>
+class Product{
+    public:
+    static y_T product(x_T a, w_T w){
+
+#pragma HLS INLINE
+        return a * w;
+    }
+    static void limit(unsigned multiplier_limit) {}
+};
+
+template<class x_T, class w_T, class y_T>
+class both_binary : public Product<x_T, w_T, y_T>{
+    public:
+    static y_T product(x_T a, w_T w){
+
+#pragma HLS INLINE
+        return a == w;
+    }
+};
+
+template<class x_T, class w_T, class y_T>
+class weight_binary : public Product<x_T, w_T, y_T>{
+    public:
+    static y_T product(x_T a, w_T w){
+
+#pragma HLS INLINE
+        return w == 0 ? (x_T) -a : a;
+    }
+};
+
+template<class x_T, class w_T, class y_T>
+class weight_ternary : public Product<x_T, w_T, y_T>{
+    public:
+    static y_T product(x_T a, w_T w){
+
+#pragma HLS INLINE
+        if (w == 0) return (x_T) 0;
+        else if(w == -1) return (x_T) -a;
+        else return (x_T) a;
+    }
+};
+
+template<class x_T, class w_T, class y_T>
+class mult : public Product<x_T, w_T, y_T>{
+    public:
+    static y_T product(x_T a, w_T w){
+
+#pragma HLS INLINE
+        return a * w;
+    }
+    static void limit(unsigned multiplier_limit){
+#pragma HLS INLINE
+#pragma HLS ALLOCATION instances=mul limit=multiplier_limit operation
+    }
+};
+
+template<class x_T, class w_T, class y_T>
+class weight_exponential : public Product<x_T, w_T, y_T>{
+    public:
+    static y_T product(x_T a, w_T w){
+
+#pragma HLS INLINE
+
+        y_T ay = a;
+        y_T y = ay << w.weight;
+
+        return w.sign == 1 ? (y_T) y : (y_T) -y;
+    }
+};
+
+}
+
+template<class data_T, class res_T, typename CONFIG_T>
+inline typename std::enable_if<std::is_same<data_T, ap_uint<1>>::value
+        && std::is_same<typename CONFIG_T::weight_t, ap_uint<1>>::value, ap_int<nnet::ceillog2(CONFIG_T::n_in) + 2>>::type
+cast(typename CONFIG_T::accum_t x){
+  return (ap_int<nnet::ceillog2(CONFIG_T::n_in) + 2>) (x - CONFIG_T::n_in / 2) * 2;
+}
+
+template<class data_T, class res_T, typename CONFIG_T>
+inline typename std::enable_if<(! std::is_same<data_T, ap_uint<1>>::value), res_T>::type
+cast(typename CONFIG_T::accum_t x){
+  return (res_T) x;
+}
+
+}
+# 6 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense.h" 2
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_latency.h" 1
+# 27 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_latency.h"
+# 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
+# 28 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_latency.h" 2
+
+namespace nnet {
+
+template<class data_T, class res_T, typename CONFIG_T>
+void dense_latency(
+    data_T data[CONFIG_T::n_in],
+    res_T res[CONFIG_T::n_out],
+    typename CONFIG_T::weight_t weights[CONFIG_T::n_in*CONFIG_T::n_out],
+    typename CONFIG_T::bias_t biases[CONFIG_T::n_out])
+{
+    data_T cache;
+    typename CONFIG_T::accum_t mult[CONFIG_T::n_in*CONFIG_T::n_out];
+    typename CONFIG_T::accum_t acc[CONFIG_T::n_out];
+
+
+#pragma HLS function_instantiate variable=weights,biases
+
+    if (CONFIG_T::io_type == io_parallel || CONFIG_T::io_type == io_stream){
+
+
+
+#pragma HLS PIPELINE II=CONFIG_T::reuse_factor
+
+
+#pragma HLS ARRAY_PARTITION variable=biases complete
+#pragma HLS ARRAY_PARTITION variable=mult complete
+#pragma HLS ARRAY_PARTITION variable=acc complete
+
+        int multiplier_limit = ceil(float(CONFIG_T::n_in*CONFIG_T::n_out) / float(CONFIG_T::reuse_factor)) - floor(float(CONFIG_T::n_zeros) / float(CONFIG_T::reuse_factor));
+        CONFIG_T::template product<data_T, typename CONFIG_T::weight_t, typename CONFIG_T::accum_t>::limit(multiplier_limit);
+
+    } else if (CONFIG_T::io_type == io_serial){
+
+
+        int cycle_factor = CONFIG_T::n_out / CONFIG_T::reuse_factor;
+        int reused_cycle = ((CONFIG_T::n_out + CONFIG_T::reuse_factor - 1) / CONFIG_T::reuse_factor);
+        if (cycle_factor != reused_cycle) {
+            cycle_factor = CONFIG_T::n_out;
+        }
+
+
+
+
+
+
+#pragma HLS ARRAY_PARTITION variable=weights cyclic factor=cycle_factor
+#pragma HLS ARRAY_PARTITION variable=mult cyclic factor=cycle_factor
+#pragma HLS ARRAY_PARTITION variable=acc complete
+#pragma HLS DATAFLOW
+#pragma HLS STREAM variable=mult depth=1
+#pragma HLS STREAM variable=acc depth=1
+        if (CONFIG_T::store_weights_in_bram){
+#pragma HLS RESOURCE variable=weights core=ROM_2P_BRAM
+        }
+    }
+
+
+    Product1: for(int ii = 0; ii < CONFIG_T::n_in; ii++) {
+        if (CONFIG_T::io_type == io_serial){
+#pragma HLS PIPELINE
+        }
+        cache = data[ii];
+        Product2: for(int jj = 0; jj < CONFIG_T::n_out; jj++) {
+            if (CONFIG_T::io_type == io_serial) {
+                int multiplier_limit = ceil(float(CONFIG_T::n_out) / float(CONFIG_T::reuse_factor));
+                CONFIG_T::template product<data_T, typename CONFIG_T::weight_t, typename CONFIG_T::accum_t>::limit(multiplier_limit);
+            }
+        int index = ii*CONFIG_T::n_out+jj;
+        mult[index] = CONFIG_T::template product<data_T, typename CONFIG_T::weight_t, typename CONFIG_T::accum_t>::product(cache, weights[index]);
+        }
+    }
+
+
+    ResetAccum: for(int iacc = 0; iacc < CONFIG_T::n_out; iacc++) {
+        if (CONFIG_T::io_type == io_serial){
+#pragma HLS UNROLL
+        }
+        acc[iacc] = (typename CONFIG_T::accum_t) biases[iacc];
+    }
+
+
+    Accum1: for(int ii = 0; ii < CONFIG_T::n_in; ii++) {
+        if (CONFIG_T::io_type == io_serial){
+#pragma HLS PIPELINE
+        }
+        Accum2: for(int jj = 0; jj < CONFIG_T::n_out; jj++) {
+        int index = ii*CONFIG_T::n_out+jj;
+        acc[jj] += mult[index];
+        }
+    }
+
+
+    Result: for(int ires = 0; ires < CONFIG_T::n_out; ires++){
+        if (CONFIG_T::io_type == io_serial){
+#pragma HLS UNROLL
+        }
+
+        res[ires] = cast<data_T, res_T, CONFIG_T>(acc[ires]);
+    }
+}
+
+}
+# 7 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense.h" 2
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 1
+# 26 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h"
+# 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
+# 27 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 2
+# 1 "/usr/include/assert.h" 1 3 4
+# 65 "/usr/include/assert.h" 3 4
+
+# 65 "/usr/include/assert.h" 3 4
+extern "C" {
+
+
+extern void __assert_fail (const char *__assertion, const char *__file,
+      unsigned int __line, const char *__function)
+     throw () __attribute__ ((__noreturn__));
+
+
+extern void __assert_perror_fail (int __errnum, const char *__file,
+      unsigned int __line, const char *__function)
+     throw () __attribute__ ((__noreturn__));
+
+
+
+
+extern void __assert (const char *__assertion, const char *__file, int __line)
+     throw () __attribute__ ((__noreturn__));
+
+
+}
+# 28 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 2
+
+
+# 29 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h"
+namespace nnet {
+
+template<class data_T, class res_T, typename CONFIG_T>
+void dense_resource_rf_leq_nin(
+    data_T data[CONFIG_T::n_in],
+    res_T res[CONFIG_T::n_out],
+    typename CONFIG_T::weight_t weights[CONFIG_T::n_in*CONFIG_T::n_out],
+    typename CONFIG_T::bias_t biases[CONFIG_T::n_out]) {
+
+    const int rufactor = CONFIG_T::reuse_factor;
+    const int multfactor = (CONFIG_T::n_in > CONFIG_T::reuse_factor ? CONFIG_T::reuse_factor : CONFIG_T::n_in);
+    const int multiplier_limit = ((CONFIG_T::n_in*CONFIG_T::n_out + multfactor - 1) / multfactor);
+    const int block_factor = ((CONFIG_T::n_in*CONFIG_T::n_out + CONFIG_T::reuse_factor - 1) / CONFIG_T::reuse_factor);
+    const int multscale = multiplier_limit/CONFIG_T::n_out;
+    const int nin = CONFIG_T::n_in;
+    const int nout = CONFIG_T::n_out;
+
+    
+# 46 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   ((
+# 46 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h"
+   (multiplier_limit % nout == 0 || rufactor >= nin) && "The current Reuse Factor is not allowed"
+# 46 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   ) ? static_cast<void> (0) : __assert_fail (
+# 46 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h"
+   "(multiplier_limit % nout == 0 || rufactor >= nin) && \"The current Reuse Factor is not allowed\""
+# 46 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   , "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h", 46, __PRETTY_FUNCTION__))
+# 46 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h"
+                                                                                                         ;
+    
+# 47 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   ((
+# 47 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h"
+   (multiplier_limit == block_factor) && "This function is correct only for RF <= N_IN"
+# 47 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   ) ? static_cast<void> (0) : __assert_fail (
+# 47 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h"
+   "(multiplier_limit == block_factor) && \"This function is correct only for RF <= N_IN\""
+# 47 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   , "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h", 47, __PRETTY_FUNCTION__))
+# 47 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h"
+                                                                                               ;
+
+#pragma HLS function_instantiate variable=weights,biases
+
+#pragma HLS ARRAY_RESHAPE variable=weights block factor=block_factor
+#pragma HLS ARRAY_PARTITION variable=biases complete
+
+    typename CONFIG_T::accum_t acc[CONFIG_T::n_out];
+#pragma HLS ARRAY_PARTITION variable=acc complete
+
+    InitAccum:
+    for (int iacc = 0; iacc < nout; iacc++) {
+#pragma HLS UNROLL
+        acc[iacc] = (typename CONFIG_T::accum_t) biases[iacc];
+    }
+
+    ReuseLoop:
+    for (int ir = 0; ir < rufactor; ir++) {
+#pragma HLS PIPELINE II=1 rewind
+
+        int w_index = ir;
+        int in_index = ir;
+        int out_index = 0;
+        int acc_step = 0;
+
+        MultLoop:
+        for (int im = 0; im < block_factor; im++) {
+#pragma HLS UNROLL
+
+            acc[out_index] += CONFIG_T::template product<data_T, typename CONFIG_T::weight_t, typename CONFIG_T::accum_t>::product(data[in_index], weights[w_index]);
+
+
+            w_index += rufactor;
+
+            in_index += rufactor;
+            if (in_index >= nin) {
+                in_index = ir;
+            }
+
+            if (acc_step + 1 >= multscale) {
+                acc_step = 0;
+                out_index++;
+            } else {
+                acc_step++;
+            }
+        }
+    }
+
+
+    Result:
+    for (int ires = 0; ires < CONFIG_T::n_out; ires++) {
+#pragma HLS UNROLL
+        res[ires] = cast<data_T, res_T, CONFIG_T>(acc[ires]);
+    }
+}
+
+template<class data_T, class res_T, typename CONFIG_T>
+void dense_resource_rf_gt_nin_rem0(
+    data_T data[CONFIG_T::n_in],
+    res_T res[CONFIG_T::n_out],
+    typename CONFIG_T::weight_t weights[CONFIG_T::n_in*CONFIG_T::n_out],
+    typename CONFIG_T::bias_t biases[CONFIG_T::n_out]) {
+
+    const int rufactor = (CONFIG_T::reuse_factor > CONFIG_T::n_in * CONFIG_T::n_out ? CONFIG_T::n_in * CONFIG_T::n_out : CONFIG_T::reuse_factor);
+    const int multfactor = (CONFIG_T::n_in > CONFIG_T::reuse_factor ? CONFIG_T::reuse_factor : CONFIG_T::n_in);
+    const int multiplier_limit = ((CONFIG_T::n_in*CONFIG_T::n_out + multfactor - 1) / multfactor);
+    const int block_factor = ((CONFIG_T::n_in*CONFIG_T::n_out + CONFIG_T::reuse_factor - 1) / CONFIG_T::reuse_factor);
+    const int multscale = multiplier_limit/CONFIG_T::n_out;
+    const int nin = CONFIG_T::n_in;
+    const int nout = CONFIG_T::n_out;
+
+    
+# 118 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   ((
+# 118 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h"
+   (multiplier_limit % nout == 0 || rufactor >= nin) && "The current Reuse Factor is not allowed"
+# 118 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   ) ? static_cast<void> (0) : __assert_fail (
+# 118 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h"
+   "(multiplier_limit % nout == 0 || rufactor >= nin) && \"The current Reuse Factor is not allowed\""
+# 118 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   , "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h", 118, __PRETTY_FUNCTION__))
+# 118 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h"
+                                                                                                         ;
+    
+# 119 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   ((
+# 119 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h"
+   (rufactor > nin && rufactor % nin == 0) && "This function is correct only for RF > N_IN && RF % N_IN == 0"
+# 119 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   ) ? static_cast<void> (0) : __assert_fail (
+# 119 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h"
+   "(rufactor > nin && rufactor % nin == 0) && \"This function is correct only for RF > N_IN && RF % N_IN == 0\""
+# 119 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   , "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h", 119, __PRETTY_FUNCTION__))
+# 119 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h"
+                                                                                                                     ;
+
+#pragma HLS function_instantiate variable=weights,biases
+
+#pragma HLS ARRAY_RESHAPE variable=weights block factor=block_factor
+#pragma HLS ARRAY_PARTITION variable=biases complete
+
+    typename CONFIG_T::accum_t acc[CONFIG_T::n_out];
+#pragma HLS ARRAY_PARTITION variable=acc complete
+
+    InitAccum:
+    for (int iacc = 0; iacc < nout; iacc++) {
+#pragma HLS UNROLL
+        acc[iacc] = (typename CONFIG_T::accum_t) biases[iacc];
+    }
+
+    int w_index;
+    int in_index = 0;
+    int out_index;
+    int outstep = 0;
+    const int outscale = rufactor / nin;
+
+    int outidx[rufactor];
+    IndexLoop:
+    for (int ir = 0; ir < rufactor; ir++) {
+        outidx[ir] = outstep;
+        if ((ir + 1) % nin == 0) {
+            outstep++;
+        }
+    }
+
+    ReuseLoop:
+    for (int ir = 0; ir < rufactor; ir++) {
+#pragma HLS PIPELINE II=1 rewind
+
+        w_index = ir;
+        out_index = outidx[ir] ;
+
+        MultLoop:
+        for (int im = 0; im < block_factor; im++) {
+#pragma HLS UNROLL
+            acc[out_index] += CONFIG_T::template product<data_T, typename CONFIG_T::weight_t, typename CONFIG_T::accum_t>::product(data[in_index], weights[w_index]);
+
+            w_index += rufactor;
+            if (w_index >= CONFIG_T::n_in * CONFIG_T::n_out) break;
+            out_index += outscale;
+        }
+
+        in_index++;
+        if (in_index >= nin) {
+            in_index = 0;
+
+        }
+    }
+
+
+    Result:
+    for (int ires = 0; ires < CONFIG_T::n_out; ires++) {
+#pragma HLS UNROLL
+        res[ires] = cast<data_T, res_T, CONFIG_T>(acc[ires]);
+    }
+}
+
+template<class data_T, class res_T, typename CONFIG_T>
+void dense_resource_rf_gt_nin(
+    data_T data[CONFIG_T::n_in],
+    res_T res[CONFIG_T::n_out],
+    typename CONFIG_T::weight_t weights[CONFIG_T::n_in*CONFIG_T::n_out],
+    typename CONFIG_T::bias_t biases[CONFIG_T::n_out]) {
+
+    const int rufactor = CONFIG_T::reuse_factor;
+    const int multfactor = (CONFIG_T::n_in > CONFIG_T::reuse_factor ? CONFIG_T::reuse_factor : CONFIG_T::n_in);
+    const int multiplier_limit = ((CONFIG_T::n_in*CONFIG_T::n_out + multfactor - 1) / multfactor);
+    const int block_factor = ((CONFIG_T::n_in*CONFIG_T::n_out + CONFIG_T::reuse_factor - 1) / CONFIG_T::reuse_factor);
+    const int multscale = multiplier_limit/CONFIG_T::n_out;
+    const int nin = CONFIG_T::n_in;
+    const int nout = CONFIG_T::n_out;
+
+    
+# 197 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   ((
+# 197 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h"
+   (multiplier_limit % nout == 0 || rufactor >= nin) && "The current Reuse Factor is not allowed"
+# 197 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   ) ? static_cast<void> (0) : __assert_fail (
+# 197 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h"
+   "(multiplier_limit % nout == 0 || rufactor >= nin) && \"The current Reuse Factor is not allowed\""
+# 197 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   , "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h", 197, __PRETTY_FUNCTION__))
+# 197 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h"
+                                                                                                         ;
+    
+# 198 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   ((
+# 198 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h"
+   (rufactor > nin) && "This function is correct only for RF > N_IN"
+# 198 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   ) ? static_cast<void> (0) : __assert_fail (
+# 198 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h"
+   "(rufactor > nin) && \"This function is correct only for RF > N_IN\""
+# 198 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h" 3 4
+   , "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h", 198, __PRETTY_FUNCTION__))
+# 198 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense_resource.h"
+                                                                            ;
+
+#pragma HLS function_instantiate variable=weights,biases
+
+#pragma HLS ARRAY_RESHAPE variable=weights block factor=block_factor
+#pragma HLS ARRAY_PARTITION variable=biases complete
+
+    typename CONFIG_T::accum_t acc[CONFIG_T::n_out];
+#pragma HLS ARRAY_PARTITION variable=acc complete
+
+    InitAccum:
+    for (int iacc = 0; iacc < nout; iacc++) {
+#pragma HLS UNROLL
+        acc[iacc] = (typename CONFIG_T::accum_t) biases[iacc];
+    }
+
+    ReuseLoop:
+    for (int ir = 0; ir < rufactor; ir++) {
+#pragma HLS PIPELINE II=1 rewind
+        typename CONFIG_T::accum_t tmpmult[block_factor];
+#pragma HLS ARRAY_PARTITION variable=tmpmult complete
+
+        MultLoop:
+        for (int im = 0; im < block_factor; im++) {
+#pragma HLS UNROLL
+            int w_index = ir + rufactor * im;
+            int in_index = w_index % nin;
+            if (w_index >= CONFIG_T::n_in*CONFIG_T::n_out) continue;
+            tmpmult[im] = CONFIG_T::template product<data_T, typename CONFIG_T::weight_t, typename CONFIG_T::accum_t>::product(data[in_index], weights[w_index]);
+        }
+
+        typename CONFIG_T::accum_t mult[multiplier_limit];
+#pragma HLS ARRAY_PARTITION variable=mult complete
+
+        ResetMult:
+        for (int imult = 0; imult < multiplier_limit; imult++) {
+#pragma HLS UNROLL
+            mult[imult] = 0;
+        }
+
+        AccumLoop1:
+        for (int im = 0; im < block_factor; im++) {
+#pragma HLS UNROLL
+            int w_index = ir + rufactor * im;
+            int out_index = w_index / multfactor;
+            if (out_index >= multiplier_limit) continue;
+            mult[out_index] += tmpmult[im];
+        }
+
+        AccumLoop2:
+        for (int im = 0; im < multiplier_limit; im++) {
+#pragma HLS UNROLL
+
+
+            acc[im] += mult[im];
+        }
+    }
+
+
+    Result:
+    for (int ires = 0; ires < CONFIG_T::n_out; ires++) {
+#pragma HLS UNROLL
+        res[ires] = cast<data_T, res_T, CONFIG_T>(acc[ires]);
+    }
+}
+
+template<class data_T, class res_T, typename CONFIG_T>
+void dense_resource(
+    data_T data[CONFIG_T::n_in],
+    res_T res[CONFIG_T::n_out],
+    typename CONFIG_T::weight_t weights[CONFIG_T::n_in*CONFIG_T::n_out],
+    typename CONFIG_T::bias_t biases[CONFIG_T::n_out]) {
+
+#pragma HLS INLINE region
+
+    if (CONFIG_T::reuse_factor <= CONFIG_T::n_in) {
+        dense_resource_rf_leq_nin<data_T, res_T, CONFIG_T>(data, res, weights, biases);
+    } else if (CONFIG_T::reuse_factor % CONFIG_T::n_in == 0) {
+        dense_resource_rf_gt_nin_rem0<data_T, res_T, CONFIG_T>(data, res, weights, biases);
+    } else {
+        dense_resource_rf_gt_nin<data_T, res_T, CONFIG_T>(data, res, weights, biases);
+    }
+}
+
+}
+# 8 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense.h" 2
+
+
+# 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
+# 11 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense.h" 2
 
 namespace nnet {
 
@@ -80394,7 +81009,6 @@ struct dense_config
     typedef float bias_t;
     typedef float weight_t;
     typedef float accum_t;
-    typedef float mult_t;
 
 
     static const unsigned n_in = 10;
@@ -80402,12 +81016,30 @@ struct dense_config
 
 
     static const unsigned io_type = io_parallel;
+    static const unsigned strategy = latency;
     static const unsigned reuse_factor = 1;
     static const bool store_weights_in_bram = false;
     static const unsigned n_zeros = 0;
 
+
+    template<class x_T, class y_T, class res_T>
+    using product = nnet::product::mult<x_T, y_T, res_T>;
 };
 
+template<class data_T, class res_T, typename CONFIG_T>
+void dense(
+    data_T data[CONFIG_T::n_in],
+    res_T res[CONFIG_T::n_out],
+    typename CONFIG_T::weight_t weights[CONFIG_T::n_in*CONFIG_T::n_out],
+    typename CONFIG_T::bias_t biases[CONFIG_T::n_out])
+{
+#pragma HLS inline
+    if (CONFIG_T::strategy == nnet::latency) {
+        dense_latency<data_T, res_T, CONFIG_T>(data, res, weights, biases);
+    } else {
+        dense_resource<data_T, res_T, CONFIG_T>(data, res, weights, biases);
+    }
+}
 
 template<class data_T, class res_T, typename CONFIG_T>
 void dense_simple(
@@ -80478,9 +81110,9 @@ void dense_simple(
 }
 
 }
-# 9 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_lstm.h" 2
+# 9 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_lstm.h" 2
 # 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
-# 10 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_lstm.h" 2
+# 10 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_lstm.h" 2
 # 1 "/usr/include/assert.h" 1 3 4
 # 65 "/usr/include/assert.h" 3 4
 
@@ -80505,10 +81137,10 @@ extern void __assert (const char *__assertion, const char *__file, int __line)
 
 
 }
-# 11 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_lstm.h" 2
+# 11 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_lstm.h" 2
 
 
-# 12 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_lstm.h"
+# 12 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_lstm.h"
 namespace nnet {
 
 struct lstm_config
@@ -81005,37 +81637,527 @@ void lstm_05_025(
 }
 
 }
-# 10 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/parameters.h" 2
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_activation.h" 1
-# 11 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/parameters.h" 2
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/nnet_utils/nnet_dense.h" 1
-# 12 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/parameters.h" 2
+# 10 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/parameters.h" 2
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_activation.h" 1
+# 11 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/parameters.h" 2
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_dense.h" 1
+# 12 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/parameters.h" 2
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_repeat_vector.h" 1
 
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/weights/w2.h" 1
-# 10 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/weights/w2.h"
-model_default_t w2[3584];
-# 14 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/parameters.h" 2
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/weights/b2.h" 1
-# 10 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/weights/b2.h"
-model_default_t b2[128];
-# 15 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/parameters.h" 2
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/weights/wr2.h" 1
-# 10 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/weights/wr2.h"
-model_default_t wr2[4096];
-# 16 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/parameters.h" 2
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/weights/w3.h" 1
-# 10 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/weights/w3.h"
-model_default_t w3[320];
-# 17 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/parameters.h" 2
-# 1 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/weights/b3.h" 1
-# 10 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/weights/b3.h"
-model_default_t b3[10];
-# 18 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/parameters.h" 2
+
+
+
+
+
+# 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
+# 8 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_repeat_vector.h" 2
+
+namespace nnet {
+
+struct repeat_vector_config
+{
+
+
+    static const unsigned h = 10;
+    static const unsigned t = 10;
+};
+
+template<class data_T, class res_T, typename CONFIG_T>
+void repeat_vector(
+ data_T input[CONFIG_T::h*CONFIG_T::t],
+ res_T res[CONFIG_T::h*CONFIG_T::t]
+){
+ for (int ii = 0; ii < CONFIG_T::t; ii++) {
+  for (int jj = 0; jj < CONFIG_T::h; jj++) {
+   int index_input = (CONFIG_T::h*CONFIG_T::t)-CONFIG_T::h+jj;
+   int index_res = ii*CONFIG_T::h+jj;
+
+   res[index_res] = (res_T) input[index_input];
+  }
+ }
+}
+}
+# 13 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/parameters.h" 2
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_attention.h" 1
+
+
+
+
+
+
+# 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
+# 8 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_attention.h" 2
+
+namespace nnet {
+
+struct attention_config
+{
+ typedef float mult_t;
+ typedef float accum_t;
+
+
+
+ static const unsigned query_h = 4;
+ static const unsigned query_x = 4;
+ static const unsigned value_h = 4;
+ static const unsigned value_x = 4;
+};
+
+template<class data_T, class res_T, typename CONFIG_T, typename CONFIG_A>
+void attention(
+ data_T query[CONFIG_T::query_h*CONFIG_T::query_x],
+ data_T value[CONFIG_T::value_h*CONFIG_T::value_x],
+ res_T res[CONFIG_T::query_h*CONFIG_T::value_x]
+){
+
+ typename CONFIG_T::mult_t mult[CONFIG_T::query_h*CONFIG_T::query_x*CONFIG_T::value_h];
+ typename CONFIG_T::accum_t acc[CONFIG_T::query_h*CONFIG_T::value_h];
+ typename CONFIG_T::accum_t mult_final[CONFIG_T::query_h*CONFIG_T::value_h*CONFIG_T::value_x];
+ typename CONFIG_T::accum_t acc_final[CONFIG_T::query_h*CONFIG_T::value_x];
+ typename CONFIG_T::mult_t dist[CONFIG_T::query_h*CONFIG_T::value_h];
+
+
+#pragma HLS ARRAY_PARTITION variable=acc complete dim=0
+
+#pragma HLS ARRAY_PARTITION variable=acc_final complete dim=0
+#pragma HLS ARRAY_PARTITION variable=dist complete dim=0
+
+
+
+ for(int ii = 0; ii < CONFIG_T::query_h; ii++) {
+  for (int ff = 0; ff < CONFIG_T::query_x; ff++) {
+   for (int jj = 0; jj < CONFIG_T::value_h; jj++) {
+    int index_query = ii*CONFIG_T::query_x+ff;
+    int index_value = jj*CONFIG_T::value_x+ff;
+    int index_mult = ii*CONFIG_T::query_x*CONFIG_T::value_h+ff*CONFIG_T::value_h+jj;
+
+    mult[index_mult] = query[index_query] * value[index_value];
+   }
+  }
+ }
+
+
+ for (int iacc = 0; iacc < CONFIG_T::query_h*CONFIG_T::value_h; iacc++) {
+  acc[iacc] = 0;
+ }
+
+
+ for (int ii = 0; ii < CONFIG_T::query_h; ii++) {
+  for (int jj = 0; jj < CONFIG_T::value_h; jj++) {
+   for (int ff = 0; ff < CONFIG_T::value_x; ff++) {
+    int index_acc = ii*CONFIG_T::value_h+jj;
+    int index_mult = ii*CONFIG_T::query_x*CONFIG_T::value_h+ff*CONFIG_T::value_h+jj;
+
+    acc[index_acc] += mult[index_mult];
+   }
+  }
+ }
+
+
+ for (int ii = 0; ii < CONFIG_T::query_h; ii++) {
+  typename CONFIG_T::accum_t temp[CONFIG_T::value_h];
+  typename CONFIG_T::accum_t temp_dist[CONFIG_T::value_h];
+
+#pragma HLS ARRAY_PARTITION variable=temp complete dim=0
+#pragma HLS ARRAY_PARTITION variable=temp_dist complete dim=0
+
+
+  for (int itmp = 0; itmp < CONFIG_T::value_h; itmp++) {
+   int index_acc = ii*CONFIG_T::value_h+itmp;
+
+   temp[itmp] = acc[index_acc];
+  }
+
+  softmax<typename CONFIG_T::accum_t, typename CONFIG_T::accum_t, CONFIG_A> (temp, temp_dist);
+
+  for (int jj = 0; jj < CONFIG_T::value_h; jj++) {
+   int index_dist = ii*CONFIG_T::value_h+jj;
+
+   dist[index_dist] = temp_dist[jj];
+  }
+ }
+
+
+ for (int ii = 0; ii < CONFIG_T::query_h; ii++) {
+  for (int jj = 0; jj < CONFIG_T::value_h; jj++) {
+   for (int ff = 0; ff < CONFIG_T::value_x; ff++) {
+    int index_dist = ii*CONFIG_T::value_h+jj;
+    int index_value = jj*CONFIG_T::value_x+ff;
+    int index_mult = ii*CONFIG_T::value_h*CONFIG_T::value_x+jj*CONFIG_T::value_x+ff;
+
+    mult_final[index_mult] = dist[index_dist] * value[index_value];
+   }
+  }
+ }
+
+
+
+ for (int iacc = 0; iacc < CONFIG_T::query_h*CONFIG_T::value_x; iacc++) {
+  acc_final[iacc] = 0;
+ }
+
+
+ for (int ii = 0; ii < CONFIG_T::query_h; ii++) {
+  for (int jj = 0; jj < CONFIG_T::value_x; jj++) {
+   for (int ff = 0; ff < CONFIG_T::value_h; ff++) {
+    int index_acc = ii*CONFIG_T::value_x+jj;
+    int index_mult = ii*CONFIG_T::value_h*CONFIG_T::value_x+ff*CONFIG_T::value_x+jj;
+
+    acc_final[index_acc] += mult_final[index_mult];
+   }
+  }
+ }
+
+
+ for (int ii = 0; ii < CONFIG_T::query_h*CONFIG_T::value_x; ii++) {
+  res[ii] = (res_T) acc_final[ii];
+ }
+}
+}
+# 14 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/parameters.h" 2
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_merge.h" 1
+# 25 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_merge.h"
+# 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
+# 26 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_merge.h" 2
+
+namespace nnet {
+
+struct merge_config
+{
+    static const unsigned n_elem = 10;
+};
+
+struct concat_config {
+    static const unsigned n_elem1_0 = 10;
+    static const unsigned n_elem1_1 = 10;
+    static const unsigned n_elem1_2 = 10;
+    static const unsigned n_elem2_0 = 10;
+    static const unsigned n_elem2_1 = 10;
+    static const unsigned n_elem2_2 = 10;
+
+    static const unsigned axis = -1;
+};
+
+template<class input1_T, class input2_T, class res_T, typename CONFIG_T>
+void add(
+    input1_T data1[CONFIG_T::n_elem],
+ input2_T data2[CONFIG_T::n_elem],
+    res_T res[CONFIG_T::n_elem])
+{
+    for (int ii=0; ii<CONFIG_T::n_elem; ii++) {
+        res[ii] = data1[ii] + data2[ii];
+    }
+}
+
+template<class input1_T, class input2_T, class res_T, typename CONFIG_T>
+void subtract(
+    input1_T data1[CONFIG_T::n_elem],
+ input2_T data2[CONFIG_T::n_elem],
+    res_T res[CONFIG_T::n_elem])
+{
+    for (int ii=0; ii<CONFIG_T::n_elem; ii++) {
+        res[ii] = data1[ii] - data2[ii];
+    }
+}
+
+template<class input1_T, class input2_T, class res_T, typename CONFIG_T>
+void multiply(
+    input1_T data1[CONFIG_T::n_elem],
+ input2_T data2[CONFIG_T::n_elem],
+    res_T res[CONFIG_T::n_elem])
+{
+    for (int ii=0; ii<CONFIG_T::n_elem; ii++) {
+        res[ii] = data1[ii] * data2[ii];
+    }
+}
+
+template<class input1_T, class input2_T, class res_T, typename CONFIG_T>
+void average(
+    input1_T data1[CONFIG_T::n_elem],
+ input2_T data2[CONFIG_T::n_elem],
+    res_T res[CONFIG_T::n_elem])
+{
+    for (int ii=0; ii<CONFIG_T::n_elem; ii++) {
+        res[ii] = data1[ii] * data2[ii] / (res_T) 2;
+    }
+}
+
+template<class input1_T, class input2_T, class res_T, typename CONFIG_T>
+void maximum(
+    input1_T data1[CONFIG_T::n_elem],
+ input2_T data2[CONFIG_T::n_elem],
+    res_T res[CONFIG_T::n_elem])
+{
+    for (int ii=0; ii<CONFIG_T::n_elem; ii++) {
+        res[ii] = (data1[ii] > data2[ii]) ? data1[ii] : data2[ii];
+    }
+}
+
+template<class input1_T, class input2_T, class res_T, typename CONFIG_T>
+void minimum(
+    input1_T data1[CONFIG_T::n_elem],
+ input2_T data2[CONFIG_T::n_elem],
+    res_T res[CONFIG_T::n_elem])
+{
+    for (int ii=0; ii<CONFIG_T::n_elem; ii++) {
+        res[ii] = (data1[ii] < data2[ii]) ? data1[ii] : data2[ii];
+    }
+}
+
+template<class input1_T, class input2_T, class res_T, typename CONFIG_T>
+void concatenate1d(
+    input1_T data1[CONFIG_T::n_elem1_0],
+ input2_T data2[CONFIG_T::n_elem2_0],
+    res_T res[CONFIG_T::n_elem1_0 + CONFIG_T::n_elem2_0])
+{
+    for (int ii=0; ii<CONFIG_T::n_elem1_0; ii++) {
+        res[ii] = data1[ii];
+    }
+    for (int ii=0; ii<CONFIG_T::n_elem2_0; ii++) {
+        res[CONFIG_T::n_elem1_0 + ii] = data2[ii];
+    }
+}
+
+template<class input1_T, class input2_T, class res_T, typename CONFIG_T>
+void concatenate2d_0(
+    input1_T data1[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1],
+ input2_T data2[CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1],
+    res_T res[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 + CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1])
+{
+    for (int ii=0; ii<CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1; ii++) {
+        res[ii] = data1[ii];
+    }
+    for (int ii=0; ii<CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1; ii++) {
+        res[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 + ii] = data2[ii];
+    }
+}
+
+template<class input1_T, class input2_T, class res_T, typename CONFIG_T>
+void concatenate2d_1(
+    input1_T data1[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1],
+ input2_T data2[CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1],
+    res_T res[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 + CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1])
+{
+    for (int ii=0; ii<CONFIG_T::n_elem1_0; ii++) {
+        for (int jj=0; jj<CONFIG_T::n_elem1_1; jj++) {
+            res[ii * (CONFIG_T::n_elem1_1 + CONFIG_T::n_elem2_1) + jj] = data1[ii * CONFIG_T::n_elem1_1 + jj];
+        }
+        for (int jj=0; jj<CONFIG_T::n_elem2_1; jj++) {
+            res[ii * (CONFIG_T::n_elem1_1 + CONFIG_T::n_elem2_1) + CONFIG_T::n_elem1_1 + jj] = data2[ii * CONFIG_T::n_elem2_1 + jj];
+        }
+    }
+}
+
+template<class input1_T, class input2_T, class res_T, typename CONFIG_T>
+void concatenate2d(
+    input1_T data1[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1],
+ input2_T data2[CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1],
+    res_T res[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 + CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1])
+{
+    if (CONFIG_T::axis == 1 || CONFIG_T::axis == -1) {
+        concatenate2d_1<input1_T, input2_T, res_T, CONFIG_T>(data1, data2, res);
+    } else {
+        concatenate2d_0<input1_T, input2_T, res_T, CONFIG_T>(data1, data2, res);
+    }
+}
+
+template<class input1_T, class input2_T, class res_T, typename CONFIG_T>
+void concatenate3d_0(
+input1_T data1[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 * CONFIG_T::n_elem1_2],
+ input2_T data2[CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1 * CONFIG_T::n_elem2_2],
+    res_T res[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 * CONFIG_T::n_elem1_2 + CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1 * CONFIG_T::n_elem2_2])
+{
+    for (int ii=0; ii<CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 * CONFIG_T::n_elem1_2; ii++) {
+        res[ii] = data1[ii];
+    }
+    for (int ii=0; ii<CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1 * CONFIG_T::n_elem2_2; ii++) {
+        res[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 * CONFIG_T::n_elem1_2 + ii] = data2[ii];
+    }
+}
+
+template<class input1_T, class input2_T, class res_T, typename CONFIG_T>
+void concatenate3d_1(
+input1_T data1[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 * CONFIG_T::n_elem1_2],
+ input2_T data2[CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1 * CONFIG_T::n_elem2_2],
+    res_T res[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 * CONFIG_T::n_elem1_2 + CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1 * CONFIG_T::n_elem2_2])
+{
+    for (int ii=0; ii<CONFIG_T::n_elem1_0; ii++) {
+        for (int jj=0; jj<CONFIG_T::n_elem1_1; jj++) {
+            for (int kk=0; kk<CONFIG_T::n_elem1_2; kk++) {
+                int res_idx = ii * (CONFIG_T::n_elem1_1 + CONFIG_T::n_elem2_1) * CONFIG_T::n_elem1_2
+                            + jj * CONFIG_T::n_elem1_2
+                            + kk;
+                int data_idx = ii * CONFIG_T::n_elem1_1 * CONFIG_T::n_elem1_2
+                             + jj * CONFIG_T::n_elem1_2
+                             + kk;
+                res[res_idx] = data1[data_idx];
+            }
+        }
+        for (int jj=0; jj<CONFIG_T::n_elem2_1; jj++) {
+            for (int kk=0; kk<CONFIG_T::n_elem2_2; kk++) {
+                int res_idx = ii * (CONFIG_T::n_elem1_1 + CONFIG_T::n_elem2_1) * CONFIG_T::n_elem1_2
+                            + (jj + CONFIG_T::n_elem1_1) * CONFIG_T::n_elem1_2
+                            + kk;
+                int data_idx = ii * CONFIG_T::n_elem2_1 * CONFIG_T::n_elem2_2
+                             + jj * CONFIG_T::n_elem2_2
+                             + kk;
+                res[res_idx] = data2[data_idx];
+            }
+        }
+    }
+}
+
+template<class input1_T, class input2_T, class res_T, typename CONFIG_T>
+void concatenate3d_2(
+input1_T data1[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 * CONFIG_T::n_elem1_2],
+ input2_T data2[CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1 * CONFIG_T::n_elem2_2],
+    res_T res[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 * CONFIG_T::n_elem1_2 + CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1 * CONFIG_T::n_elem2_2])
+{
+    for (int ii=0; ii<CONFIG_T::n_elem1_0; ii++) {
+        for (int jj=0; jj<CONFIG_T::n_elem1_1; jj++) {
+            for (int kk=0; kk<CONFIG_T::n_elem1_2; kk++) {
+                int res_idx = ii * CONFIG_T::n_elem1_1 * (CONFIG_T::n_elem1_2 + CONFIG_T::n_elem2_2)
+                            + jj * (CONFIG_T::n_elem1_2 + CONFIG_T::n_elem2_2)
+                            + kk;
+                int data_idx = ii * CONFIG_T::n_elem1_1 * CONFIG_T::n_elem1_2
+                             + jj * CONFIG_T::n_elem1_2
+                             + kk;
+                res[res_idx] = data1[data_idx];
+            }
+            for (int kk=0; kk<CONFIG_T::n_elem1_2; kk++) {
+                res[ii * (CONFIG_T::n_elem1_1 + CONFIG_T::n_elem2_1) + CONFIG_T::n_elem1_1 + jj] = data1[ii * CONFIG_T::n_elem2_1 + jj];
+                int res_idx = ii * CONFIG_T::n_elem1_1 * (CONFIG_T::n_elem1_2 + CONFIG_T::n_elem2_2)
+                            + jj * (CONFIG_T::n_elem1_2 + CONFIG_T::n_elem2_2)
+                            + kk + CONFIG_T::n_elem1_2;
+                int data_idx = ii * CONFIG_T::n_elem2_1 * CONFIG_T::n_elem2_2
+                             + jj * CONFIG_T::n_elem2_2
+                             + kk;
+                res[res_idx] = data2[data_idx];
+            }
+        }
+    }
+}
+
+template<class input1_T, class input2_T, class res_T, typename CONFIG_T>
+void concatenate3d(
+    input1_T data1[CONFIG_T::n_elem1[0] * CONFIG_T::n_elem1_1 * CONFIG_T::n_elem1_2],
+ input2_T data2[CONFIG_T::n_elem2[0] * CONFIG_T::n_elem2_1 * CONFIG_T::n_elem2_2],
+    res_T res[CONFIG_T::n_elem1[0] * CONFIG_T::n_elem1_1 * CONFIG_T::n_elem1_2 + CONFIG_T::n_elem2[0] * CONFIG_T::n_elem2_1 * CONFIG_T::n_elem2_2])
+{
+    if (CONFIG_T::axis == 2 || CONFIG_T::axis == -1) {
+        concatenate3d_2<input1_T, input2_T, res_T, CONFIG_T>(data1, data2, res);
+    } else if (CONFIG_T::axis == 1) {
+        concatenate3d_1<input1_T, input2_T, res_T, CONFIG_T>(data1, data2, res);
+    } else {
+        concatenate3d_0<input1_T, input2_T, res_T, CONFIG_T>(data1, data2, res);
+    }
+}
+
+}
+# 15 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/parameters.h" 2
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_time_distributed_dense.h" 1
+
+
+
+
+
+
+# 1 "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/math.h" 1 3
+# 8 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/nnet_utils/nnet_time_distributed_dense.h" 2
+
+namespace nnet {
+
+struct time_distributed_dense_config
+{
+
+    typedef float bias_t;
+    typedef float weight_t;
+    typedef float accum_t;
+
+
+
+    static const unsigned t = 10;
+    static const unsigned n_in = 10;
+    static const unsigned n_out = 10;
+};
+
+template<class data_T, class res_T, typename CONFIG_T, typename CONFIG_A, typename CONFIG_D>
+void td_dense(
+ data_T input[CONFIG_T::n_in*CONFIG_T::t],
+ res_T res[CONFIG_T::n_out*CONFIG_T::t],
+ typename CONFIG_T::weight_t weights[CONFIG_T::n_in*CONFIG_T::n_out],
+ typename CONFIG_T::bias_t biases[CONFIG_T::n_out]
+){
+
+ typename CONFIG_T::accum_t acc[CONFIG_T::n_out*CONFIG_T::t];
+
+ for (int ii = 0; ii < CONFIG_T::t; ii++) {
+
+  typename CONFIG_T::accum_t dense_input[CONFIG_T::n_in];
+
+  for (int jj = 0; jj < CONFIG_T::n_in; jj++) {
+   int index = ii*CONFIG_T::n_in+jj;
+
+   dense_input[jj] = input[index];
+  }
+
+  typename CONFIG_T::accum_t dense_acc[CONFIG_T::n_out];
+  typename CONFIG_T::accum_t tanh_acc[CONFIG_T::n_out];
+
+  dense_simple<typename CONFIG_T::accum_t, typename CONFIG_T::accum_t, CONFIG_D>(dense_input, dense_acc, weights, biases);
+  tanh<typename CONFIG_T::accum_t, typename CONFIG_T::accum_t, CONFIG_A>(dense_acc, tanh_acc);
+
+  for (int jj = 0; jj < CONFIG_T::n_out; jj++) {
+   int index = ii*CONFIG_T::n_out+jj;
+
+   acc[index] = tanh_acc[jj];
+  }
+ }
+
+ for (int ii = 0; ii < CONFIG_T::n_out*CONFIG_T::t; ii++) {
+  res[ii] = (res_T) acc[ii];
+ }
+}
+}
+# 16 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/parameters.h" 2
+
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/weights/lstm_kernel.h" 1
+# 10 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/weights/lstm_kernel.h"
+model_default_t lstm_kernel[32];
+# 18 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/parameters.h" 2
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/weights/lstm_recurrent_kernel.h" 1
+# 10 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/weights/lstm_recurrent_kernel.h"
+model_default_t lstm_recurrent_kernel[256];
+# 19 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/parameters.h" 2
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/weights/lstm_bias.h" 1
+# 10 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/weights/lstm_bias.h"
+model_default_t lstm_bias[32];
+# 20 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/parameters.h" 2
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/weights/lstm_1_kernel.h" 1
+# 10 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/weights/lstm_1_kernel.h"
+model_default_t lstm_1_kernel[256];
+# 21 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/parameters.h" 2
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/weights/lstm_1_recurrent_kernel.h" 1
+# 10 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/weights/lstm_1_recurrent_kernel.h"
+model_default_t lstm_1_recurrent_kernel[256];
+# 22 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/parameters.h" 2
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/weights/lstm_1_bias.h" 1
+# 10 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/weights/lstm_1_bias.h"
+model_default_t lstm_1_bias[32];
+# 23 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/parameters.h" 2
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/weights/time_distributed_kernel.h" 1
+# 10 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/weights/time_distributed_kernel.h"
+model_default_t time_distributed_kernel[16];
+# 24 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/parameters.h" 2
+# 1 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/weights/time_distributed_bias.h" 1
+# 10 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/weights/time_distributed_bias.h"
+model_default_t time_distributed_bias[1];
+# 25 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/parameters.h" 2
 
 struct config1_lstm2 : nnet::lstm_config {
-    static const unsigned length_x = 28;
-    static const unsigned length_h = 32;
-    static const unsigned timestep = 28;
+    static const unsigned length_x = 1;
+    static const unsigned length_h = 8;
+    static const unsigned timestep = 8;
 
     static const unsigned reuse_factor_tail = 1;
 
@@ -81046,7 +82168,7 @@ struct config1_lstm2 : nnet::lstm_config {
 };
 
 struct config2_lstm2 : nnet::activ_config {
-    static const unsigned n_in = 32;
+    static const unsigned n_in = 8;
     typedef ap_fixed<18,8> table_t;
     typedef model_default_t constant_t;
 };
@@ -81060,8 +82182,8 @@ struct config_x_lstm2 : nnet::dense_config {
 
 
     static const unsigned reuse_factor = 1;
-    static const unsigned n_in = 28;
-    static const unsigned n_out = 32 * 4;
+    static const unsigned n_in = 1;
+    static const unsigned n_out = 8 * 4;
 
 };
 
@@ -81074,11 +82196,44 @@ struct config_h_lstm2 : nnet::dense_config {
 
 
     static const unsigned reuse_factor = 1;
-    static const unsigned n_in = 32;
-    static const unsigned n_out = 32 * 4;
+    static const unsigned n_in = 8;
+    static const unsigned n_out = 8 * 4;
 };
 
-struct config3 : nnet::dense_config {
+struct config_tanh_test : nnet::activ_config {
+ static const unsigned n_in = 8;
+ typedef ap_fixed<18,8> table_t;
+ typedef model_default_t constant_t;
+};
+
+struct config3 : nnet::repeat_vector_config {
+
+    static const unsigned h = 8;
+    static const unsigned t = 8;
+
+};
+
+
+struct config1_lstm4 : nnet::lstm_config {
+    static const unsigned length_x = 8;
+    static const unsigned length_h = 8;
+    static const unsigned timestep = 8;
+
+    static const unsigned reuse_factor_tail = 1;
+
+    typedef model_default_t bias_t;
+    typedef model_default_t weight_t;
+    typedef model_default_t accum_t;
+    typedef model_default_t mult_t;
+};
+
+struct config2_lstm4 : nnet::activ_config {
+    static const unsigned n_in = 8;
+    typedef ap_fixed<18,8> table_t;
+    typedef model_default_t constant_t;
+};
+
+struct config_x_lstm4 : nnet::dense_config {
 
     typedef model_default_t weight_t;
     typedef model_default_t bias_t;
@@ -81087,43 +82242,105 @@ struct config3 : nnet::dense_config {
 
 
     static const unsigned reuse_factor = 1;
-    static const unsigned n_in = 1*32;
-    static const unsigned n_out = 10;
+    static const unsigned n_in = 8;
+    static const unsigned n_out = 8 * 4;
 
 };
 
-struct softmax_config5: nnet::activ_config {
-    static const unsigned n_in = 10;
+struct config_h_lstm4 : nnet::dense_config {
+
+    typedef model_default_t weight_t;
+    typedef model_default_t bias_t;
+    typedef model_default_t accum_t;
+    typedef model_default_t mult_t;
+
+
+    static const unsigned reuse_factor = 1;
+    static const unsigned n_in = 8;
+    static const unsigned n_out = 8 * 4;
+};
+
+struct config5 : nnet::attention_config {
+    typedef model_default_t mult_t;
+    typedef model_default_t accum_t;
+
+ static const unsigned query_h = 8;
+ static const unsigned query_x = 8;
+ static const unsigned value_h = 8;
+ static const unsigned value_x = 8;
+};
+
+struct config_softmax5 : nnet::activ_config {
+    static const unsigned n_in = 8;
     typedef ap_fixed<18,8> table_t;
     typedef model_default_t constant_t;
 };
-# 23 "/mnt/ccnas2/bdp/umm20/lstm-hls4ml/new-template-test/firmware/myproject.cpp" 2
+
+struct config_concatenate6 : nnet::concat_config {
+ static const unsigned n_elem1_0 = 8;
+ static const unsigned n_elem1_1 = 8;
+ static const unsigned n_elem2_0 = 8;
+ static const unsigned n_elem2_1 = 8;
+};
+
+struct config7 : nnet::time_distributed_dense_config {
+ typedef model_default_t weight_t;
+    typedef model_default_t bias_t;
+    typedef model_default_t accum_t;
+
+ static const unsigned t = 8;
+ static const unsigned n_in = 8*2;
+ static const unsigned n_out = 1;
+};
+
+struct config_dense7 : nnet::dense_config {
+
+ typedef model_default_t weight_t;
+ typedef model_default_t bias_t;
+ typedef model_default_t accum_t;
+ typedef model_default_t mult_t;
+
+
+ static const unsigned reuse_factor = 1;
+ static const unsigned n_in = 8*2;
+ static const unsigned n_out = 1;
+};
+
+struct config_tanh7 : nnet::activ_config {
+    static const unsigned n_in = 1;
+    typedef ap_fixed<18,8> table_t;
+    typedef model_default_t constant_t;
+};
+# 23 "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/myproject.cpp" 2
 
 void myproject(
-    input_t input_1[28*28],
-    result_t layer5_out[10],
+    input_t input_1[8*1],
+    result_t layer7_out[8*1],
     unsigned short &const_size_in_1,
     unsigned short &const_size_out_1
 ) {
 
 
-
-#pragma HLS ARRAY_PARTITION variable=layer5_out complete dim=0
-#pragma HLS INTERFACE ap_vld port=input_1,layer5_out
+#pragma HLS ARRAY_RESHAPE variable=input_1 complete dim=0
+#pragma HLS ARRAY_PARTITION variable=layer7_out complete dim=0
+#pragma HLS INTERFACE ap_vld port=input_1,layer7_out
 #pragma HLS DATAFLOW
 
-    const_size_in_1 = 28*28;
-    const_size_out_1 = 10;
+    const_size_in_1 = 8*1;
+    const_size_out_1 = 8*1;
 
 
     static bool loaded_weights = false;
     if (!loaded_weights) {
 
-        nnet::load_weights_from_txt<model_default_t, 3584>(w2, "w2.txt");
-        nnet::load_weights_from_txt<model_default_t, 128>(b2, "b2.txt");
-        nnet::load_weights_from_txt<model_default_t, 4096>(wr2, "wr2.txt");
-        nnet::load_weights_from_txt<model_default_t, 320>(w3, "w3.txt");
-        nnet::load_weights_from_txt<model_default_t, 10>(b3, "b3.txt");
+        nnet::load_weights_from_txt<model_default_t, 32>(lstm_kernel, "lstm_kernel.txt");
+        nnet::load_weights_from_txt<model_default_t, 256>(lstm_recurrent_kernel, "lstm_recurrent_kernel.txt");
+        nnet::load_weights_from_txt<model_default_t, 32>(lstm_bias, "lstm_bias.txt");
+        nnet::load_weights_from_txt<model_default_t, 256>(lstm_1_kernel, "lstm_1_kernel.txt");
+        nnet::load_weights_from_txt<model_default_t, 256>(lstm_1_recurrent_kernel, "lstm_1_recurrent_kernel.txt");
+        nnet::load_weights_from_txt<model_default_t, 32>(lstm_1_bias, "lstm_1_bias.txt");
+        nnet::load_weights_from_txt<model_default_t, 16>(time_distributed_kernel, "time_distributed_kernel.txt");
+        nnet::load_weights_from_txt<model_default_t, 1>(time_distributed_bias, "time_distributed_bias.txt");
         loaded_weights = true;
     }
 
@@ -81132,18 +82349,26 @@ void myproject(
 
 
 
-
-    const int lstm2_factor = 28;
-#pragma HLS ARRAY_PARTITION variable=input_1 cyclic factor=lstm2_factor
-
-    layer2_t layer2_out[1*32];
+    layer2_t layer2_out[8*8];
 #pragma HLS ARRAY_PARTITION variable=layer2_out complete dim=0
-    nnet::lstm_05_025<input_t, input_t, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2>(input_1, w2, wr2, b2, layer2_out);
+    nnet::lstm_06_025<input_t, input_t, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2>(input_1, lstm_kernel, lstm_recurrent_kernel, lstm_bias, layer2_out);
 
-    layer3_t layer3_out[10];
+    layer3_t layer3_out[8*8];
 #pragma HLS ARRAY_PARTITION variable=layer3_out complete dim=0
-    nnet::dense_simple<layer2_t, layer3_t, config3>(layer2_out, layer3_out, w3, b3);
+    nnet::repeat_vector<layer2_t, layer3_t, config3>(layer2_out, layer3_out);
 
-    nnet::softmax<layer3_t, result_t, softmax_config5>(layer3_out, layer5_out);
+    layer4_t layer4_out[8*8];
+#pragma HLS ARRAY_PARTITION variable=layer4_out complete dim=0
+    nnet::lstm_06_025<layer3_t, layer4_t, config1_lstm4, config2_lstm4, config_x_lstm4, config_h_lstm4>(layer3_out, lstm_1_kernel, lstm_1_recurrent_kernel, lstm_1_bias, layer4_out);
+
+    layer5_t layer5_out[8*8];
+#pragma HLS ARRAY_PARTITION variable=layer5_out complete dim=0
+    nnet::attention<layer4_t, layer5_t, config5, config_softmax5>(layer4_out, layer2_out, layer5_out);
+
+    layer6_t layer6_out[8*8*2];
+#pragma HLS ARRAY_PARTITION variable=layer6_out complete dim=0
+    nnet::concatenate2d_1<layer4_t, layer5_t, layer6_t, config_concatenate6>(layer4_out, layer5_out, layer6_out);
+
+    nnet::td_dense<layer6_t, result_t, config7, config_tanh7, config_dense7>(layer6_out, layer7_out, time_distributed_kernel, time_distributed_bias);
 
 }

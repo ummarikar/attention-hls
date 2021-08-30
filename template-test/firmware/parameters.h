@@ -14,9 +14,6 @@
 #include "nnet_utils/nnet_merge.h"
 #include "nnet_utils/nnet_time_distributed_dense.h"
 
-#include "weights/w2.h"
-#include "weights/wr2.h"
-#include "weights/b2.h"
 #include "weights/lstm_kernel.h"
 #include "weights/lstm_recurrent_kernel.h"
 #include "weights/lstm_bias.h"
@@ -70,6 +67,12 @@ struct config_h_lstm2 : nnet::dense_config {
     static const unsigned reuse_factor = 1;
     static const unsigned n_in = N_LAYER_2;
     static const unsigned n_out = N_LAYER_2 * 4;
+};
+
+struct config_tanh_test : nnet::activ_config {
+	static const unsigned n_in = N_LAYER_2;
+	typedef ap_fixed<18,8> table_t;
+	typedef model_default_t constant_t;
 };
 
 struct config3 : nnet::repeat_vector_config {

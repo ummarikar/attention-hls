@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'lstm_tail_02'" level="0">
-<item name = "Date">Sat Apr 24 23:32:29 2021
+<item name = "Date">Mon Aug 30 19:38:20 2021
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">myproject_prj</item>
@@ -31,7 +31,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="call_ret_hard_tanh_fu_23485">hard_tanh, 0, 0, 0 ns, 0 ns, 1, 1, function</column>
+<column name="call_ret_hard_tanh_fu_1861">hard_tanh, 0, 0, 0 ns, 0 ns, 1, 1, function</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

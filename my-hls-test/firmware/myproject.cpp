@@ -23,32 +23,32 @@
 
 void myproject(
     input_t input_1[N_INPUT_1_1*N_INPUT_2_1],
-    result_t layer2_out[N_LOOP_2*N_LAYER_2], result_t layer2_out[N_LOOP_2*N_LAYER_2], result_t layer2_out[N_LOOP_2*N_LAYER_2],
+    result_t layer3_out[N_SEQUENCE_OUT_2*N_LAYER_2], result_t layer3_out[N_SEQUENCE_OUT_2*N_LAYER_2], result_t layer3_out[N_SEQUENCE_OUT_2*N_LAYER_2],
     unsigned short &const_size_in_1,
     unsigned short &const_size_out_1, unsigned short &const_size_out_2, unsigned short &const_size_out_3
 ) {
 
     //hls-fpga-machine-learning insert IO
     #pragma HLS ARRAY_RESHAPE variable=input_1 complete dim=0
-    #pragma HLS ARRAY_PARTITION variable=layer2_out complete dim=0
-    #pragma HLS ARRAY_PARTITION variable=layer2_out complete dim=0
-    #pragma HLS ARRAY_PARTITION variable=layer2_out complete dim=0
-    #pragma HLS INTERFACE ap_vld port=input_1,layer2_out,layer2_out,layer2_out 
+    #pragma HLS ARRAY_PARTITION variable=layer3_out complete dim=0
+    #pragma HLS ARRAY_PARTITION variable=layer3_out complete dim=0
+    #pragma HLS ARRAY_PARTITION variable=layer3_out complete dim=0
+    #pragma HLS INTERFACE ap_vld port=input_1,layer3_out,layer3_out,layer3_out 
     #pragma HLS PIPELINE 
 
     const_size_in_1 = N_INPUT_1_1*N_INPUT_2_1;
-    const_size_out_1 = N_LOOP_2*N_LAYER_2;
-    const_size_out_2 = N_LOOP_2*N_LAYER_2;
-    const_size_out_3 = N_LOOP_2*N_LAYER_2;
+    const_size_out_1 = N_SEQUENCE_OUT_2*N_LAYER_2;
+    const_size_out_2 = N_SEQUENCE_OUT_2*N_LAYER_2;
+    const_size_out_3 = N_SEQUENCE_OUT_2*N_LAYER_2;
 
 #ifndef __SYNTHESIS__
     static bool loaded_weights = false;
     if (!loaded_weights) {
         //hls-fpga-machine-learning insert load weights
-        nnet::load_weights_from_txt<model_default_t, 128>(w2, "w2.txt");
-        nnet::load_weights_from_txt<model_default_t, 128>(b2, "b2.txt");
-        nnet::load_weights_from_txt<model_default_t, 4096>(wr2, "wr2.txt");
-        nnet::load_weights_from_txt<model_default_t, 128>(br2, "br2.txt");
+        nnet::load_weights_from_txt<lstm_default_t, 32>(w2, "w2.txt");
+        nnet::load_weights_from_txt<lstm_default_t, 32>(b2, "b2.txt");
+        nnet::load_weights_from_txt<lstm_default_t, 256>(wr2, "wr2.txt");
+        nnet::load_weights_from_txt<lstm_default_t, 32>(br2, "br2.txt");
         loaded_weights = true;
     }
 #endif
@@ -59,6 +59,10 @@ void myproject(
 
     //hls-fpga-machine-learning insert layers
 
-    nnet::lstm_loop<input_t, input_t, config2>(input_1, layer2_out, w2, wr2, b2, br2);
+    layer2_t layer2_out[N_SEQUENCE_OUT_2*N_LAYER_2];
+    #pragma HLS ARRAY_PARTITION variable=layer2_out complete dim=0
+    nnet::lstm_stack<input_t, layer2_t, config2>(input_1, layer2_out, w2, wr2, b2, br2); // lstm
+
+    nnet::tanh<layer2_t, result_t, tanh_config3>(layer2_out, layer3_out); // lstm_tanh
 
 }

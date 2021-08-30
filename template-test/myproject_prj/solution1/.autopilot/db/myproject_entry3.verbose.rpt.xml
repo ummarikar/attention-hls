@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'myproject_entry3'" level="0">
-<item name = "Date">Tue Apr 13 22:36:02 2021
+<item name = "Date">Mon Aug 30 19:39:32 2021
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">myproject_prj</item>
@@ -114,9 +114,9 @@
 <column name="ap_ready">out, 1, ap_ctrl_hs, myproject.entry3, return value</column>
 <column name="start_out">out, 1, ap_ctrl_hs, myproject.entry3, return value</column>
 <column name="start_write">out, 1, ap_ctrl_hs, myproject.entry3, return value</column>
-<column name="input_1_V">in, 12544, ap_vld, input_1_V, pointer</column>
+<column name="input_1_V">in, 128, ap_vld, input_1_V, pointer</column>
 <column name="input_1_V_ap_vld">in, 1, ap_vld, input_1_V, pointer</column>
-<column name="input_1_V_out_din">out, 12544, ap_fifo, input_1_V_out, pointer</column>
+<column name="input_1_V_out_din">out, 128, ap_fifo, input_1_V_out, pointer</column>
 <column name="input_1_V_out_full_n">in, 1, ap_fifo, input_1_V_out, pointer</column>
 <column name="input_1_V_out_write">out, 1, ap_fifo, input_1_V_out, pointer</column>
 </table>

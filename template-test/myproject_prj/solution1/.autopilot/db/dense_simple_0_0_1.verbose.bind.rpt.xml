@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'dense_simple_0_0_1'" level="0">
-<item name = "Date">Sat Apr 24 23:33:39 2021
+<item name = "Date">Mon Aug 30 19:37:43 2021
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">myproject_prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">5.00 ns, 4.123 ns, 0.62 ns</column>
+<column name="ap_clk">5.00 ns, 3.570 ns, 0.62 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">2, 2, 10.000 ns, 10.000 ns, 1, 1, function</column>
+<column name="">1, 1, 5.000 ns, 5.000 ns, 1, 1, function</column>
 </table>
 </item>
 <item name = "Detail">

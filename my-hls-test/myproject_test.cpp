@@ -20,13 +20,21 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include <map>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
 #include "firmware/myproject.h"
+#include "firmware/nnet_utils/nnet_helpers.h"
 
 #define CHECKPOINT 5000
+
+namespace nnet {
+    bool trace_enabled = true;
+    std::map<std::string, void *> *trace_outputs = NULL;
+    size_t trace_type_size = sizeof(double);
+}
 
 int main(int argc, char **argv)
 {
@@ -49,7 +57,6 @@ int main(int argc, char **argv)
   if (fin.is_open() && fpr.is_open()) {
     while ( std::getline(fin,iline) && std::getline (fpr,pline) ) {
       if (e % CHECKPOINT == 0) std::cout << "Processing input " << e << std::endl;
-      e++;
       char* cstr=const_cast<char*>(iline.c_str());
       char* current;
       std::vector<float> in;
@@ -67,67 +74,44 @@ int main(int argc, char **argv)
       }
 
       //hls-fpga-machine-learning insert data
-      std::vector<float>::const_iterator in_begin = in.cbegin();
-      std::vector<float>::const_iterator in_end;
       input_t input_1[N_INPUT_1_1*N_INPUT_2_1];
-      in_end = in_begin + (N_INPUT_1_1*N_INPUT_2_1);
-      std::copy(in_begin, in_end, input_1);
-      in_begin = in_end;
-      result_t layer2_out[N_LOOP_2*N_LAYER_2]{};
-      std::fill_n(layer2_out, 640, 0.);
-      result_t layer2_out[N_LOOP_2*N_LAYER_2]{};
-      std::fill_n(layer2_out, 640, 0.);
-      result_t layer2_out[N_LOOP_2*N_LAYER_2]{};
-      std::fill_n(layer2_out, 640, 0.);
+      nnet::copy_data<float, input_t, 0, N_INPUT_1_1*N_INPUT_2_1>(in, input_1);
+      result_t layer3_out[N_SEQUENCE_OUT_2*N_LAYER_2];
+      result_t layer3_out[N_SEQUENCE_OUT_2*N_LAYER_2];
+      result_t layer3_out[N_SEQUENCE_OUT_2*N_LAYER_2];
 
       //hls-fpga-machine-learning insert top-level-function
       unsigned short size_in1,size_out1,size_out2,size_out3;
-      myproject(input_1,layer2_out,layer2_out,layer2_out,size_in1,size_out1,size_out2,size_out3);
-
-      //hls-fpga-machine-learning insert tb-output
-      for(int i = 0; i < N_LOOP_2*N_LAYER_2; i++) {
-        fout << layer2_out[i] << " ";
-      }
-      fout << std::endl;
-      for(int i = 0; i < N_LOOP_2*N_LAYER_2; i++) {
-        fout << layer2_out[i] << " ";
-      }
-      fout << std::endl;
-      for(int i = 0; i < N_LOOP_2*N_LAYER_2; i++) {
-        fout << layer2_out[i] << " ";
-      }
-      fout << std::endl;
+      myproject(input_1,layer3_out,layer3_out,layer3_out,size_in1,size_out1,size_out2,size_out3);
 
       if (e % CHECKPOINT == 0) {
         std::cout << "Predictions" << std::endl;
         //hls-fpga-machine-learning insert predictions
-        for(int i = 0; i < N_LOOP_2*N_LAYER_2; i++) {
+        for(int i = 0; i < N_SEQUENCE_OUT_2*N_LAYER_2; i++) {
           std::cout << pr[i] << " ";
         }
         std::cout << std::endl;
-        for(int i = 0; i < N_LOOP_2*N_LAYER_2; i++) {
+        for(int i = 0; i < N_SEQUENCE_OUT_2*N_LAYER_2; i++) {
           std::cout << pr[i] << " ";
         }
         std::cout << std::endl;
-        for(int i = 0; i < N_LOOP_2*N_LAYER_2; i++) {
+        for(int i = 0; i < N_SEQUENCE_OUT_2*N_LAYER_2; i++) {
           std::cout << pr[i] << " ";
         }
         std::cout << std::endl;
         std::cout << "Quantized predictions" << std::endl;
         //hls-fpga-machine-learning insert quantized
-        for(int i = 0; i < N_LOOP_2*N_LAYER_2; i++) {
-          std::cout << layer2_out[i] << " ";
-        }
-        std::cout << std::endl;
-        for(int i = 0; i < N_LOOP_2*N_LAYER_2; i++) {
-          std::cout << layer2_out[i] << " ";
-        }
-        std::cout << std::endl;
-        for(int i = 0; i < N_LOOP_2*N_LAYER_2; i++) {
-          std::cout << layer2_out[i] << " ";
-        }
-        std::cout << std::endl;
+        nnet::print_result<result_t, N_SEQUENCE_OUT_2*N_LAYER_2>(layer3_out, std::cout, true);
+        nnet::print_result<result_t, N_SEQUENCE_OUT_2*N_LAYER_2>(layer3_out, std::cout, true);
+        nnet::print_result<result_t, N_SEQUENCE_OUT_2*N_LAYER_2>(layer3_out, std::cout, true);
       }
+      e++;
+
+      //hls-fpga-machine-learning insert tb-output
+      nnet::print_result<result_t, N_SEQUENCE_OUT_2*N_LAYER_2>(layer3_out, fout);
+      nnet::print_result<result_t, N_SEQUENCE_OUT_2*N_LAYER_2>(layer3_out, fout);
+      nnet::print_result<result_t, N_SEQUENCE_OUT_2*N_LAYER_2>(layer3_out, fout);
+
     }
     fin.close();
     fpr.close();
@@ -135,45 +119,24 @@ int main(int argc, char **argv)
     std::cout << "INFO: Unable to open input/predictions file, using default input." << std::endl;
     //hls-fpga-machine-learning insert zero
     input_t input_1[N_INPUT_1_1*N_INPUT_2_1];
-    std::fill_n(input_1, N_INPUT_1_1*N_INPUT_2_1, 0.);
-    result_t layer2_out[N_LOOP_2*N_LAYER_2]{};
-      std::fill_n(layer2_out, 640, 0.);
-    result_t layer2_out[N_LOOP_2*N_LAYER_2]{};
-      std::fill_n(layer2_out, 640, 0.);
-    result_t layer2_out[N_LOOP_2*N_LAYER_2]{};
-      std::fill_n(layer2_out, 640, 0.);
+    nnet::fill_zero<input_t, N_INPUT_1_1*N_INPUT_2_1>(input_1);
+    result_t layer3_out[N_SEQUENCE_OUT_2*N_LAYER_2];
+    result_t layer3_out[N_SEQUENCE_OUT_2*N_LAYER_2];
+    result_t layer3_out[N_SEQUENCE_OUT_2*N_LAYER_2];
 
     //hls-fpga-machine-learning insert top-level-function
     unsigned short size_in1,size_out1,size_out2,size_out3;
-    myproject(input_1,layer2_out,layer2_out,layer2_out,size_in1,size_out1,size_out2,size_out3);
+    myproject(input_1,layer3_out,layer3_out,layer3_out,size_in1,size_out1,size_out2,size_out3);
 
     //hls-fpga-machine-learning insert output
-    for(int i = 0; i < N_LOOP_2*N_LAYER_2; i++) {
-      std::cout << layer2_out[i] << " ";
-    }
-    std::cout << std::endl;
-    for(int i = 0; i < N_LOOP_2*N_LAYER_2; i++) {
-      std::cout << layer2_out[i] << " ";
-    }
-    std::cout << std::endl;
-    for(int i = 0; i < N_LOOP_2*N_LAYER_2; i++) {
-      std::cout << layer2_out[i] << " ";
-    }
-    std::cout << std::endl;
+    nnet::print_result<result_t, N_SEQUENCE_OUT_2*N_LAYER_2>(layer3_out, std::cout, true);
+    nnet::print_result<result_t, N_SEQUENCE_OUT_2*N_LAYER_2>(layer3_out, std::cout, true);
+    nnet::print_result<result_t, N_SEQUENCE_OUT_2*N_LAYER_2>(layer3_out, std::cout, true);
 
     //hls-fpga-machine-learning insert tb-output
-    for(int i = 0; i < N_LOOP_2*N_LAYER_2; i++) {
-      fout << layer2_out[i] << " ";
-    }
-    fout << std::endl;
-    for(int i = 0; i < N_LOOP_2*N_LAYER_2; i++) {
-      fout << layer2_out[i] << " ";
-    }
-    fout << std::endl;
-    for(int i = 0; i < N_LOOP_2*N_LAYER_2; i++) {
-      fout << layer2_out[i] << " ";
-    }
-    fout << std::endl;
+    nnet::print_result<result_t, N_SEQUENCE_OUT_2*N_LAYER_2>(layer3_out, fout);
+    nnet::print_result<result_t, N_SEQUENCE_OUT_2*N_LAYER_2>(layer3_out, fout);
+    nnet::print_result<result_t, N_SEQUENCE_OUT_2*N_LAYER_2>(layer3_out, fout);
   }
 
   fout.close();

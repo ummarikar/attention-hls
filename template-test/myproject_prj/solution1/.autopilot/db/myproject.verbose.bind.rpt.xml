@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'myproject'" level="0">
-<item name = "Date">Sat Apr 24 23:35:08 2021
+<item name = "Date">Mon Aug 30 19:39:24 2021
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">myproject_prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">5.00 ns, 4.320 ns, 0.62 ns</column>
+<column name="ap_clk">5.00 ns, 4.375 ns, 0.62 ns</column>
 </table>
 </item>
 </section>
@@ -24,18 +24,22 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">324, 325, 1.620 us, 1.625 us, 308, 308, dataflow</column>
+<column name="">7807, 7807, 39.035 us, 39.035 us, 7321, 7321, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_Loop_LSTM_TS_proc234_fu_114">Loop_LSTM_TS_proc234, 313, 314, 1.565 us, 1.570 us, 308, 308, loop rewind(delay=0 initiation interval(s))</column>
-<column name="grp_softmax_fu_176">softmax, 6, 6, 30.000 ns, 30.000 ns, 1, 1, function</column>
-<column name="grp_dense_simple_0_0_1_fu_214">dense_simple_0_0_1, 2, 2, 10.000 ns, 10.000 ns, 1, 1, function</column>
-<column name="call_ret2_Block_preheader_i_0_fu_250">Block_preheader_i_0, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
-<column name="call_ln0_Block_preheader139_s_fu_286">Block_preheader139_s, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="grp_concatenate2d_1_fu_1298">concatenate2d_1, 153, 153, 0.765 us, 0.765 us, 153, 153, none</column>
+<column name="grp_attention_fu_1430">attention, 7320, 7320, 36.600 us, 36.600 us, 7320, 7320, none</column>
+<column name="grp_repeat_vector_fu_1630">repeat_vector, 81, 81, 0.405 us, 0.405 us, 81, 81, none</column>
+<column name="grp_Loop_TIMESTEP_proc34_1_fu_1650">Loop_TIMESTEP_proc34_1, 75, 76, 0.375 us, 0.380 us, 72, 72, loop rewind(delay=0 initiation interval(s))</column>
+<column name="grp_Loop_TIMESTEP_proc34_fu_1784">Loop_TIMESTEP_proc34, 78, 79, 0.390 us, 0.395 us, 72, 72, loop rewind(delay=0 initiation interval(s))</column>
+<column name="grp_td_dense_fu_1855">td_dense, 314, 314, 1.570 us, 1.570 us, 314, 314, none</column>
+<column name="call_ln0_Block_preheader138_s_fu_2005">Block_preheader138_s, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ln335_myproject_entry3_fu_2013">myproject_entry3, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ln35_myproject_entry343_fu_2020">myproject_entry343, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

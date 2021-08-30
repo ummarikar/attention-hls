@@ -34,9 +34,9 @@ void attention(
 	typename CONFIG_T::accum_t acc_final[CONFIG_T::query_h*CONFIG_T::value_x];
 	typename CONFIG_T::mult_t dist[CONFIG_T::query_h*CONFIG_T::value_h];
 
-	#pragma HLS ARRAY_PARTITION variable=mult complete dim=0
+	//#pragma HLS ARRAY_PARTITION variable=mult complete dim=0
 	#pragma HLS ARRAY_PARTITION variable=acc complete dim=0
-	#pragma HLS ARRAY_PARTITION variable=mult_final complete dim=0
+	//#pragma HLS ARRAY_PARTITION variable=mult_final complete dim=0
 	#pragma HLS ARRAY_PARTITION variable=acc_final complete dim=0
 	#pragma HLS ARRAY_PARTITION variable=dist complete dim=0
 

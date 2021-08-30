@@ -20,9 +20,9 @@
 #ifndef MYPROJECT_H_
 #define MYPROJECT_H_
 
-#include <complex>
 #include "ap_int.h"
 #include "ap_fixed.h"
+#include "hls_stream.h"
 
 #include "defines.h"
 
@@ -30,7 +30,7 @@
 // Prototype of top level function for C-synthesis
 void myproject(
     input_t input_1[N_INPUT_1_1*N_INPUT_2_1],
-    result_t layer2_out[N_LOOP_2*N_LAYER_2], result_t layer2_out[N_LOOP_2*N_LAYER_2], result_t layer2_out[N_LOOP_2*N_LAYER_2],
+    result_t layer3_out[N_SEQUENCE_OUT_2*N_LAYER_2], result_t layer3_out[N_SEQUENCE_OUT_2*N_LAYER_2], result_t layer3_out[N_SEQUENCE_OUT_2*N_LAYER_2],
     unsigned short &const_size_in_1,
     unsigned short &const_size_out_1, unsigned short &const_size_out_2, unsigned short &const_size_out_3
 );

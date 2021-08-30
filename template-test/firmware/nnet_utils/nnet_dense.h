@@ -1,27 +1,11 @@
-//
-//    rfnoc-hls-neuralnet: Vivado HLS code for neural-net building blocks
-//
-//    Copyright (C) 2017 EJ Kreinar
-//
-//    This program is free software: you can redistribute it and/or modify
-//    it under the terms of the GNU General Public License as published by
-//    the Free Software Foundation, either version 3 of the License, or
-//    (at your option) any later version.
-//
-//    This program is distributed in the hope that it will be useful,
-//    but WITHOUT ANY WARRANTY; without even the implied warranty of
-//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//    GNU General Public License for more details.
-//
-//    You should have received a copy of the GNU General Public License
-//    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-//
-
 #ifndef NNET_DENSE_H_
 #define NNET_DENSE_H_
 
 #include "nnet_common.h"
-//#include "nnet_helpers.h"
+#include "nnet_mult.h"
+#include "nnet_dense_latency.h"
+#include "nnet_dense_resource.h"
+#include "nnet_helpers.h"
 #include "hls_stream.h"
 #include <math.h>
 
@@ -33,7 +17,6 @@ struct dense_config
     typedef float bias_t;
     typedef float weight_t;
     typedef float accum_t;
-    typedef float mult_t;
 
     // Layer Sizes
     static const unsigned n_in = 10;
@@ -41,12 +24,30 @@ struct dense_config
 
     // Resource reuse info
     static const unsigned io_type = io_parallel;
+    static const unsigned strategy = latency; 
     static const unsigned reuse_factor = 1;
     static const bool store_weights_in_bram = false;
     static const unsigned n_zeros = 0;
     // partitioning arrays cyclically to go with roll factors?
+    // Product function to use
+    template<class x_T, class y_T, class res_T>
+    using product = nnet::product::mult<x_T, y_T, res_T>;
 };
 
+template<class data_T, class res_T, typename CONFIG_T>
+void dense(
+    data_T    data[CONFIG_T::n_in],
+    res_T     res[CONFIG_T::n_out],
+    typename CONFIG_T::weight_t  weights[CONFIG_T::n_in*CONFIG_T::n_out],
+    typename CONFIG_T::bias_t    biases[CONFIG_T::n_out])
+{
+    #pragma HLS inline
+    if (CONFIG_T::strategy == nnet::latency) {
+        dense_latency<data_T, res_T, CONFIG_T>(data, res, weights, biases);
+    } else {
+        dense_resource<data_T, res_T, CONFIG_T>(data, res, weights, biases);
+    }
+}
 
 template<class data_T, class res_T, typename CONFIG_T>
 void dense_simple(

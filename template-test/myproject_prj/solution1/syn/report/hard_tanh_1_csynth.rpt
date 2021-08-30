@@ -1,0 +1,164 @@
+
+
+================================================================
+== Vivado HLS Report for 'hard_tanh_1'
+================================================================
+* Date:           Mon Aug 30 19:40:01 2021
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: kintexu
+* Target device:  xcku115-flvb2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 1.468 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        0|        0|   0 ns   |   0 ns   |    1|    1| function |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+--------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT  | URAM|
++---------------------+---------+-------+---------+--------+-----+
+|DSP                  |        -|      -|        -|       -|    -|
+|Expression           |        -|      -|        0|     416|    -|
+|FIFO                 |        -|      -|        -|       -|    -|
+|Instance             |        -|      -|        -|       -|    -|
+|Memory               |        -|      -|        -|       -|    -|
+|Multiplexer          |        -|      -|        -|       -|    -|
+|Register             |        -|      -|        -|       -|    -|
++---------------------+---------+-------+---------+--------+-----+
+|Total                |        0|      0|        0|     416|    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available SLR        |     2160|   2760|   663360|  331680|    0|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization SLR (%)  |        0|      0|        0|   ~0   |  100|
++---------------------+---------+-------+---------+--------+-----+
+|Available            |     4320|   5520|  1326720|  663360|    0|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization (%)      |        0|      0|        0|   ~0   |    0|
++---------------------+---------+-------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------+----------+-------+---+----+------------+------------+
+    |        Variable Name       | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------+----------+-------+---+----+------------+------------+
+    |icmp_ln1494_1_fu_130_p2     |   icmp   |      0|  0|  13|          16|          11|
+    |icmp_ln1494_2_fu_168_p2     |   icmp   |      0|  0|  13|          16|          11|
+    |icmp_ln1494_3_fu_206_p2     |   icmp   |      0|  0|  13|          16|          11|
+    |icmp_ln1494_4_fu_244_p2     |   icmp   |      0|  0|  13|          16|          11|
+    |icmp_ln1494_5_fu_282_p2     |   icmp   |      0|  0|  13|          16|          11|
+    |icmp_ln1494_6_fu_320_p2     |   icmp   |      0|  0|  13|          16|          11|
+    |icmp_ln1494_7_fu_358_p2     |   icmp   |      0|  0|  13|          16|          11|
+    |icmp_ln1494_fu_92_p2        |   icmp   |      0|  0|  13|          16|          11|
+    |icmp_ln1495_1_fu_136_p2     |   icmp   |      0|  0|  13|          16|          12|
+    |icmp_ln1495_2_fu_174_p2     |   icmp   |      0|  0|  13|          16|          12|
+    |icmp_ln1495_3_fu_212_p2     |   icmp   |      0|  0|  13|          16|          12|
+    |icmp_ln1495_4_fu_250_p2     |   icmp   |      0|  0|  13|          16|          12|
+    |icmp_ln1495_5_fu_288_p2     |   icmp   |      0|  0|  13|          16|          12|
+    |icmp_ln1495_6_fu_326_p2     |   icmp   |      0|  0|  13|          16|          12|
+    |icmp_ln1495_7_fu_364_p2     |   icmp   |      0|  0|  13|          16|          12|
+    |icmp_ln1495_fu_98_p2        |   icmp   |      0|  0|  13|          16|          12|
+    |or_ln1494_10_fu_230_p2      |    or    |      0|  0|   2|           1|           1|
+    |or_ln1494_11_fu_268_p2      |    or    |      0|  0|   2|           1|           1|
+    |or_ln1494_12_fu_306_p2      |    or    |      0|  0|   2|           1|           1|
+    |or_ln1494_13_fu_344_p2      |    or    |      0|  0|   2|           1|           1|
+    |or_ln1494_14_fu_382_p2      |    or    |      0|  0|   2|           1|           1|
+    |or_ln1494_8_fu_154_p2       |    or    |      0|  0|   2|           1|           1|
+    |or_ln1494_9_fu_192_p2       |    or    |      0|  0|   2|           1|           1|
+    |or_ln1494_fu_116_p2         |    or    |      0|  0|   2|           1|           1|
+    |select_ln1494_16_fu_122_p3  |  select  |      0|  0|  12|           1|          12|
+    |select_ln1494_17_fu_146_p3  |  select  |      0|  0|  12|           1|          11|
+    |select_ln1494_18_fu_160_p3  |  select  |      0|  0|  12|           1|          12|
+    |select_ln1494_19_fu_184_p3  |  select  |      0|  0|  12|           1|          11|
+    |select_ln1494_20_fu_198_p3  |  select  |      0|  0|  12|           1|          12|
+    |select_ln1494_21_fu_222_p3  |  select  |      0|  0|  12|           1|          11|
+    |select_ln1494_22_fu_236_p3  |  select  |      0|  0|  12|           1|          12|
+    |select_ln1494_23_fu_260_p3  |  select  |      0|  0|  12|           1|          11|
+    |select_ln1494_24_fu_274_p3  |  select  |      0|  0|  12|           1|          12|
+    |select_ln1494_25_fu_298_p3  |  select  |      0|  0|  12|           1|          11|
+    |select_ln1494_26_fu_312_p3  |  select  |      0|  0|  12|           1|          12|
+    |select_ln1494_27_fu_336_p3  |  select  |      0|  0|  12|           1|          11|
+    |select_ln1494_28_fu_350_p3  |  select  |      0|  0|  12|           1|          12|
+    |select_ln1494_29_fu_374_p3  |  select  |      0|  0|  12|           1|          11|
+    |select_ln1494_30_fu_388_p3  |  select  |      0|  0|  12|           1|          12|
+    |select_ln1494_fu_108_p3     |  select  |      0|  0|  12|           1|          11|
+    +----------------------------+----------+-------+---+----+------------+------------+
+    |Total                       |          |      0|  0| 416|         280|         376|
+    +----------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------+-----+-----+------------+---------------+--------------+
+|   RTL Ports   | Dir | Bits|  Protocol  | Source Object |    C Type    |
++---------------+-----+-----+------------+---------------+--------------+
+|ap_ready       | out |    1| ap_ctrl_hs |  hard_tanh.1  | return value |
+|ap_return_0    | out |   12| ap_ctrl_hs |  hard_tanh.1  | return value |
+|ap_return_1    | out |   12| ap_ctrl_hs |  hard_tanh.1  | return value |
+|ap_return_2    | out |   12| ap_ctrl_hs |  hard_tanh.1  | return value |
+|ap_return_3    | out |   12| ap_ctrl_hs |  hard_tanh.1  | return value |
+|ap_return_4    | out |   12| ap_ctrl_hs |  hard_tanh.1  | return value |
+|ap_return_5    | out |   12| ap_ctrl_hs |  hard_tanh.1  | return value |
+|ap_return_6    | out |   12| ap_ctrl_hs |  hard_tanh.1  | return value |
+|ap_return_7    | out |   12| ap_ctrl_hs |  hard_tanh.1  | return value |
+|data_0_V_read  |  in |   16|   ap_none  | data_0_V_read |    scalar    |
+|data_1_V_read  |  in |   16|   ap_none  | data_1_V_read |    scalar    |
+|data_2_V_read  |  in |   16|   ap_none  | data_2_V_read |    scalar    |
+|data_3_V_read  |  in |   16|   ap_none  | data_3_V_read |    scalar    |
+|data_4_V_read  |  in |   16|   ap_none  | data_4_V_read |    scalar    |
+|data_5_V_read  |  in |   16|   ap_none  | data_5_V_read |    scalar    |
+|data_6_V_read  |  in |   16|   ap_none  | data_6_V_read |    scalar    |
+|data_7_V_read  |  in |   16|   ap_none  | data_7_V_read |    scalar    |
++---------------+-----+-----+------------+---------------+--------------+
+

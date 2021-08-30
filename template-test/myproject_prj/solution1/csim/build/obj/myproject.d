@@ -26,14 +26,16 @@ obj/myproject.o: ../../../../firmware/myproject.cpp \
  ../../../../firmware/nnet_utils/nnet_activation.h \
  ../../../../firmware/nnet_utils/nnet_common.h \
  ../../../../firmware/nnet_utils/nnet_dense.h \
+ ../../../../firmware/nnet_utils/nnet_mult.h \
+ ../../../../firmware/nnet_utils/nnet_helpers.h \
+ ../../../../firmware/nnet_utils/nnet_dense_latency.h \
+ ../../../../firmware/nnet_utils/nnet_dense_resource.h \
  ../../../../firmware/nnet_utils/nnet_activation.h \
  ../../../../firmware/nnet_utils/nnet_dense.h \
  ../../../../firmware/nnet_utils/nnet_repeat_vector.h \
  ../../../../firmware/nnet_utils/nnet_attention.h \
  ../../../../firmware/nnet_utils/nnet_merge.h \
  ../../../../firmware/nnet_utils/nnet_time_distributed_dense.h \
- ../../../../firmware/weights/w2.h ../../../../firmware/weights/wr2.h \
- ../../../../firmware/weights/b2.h \
  ../../../../firmware/weights/lstm_kernel.h \
  ../../../../firmware/weights/lstm_recurrent_kernel.h \
  ../../../../firmware/weights/lstm_bias.h \
