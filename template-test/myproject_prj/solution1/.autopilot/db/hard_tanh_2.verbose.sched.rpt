@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'hard_tanh_2'
 ================================================================
-* Date:           Mon Aug 30 20:45:44 2021
+* Date:           Mon Aug 30 22:34:20 2021
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
 * Project:        myproject_prj
@@ -166,7 +166,7 @@ Target clock period: 5ns, clock uncertainty: 0.625ns.
 The critical path consists of the following:
 	wire read on port 'data_7_V_read' (firmware/nnet_utils/nnet_activation.h:331) [9]  (0 ns)
 	'icmp' operation ('icmp_ln1494_7', firmware/nnet_utils/nnet_activation.h:346) [69]  (1.1 ns)
-	'or' operation ('or_ln1494_14', firmware/nnet_utils/nnet_activation.h:346) [73]  (0 ns)
+	'select' operation ('select_ln1494_29', firmware/nnet_utils/nnet_activation.h:346) [72]  (0 ns)
 	'select' operation ('res[7].V', firmware/nnet_utils/nnet_activation.h:346) [74]  (0.372 ns)
 
 

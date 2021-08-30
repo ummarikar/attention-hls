@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'myproject'" level="0">
-<item name = "Date">Mon Aug 30 20:47:14 2021
+<item name = "Date">Mon Aug 30 22:35:50 2021
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">myproject_prj</item>
@@ -34,7 +34,7 @@
 <column name="grp_concatenate2d_1_fu_1298">concatenate2d_1, 153, 153, 0.765 us, 0.765 us, 153, 153, none</column>
 <column name="grp_attention_fu_1430">attention, 7320, 7320, 36.600 us, 36.600 us, 7320, 7320, none</column>
 <column name="grp_repeat_vector_fu_1630">repeat_vector, 81, 81, 0.405 us, 0.405 us, 81, 81, none</column>
-<column name="grp_Loop_TIMESTEP_proc34_1_fu_1650">Loop_TIMESTEP_proc34_1, 75, 76, 0.375 us, 0.380 us, 72, 72, loop rewind(delay=0 initiation interval(s))</column>
+<column name="grp_Loop_TIMESTEP_proc34_1_fu_1650">Loop_TIMESTEP_proc34_1, 77, 78, 0.385 us, 0.390 us, 72, 72, loop rewind(delay=0 initiation interval(s))</column>
 <column name="grp_Loop_TIMESTEP_proc34_fu_1784">Loop_TIMESTEP_proc34, 78, 79, 0.390 us, 0.395 us, 72, 72, loop rewind(delay=0 initiation interval(s))</column>
 <column name="grp_td_dense_fu_1855">td_dense, 314, 314, 1.570 us, 1.570 us, 314, 314, none</column>
 <column name="call_ln0_Block_preheader138_s_fu_2005">Block_preheader138_s, 0, 0, 0 ns, 0 ns, 0, 0, none</column>

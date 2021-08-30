@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Loop_TIMESTEP_proc34'" level="0">
-<item name = "Date">Mon Aug 30 20:47:31 2021
+<item name = "Date">Mon Aug 30 22:36:07 2021
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">myproject_prj</item>
@@ -57,22 +57,22 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 1228, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">12, 273, 7601, 12899, -</column>
+<column name="Instance">12, 284, 7757, 12640, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 992, -</column>
 <column name="Register">-, -, 3604, -, -</column>
 <specialColumn name="Available SLR">2160, 2760, 663360, 331680, 0</specialColumn>
-<specialColumn name="Utilization SLR (%)">~0, 9, 1, 4, 100</specialColumn>
+<specialColumn name="Utilization SLR (%)">~0, 10, 1, 4, 100</specialColumn>
 <specialColumn name="Available">4320, 5520, 1326720, 663360, 0</specialColumn>
-<specialColumn name="Utilization (%)">~0, 4, ~0, 2, 0</specialColumn>
+<specialColumn name="Utilization (%)">~0, 5, ~0, 2, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
-<column name="grp_dense_simple_0_0_0_0_1_fu_1227">dense_simple_0_0_0_0_1, 0, 221, 4752, 6864, 0</column>
-<column name="grp_dense_simple_0_0_1_fu_1321">dense_simple_0_0_1, 0, 28, 967, 1209, 0</column>
+<column name="grp_dense_simple_0_0_0_0_1_fu_1227">dense_simple_0_0_0_0_1, 0, 230, 4880, 6617, 0</column>
+<column name="grp_dense_simple_0_0_1_fu_1321">dense_simple_0_0_1, 0, 30, 995, 1197, 0</column>
 <column name="call_ret4_hard_tanh_3_fu_1378">hard_tanh_3, 0, 0, 0, 416, 0</column>
 <column name="grp_lstm_tail_02_1_fu_1326">lstm_tail_02_1, 0, 24, 1633, 840, 0</column>
 <column name="grp_sigmoid_1_fu_1279">sigmoid_1, 4, 0, 83, 1190, 0</column>
@@ -112,7 +112,7 @@
 <column name="lshr_ln203_fu_1480_p2">lshr, 0, 0, 423, 128, 128</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state17_pp0_stage6_iter1">or, 0, 0, 2, 1, 1</column>
-<column name="empty_346_fu_1398_p2">or, 0, 0, 7, 7, 4</column>
+<column name="empty_347_fu_1398_p2">or, 0, 0, 7, 7, 4</column>
 <column name="select_ln203_1_fu_1454_p3">select, 0, 0, 127, 1, 128</column>
 <column name="select_ln203_2_fu_1462_p3">select, 0, 0, 8, 1, 8</column>
 <column name="select_ln203_fu_1446_p3">select, 0, 0, 8, 1, 8</column>

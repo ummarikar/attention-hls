@@ -774,9 +774,9 @@ set RtlHierarchyInfo {[
 					{"Name" : "layer2_out_63_V_out_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "sigmoid_table18", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_sigmoid_1_fu_1293", "Port" : "sigmoid_table18"},
+					{"ID" : "6", "SubInstance" : "grp_sigmoid_1_fu_1307", "Port" : "sigmoid_table18"},
 					{"ID" : "2", "SubInstance" : "grp_sigmoid_1_fu_1279", "Port" : "sigmoid_table18"},
-					{"ID" : "6", "SubInstance" : "grp_sigmoid_1_fu_1307", "Port" : "sigmoid_table18"}]}]},
+					{"ID" : "4", "SubInstance" : "grp_sigmoid_1_fu_1293", "Port" : "sigmoid_table18"}]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_dense_simple_0_0_0_0_1_fu_1227", "Parent" : "0",
 		"CDFG" : "dense_simple_0_0_0_0_1",
 		"Protocol" : "ap_ctrl_hs",

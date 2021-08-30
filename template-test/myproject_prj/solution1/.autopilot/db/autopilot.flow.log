@@ -1,9 +1,9 @@
-INFO-FLOW: Workspace /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1 opened at Mon Aug 30 20:43:12 BST 2021
+INFO-FLOW: Workspace /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1 opened at Mon Aug 30 22:31:50 BST 2021
 Execute     config_array_partition -maximum_size 4096 
 INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
 Execute     set_part xcku115-flvb2104-2-i 
 Execute       ap_part_info -name xcku115-flvb2104-2-i -data single -quiet 
-Command       ap_part_info done; 6.16 sec.
+Command       ap_part_info done; 5.98 sec.
 Execute       ap_part_info -name xcku115-flvb2104-2-i -data info 
 Execute       add_library xilinx/kintexu/kintexu:xcku115:-flvb2104:-2-i 
 Execute         get_default_platform 
@@ -49,8 +49,8 @@ Execute             source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/techno
 Execute             source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
 Execute             source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute             source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command           ap_source done; 0.19 sec.
-Command         ap_source done; 0.19 sec.
+Command           ap_source done; 0.17 sec.
+Command         ap_source done; 0.17 sec.
 Execute         ap_part_info -data single -name xcku115-flvb2104-2-i 
 Execute         ap_part_info -name xcku115-flvb2104-2-i -data resources 
 Execute         ap_part_info -name xcku115-flvb2104-2-i -data info 
@@ -76,7 +76,7 @@ Execute           source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technolo
 INFO: [HLS 200-10] Setting target device to 'xcku115-flvb2104-2-i'
 Execute       ap_part_info -name xcku115-flvb2104-2-i -data info 
 Execute       get_default_platform 
-Command     set_part done; 6.68 sec.
+Command     set_part done; 6.51 sec.
 Execute     create_clock -period 5 -name default 
 Execute       config_clock -quiet -name default -period 5 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
@@ -89,10 +89,10 @@ Execute       is_encrypted /mnt/ccnas2/bdp/umm20/attention-hls/template-test/fir
 Execute       is_xip /mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/myproject.cpp 
 Execute       ap_part_info -name xcku115-flvb2104-2-i -data info 
 Execute       source run_sim.tcl 
-Command       ap_source done; 0.83 sec.
+Command       ap_source done; 0.85 sec.
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-Command     csim_design done; 8.07 sec.
+Command     csim_design done; 7.98 sec.
 Execute     csynth_design 
 Execute       get_config_compile -dump_cfg 
 Execute       get_config_compile -effort 
@@ -119,29 +119,29 @@ INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
 Execute         clang  -fno-limit-debug-info -gcc-toolchain "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "firmware/myproject.cpp"   -std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/autopilot" -I "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp" 
 INFO-FLOW: exec /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E firmware/myproject.cpp -std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/autopilot -I /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp
-Command         clang done; 2.13 sec.
+Command         clang done; 2.3 sec.
 Execute         tidy_31 xilinx-xfmat-array-geometry /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp std=c++0x 
 INFO-FLOW: exec /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
-Command         tidy_31 done; 1.24 sec.
+Command         tidy_31 done; 1.22 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute         clang -syntaxcheck -src /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/gcc" -hls  -std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/autopilot" -I "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp"  -o "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/useless.bc"  
 INFO-FLOW: exec /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/gcc -hls -std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/autopilot -I /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/useless.bc
-Command         clang done; 2.31 sec.
-INFO-FLOW: Done: GCC PP time: 5.7 seconds per iteration
+Command         clang done; 2.3 sec.
+INFO-FLOW: Done: GCC PP time: 5.8 seconds per iteration
 Execute         source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute         source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
 Execute           source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/try/try.tcl 
 Execute         list_core -type functional_unit 
 Execute         tidy_31 xilinx-systemc-detector /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp std=c++0x -directive=/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
-Command         tidy_31 done; 1.17 sec.
+Command         tidy_31 done; 1.14 sec.
 INFO-FLOW: Running: tidy-3.1 CDT preprocess
 Execute         tidy_31 xilinx-directive2pragma /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp std=c++0x -directive=/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/all.directive.json -quiet -fix-errors /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
-Command         tidy_31 done; 1.1 sec.
+Command         tidy_31 done; 1.07 sec.
 Execute         get_config_dataflow -strict_mode 
 Execute         ap_eval exec -ignorestderr /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.myproject.pp.0.cpp.diag.yml /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 -fstrict-dataflow > /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.myproject.pp.0.cpp.out.log 2> /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.myproject.pp.0.cpp.err.log 
-Command         ap_eval done; 1.33 sec.
+Command         ap_eval done; 1.25 sec.
 Execute         source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
 Execute           source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
 WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/nnet_utils/nnet_dense_latency.h:64:9
@@ -161,40 +161,40 @@ Execute         send_msg_by_id WARNING @200-471@%s%s 13 firmware/myproject.cpp
 WARNING: [HLS 200-471] Dataflow form checks found 13 issue(s) in file firmware/myproject.cpp
 Execute         tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp std=c++0x 
 Execute           ap_eval exec -ignorestderr /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/tidy-3.1.myproject.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 > /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/tidy-3.1.myproject.pp.0.cpp.out.log 2> /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/tidy-3.1.myproject.pp.0.cpp.err.log 
-Command           ap_eval done; 2.1 sec.
+Command           ap_eval done; 2.08 sec.
 Execute           ap_eval exec -ignorestderr /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 > /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/xilinx-legacy-rewriter.myproject.pp.0.cpp.out.log 2> /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/xilinx-legacy-rewriter.myproject.pp.0.cpp.err.log 
-Command           ap_eval done; 0.98 sec.
-Command         tidy_31 done; 3.11 sec.
-INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 5.7 seconds per iteration
+Command           ap_eval done; 0.99 sec.
+Command         tidy_31 done; 3.12 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 5.5 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute         tidy_31 xilinx-ssdm-intrinsics-arguments /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.pragma.1.cpp std=c++0x 
 INFO-FLOW: exec /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.pragma.1.cpp -- -std=c++0x -fhls -ferror-limit=0
-Command         tidy_31 done; 2.65 sec.
+Command         tidy_31 done; 2.44 sec.
 Execute         ap_part_info -name xcku115-flvb2104-2-i -data info 
 INFO-FLOW: Processing labels
 Execute         clang -src /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.pragma.2.cpp"  -std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/autopilot" -I "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.bc" 
 INFO-FLOW: exec /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.pragma.2.cpp -std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/autopilot -I /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.bc
-Command         clang done; 2.5 sec.
+Command         clang done; 2.42 sec.
 INFO-FLOW: Linking Debug ...
 Execute         llvm-ld /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.g.bc -hls-opt -except-internalize myproject -L/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/lib -lhlsm -lhlsmc++ -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/a.g 
-Command         llvm-ld done; 2.46 sec.
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:27 ; elapsed = 00:00:37 . Memory (MB): peak = 1051.270 ; gain = 529.180 ; free physical = 158289 ; free virtual = 554534
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:27 ; elapsed = 00:00:37 . Memory (MB): peak = 1051.270 ; gain = 529.180 ; free physical = 158289 ; free virtual = 554534
+Command         llvm-ld done; 2.4 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 1054.238 ; gain = 532.148 ; free physical = 155680 ; free virtual = 553899
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 1054.238 ; gain = 532.148 ; free physical = 155680 ; free virtual = 553899
 Execute         get_config_sdx -target 
 Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute           cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 Execute           transform -promote-dbg-pointer /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/a.pp.bc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/a.pp.0.bc -f 
-Command           transform done; 0.57 sec.
+Command           transform done; 0.56 sec.
 Execute           llvm-ld /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/lib -lfloatconversion -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/a.g.0 
-Command           llvm-ld done; 3.01 sec.
+Command           llvm-ld done; 3.24 sec.
 INFO-FLOW: Running Standard Transforms...
 Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top myproject -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/a.g.0.bc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
 INFO: [HLS 200-489] Unrolling loop 'INPUT_X' (firmware/nnet_utils/nnet_lstm.h:382) in function 'void nnet::lstm_06_025<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2>(FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*, FORWARD_REFERENCE*)' completely with a factor of 1.
 INFO: [XFORM 203-603] Inlining function 'nnet::lstm_06_025<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2>' into 'myproject' (firmware/myproject.cpp:62).
 INFO: [XFORM 203-603] Inlining function 'nnet::lstm_06_025<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config1_lstm4, config2_lstm4, config_x_lstm4, config_h_lstm4>' into 'myproject' (firmware/myproject.cpp:70).
-Command           transform done; 5.08 sec.
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:35 ; elapsed = 00:00:46 . Memory (MB): peak = 1243.270 ; gain = 721.180 ; free physical = 158304 ; free virtual = 554511
+Command           transform done; 5.14 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:35 ; elapsed = 00:00:45 . Memory (MB): peak = 1134.242 ; gain = 612.152 ; free physical = 155430 ; free virtual = 553684
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute           transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/a.g.1.bc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/a.g.2.prechk.bc -f 
@@ -210,11 +210,11 @@ INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::de
 INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_h_lstm4>' (firmware/nnet_utils/nnet_dense.h:78) automatically.
 INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::lstm_tail_02<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config1_lstm4, config2_lstm4>' (firmware/nnet_utils/nnet_lstm.h:95) automatically.
 INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_dense7>' (firmware/nnet_utils/nnet_dense.h:78) automatically.
-Command           transform done; 1.74 sec.
+Command           transform done; 1.75 sec.
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute           transform -syn-check /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/a.g.2.prechk.bc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-Command           transform done; 0.22 sec.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:37 ; elapsed = 00:00:48 . Memory (MB): peak = 1251.793 ; gain = 729.703 ; free physical = 157960 ; free virtual = 554248
+Command           transform done; 0.2 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:37 ; elapsed = 00:00:47 . Memory (MB): peak = 1274.125 ; gain = 752.035 ; free physical = 155349 ; free virtual = 553609
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/a.g.1.bc to /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
@@ -440,7 +440,7 @@ INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extrac
 	 'nnet::attention<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config5, config_softmax5>'
 	 'nnet::concatenate2d_1<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_concatenate6>'
 	 'nnet::td_dense<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config7, config_tanh7, config_dense7>'.
-Command           transform done; 24.55 sec.
+Command           transform done; 24.63 sec.
 INFO-FLOW: Presyn 2...
 Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/a.o.1.tmp.bc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_activation.h:293:18) to (firmware/nnet_utils/nnet_activation.h:326:1) in function 'nnet::tanh<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_tanh7>'... converting 3 basic blocks.
@@ -453,11 +453,11 @@ INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_activation.h:331:23) to (firmware/nnet_utils/nnet_activation.h:351:1) in function 'nnet::hard_tanh<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_lstm2>'... converting 17 basic blocks.
 INFO: [XFORM 203-11] Balancing expressions in function 'nnet::softmax<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_softmax5>' (firmware/nnet_utils/nnet_activation.h:231:18)...104 expression(s) balanced.
 INFO: [XFORM 203-11] Balancing expressions in function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_x_lstm4>.0.0' (firmware/nnet_utils/nnet_dense.h:70:27)...256 expression(s) balanced.
-INFO: [XFORM 203-11] Balancing expressions in function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_h_lstm4>.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0' (firmware/nnet_utils/nnet_dense.h:70:27)...256 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_h_lstm4>.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0' (firmware/nnet_utils/nnet_dense.h:70:27)...254 expression(s) balanced.
 INFO: [XFORM 203-11] Balancing expressions in function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_h_lstm2>.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0' (firmware/nnet_utils/nnet_dense.h:70:27)...256 expression(s) balanced.
 INFO: [XFORM 203-11] Balancing expressions in function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_dense7>.0.0' (firmware/nnet_utils/nnet_dense.h:70:1)...16 expression(s) balanced.
-Command           transform done; 22.36 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:23 ; elapsed = 00:01:35 . Memory (MB): peak = 1459.270 ; gain = 937.180 ; free physical = 157525 ; free virtual = 553931
+Command           transform done; 21.19 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:22 ; elapsed = 00:01:33 . Memory (MB): peak = 1443.270 ; gain = 921.180 ; free physical = 155238 ; free virtual = 553510
 INFO-FLOW: Building ssdm...
 Execute           transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/a.o.2.bc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 WARNING: [XFORM 203-631] Renaming function 'nnet::td_dense<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config7, config_tanh7, config_dense7>' to 'td_dense' (firmware/nnet_utils/nnet_time_distributed_dense.h:33:53)
@@ -490,11 +490,11 @@ INFO: [XFORM 203-531] Rewinding loop 'TIMESTEP' (firmware/nnet_utils/nnet_lstm.h
 INFO: [XFORM 203-531] Rewinding loop 'TIMESTEP' (firmware/nnet_utils/nnet_lstm.h:377) in function 'Loop_TIMESTEP_proc34'.
 WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'TIMESTEP' in function 'Loop_TIMESTEP_proc34.1'.
 WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'TIMESTEP' in function 'Loop_TIMESTEP_proc34'.
-Command           transform done; 47.97 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:02:11 ; elapsed = 00:02:23 . Memory (MB): peak = 1843.270 ; gain = 1321.180 ; free physical = 156753 ; free virtual = 553267
+Command           transform done; 48.7 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:02:10 ; elapsed = 00:02:22 . Memory (MB): peak = 1827.270 ; gain = 1305.180 ; free physical = 154789 ; free virtual = 553062
 INFO-FLOW: Finish building internal data model.
-Command         opt_and_import_c done; 105.59 sec.
-Command       elaborate done; 126.34 sec.
+Command         opt_and_import_c done; 105.49 sec.
+Command       elaborate done; 125.91 sec.
 Execute       autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
@@ -514,7 +514,6 @@ WARNING: [SYN 201-103] Legalizing function name 'dense_simple.0.0.0.0' to 'dense
 WARNING: [SYN 201-103] Legalizing function name 'hard_tanh.1' to 'hard_tanh_1'.
 WARNING: [SYN 201-103] Legalizing function name 'Loop_TIMESTEP_proc34.1' to 'Loop_TIMESTEP_proc34_1'.
 WARNING: [SYN 201-103] Legalizing function name 'dense_simple.0.0.2' to 'dense_simple_0_0_2'.
-Command         ap_set_top_model done; 0.12 sec.
 Execute         get_model_list myproject -filter all-wo-channel -topdown 
 Execute         preproc_iomode -model myproject 
 Execute         preproc_iomode -model td_dense 
@@ -728,7 +727,7 @@ Execute         set_default_model myproject.entry3
 Execute         schedule -model myproject.entry3 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 143.69 seconds; current allocated memory: 908.439 MB.
+INFO: [HLS 200-111]  Elapsed time: 142.94 seconds; current allocated memory: 907.912 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject_entry3.verbose.sched.rpt 
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject_entry3.sched.adb -f 
 INFO-FLOW: Finish scheduling myproject.entry3.
@@ -740,7 +739,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 908.496 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 907.969 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject_entry3.verbose.bind.rpt 
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject_entry3.bind.adb -f 
 INFO-FLOW: Finish binding myproject.entry3.
@@ -751,7 +750,7 @@ Execute         set_default_model myproject.entry343
 Execute         schedule -model myproject.entry343 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 908.544 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 908.033 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject_entry343.verbose.sched.rpt 
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject_entry343.sched.adb -f 
 INFO-FLOW: Finish scheduling myproject.entry343.
@@ -763,7 +762,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 908.605 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 908.094 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject_entry343.verbose.bind.rpt 
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject_entry343.bind.adb -f 
 INFO-FLOW: Finish binding myproject.entry343.
@@ -774,7 +773,7 @@ Execute         set_default_model Block_.preheader138.
 Execute         schedule -model Block_.preheader138. 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 908.621 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 908.110 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/Block_preheader138_s.verbose.sched.rpt 
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/Block_preheader138_s.sched.adb -f 
 INFO-FLOW: Finish scheduling Block_.preheader138..
@@ -786,7 +785,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 908.658 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 908.147 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/Block_preheader138_s.verbose.bind.rpt 
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/Block_preheader138_s.bind.adb -f 
 INFO-FLOW: Finish binding Block_.preheader138..
@@ -799,12 +798,12 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'dense_simple.0.0.1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.2 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.25 seconds; current allocated memory: 909.257 MB.
+Command         schedule done; 0.17 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 908.717 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_1.verbose.sched.rpt 
-Command         syn_report done; 0.17 sec.
+Command         syn_report done; 0.15 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_1.sched.adb -f 
-Command         db_write done; 0.15 sec.
+Command         db_write done; 0.14 sec.
 INFO-FLOW: Finish scheduling dense_simple.0.0.1.
 Execute         set_default_model dense_simple.0.0.1 
 Execute         bind -model dense_simple.0.0.1 
@@ -815,12 +814,11 @@ INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command         bind done; 0.14 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 910.037 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 909.490 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_1.verbose.bind.rpt 
-Command         syn_report done; 0.27 sec.
+Command         syn_report done; 0.25 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_1.bind.adb -f 
-Command         db_write done; 0.16 sec.
+Command         db_write done; 0.14 sec.
 INFO-FLOW: Finish binding dense_simple.0.0.1.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dense_simple_0_0_0_0_1' 
@@ -831,12 +829,12 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'dense_simple.0.0.0.0.1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 1.13 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.6 seconds; current allocated memory: 913.728 MB.
+Command         schedule done; 1.1 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.51 seconds; current allocated memory: 912.967 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_0_0_1.verbose.sched.rpt 
-Command         syn_report done; 1.04 sec.
+Command         syn_report done; 0.96 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_0_0_1.sched.adb -f 
-Command         db_write done; 0.93 sec.
+Command         db_write done; 0.86 sec.
 INFO-FLOW: Finish scheduling dense_simple.0.0.0.0.1.
 Execute         set_default_model dense_simple.0.0.0.0.1 
 Execute         bind -model dense_simple.0.0.0.0.1 
@@ -847,12 +845,12 @@ INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command         bind done; 0.87 sec.
-INFO: [HLS 200-111]  Elapsed time: 2.84 seconds; current allocated memory: 922.641 MB.
+Command         bind done; 0.89 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.71 seconds; current allocated memory: 921.866 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_0_0_1.verbose.bind.rpt 
-Command         syn_report done; 1.76 sec.
+Command         syn_report done; 1.68 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_0_0_1.bind.adb -f 
-Command         db_write done; 0.94 sec.
+Command         db_write done; 0.89 sec.
 INFO-FLOW: Finish binding dense_simple.0.0.0.0.1.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'sigmoid_1' 
@@ -863,11 +861,12 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'sigmoid.1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 2.81 seconds; current allocated memory: 923.924 MB.
+Command         schedule done; 0.11 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.69 seconds; current allocated memory: 923.177 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/sigmoid_1.verbose.sched.rpt 
-Command         syn_report done; 0.21 sec.
+Command         syn_report done; 0.22 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/sigmoid_1.sched.adb -f 
-Command         db_write done; 0.18 sec.
+Command         db_write done; 0.19 sec.
 INFO-FLOW: Finish scheduling sigmoid.1.
 Execute         set_default_model sigmoid.1 
 Execute         bind -model sigmoid.1 
@@ -877,9 +876,9 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 924.760 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.48 seconds; current allocated memory: 924.012 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/sigmoid_1.verbose.bind.rpt 
-Command         syn_report done; 0.31 sec.
+Command         syn_report done; 0.33 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/sigmoid_1.bind.adb -f 
 Command         db_write done; 0.19 sec.
 INFO-FLOW: Finish binding sigmoid.1.
@@ -892,7 +891,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'hard_tanh.3'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.57 seconds; current allocated memory: 925.117 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.58 seconds; current allocated memory: 924.353 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_3.verbose.sched.rpt 
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_3.sched.adb -f 
 INFO-FLOW: Finish scheduling hard_tanh.3.
@@ -904,7 +903,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 925.428 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 924.664 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_3.verbose.bind.rpt 
 Command         syn_report done; 0.11 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_3.bind.adb -f 
@@ -918,7 +917,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'hard_tanh.2'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 925.720 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 924.920 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_2.verbose.sched.rpt 
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_2.sched.adb -f 
 INFO-FLOW: Finish scheduling hard_tanh.2.
@@ -930,7 +929,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 926.011 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 925.246 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_2.verbose.bind.rpt 
 Command         syn_report done; 0.12 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_2.bind.adb -f 
@@ -945,11 +944,11 @@ INFO: [SCHED 204-61] Pipelining function 'lstm_tail_02.1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
 Command         schedule done; 0.14 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 926.578 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 925.828 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/lstm_tail_02_1.verbose.sched.rpt 
 Command         syn_report done; 0.15 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/lstm_tail_02_1.sched.adb -f 
-Command         db_write done; 0.15 sec.
+Command         db_write done; 0.14 sec.
 INFO-FLOW: Finish scheduling lstm_tail_02.1.
 Execute         set_default_model lstm_tail_02.1 
 Execute         bind -model lstm_tail_02.1 
@@ -960,9 +959,9 @@ INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.39 seconds; current allocated memory: 927.307 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 926.557 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/lstm_tail_02_1.verbose.bind.rpt 
-Command         syn_report done; 0.25 sec.
+Command         syn_report done; 0.24 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/lstm_tail_02_1.bind.adb -f 
 Command         db_write done; 0.15 sec.
 INFO-FLOW: Finish binding lstm_tail_02.1.
@@ -987,12 +986,12 @@ WARNING: [SCHED 204-68] The II Violation in module 'Loop_TIMESTEP_proc34' (Loop:
    between 'call' operation ('call_ret', firmware/nnet_utils/nnet_lstm.h:405->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62) to 'lstm_tail_02.1' and 'call' operation ('call_ret3', firmware/nnet_utils/nnet_lstm.h:389->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62) to 'dense_simple.0.0.0.0.1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 9, Depth = 16.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 1.53 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.95 seconds; current allocated memory: 929.101 MB.
+Command         schedule done; 1.57 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.98 seconds; current allocated memory: 928.352 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/Loop_TIMESTEP_proc34.verbose.sched.rpt 
-Command         syn_report done; 0.53 sec.
+Command         syn_report done; 0.51 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/Loop_TIMESTEP_proc34.sched.adb -f 
-Command         db_write done; 0.52 sec.
+Command         db_write done; 0.47 sec.
 INFO-FLOW: Finish scheduling Loop_TIMESTEP_proc34.
 Execute         set_default_model Loop_TIMESTEP_proc34 
 Execute         bind -model Loop_TIMESTEP_proc34 
@@ -1003,11 +1002,11 @@ INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
 Command         bind done; 1.55 sec.
-INFO: [HLS 200-111]  Elapsed time: 2.6 seconds; current allocated memory: 932.627 MB.
+INFO: [HLS 200-111]  Elapsed time: 2.53 seconds; current allocated memory: 931.893 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/Loop_TIMESTEP_proc34.verbose.bind.rpt 
-Command         syn_report done; 1.82 sec.
+Command         syn_report done; 1.81 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/Loop_TIMESTEP_proc34.bind.adb -f 
-Command         db_write done; 0.5 sec.
+Command         db_write done; 0.49 sec.
 INFO-FLOW: Finish binding Loop_TIMESTEP_proc34.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'repeat_vector' 
@@ -1016,12 +1015,12 @@ Execute         set_default_model repeat_vector
 Execute         schedule -model repeat_vector 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.49 sec.
-INFO: [HLS 200-111]  Elapsed time: 2.83 seconds; current allocated memory: 935.676 MB.
+Command         schedule done; 0.5 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.81 seconds; current allocated memory: 934.891 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/repeat_vector.verbose.sched.rpt 
-Command         syn_report done; 0.69 sec.
+Command         syn_report done; 0.68 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/repeat_vector.sched.adb -f 
-Command         db_write done; 0.67 sec.
+Command         db_write done; 0.66 sec.
 INFO-FLOW: Finish scheduling repeat_vector.
 Execute         set_default_model repeat_vector 
 Execute         bind -model repeat_vector 
@@ -1031,12 +1030,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command         bind done; 0.19 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.55 seconds; current allocated memory: 944.239 MB.
+Command         bind done; 0.18 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.52 seconds; current allocated memory: 943.454 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/repeat_vector.verbose.bind.rpt 
-Command         syn_report done; 0.84 sec.
+Command         syn_report done; 0.82 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/repeat_vector.bind.adb -f 
-Command         db_write done; 0.69 sec.
+Command         db_write done; 0.66 sec.
 INFO-FLOW: Finish binding repeat_vector.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dense_simple_0_0' 
@@ -1045,14 +1044,14 @@ Execute         set_default_model dense_simple.0.0
 Execute         schedule -model dense_simple.0.0 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'dense_simple.0.0'.
-INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
 Command         schedule done; 1.1 sec.
-INFO: [HLS 200-111]  Elapsed time: 2.64 seconds; current allocated memory: 947.733 MB.
+INFO: [HLS 200-111]  Elapsed time: 2.61 seconds; current allocated memory: 946.850 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0.verbose.sched.rpt 
-Command         syn_report done; 1.03 sec.
+Command         syn_report done; 0.92 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0.sched.adb -f 
-Command         db_write done; 0.92 sec.
+Command         db_write done; 0.81 sec.
 INFO-FLOW: Finish scheduling dense_simple.0.0.
 Execute         set_default_model dense_simple.0.0 
 Execute         bind -model dense_simple.0.0 
@@ -1063,12 +1062,12 @@ INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command         bind done; 0.89 sec.
-INFO: [HLS 200-111]  Elapsed time: 2.84 seconds; current allocated memory: 956.385 MB.
+Command         bind done; 0.84 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.57 seconds; current allocated memory: 955.505 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0.verbose.bind.rpt 
-Command         syn_report done; 1.85 sec.
+Command         syn_report done; 1.73 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0.bind.adb -f 
-Command         db_write done; 0.99 sec.
+Command         db_write done; 0.88 sec.
 INFO-FLOW: Finish binding dense_simple.0.0.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dense_simple_0_0_0_0' 
@@ -1079,12 +1078,12 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'dense_simple.0.0.0.0'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 1.17 sec.
-INFO: [HLS 200-111]  Elapsed time: 4.03 seconds; current allocated memory: 960.470 MB.
+Command         schedule done; 1.11 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.73 seconds; current allocated memory: 959.470 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_0_0.verbose.sched.rpt 
-Command         syn_report done; 1.05 sec.
+Command         syn_report done; 0.88 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_0_0.sched.adb -f 
-Command         db_write done; 0.93 sec.
+Command         db_write done; 0.79 sec.
 INFO-FLOW: Finish scheduling dense_simple.0.0.0.0.
 Execute         set_default_model dense_simple.0.0.0.0 
 Execute         bind -model dense_simple.0.0.0.0 
@@ -1095,12 +1094,12 @@ INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command         bind done; 0.92 sec.
-INFO: [HLS 200-111]  Elapsed time: 2.9 seconds; current allocated memory: 969.567 MB.
+Command         bind done; 0.87 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.54 seconds; current allocated memory: 968.387 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_0_0.verbose.bind.rpt 
-Command         syn_report done; 1.7 sec.
+Command         syn_report done; 1.68 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_0_0.bind.adb -f 
-Command         db_write done; 0.91 sec.
+Command         db_write done; 0.85 sec.
 INFO-FLOW: Finish binding dense_simple.0.0.0.0.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'sigmoid' 
@@ -1111,12 +1110,12 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'sigmoid'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.11 sec.
-INFO: [HLS 200-111]  Elapsed time: 2.73 seconds; current allocated memory: 970.833 MB.
+Command         schedule done; 0.12 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.66 seconds; current allocated memory: 969.617 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/sigmoid.verbose.sched.rpt 
-Command         syn_report done; 0.22 sec.
+Command         syn_report done; 0.21 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/sigmoid.sched.adb -f 
-Command         db_write done; 0.18 sec.
+Command         db_write done; 0.17 sec.
 INFO-FLOW: Finish scheduling sigmoid.
 Execute         set_default_model sigmoid 
 Execute         bind -model sigmoid 
@@ -1126,11 +1125,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.48 seconds; current allocated memory: 971.720 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.45 seconds; current allocated memory: 970.452 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/sigmoid.verbose.bind.rpt 
-Command         syn_report done; 0.32 sec.
+Command         syn_report done; 0.31 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/sigmoid.bind.adb -f 
-Command         db_write done; 0.19 sec.
+Command         db_write done; 0.18 sec.
 INFO-FLOW: Finish binding sigmoid.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'hard_tanh_1' 
@@ -1141,7 +1140,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'hard_tanh.1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.57 seconds; current allocated memory: 972.009 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.55 seconds; current allocated memory: 970.793 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_1.verbose.sched.rpt 
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_1.sched.adb -f 
 INFO-FLOW: Finish scheduling hard_tanh.1.
@@ -1153,7 +1152,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 972.320 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 971.067 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_1.verbose.bind.rpt 
 Command         syn_report done; 0.11 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_1.bind.adb -f 
@@ -1167,7 +1166,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'hard_tanh'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 972.612 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 971.359 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh.verbose.sched.rpt 
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh.sched.adb -f 
 INFO-FLOW: Finish scheduling hard_tanh.
@@ -1179,9 +1178,9 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 972.902 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 971.685 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh.verbose.bind.rpt 
-Command         syn_report done; 0.12 sec.
+Command         syn_report done; 0.11 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh.bind.adb -f 
 INFO-FLOW: Finish binding hard_tanh.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1194,11 +1193,11 @@ INFO: [SCHED 204-61] Pipelining function 'lstm_tail_02'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
 Command         schedule done; 0.14 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 973.485 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 972.267 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/lstm_tail_02.verbose.sched.rpt 
-Command         syn_report done; 0.16 sec.
+Command         syn_report done; 0.15 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/lstm_tail_02.sched.adb -f 
-Command         db_write done; 0.15 sec.
+Command         db_write done; 0.14 sec.
 INFO-FLOW: Finish scheduling lstm_tail_02.
 Execute         set_default_model lstm_tail_02 
 Execute         bind -model lstm_tail_02 
@@ -1209,9 +1208,9 @@ INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.4 seconds; current allocated memory: 974.198 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 972.996 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/lstm_tail_02.verbose.bind.rpt 
-Command         syn_report done; 0.25 sec.
+Command         syn_report done; 0.24 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/lstm_tail_02.bind.adb -f 
 Command         db_write done; 0.15 sec.
 INFO-FLOW: Finish binding lstm_tail_02.
@@ -1234,14 +1233,14 @@ WARNING: [SCHED 204-68] The II Violation in module 'Loop_TIMESTEP_proc34_1' (Loo
    between 'call' operation ('call_ret', firmware/nnet_utils/nnet_lstm.h:405->firmware/myproject.cpp:70) to 'lstm_tail_02' and 'call' operation ('call_ret5', firmware/nnet_utils/nnet_lstm.h:389->firmware/myproject.cpp:70) to 'dense_simple.0.0.0.0'.
 WARNING: [SCHED 204-68] The II Violation in module 'Loop_TIMESTEP_proc34_1' (Loop: TIMESTEP): Unable to enforce a carried dependence constraint (II = 8, distance = 1, offset = 1)
    between 'call' operation ('call_ret', firmware/nnet_utils/nnet_lstm.h:405->firmware/myproject.cpp:70) to 'lstm_tail_02' and 'call' operation ('call_ret5', firmware/nnet_utils/nnet_lstm.h:389->firmware/myproject.cpp:70) to 'dense_simple.0.0.0.0'.
-INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 9, Depth = 13.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 9, Depth = 15.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 2.06 sec.
-INFO: [HLS 200-111]  Elapsed time: 2.48 seconds; current allocated memory: 976.470 MB.
+Command         schedule done; 2.03 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.45 seconds; current allocated memory: 975.238 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/Loop_TIMESTEP_proc34_1.verbose.sched.rpt 
-Command         syn_report done; 0.69 sec.
+Command         syn_report done; 0.65 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/Loop_TIMESTEP_proc34_1.sched.adb -f 
-Command         db_write done; 0.65 sec.
+Command         db_write done; 0.61 sec.
 INFO-FLOW: Finish scheduling Loop_TIMESTEP_proc34.1.
 Execute         set_default_model Loop_TIMESTEP_proc34.1 
 Execute         bind -model Loop_TIMESTEP_proc34.1 
@@ -1251,10 +1250,10 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command         bind done; 2.08 sec.
-INFO: [HLS 200-111]  Elapsed time: 3.42 seconds; current allocated memory: 981.502 MB.
+Command         bind done; 1.94 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.2 seconds; current allocated memory: 980.459 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/Loop_TIMESTEP_proc34_1.verbose.bind.rpt 
-Command         syn_report done; 2.65 sec.
+Command         syn_report done; 2.7 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/Loop_TIMESTEP_proc34_1.bind.adb -f 
 Command         db_write done; 0.63 sec.
 INFO-FLOW: Finish binding Loop_TIMESTEP_proc34.1.
@@ -1267,12 +1266,12 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'softmax'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.77 sec.
-INFO: [HLS 200-111]  Elapsed time: 4.08 seconds; current allocated memory: 987.617 MB.
+Command         schedule done; 0.76 sec.
+INFO: [HLS 200-111]  Elapsed time: 4.11 seconds; current allocated memory: 986.558 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/softmax.verbose.sched.rpt 
-Command         syn_report done; 1.59 sec.
+Command         syn_report done; 1.55 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/softmax.sched.adb -f 
-Command         db_write done; 1.33 sec.
+Command         db_write done; 1.29 sec.
 INFO-FLOW: Finish scheduling softmax.
 Execute         set_default_model softmax 
 Execute         bind -model softmax 
@@ -1283,11 +1282,11 @@ INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
 Command         bind done; 0.6 sec.
-INFO: [HLS 200-111]  Elapsed time: 3.53 seconds; current allocated memory: 994.632 MB.
+INFO: [HLS 200-111]  Elapsed time: 3.44 seconds; current allocated memory: 993.544 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/softmax.verbose.bind.rpt 
-Command         syn_report done; 2.56 sec.
+Command         syn_report done; 2.6 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/softmax.bind.adb -f 
-Command         db_write done; 1.36 sec.
+Command         db_write done; 1.34 sec.
 INFO-FLOW: Finish binding softmax.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'attention' 
@@ -1296,12 +1295,12 @@ Execute         set_default_model attention
 Execute         schedule -model attention 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 4.35 sec.
-INFO: [HLS 200-111]  Elapsed time: 8.29 seconds; current allocated memory: 1012.284 MB.
+Command         schedule done; 4.41 sec.
+INFO: [HLS 200-111]  Elapsed time: 8.37 seconds; current allocated memory: 1011.212 MB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/attention.verbose.sched.rpt 
-Command         syn_report done; 2.58 sec.
+Command         syn_report done; 2.48 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/attention.sched.adb -f 
-Command         db_write done; 2.5 sec.
+Command         db_write done; 2.41 sec.
 INFO-FLOW: Finish scheduling attention.
 Execute         set_default_model attention 
 Execute         bind -model attention 
@@ -1311,12 +1310,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command         bind done; 1.29 sec.
-INFO: [HLS 200-111]  Elapsed time: 6.37 seconds; current allocated memory: 1.016 GB.
+Command         bind done; 1.32 sec.
+INFO: [HLS 200-111]  Elapsed time: 6.21 seconds; current allocated memory: 1.016 GB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/attention.verbose.bind.rpt 
-Command         syn_report done; 3.81 sec.
+Command         syn_report done; 3.69 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/attention.bind.adb -f 
-Command         db_write done; 2.55 sec.
+Command         db_write done; 2.57 sec.
 INFO-FLOW: Finish binding attention.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'concatenate2d_1' 
@@ -1325,12 +1324,12 @@ Execute         set_default_model concatenate2d_1
 Execute         schedule -model concatenate2d_1 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 2.25 sec.
-INFO: [HLS 200-111]  Elapsed time: 8.63 seconds; current allocated memory: 1.025 GB.
+Command         schedule done; 2.34 sec.
+INFO: [HLS 200-111]  Elapsed time: 8.63 seconds; current allocated memory: 1.024 GB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/concatenate2d_1.verbose.sched.rpt 
-Command         syn_report done; 1.64 sec.
+Command         syn_report done; 1.75 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/concatenate2d_1.sched.adb -f 
-Command         db_write done; 1.63 sec.
+Command         db_write done; 1.7 sec.
 INFO-FLOW: Finish scheduling concatenate2d_1.
 Execute         set_default_model concatenate2d_1 
 Execute         bind -model concatenate2d_1 
@@ -1340,12 +1339,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command         bind done; 3.2 sec.
-INFO: [HLS 200-111]  Elapsed time: 6.47 seconds; current allocated memory: 1.081 GB.
+Command         bind done; 3.68 sec.
+INFO: [HLS 200-111]  Elapsed time: 7.13 seconds; current allocated memory: 1.080 GB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/concatenate2d_1.verbose.bind.rpt 
-Command         syn_report done; 2.4 sec.
+Command         syn_report done; 2.47 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/concatenate2d_1.bind.adb -f 
-Command         db_write done; 1.69 sec.
+Command         db_write done; 1.75 sec.
 INFO-FLOW: Finish binding concatenate2d_1.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dense_simple_0_0_2' 
@@ -1354,13 +1353,13 @@ Execute         set_default_model dense_simple.0.0.2
 Execute         schedule -model dense_simple.0.0.2 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'dense_simple.0.0.2'.
-WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('data_V_load_2', firmware/nnet_utils/nnet_dense.h:96) on array 'data_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'data_V'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('data_V_load', firmware/nnet_utils/nnet_dense.h:96) on array 'data_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'data_V'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 8, Depth = 10.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.13 sec.
-INFO: [HLS 200-111]  Elapsed time: 4.24 seconds; current allocated memory: 1.082 GB.
+Command         schedule done; 0.14 sec.
+INFO: [HLS 200-111]  Elapsed time: 4.38 seconds; current allocated memory: 1.081 GB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_2.verbose.sched.rpt 
-Command         syn_report done; 0.13 sec.
+Command         syn_report done; 0.14 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_2.sched.adb -f 
 INFO-FLOW: Finish scheduling dense_simple.0.0.2.
 Execute         set_default_model dense_simple.0.0.2 
@@ -1372,7 +1371,7 @@ INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.31 seconds; current allocated memory: 1.082 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 1.081 GB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_2.verbose.bind.rpt 
 Command         syn_report done; 0.18 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_2.bind.adb -f 
@@ -1387,7 +1386,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'tanh'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 1.082 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 1.081 GB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/tanh.verbose.sched.rpt 
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/tanh.sched.adb -f 
 INFO-FLOW: Finish scheduling tanh.
@@ -1399,7 +1398,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 1.082 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 1.081 GB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/tanh.verbose.bind.rpt 
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/tanh.bind.adb -f 
 INFO-FLOW: Finish binding tanh.
@@ -1410,9 +1409,9 @@ Execute         set_default_model td_dense
 Execute         schedule -model td_dense 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.083 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.082 GB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/td_dense.verbose.sched.rpt 
-Command         syn_report done; 0.17 sec.
+Command         syn_report done; 0.16 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/td_dense.sched.adb -f 
 Command         db_write done; 0.17 sec.
 INFO-FLOW: Finish scheduling td_dense.
@@ -1424,11 +1423,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.44 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.43 seconds; current allocated memory: 1.083 GB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/td_dense.verbose.bind.rpt 
 Command         syn_report done; 0.26 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/td_dense.bind.adb -f 
-Command         db_write done; 0.17 sec.
+Command         db_write done; 0.19 sec.
 INFO-FLOW: Finish binding td_dense.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'myproject' 
@@ -1438,11 +1437,11 @@ Execute         schedule -model myproject
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
 Command         schedule done; 0.15 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.64 seconds; current allocated memory: 1.086 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.63 seconds; current allocated memory: 1.085 GB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.verbose.sched.rpt 
-Command         syn_report done; 0.87 sec.
+Command         syn_report done; 0.86 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.sched.adb -f 
-Command         db_write done; 0.74 sec.
+Command         db_write done; 0.72 sec.
 INFO-FLOW: Finish scheduling myproject.
 Execute         set_default_model myproject 
 Execute         bind -model myproject 
@@ -1452,8 +1451,8 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command         bind done; 11.85 sec.
-INFO: [HLS 200-111]  Elapsed time: 13.46 seconds; current allocated memory: 1.098 GB.
+Command         bind done; 12.03 sec.
+INFO: [HLS 200-111]  Elapsed time: 13.61 seconds; current allocated memory: 1.097 GB.
 Execute         syn_report -verbosereport -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.verbose.bind.rpt 
 Command         syn_report done; 6.74 sec.
 Execute         db_write -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.bind.adb -f 
@@ -1494,7 +1493,7 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_auto_prefix 
 Execute         create_rtl_model myproject.entry3 -vendor xilinx -mg_file /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject_entry3.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject_entry3'.
-INFO: [HLS 200-111]  Elapsed time: 7.55 seconds; current allocated memory: 1.101 GB.
+INFO: [HLS 200-111]  Elapsed time: 7.55 seconds; current allocated memory: 1.100 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl myproject.entry3 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/myproject_entry3 -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl myproject.entry3 -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/myproject_entry3 
@@ -1511,7 +1510,7 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_auto_prefix 
 Execute         create_rtl_model myproject.entry343 -vendor xilinx -mg_file /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject_entry343.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject_entry343'.
-INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.102 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.101 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl myproject.entry343 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/myproject_entry343 -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl myproject.entry343 -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/myproject_entry343 
@@ -1528,7 +1527,7 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_auto_prefix 
 Execute         create_rtl_model Block_.preheader138. -vendor xilinx -mg_file /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/Block_preheader138_s.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_preheader138_s'.
-INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.102 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.101 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl Block_.preheader138. -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/Block_preheader138_s -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl Block_.preheader138. -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/Block_preheader138_s 
@@ -1545,7 +1544,7 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_auto_prefix 
 Execute         create_rtl_model dense_simple.0.0.1 -vendor xilinx -mg_file /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_1.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_simple_0_0_1'.
-INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 1.105 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 1.104 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl dense_simple.0.0.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/dense_simple_0_0_1 -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl dense_simple.0.0.1 -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/dense_simple_0_0_1 
@@ -1555,7 +1554,7 @@ Execute         syn_report -rtlxml -model dense_simple.0.0.1 -o /mnt/ccnas2/bdp/
 Execute         syn_report -verbosereport -model dense_simple.0.0.1 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_1.verbose.rpt 
 Command         syn_report done; 0.29 sec.
 Execute         db_write -model dense_simple.0.0.1 -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_1.adb 
-Command         db_write done; 0.23 sec.
+Command         db_write done; 0.21 sec.
 Execute         gen_tb_info dense_simple.0.0.1 -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_1 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dense_simple_0_0_0_0_1' 
@@ -1564,8 +1563,8 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_auto_prefix 
 Execute         create_rtl_model dense_simple.0.0.0.0.1 -vendor xilinx -mg_file /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_0_0_1.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_simple_0_0_0_0_1'.
-Command         create_rtl_model done; 0.21 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.91 seconds; current allocated memory: 1.118 GB.
+Command         create_rtl_model done; 0.2 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.88 seconds; current allocated memory: 1.116 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl dense_simple.0.0.0.0.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/dense_simple_0_0_0_0_1 -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl dense_simple.0.0.0.0.1 -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/dense_simple_0_0_0_0_1 
@@ -1573,11 +1572,11 @@ Execute         gen_rtl dense_simple.0.0.0.0.1 -style xilinx -f -lang vlog -o /m
 Execute         syn_report -csynth -model dense_simple.0.0.0.0.1 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/dense_simple_0_0_0_0_1_csynth.rpt 
 Command         syn_report done; 0.52 sec.
 Execute         syn_report -rtlxml -model dense_simple.0.0.0.0.1 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/dense_simple_0_0_0_0_1_csynth.xml 
-Command         syn_report done; 0.26 sec.
+Command         syn_report done; 0.25 sec.
 Execute         syn_report -verbosereport -model dense_simple.0.0.0.0.1 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_0_0_1.verbose.rpt 
-Command         syn_report done; 2.08 sec.
+Command         syn_report done; 1.96 sec.
 Execute         db_write -model dense_simple.0.0.0.0.1 -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_0_0_1.adb 
-Command         db_write done; 1.52 sec.
+Command         db_write done; 1.4 sec.
 Execute         gen_tb_info dense_simple.0.0.0.0.1 -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_0_0_1 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'sigmoid_1' 
@@ -1587,7 +1586,7 @@ Execute         get_config_rtl -module_auto_prefix
 Execute         create_rtl_model sigmoid.1 -vendor xilinx -mg_file /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/sigmoid_1.compgen.tcl 
 INFO: [SYN 201-210] Renamed object name 'sigmoid_1_sigmoid_table18' to 'sigmoid_1_sigmoidbkb' due to the length limit 20
 INFO: [RTGEN 206-100] Finished creating RTL model for 'sigmoid_1'.
-INFO: [HLS 200-111]  Elapsed time: 4.67 seconds; current allocated memory: 1.137 GB.
+INFO: [HLS 200-111]  Elapsed time: 4.41 seconds; current allocated memory: 1.135 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl sigmoid.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/sigmoid_1 -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl sigmoid.1 -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/sigmoid_1 
@@ -1595,9 +1594,9 @@ Execute         gen_rtl sigmoid.1 -style xilinx -f -lang vlog -o /mnt/ccnas2/bdp
 Execute         syn_report -csynth -model sigmoid.1 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/sigmoid_1_csynth.rpt 
 Execute         syn_report -rtlxml -model sigmoid.1 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/sigmoid_1_csynth.xml 
 Execute         syn_report -verbosereport -model sigmoid.1 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/sigmoid_1.verbose.rpt 
-Command         syn_report done; 0.37 sec.
+Command         syn_report done; 0.38 sec.
 Execute         db_write -model sigmoid.1 -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/sigmoid_1.adb 
-Command         db_write done; 0.48 sec.
+Command         db_write done; 0.46 sec.
 Execute         gen_tb_info sigmoid.1 -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/sigmoid_1 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'hard_tanh_3' 
@@ -1606,7 +1605,7 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_auto_prefix 
 Execute         create_rtl_model hard_tanh.3 -vendor xilinx -mg_file /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_3.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'hard_tanh_3'.
-INFO: [HLS 200-111]  Elapsed time: 1.04 seconds; current allocated memory: 1.140 GB.
+INFO: [HLS 200-111]  Elapsed time: 1.04 seconds; current allocated memory: 1.138 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl hard_tanh.3 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/hard_tanh_3 -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl hard_tanh.3 -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/hard_tanh_3 
@@ -1616,7 +1615,7 @@ Execute         syn_report -rtlxml -model hard_tanh.3 -o /mnt/ccnas2/bdp/umm20/a
 Execute         syn_report -verbosereport -model hard_tanh.3 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_3.verbose.rpt 
 Command         syn_report done; 0.12 sec.
 Execute         db_write -model hard_tanh.3 -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_3.adb 
-Command         db_write done; 0.35 sec.
+Command         db_write done; 0.33 sec.
 Execute         gen_tb_info hard_tanh.3 -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_3 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'hard_tanh_2' 
@@ -1625,7 +1624,7 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_auto_prefix 
 Execute         create_rtl_model hard_tanh.2 -vendor xilinx -mg_file /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_2.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'hard_tanh_2'.
-INFO: [HLS 200-111]  Elapsed time: 0.57 seconds; current allocated memory: 1.142 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.56 seconds; current allocated memory: 1.140 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl hard_tanh.2 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/hard_tanh_2 -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl hard_tanh.2 -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/hard_tanh_2 
@@ -1633,9 +1632,9 @@ Execute         gen_rtl hard_tanh.2 -style xilinx -f -lang vlog -o /mnt/ccnas2/b
 Execute         syn_report -csynth -model hard_tanh.2 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/hard_tanh_2_csynth.rpt 
 Execute         syn_report -rtlxml -model hard_tanh.2 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/hard_tanh_2_csynth.xml 
 Execute         syn_report -verbosereport -model hard_tanh.2 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_2.verbose.rpt 
-Command         syn_report done; 0.14 sec.
+Command         syn_report done; 0.13 sec.
 Execute         db_write -model hard_tanh.2 -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_2.adb 
-Command         db_write done; 0.36 sec.
+Command         db_write done; 0.34 sec.
 Execute         gen_tb_info hard_tanh.2 -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_2 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'lstm_tail_02_1' 
@@ -1644,7 +1643,7 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_auto_prefix 
 Execute         create_rtl_model lstm_tail_02.1 -vendor xilinx -mg_file /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/lstm_tail_02_1.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'lstm_tail_02_1'.
-INFO: [HLS 200-111]  Elapsed time: 0.65 seconds; current allocated memory: 1.145 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.61 seconds; current allocated memory: 1.143 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl lstm_tail_02.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/lstm_tail_02_1 -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl lstm_tail_02.1 -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/lstm_tail_02_1 
@@ -1652,9 +1651,9 @@ Execute         gen_rtl lstm_tail_02.1 -style xilinx -f -lang vlog -o /mnt/ccnas
 Execute         syn_report -csynth -model lstm_tail_02.1 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/lstm_tail_02_1_csynth.rpt 
 Execute         syn_report -rtlxml -model lstm_tail_02.1 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/lstm_tail_02_1_csynth.xml 
 Execute         syn_report -verbosereport -model lstm_tail_02.1 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/lstm_tail_02_1.verbose.rpt 
-Command         syn_report done; 0.27 sec.
+Command         syn_report done; 0.26 sec.
 Execute         db_write -model lstm_tail_02.1 -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/lstm_tail_02_1.adb 
-Command         db_write done; 0.46 sec.
+Command         db_write done; 0.44 sec.
 Execute         gen_tb_info lstm_tail_02.1 -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/lstm_tail_02_1 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'Loop_TIMESTEP_proc34' 
@@ -1663,8 +1662,8 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_auto_prefix 
 Execute         create_rtl_model Loop_TIMESTEP_proc34 -vendor xilinx -mg_file /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/Loop_TIMESTEP_proc34.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_TIMESTEP_proc34'.
-Command         create_rtl_model done; 0.28 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.17 seconds; current allocated memory: 1.154 GB.
+Command         create_rtl_model done; 0.29 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.14 seconds; current allocated memory: 1.152 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl Loop_TIMESTEP_proc34 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/Loop_TIMESTEP_proc34 -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl Loop_TIMESTEP_proc34 -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/Loop_TIMESTEP_proc34 
@@ -1672,9 +1671,9 @@ Execute         gen_rtl Loop_TIMESTEP_proc34 -style xilinx -f -lang vlog -o /mnt
 Execute         syn_report -csynth -model Loop_TIMESTEP_proc34 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/Loop_TIMESTEP_proc34_csynth.rpt 
 Execute         syn_report -rtlxml -model Loop_TIMESTEP_proc34 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/Loop_TIMESTEP_proc34_csynth.xml 
 Execute         syn_report -verbosereport -model Loop_TIMESTEP_proc34 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/Loop_TIMESTEP_proc34.verbose.rpt 
-Command         syn_report done; 1.87 sec.
+Command         syn_report done; 1.84 sec.
 Execute         db_write -model Loop_TIMESTEP_proc34 -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/Loop_TIMESTEP_proc34.adb 
-Command         db_write done; 0.84 sec.
+Command         db_write done; 0.8 sec.
 Execute         gen_tb_info Loop_TIMESTEP_proc34 -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/Loop_TIMESTEP_proc34 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'repeat_vector' 
@@ -1687,19 +1686,19 @@ INFO: [SYN 201-210] Renamed object name 'myproject_mux_646_1_1_1' to 'myproject_
 INFO: [RTGEN 206-100] Generating core module 'myproject_mux_646cud': 64 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'myproject_mux_646dEe': 64 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'repeat_vector'.
-Command         create_rtl_model done; 0.92 sec.
-INFO: [HLS 200-111]  Elapsed time: 3.93 seconds; current allocated memory: 1.198 GB.
+Command         create_rtl_model done; 0.68 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.58 seconds; current allocated memory: 1.196 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl repeat_vector -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/repeat_vector -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl repeat_vector -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/repeat_vector 
 Execute         gen_rtl repeat_vector -style xilinx -f -lang vlog -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/verilog/repeat_vector 
 Execute         syn_report -csynth -model repeat_vector -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/repeat_vector_csynth.rpt 
-Command         syn_report done; 0.15 sec.
+Command         syn_report done; 0.14 sec.
 Execute         syn_report -rtlxml -model repeat_vector -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/repeat_vector_csynth.xml 
 Execute         syn_report -verbosereport -model repeat_vector -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/repeat_vector.verbose.rpt 
-Command         syn_report done; 0.92 sec.
+Command         syn_report done; 0.88 sec.
 Execute         db_write -model repeat_vector -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/repeat_vector.adb 
-Command         db_write done; 1.11 sec.
+Command         db_write done; 1.02 sec.
 Execute         gen_tb_info repeat_vector -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/repeat_vector 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dense_simple_0_0' 
@@ -1708,20 +1707,20 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_auto_prefix 
 Execute         create_rtl_model dense_simple.0.0 -vendor xilinx -mg_file /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_simple_0_0'.
-Command         create_rtl_model done; 0.2 sec.
-INFO: [HLS 200-111]  Elapsed time: 2.77 seconds; current allocated memory: 1.226 GB.
+Command         create_rtl_model done; 0.23 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.57 seconds; current allocated memory: 1.223 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl dense_simple.0.0 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/dense_simple_0_0 -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl dense_simple.0.0 -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/dense_simple_0_0 
 Execute         gen_rtl dense_simple.0.0 -style xilinx -f -lang vlog -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/verilog/dense_simple_0_0 
 Execute         syn_report -csynth -model dense_simple.0.0 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/dense_simple_0_0_csynth.rpt 
-Command         syn_report done; 0.52 sec.
+Command         syn_report done; 0.53 sec.
 Execute         syn_report -rtlxml -model dense_simple.0.0 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/dense_simple_0_0_csynth.xml 
 Command         syn_report done; 0.26 sec.
 Execute         syn_report -verbosereport -model dense_simple.0.0 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0.verbose.rpt 
-Command         syn_report done; 2 sec.
+Command         syn_report done; 1.93 sec.
 Execute         db_write -model dense_simple.0.0 -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0.adb 
-Command         db_write done; 1.77 sec.
+Command         db_write done; 1.67 sec.
 Execute         gen_tb_info dense_simple.0.0 -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dense_simple_0_0_0_0' 
@@ -1730,20 +1729,20 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_auto_prefix 
 Execute         create_rtl_model dense_simple.0.0.0.0 -vendor xilinx -mg_file /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_0_0.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_simple_0_0_0_0'.
-Command         create_rtl_model done; 0.21 sec.
-INFO: [HLS 200-111]  Elapsed time: 4.99 seconds; current allocated memory: 1.252 GB.
+Command         create_rtl_model done; 0.2 sec.
+INFO: [HLS 200-111]  Elapsed time: 4.82 seconds; current allocated memory: 1.249 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl dense_simple.0.0.0.0 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/dense_simple_0_0_0_0 -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl dense_simple.0.0.0.0 -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/dense_simple_0_0_0_0 
 Execute         gen_rtl dense_simple.0.0.0.0 -style xilinx -f -lang vlog -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/verilog/dense_simple_0_0_0_0 
 Execute         syn_report -csynth -model dense_simple.0.0.0.0 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/dense_simple_0_0_0_0_csynth.rpt 
-Command         syn_report done; 0.54 sec.
+Command         syn_report done; 0.53 sec.
 Execute         syn_report -rtlxml -model dense_simple.0.0.0.0 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/dense_simple_0_0_0_0_csynth.xml 
-Command         syn_report done; 0.3 sec.
+Command         syn_report done; 0.26 sec.
 Execute         syn_report -verbosereport -model dense_simple.0.0.0.0 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_0_0.verbose.rpt 
-Command         syn_report done; 2.01 sec.
+Command         syn_report done; 1.88 sec.
 Execute         db_write -model dense_simple.0.0.0.0 -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_0_0.adb 
-Command         db_write done; 2.01 sec.
+Command         db_write done; 1.82 sec.
 Execute         gen_tb_info dense_simple.0.0.0.0 -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_0_0 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'sigmoid' 
@@ -1753,7 +1752,7 @@ Execute         get_config_rtl -module_auto_prefix
 Execute         create_rtl_model sigmoid -vendor xilinx -mg_file /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/sigmoid.compgen.tcl 
 INFO: [SYN 201-210] Renamed object name 'sigmoid_sigmoid_table14' to 'sigmoid_sigmoid_teOg' due to the length limit 20
 INFO: [RTGEN 206-100] Finished creating RTL model for 'sigmoid'.
-INFO: [HLS 200-111]  Elapsed time: 5.19 seconds; current allocated memory: 1.271 GB.
+INFO: [HLS 200-111]  Elapsed time: 4.78 seconds; current allocated memory: 1.267 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl sigmoid -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/sigmoid -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl sigmoid -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/sigmoid 
@@ -1761,9 +1760,9 @@ Execute         gen_rtl sigmoid -style xilinx -f -lang vlog -o /mnt/ccnas2/bdp/u
 Execute         syn_report -csynth -model sigmoid -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/sigmoid_csynth.rpt 
 Execute         syn_report -rtlxml -model sigmoid -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/sigmoid_csynth.xml 
 Execute         syn_report -verbosereport -model sigmoid -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/sigmoid.verbose.rpt 
-Command         syn_report done; 0.38 sec.
+Command         syn_report done; 0.36 sec.
 Execute         db_write -model sigmoid -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/sigmoid.adb 
-Command         db_write done; 0.97 sec.
+Command         db_write done; 0.91 sec.
 Execute         gen_tb_info sigmoid -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/sigmoid 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'hard_tanh_1' 
@@ -1772,7 +1771,7 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_auto_prefix 
 Execute         create_rtl_model hard_tanh.1 -vendor xilinx -mg_file /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_1.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'hard_tanh_1'.
-INFO: [HLS 200-111]  Elapsed time: 1.62 seconds; current allocated memory: 1.275 GB.
+INFO: [HLS 200-111]  Elapsed time: 1.49 seconds; current allocated memory: 1.271 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl hard_tanh.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/hard_tanh_1 -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl hard_tanh.1 -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/hard_tanh_1 
@@ -1780,9 +1779,9 @@ Execute         gen_rtl hard_tanh.1 -style xilinx -f -lang vlog -o /mnt/ccnas2/b
 Execute         syn_report -csynth -model hard_tanh.1 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/hard_tanh_1_csynth.rpt 
 Execute         syn_report -rtlxml -model hard_tanh.1 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/hard_tanh_1_csynth.xml 
 Execute         syn_report -verbosereport -model hard_tanh.1 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_1.verbose.rpt 
-Command         syn_report done; 0.14 sec.
+Command         syn_report done; 0.13 sec.
 Execute         db_write -model hard_tanh.1 -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_1.adb 
-Command         db_write done; 0.84 sec.
+Command         db_write done; 0.77 sec.
 Execute         gen_tb_info hard_tanh.1 -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_1 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'hard_tanh' 
@@ -1791,7 +1790,7 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_auto_prefix 
 Execute         create_rtl_model hard_tanh -vendor xilinx -mg_file /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'hard_tanh'.
-INFO: [HLS 200-111]  Elapsed time: 1.12 seconds; current allocated memory: 1.276 GB.
+INFO: [HLS 200-111]  Elapsed time: 1 seconds; current allocated memory: 1.273 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl hard_tanh -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/hard_tanh -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl hard_tanh -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/hard_tanh 
@@ -1799,9 +1798,9 @@ Execute         gen_rtl hard_tanh -style xilinx -f -lang vlog -o /mnt/ccnas2/bdp
 Execute         syn_report -csynth -model hard_tanh -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/hard_tanh_csynth.rpt 
 Execute         syn_report -rtlxml -model hard_tanh -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/hard_tanh_csynth.xml 
 Execute         syn_report -verbosereport -model hard_tanh -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh.verbose.rpt 
-Command         syn_report done; 0.14 sec.
+Command         syn_report done; 0.13 sec.
 Execute         db_write -model hard_tanh -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh.adb 
-Command         db_write done; 0.84 sec.
+Command         db_write done; 0.82 sec.
 Execute         gen_tb_info hard_tanh -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'lstm_tail_02' 
@@ -1810,7 +1809,7 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_auto_prefix 
 Execute         create_rtl_model lstm_tail_02 -vendor xilinx -mg_file /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/lstm_tail_02.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'lstm_tail_02'.
-INFO: [HLS 200-111]  Elapsed time: 1.18 seconds; current allocated memory: 1.279 GB.
+INFO: [HLS 200-111]  Elapsed time: 1.11 seconds; current allocated memory: 1.276 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl lstm_tail_02 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/lstm_tail_02 -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl lstm_tail_02 -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/lstm_tail_02 
@@ -1820,7 +1819,7 @@ Execute         syn_report -rtlxml -model lstm_tail_02 -o /mnt/ccnas2/bdp/umm20/
 Execute         syn_report -verbosereport -model lstm_tail_02 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/lstm_tail_02.verbose.rpt 
 Command         syn_report done; 0.27 sec.
 Execute         db_write -model lstm_tail_02 -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/lstm_tail_02.adb 
-Command         db_write done; 0.94 sec.
+Command         db_write done; 0.89 sec.
 Execute         gen_tb_info lstm_tail_02 -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/lstm_tail_02 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'Loop_TIMESTEP_proc34_1' 
@@ -1832,18 +1831,18 @@ INFO: [SYN 201-210] Renamed object name 'myproject_mux_83_16_1_1' to 'myproject_
 INFO: [RTGEN 206-100] Generating core module 'myproject_mux_83_fYi': 8 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_TIMESTEP_proc34_1'.
 Command         create_rtl_model done; 0.37 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.76 seconds; current allocated memory: 1.290 GB.
+INFO: [HLS 200-111]  Elapsed time: 1.69 seconds; current allocated memory: 1.286 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl Loop_TIMESTEP_proc34.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/Loop_TIMESTEP_proc34_1 -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl Loop_TIMESTEP_proc34.1 -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/Loop_TIMESTEP_proc34_1 
 Execute         gen_rtl Loop_TIMESTEP_proc34.1 -style xilinx -f -lang vlog -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/verilog/Loop_TIMESTEP_proc34_1 
 Execute         syn_report -csynth -model Loop_TIMESTEP_proc34.1 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/Loop_TIMESTEP_proc34_1_csynth.rpt 
-Command         syn_report done; 0.19 sec.
+Command         syn_report done; 0.15 sec.
 Execute         syn_report -rtlxml -model Loop_TIMESTEP_proc34.1 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/Loop_TIMESTEP_proc34_1_csynth.xml 
 Execute         syn_report -verbosereport -model Loop_TIMESTEP_proc34.1 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/Loop_TIMESTEP_proc34_1.verbose.rpt 
-Command         syn_report done; 2.7 sec.
+Command         syn_report done; 2.72 sec.
 Execute         db_write -model Loop_TIMESTEP_proc34.1 -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/Loop_TIMESTEP_proc34_1.adb 
-Command         db_write done; 1.49 sec.
+Command         db_write done; 1.44 sec.
 Execute         gen_tb_info Loop_TIMESTEP_proc34.1 -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/Loop_TIMESTEP_proc34_1 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'softmax' 
@@ -1853,8 +1852,8 @@ Execute         get_config_rtl -module_auto_prefix
 Execute         create_rtl_model softmax -vendor xilinx -mg_file /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/softmax.compgen.tcl 
 INFO: [SYN 201-210] Renamed object name 'softmax_invert_table11' to 'softmax_invert_tag8j' due to the length limit 20
 INFO: [RTGEN 206-100] Finished creating RTL model for 'softmax'.
-Command         create_rtl_model done; 0.25 sec.
-INFO: [HLS 200-111]  Elapsed time: 4.9 seconds; current allocated memory: 1.312 GB.
+Command         create_rtl_model done; 0.26 sec.
+INFO: [HLS 200-111]  Elapsed time: 4.82 seconds; current allocated memory: 1.309 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl softmax -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/softmax -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl softmax -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/softmax 
@@ -1862,11 +1861,11 @@ Execute         gen_rtl softmax -style xilinx -f -lang vlog -o /mnt/ccnas2/bdp/u
 Execute         syn_report -csynth -model softmax -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/softmax_csynth.rpt 
 Command         syn_report done; 0.67 sec.
 Execute         syn_report -rtlxml -model softmax -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/softmax_csynth.xml 
-Command         syn_report done; 0.33 sec.
+Command         syn_report done; 0.32 sec.
 Execute         syn_report -verbosereport -model softmax -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/softmax.verbose.rpt 
 Command         syn_report done; 2.93 sec.
 Execute         db_write -model softmax -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/softmax.adb 
-Command         db_write done; 2.88 sec.
+Command         db_write done; 2.94 sec.
 Execute         gen_tb_info softmax -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/softmax 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'attention' 
@@ -1881,21 +1880,21 @@ INFO: [RTGEN 206-100] Generating core module 'myproject_mux_646cud': 72 instance
 INFO: [RTGEN 206-100] Generating core module 'myproject_mux_646dEe': 64 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'myproject_mux_83_fYi': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'attention'.
-Command         create_rtl_model done; 1.66 sec.
-INFO: [HLS 200-111]  Elapsed time: 8.79 seconds; current allocated memory: 1.386 GB.
+Command         create_rtl_model done; 1.71 sec.
+INFO: [HLS 200-111]  Elapsed time: 8.91 seconds; current allocated memory: 1.383 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl attention -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/attention -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Command         gen_rtl done; 0.11 sec.
 Execute         gen_rtl attention -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/attention 
 Execute         gen_rtl attention -style xilinx -f -lang vlog -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/verilog/attention 
 Execute         syn_report -csynth -model attention -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/attention_csynth.rpt 
-Command         syn_report done; 0.37 sec.
+Command         syn_report done; 0.41 sec.
 Execute         syn_report -rtlxml -model attention -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/attention_csynth.xml 
 Command         syn_report done; 0.18 sec.
 Execute         syn_report -verbosereport -model attention -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/attention.verbose.rpt 
-Command         syn_report done; 4.04 sec.
+Command         syn_report done; 4.13 sec.
 Execute         db_write -model attention -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/attention.adb 
-Command         db_write done; 3.85 sec.
+Command         db_write done; 3.88 sec.
 Execute         gen_tb_info attention -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/attention 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'concatenate2d_1' 
@@ -1909,21 +1908,22 @@ INFO: [RTGEN 206-100] Generating core module 'myproject_mux_128jbC': 248 instanc
 INFO: [RTGEN 206-100] Generating core module 'myproject_mux_128kbM': 248 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'myproject_mux_646cud': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'concatenate2d_1'.
-Command         create_rtl_model done; 6.06 sec.
-INFO: [HLS 200-111]  Elapsed time: 15.23 seconds; current allocated memory: 1.681 GB.
+Command         create_rtl_model done; 6.15 sec.
+INFO: [HLS 200-111]  Elapsed time: 15.49 seconds; current allocated memory: 1.677 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl concatenate2d_1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/concatenate2d_1 -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
+Command         gen_rtl done; 0.11 sec.
 Execute         gen_rtl concatenate2d_1 -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/concatenate2d_1 
 Execute         gen_rtl concatenate2d_1 -style xilinx -f -lang vlog -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/verilog/concatenate2d_1 
 Command         gen_rtl done; 0.11 sec.
 Execute         syn_report -csynth -model concatenate2d_1 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/concatenate2d_1_csynth.rpt 
-Command         syn_report done; 0.75 sec.
+Command         syn_report done; 0.76 sec.
 Execute         syn_report -rtlxml -model concatenate2d_1 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/concatenate2d_1_csynth.xml 
-Command         syn_report done; 0.36 sec.
+Command         syn_report done; 0.37 sec.
 Execute         syn_report -verbosereport -model concatenate2d_1 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/concatenate2d_1.verbose.rpt 
-Command         syn_report done; 2.87 sec.
+Command         syn_report done; 2.79 sec.
 Execute         db_write -model concatenate2d_1 -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/concatenate2d_1.adb 
-Command         db_write done; 3.42 sec.
+Command         db_write done; 3.39 sec.
 Execute         gen_tb_info concatenate2d_1 -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/concatenate2d_1 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dense_simple_0_0_2' 
@@ -1932,7 +1932,7 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_auto_prefix 
 Execute         create_rtl_model dense_simple.0.0.2 -vendor xilinx -mg_file /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_2.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_simple_0_0_2'.
-INFO: [HLS 200-111]  Elapsed time: 8.62 seconds; current allocated memory: 1.781 GB.
+INFO: [HLS 200-111]  Elapsed time: 8.59 seconds; current allocated memory: 1.778 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl dense_simple.0.0.2 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/dense_simple_0_0_2 -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl dense_simple.0.0.2 -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/dense_simple_0_0_2 
@@ -1940,9 +1940,9 @@ Execute         gen_rtl dense_simple.0.0.2 -style xilinx -f -lang vlog -o /mnt/c
 Execute         syn_report -csynth -model dense_simple.0.0.2 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/dense_simple_0_0_2_csynth.rpt 
 Execute         syn_report -rtlxml -model dense_simple.0.0.2 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/dense_simple_0_0_2_csynth.xml 
 Execute         syn_report -verbosereport -model dense_simple.0.0.2 -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_2.verbose.rpt 
-Command         syn_report done; 0.22 sec.
+Command         syn_report done; 0.21 sec.
 Execute         db_write -model dense_simple.0.0.2 -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_2.adb 
-Command         db_write done; 1.32 sec.
+Command         db_write done; 1.39 sec.
 Execute         gen_tb_info dense_simple.0.0.2 -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_2 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'tanh' 
@@ -1951,7 +1951,7 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_auto_prefix 
 Execute         create_rtl_model tanh -vendor xilinx -mg_file /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/tanh.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'tanh'.
-INFO: [HLS 200-111]  Elapsed time: 1.67 seconds; current allocated memory: 1.783 GB.
+INFO: [HLS 200-111]  Elapsed time: 1.78 seconds; current allocated memory: 1.779 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl tanh -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/tanh -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl tanh -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/tanh 
@@ -1960,7 +1960,7 @@ Execute         syn_report -csynth -model tanh -o /mnt/ccnas2/bdp/umm20/attentio
 Execute         syn_report -rtlxml -model tanh -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/tanh_csynth.xml 
 Execute         syn_report -verbosereport -model tanh -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/tanh.verbose.rpt 
 Execute         db_write -model tanh -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/tanh.adb 
-Command         db_write done; 1.23 sec.
+Command         db_write done; 1.33 sec.
 Execute         gen_tb_info tanh -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/tanh 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'td_dense' 
@@ -1971,7 +1971,7 @@ Execute         create_rtl_model td_dense -vendor xilinx -mg_file /mnt/ccnas2/bd
 INFO: [SYN 201-210] Renamed object name 'td_dense_dense_input_V' to 'td_dense_dense_inlbW' due to the length limit 20
 INFO: [RTGEN 206-100] Generating core module 'myproject_mux_128jbC': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'td_dense'.
-INFO: [HLS 200-111]  Elapsed time: 1.47 seconds; current allocated memory: 1.785 GB.
+INFO: [HLS 200-111]  Elapsed time: 1.53 seconds; current allocated memory: 1.781 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl td_dense -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/td_dense -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl td_dense -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/td_dense 
@@ -1979,9 +1979,9 @@ Execute         gen_rtl td_dense -style xilinx -f -lang vlog -o /mnt/ccnas2/bdp/
 Execute         syn_report -csynth -model td_dense -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/td_dense_csynth.rpt 
 Execute         syn_report -rtlxml -model td_dense -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/td_dense_csynth.xml 
 Execute         syn_report -verbosereport -model td_dense -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/td_dense.verbose.rpt 
-Command         syn_report done; 0.28 sec.
+Command         syn_report done; 0.27 sec.
 Execute         db_write -model td_dense -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/td_dense.adb 
-Command         db_write done; 1.38 sec.
+Command         db_write done; 1.44 sec.
 Execute         gen_tb_info td_dense -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/td_dense 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
@@ -2006,26 +2006,26 @@ INFO: [SYN 201-210] Renamed object name 'start_for_Loop_TIMESTEP_proc34_U0' to '
 INFO: [SYN 201-210] Renamed object name 'start_for_repeat_vector_U0' to 'start_for_repeat_ocq' due to the length limit 20
 INFO: [SYN 201-210] Renamed object name 'start_for_attention_U0' to 'start_for_attentipcA' due to the length limit 20
 INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject'.
-Command         create_rtl_model done; 5.01 sec.
-INFO: [HLS 200-111]  Elapsed time: 6.76 seconds; current allocated memory: 1.807 GB.
+Command         create_rtl_model done; 5.03 sec.
+INFO: [HLS 200-111]  Elapsed time: 6.84 seconds; current allocated memory: 1.803 GB.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
 Execute         gen_rtl myproject -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/systemc/myproject -synmodules myproject.entry3 myproject.entry343 Block_.preheader138. dense_simple.0.0.1 dense_simple.0.0.0.0.1 sigmoid.1 hard_tanh.3 hard_tanh.2 lstm_tail_02.1 Loop_TIMESTEP_proc34 repeat_vector dense_simple.0.0 dense_simple.0.0.0.0 sigmoid hard_tanh.1 hard_tanh lstm_tail_02 Loop_TIMESTEP_proc34.1 softmax attention concatenate2d_1 dense_simple.0.0.2 tanh td_dense myproject 
 Execute         gen_rtl myproject -istop -style xilinx -f -lang vhdl -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/vhdl/myproject 
 Command         gen_rtl done; 1.67 sec.
 Execute         gen_rtl myproject -istop -style xilinx -f -lang vlog -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/verilog/myproject 
-Command         gen_rtl done; 0.94 sec.
+Command         gen_rtl done; 0.85 sec.
 Execute         syn_report -csynth -model myproject -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/myproject_csynth.rpt 
 Command         syn_report done; 0.85 sec.
 Execute         syn_report -rtlxml -model myproject -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/syn/report/myproject_csynth.xml 
 Command         syn_report done; 0.83 sec.
 Execute         syn_report -verbosereport -model myproject -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.verbose.rpt 
-Command         syn_report done; 7.66 sec.
+Command         syn_report done; 7.6 sec.
 Execute         db_write -model myproject -f -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.adb 
-Command         db_write done; 2.94 sec.
+Command         db_write done; 2.83 sec.
 Execute         gen_tb_info myproject -p /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject 
 Execute         export_constraint_db -f -tool general -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.constraint.tcl 
 Execute         syn_report -designview -model myproject -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.design.xml 
-Command         syn_report done; 5.9 sec.
+Command         syn_report done; 5.83 sec.
 Execute         get_config_rtl -disable_wave_debug 
 Execute         syn_report -wcfg -model myproject -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject_dataflow_ana.wcfg 
 Execute         syn_report -protoinst -model myproject -o /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.protoinst 
@@ -4168,8 +4168,8 @@ Execute             source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/techno
 Execute             source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
 Execute             source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute             source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command           ap_source done; 0.18 sec.
-Command         ap_source done; 0.18 sec.
+Command           ap_source done; 0.2 sec.
+Command         ap_source done; 0.2 sec.
 Execute         source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
 Execute           source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=5.000 (was NA)
@@ -4206,7 +4206,7 @@ Execute           ap_part_info -name xcku115-flvb2104-2-i -data names -quiet
 Execute           ap_part_info -name xcku115-flvb2104-2-i -data info -quiet 
 Execute           ap_part_info -name xcku115-flvb2104-2-i -data names -quiet 
 Execute           ap_part_info -name xcku115-flvb2104-2-i -data info -quiet 
-Command         ap_source done; 0.2 sec.
+Command         ap_source done; 0.22 sec.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_3.compgen.tcl 
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/hard_tanh_2.compgen.tcl 
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/lstm_tail_02_1.compgen.tcl 
@@ -4342,7 +4342,7 @@ Execute           ap_part_info -name xcku115-flvb2104-2-i -data names -quiet
 Execute           ap_part_info -name xcku115-flvb2104-2-i -data info -quiet 
 Execute           ap_part_info -name xcku115-flvb2104-2-i -data names -quiet 
 Execute           ap_part_info -name xcku115-flvb2104-2-i -data info -quiet 
-Command         ap_source done; 1.33 sec.
+Command         ap_source done; 1.29 sec.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0.compgen.tcl 
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_0_0.compgen.tcl 
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/sigmoid.compgen.tcl 
@@ -4491,7 +4491,7 @@ Execute           ap_part_info -name xcku115-flvb2104-2-i -data names -quiet
 Execute           ap_part_info -name xcku115-flvb2104-2-i -data info -quiet 
 Execute           ap_part_info -name xcku115-flvb2104-2-i -data names -quiet 
 Execute           ap_part_info -name xcku115-flvb2104-2-i -data info -quiet 
-Command         ap_source done; 1.35 sec.
+Command         ap_source done; 1.37 sec.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/attention.compgen.tcl 
 Execute           ap_part_info -name xcku115-flvb2104-2-i -data names -quiet 
 Execute           ap_part_info -name xcku115-flvb2104-2-i -data info -quiet 
@@ -4759,7 +4759,7 @@ Execute           ap_part_info -name xcku115-flvb2104-2-i -data names -quiet
 Execute           ap_part_info -name xcku115-flvb2104-2-i -data info -quiet 
 Execute           ap_part_info -name xcku115-flvb2104-2-i -data names -quiet 
 Execute           ap_part_info -name xcku115-flvb2104-2-i -data info -quiet 
-Command         ap_source done; 3.42 sec.
+Command         ap_source done; 3.53 sec.
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/dense_simple_0_0_2.compgen.tcl 
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/tanh.compgen.tcl 
 Execute           ap_part_info -name xcku115-flvb2104-2-i -data names -quiet 
@@ -6163,7 +6163,7 @@ INFO: [RTMG 210-285] Implementing FIFO 'start_for_repeat_ocq_U(start_for_repeat_
 Execute           ap_part_info -name xcku115-flvb2104-2-i -data names -quiet 
 Execute           ap_part_info -name xcku115-flvb2104-2-i -data info -quiet 
 INFO: [RTMG 210-285] Implementing FIFO 'start_for_attentipcA_U(start_for_attentipcA)' using Shift Registers.
-Command         ap_source done; 18.28 sec.
+Command         ap_source done; 18.61 sec.
 INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1
 Execute         source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
 INFO-FLOW: DBG:CMD: read_platform_lib /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/global.setting.tcl
@@ -6188,8 +6188,8 @@ Execute             source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/techno
 Execute             source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
 Execute             source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute             source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command           ap_source done; 0.14 sec.
-Command         ap_source done; 0.14 sec.
+Command           ap_source done; 0.15 sec.
+Command         ap_source done; 0.15 sec.
 Execute         source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
 Execute           source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=myproject xml_exists=0
@@ -6289,7 +6289,7 @@ Execute           ap_part_info -name xcku115-flvb2104-2-i -data names -quiet
 Execute           ap_part_info -name xcku115-flvb2104-2-i -data info -quiet 
 Execute           ap_part_info -name xcku115-flvb2104-2-i -data names -quiet 
 Execute           ap_part_info -name xcku115-flvb2104-2-i -data info -quiet 
-Command         ap_source done; 0.23 sec.
+Command         ap_source done; 0.24 sec.
 Execute         ap_part_info -name xcku115-flvb2104-2-i -data names -quiet 
 Execute         ap_part_info -name xcku115-flvb2104-2-i -data info -quiet 
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
@@ -6392,11 +6392,11 @@ Execute         get_config_rtl -stall_sig_gen
 Execute         get_config_rtl -profile 
 INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/kernel.internal.xml
 INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:05:15 ; elapsed = 00:06:25 . Memory (MB): peak = 2867.270 ; gain = 2345.180 ; free physical = 156258 ; free virtual = 552730
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:05:12 ; elapsed = 00:06:22 . Memory (MB): peak = 2864.547 ; gain = 2342.457 ; free physical = 153351 ; free virtual = 552026
 INFO: [VHDL 208-304] Generating VHDL RTL for myproject.
 INFO: [VLOG 209-307] Generating Verilog RTL for myproject.
-Command       autosyn done; 242.5 sec.
-Command     csynth_design done; 368.85 sec.
+Command       autosyn done; 240.27 sec.
+Command     csynth_design done; 366.19 sec.
 Execute     add_files -tb myproject_test.cpp -cflags -std=c++0x -DRTL_SIM 
 INFO: [HLS 200-10] Adding test bench file 'myproject_test.cpp' to the project
 Execute     cosim_design -trace_level all 
@@ -6425,8 +6425,8 @@ Execute           source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technolo
 Execute           source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
 Execute           source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute           source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.15 sec.
-Command       ap_source done; 0.15 sec.
+Command         ap_source done; 0.16 sec.
+Command       ap_source done; 0.16 sec.
 Execute       source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
 Execute         source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 Execute       ap_part_info -name xcku115-flvb2104-2-i -data names -quiet 
@@ -6447,15 +6447,15 @@ INFO-FLOW: exec /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-cs
 Command       tidy_31 done; 1.69 sec.
 Execute       tidy_31 xilinx-tb31-process /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/./sim/autowrap/testbench/myproject_test.cpp_pre.cpp.tb.cpp std=c++0x 
 INFO-FLOW: exec /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/./sim/autowrap/testbench/myproject_test.cpp_pre.cpp.tb.cpp -- -std=c++0x -fhls -ferror-limit=0
-Command       tidy_31 done; 2.71 sec.
+Command       tidy_31 done; 2.61 sec.
 Execute       ap_part_info -name xcku115-flvb2104-2-i -data info 
 INFO-FLOW: TB processing: /mnt/ccnas2/bdp/umm20/attention-hls/template-test/firmware/myproject.cpp /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/./sim/autowrap/testbench/myproject.cpp_pre.cpp
 Execute       tidy_31 xilinx-tb-xfmat /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/./sim/autowrap/testbench/myproject.cpp_pre.cpp std=c++0x 
 INFO-FLOW: exec /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/./sim/autowrap/testbench/myproject.cpp_pre.cpp -- -std=c++0x -fhls -ferror-limit=0
-Command       tidy_31 done; 2.1 sec.
+Command       tidy_31 done; 1.98 sec.
 Execute       tidy_31 xilinx-tb31-process /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/./sim/autowrap/testbench/myproject.cpp_pre.cpp.tb.cpp std=c++0x 
 INFO-FLOW: exec /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/./sim/autowrap/testbench/myproject.cpp_pre.cpp.tb.cpp -- -std=c++0x -fhls -ferror-limit=0
-Command       tidy_31 done; 2.07 sec.
+Command       tidy_31 done; 2.04 sec.
 Execute       source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/./sim/autowrap/testbench/tb.status.tcl 
 Execute       source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
@@ -6466,7 +6466,7 @@ Execute       source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject
 Execute       ap_part_info -name xcku115-flvb2104-2-i -data info 
 Execute       source .run_sim.tcl 
 INFO: [COSIM 212-302] Starting C TB testing ... 
-Command       ap_source done; 1.18 sec.
+Command       ap_source done; 1.13 sec.
 INFO: [COSIM 212-333] Generating C post check test bench ...
 Execute       ap_part_info -name xcku115-flvb2104-2-i -data info 
 INFO: [COSIM 212-12] Generating RTL test bench ...
@@ -6511,9 +6511,9 @@ Execute         source .sim.status.tcl
 INFO: [COSIM 212-323] Starting verilog simulation. 
 INFO: [COSIM 212-15] Starting XSIM ...
 INFO: [COSIM 212-316] Starting C post checking ...
-Command       ap_source done; 82.74 sec.
+Command       ap_source done; 82.29 sec.
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
 INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
-Command     cosim_design done; 118.96 sec.
+Command     cosim_design done; 116.25 sec.
 Execute     cleanup_all 
-Command     cleanup_all done; 1.31 sec.
+Command     cleanup_all done; 1.52 sec.

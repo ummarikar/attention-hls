@@ -1014,8 +1014,8 @@ reg   [15:0] layer2_out_61_V_7_fu_462;
 reg   [15:0] layer2_out_62_V_7_fu_466;
 reg   [15:0] layer2_out_63_V_7_fu_470;
 reg    ap_block_pp0_stage6_01001;
-wire   [6:0] tmp_21_fu_1390_p3;
-wire   [6:0] empty_346_fu_1398_p2;
+wire   [6:0] tmp_19_fu_1390_p3;
+wire   [6:0] empty_347_fu_1398_p2;
 wire   [7:0] zext_ln203_fu_1410_p1;
 wire   [7:0] zext_ln203_1_fu_1414_p1;
 wire   [0:0] icmp_ln203_fu_1404_p2;
@@ -3510,7 +3510,7 @@ assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
 
 assign ap_ready = internal_ap_ready;
 
-assign empty_346_fu_1398_p2 = (tmp_21_fu_1390_p3 | 7'd15);
+assign empty_347_fu_1398_p2 = (tmp_19_fu_1390_p3 | 7'd15);
 
 assign grp_sigmoid_1_fu_1279_ap_start = grp_sigmoid_1_fu_1279_ap_start_reg;
 
@@ -3518,7 +3518,7 @@ assign grp_sigmoid_1_fu_1293_ap_start = grp_sigmoid_1_fu_1293_ap_start_reg;
 
 assign grp_sigmoid_1_fu_1307_ap_start = grp_sigmoid_1_fu_1307_ap_start_reg;
 
-assign icmp_ln203_fu_1404_p2 = ((tmp_21_fu_1390_p3 > empty_346_fu_1398_p2) ? 1'b1 : 1'b0);
+assign icmp_ln203_fu_1404_p2 = ((tmp_19_fu_1390_p3 > empty_347_fu_1398_p2) ? 1'b1 : 1'b0);
 
 assign icmp_ln377_fu_1504_p2 = ((its_0_i_i145_reg_960 == 3'd7) ? 1'b1 : 1'b0);
 
@@ -3672,7 +3672,7 @@ assign sub_ln203_2_fu_1470_p2 = (8'd127 - select_ln203_fu_1446_p3);
 
 assign sub_ln203_fu_1428_p2 = (zext_ln203_fu_1410_p1 - zext_ln203_1_fu_1414_p1);
 
-assign tmp_21_fu_1390_p3 = {{ap_phi_mux_its_0_i_i145_phi_fu_964_p6}, {4'd0}};
+assign tmp_19_fu_1390_p3 = {{ap_phi_mux_its_0_i_i145_phi_fu_964_p6}, {4'd0}};
 
 integer ap_tvar_int_0;
 
@@ -3688,13 +3688,13 @@ end
 
 assign xor_ln203_fu_1434_p2 = (zext_ln203_fu_1410_p1 ^ 8'd127);
 
-assign zext_ln203_1_fu_1414_p1 = empty_346_fu_1398_p2;
+assign zext_ln203_1_fu_1414_p1 = empty_347_fu_1398_p2;
 
 assign zext_ln203_2_fu_1476_p1 = select_ln203_2_fu_1462_p3;
 
 assign zext_ln203_3_fu_1486_p1 = sub_ln203_2_reg_2931;
 
-assign zext_ln203_fu_1410_p1 = tmp_21_fu_1390_p3;
+assign zext_ln203_fu_1410_p1 = tmp_19_fu_1390_p3;
 
 always @ (posedge ap_clk) begin
     sub_ln203_2_reg_2931[0] <= 1'b0;

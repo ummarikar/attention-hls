@@ -82200,12 +82200,6 @@ struct config_h_lstm2 : nnet::dense_config {
     static const unsigned n_out = 8 * 4;
 };
 
-struct config_tanh_test : nnet::activ_config {
- static const unsigned n_in = 8;
- typedef ap_fixed<18,8> table_t;
- typedef model_default_t constant_t;
-};
-
 struct config3 : nnet::repeat_vector_config {
 
     static const unsigned h = 8;

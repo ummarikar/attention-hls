@@ -1078,8 +1078,8 @@ Loop_TIMESTEP_proc34::Loop_TIMESTEP_proc34(sc_module_name name) : sc_module(name
     sensitive << ( real_start );
     sensitive << ( ap_idle_pp0_0to0 );
 
-    SC_METHOD(thread_empty_346_fu_1398_p2);
-    sensitive << ( tmp_21_fu_1390_p3 );
+    SC_METHOD(thread_empty_347_fu_1398_p2);
+    sensitive << ( tmp_19_fu_1390_p3 );
 
     SC_METHOD(thread_grp_dense_simple_0_0_0_0_1_fu_1227_ap_ce);
     sensitive << ( ap_CS_fsm_pp0_stage6 );
@@ -1140,8 +1140,8 @@ Loop_TIMESTEP_proc34::Loop_TIMESTEP_proc34(sc_module_name name) : sc_module(name
     sensitive << ( ap_enable_reg_pp0_iter0 );
     sensitive << ( ap_CS_fsm_pp0_stage2 );
     sensitive << ( ap_block_pp0_stage2_11001 );
-    sensitive << ( tmp_21_fu_1390_p3 );
-    sensitive << ( empty_346_fu_1398_p2 );
+    sensitive << ( tmp_19_fu_1390_p3 );
+    sensitive << ( empty_347_fu_1398_p2 );
 
     SC_METHOD(thread_icmp_ln377_fu_1504_p2);
     sensitive << ( ap_enable_reg_pp0_iter0 );
@@ -2499,7 +2499,7 @@ Loop_TIMESTEP_proc34::Loop_TIMESTEP_proc34(sc_module_name name) : sc_module(name
     sensitive << ( zext_ln203_fu_1410_p1 );
     sensitive << ( zext_ln203_1_fu_1414_p1 );
 
-    SC_METHOD(thread_tmp_21_fu_1390_p3);
+    SC_METHOD(thread_tmp_19_fu_1390_p3);
     sensitive << ( ap_phi_mux_its_0_i_i145_phi_fu_964_p6 );
 
     SC_METHOD(thread_tmp_fu_1418_p4);
@@ -2509,7 +2509,7 @@ Loop_TIMESTEP_proc34::Loop_TIMESTEP_proc34(sc_module_name name) : sc_module(name
     sensitive << ( zext_ln203_fu_1410_p1 );
 
     SC_METHOD(thread_zext_ln203_1_fu_1414_p1);
-    sensitive << ( empty_346_fu_1398_p2 );
+    sensitive << ( empty_347_fu_1398_p2 );
 
     SC_METHOD(thread_zext_ln203_2_fu_1476_p1);
     sensitive << ( select_ln203_2_fu_1462_p3 );
@@ -2518,7 +2518,7 @@ Loop_TIMESTEP_proc34::Loop_TIMESTEP_proc34(sc_module_name name) : sc_module(name
     sensitive << ( sub_ln203_2_reg_2931 );
 
     SC_METHOD(thread_zext_ln203_fu_1410_p1);
-    sensitive << ( tmp_21_fu_1390_p3 );
+    sensitive << ( tmp_19_fu_1390_p3 );
 
     SC_METHOD(thread_ap_NS_fsm);
     sensitive << ( real_start );
@@ -3272,8 +3272,8 @@ Loop_TIMESTEP_proc34::Loop_TIMESTEP_proc34(sc_module_name name) : sc_module(name
     sc_trace(mVcdFile, layer2_out_62_V_7_fu_466, "layer2_out_62_V_7_fu_466");
     sc_trace(mVcdFile, layer2_out_63_V_7_fu_470, "layer2_out_63_V_7_fu_470");
     sc_trace(mVcdFile, ap_block_pp0_stage6_01001, "ap_block_pp0_stage6_01001");
-    sc_trace(mVcdFile, tmp_21_fu_1390_p3, "tmp_21_fu_1390_p3");
-    sc_trace(mVcdFile, empty_346_fu_1398_p2, "empty_346_fu_1398_p2");
+    sc_trace(mVcdFile, tmp_19_fu_1390_p3, "tmp_19_fu_1390_p3");
+    sc_trace(mVcdFile, empty_347_fu_1398_p2, "empty_347_fu_1398_p2");
     sc_trace(mVcdFile, zext_ln203_fu_1410_p1, "zext_ln203_fu_1410_p1");
     sc_trace(mVcdFile, zext_ln203_1_fu_1414_p1, "zext_ln203_1_fu_1414_p1");
     sc_trace(mVcdFile, icmp_ln203_fu_1404_p2, "icmp_ln203_fu_1404_p2");
@@ -5143,8 +5143,8 @@ void Loop_TIMESTEP_proc34::thread_ap_reset_idle_pp0() {
     }
 }
 
-void Loop_TIMESTEP_proc34::thread_empty_346_fu_1398_p2() {
-    empty_346_fu_1398_p2 = (tmp_21_fu_1390_p3.read() | ap_const_lv7_F);
+void Loop_TIMESTEP_proc34::thread_empty_347_fu_1398_p2() {
+    empty_347_fu_1398_p2 = (tmp_19_fu_1390_p3.read() | ap_const_lv7_F);
 }
 
 void Loop_TIMESTEP_proc34::thread_grp_dense_simple_0_0_0_0_1_fu_1227_ap_ce() {
@@ -5236,7 +5236,7 @@ void Loop_TIMESTEP_proc34::thread_grp_sigmoid_1_fu_1307_ap_start() {
 }
 
 void Loop_TIMESTEP_proc34::thread_icmp_ln203_fu_1404_p2() {
-    icmp_ln203_fu_1404_p2 = (!tmp_21_fu_1390_p3.read().is_01() || !empty_346_fu_1398_p2.read().is_01())? sc_lv<1>(): (sc_biguint<7>(tmp_21_fu_1390_p3.read()) > sc_biguint<7>(empty_346_fu_1398_p2.read()));
+    icmp_ln203_fu_1404_p2 = (!tmp_19_fu_1390_p3.read().is_01() || !empty_347_fu_1398_p2.read().is_01())? sc_lv<1>(): (sc_biguint<7>(tmp_19_fu_1390_p3.read()) > sc_biguint<7>(empty_347_fu_1398_p2.read()));
 }
 
 void Loop_TIMESTEP_proc34::thread_icmp_ln377_fu_1504_p2() {
@@ -7002,8 +7002,8 @@ void Loop_TIMESTEP_proc34::thread_sub_ln203_fu_1428_p2() {
     sub_ln203_fu_1428_p2 = (!zext_ln203_fu_1410_p1.read().is_01() || !zext_ln203_1_fu_1414_p1.read().is_01())? sc_lv<8>(): (sc_biguint<8>(zext_ln203_fu_1410_p1.read()) - sc_biguint<8>(zext_ln203_1_fu_1414_p1.read()));
 }
 
-void Loop_TIMESTEP_proc34::thread_tmp_21_fu_1390_p3() {
-    tmp_21_fu_1390_p3 = esl_concat<3,4>(ap_phi_mux_its_0_i_i145_phi_fu_964_p6.read(), ap_const_lv4_0);
+void Loop_TIMESTEP_proc34::thread_tmp_19_fu_1390_p3() {
+    tmp_19_fu_1390_p3 = esl_concat<3,4>(ap_phi_mux_its_0_i_i145_phi_fu_964_p6.read(), ap_const_lv4_0);
 }
 
 void Loop_TIMESTEP_proc34::thread_tmp_fu_1418_p4() {
@@ -7015,7 +7015,7 @@ void Loop_TIMESTEP_proc34::thread_xor_ln203_fu_1434_p2() {
 }
 
 void Loop_TIMESTEP_proc34::thread_zext_ln203_1_fu_1414_p1() {
-    zext_ln203_1_fu_1414_p1 = esl_zext<8,7>(empty_346_fu_1398_p2.read());
+    zext_ln203_1_fu_1414_p1 = esl_zext<8,7>(empty_347_fu_1398_p2.read());
 }
 
 void Loop_TIMESTEP_proc34::thread_zext_ln203_2_fu_1476_p1() {
@@ -7027,7 +7027,7 @@ void Loop_TIMESTEP_proc34::thread_zext_ln203_3_fu_1486_p1() {
 }
 
 void Loop_TIMESTEP_proc34::thread_zext_ln203_fu_1410_p1() {
-    zext_ln203_fu_1410_p1 = esl_zext<8,7>(tmp_21_fu_1390_p3.read());
+    zext_ln203_fu_1410_p1 = esl_zext<8,7>(tmp_19_fu_1390_p3.read());
 }
 
 void Loop_TIMESTEP_proc34::thread_ap_NS_fsm() {

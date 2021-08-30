@@ -16754,11 +16754,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>327</second>
+              <second>322</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>502</second>
+              <second>512</second>
             </item>
           </second>
         </item>

@@ -69,12 +69,6 @@ struct config_h_lstm2 : nnet::dense_config {
     static const unsigned n_out = N_LAYER_2 * 4;
 };
 
-struct config_tanh_test : nnet::activ_config {
-	static const unsigned n_in = N_LAYER_2;
-	typedef ap_fixed<18,8> table_t;
-	typedef model_default_t constant_t;
-};
-
 struct config3 : nnet::repeat_vector_config {
     // Layer Sizes
     static const unsigned h = N_LAYER_2;

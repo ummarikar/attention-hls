@@ -1,5 +1,5 @@
 INFO: Unable to open input/predictions file, using default input.
--0.630859 -0.358398 -0.03125 0.301758 0.615234 0.65332 0.620117 0.570313 
+-0.625977 0.733398 -0.640625 0.629883 -0.640625 0.620117 0.162109 0.829102 
 INFO: Saved inference results to file: tb_data/rtl_cosim_results.log
 INFO: [XSIM 43-3496] Using init file passed via -initfile option "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/data/xsim/ip/xsim_ip.ini".
 Vivado Simulator 2019.2
@@ -8,119 +8,119 @@ Running: /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab xil
 Multi-threading is on. Using 70 slave threads.
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/fifo_w128_d2_A.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fifo_w128_d2_A_shiftReg
-INFO: [VRFC 10-311] analyzing module fifo_w128_d2_A
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_128kbM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module myproject_mux_128kbM
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/hard_tanh_3.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hard_tanh_3
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/start_for_myprojemb6.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module start_for_myprojemb6_shiftReg
-INFO: [VRFC 10-311] analyzing module start_for_myprojemb6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_entry3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_entry3
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/softmax_invert_tag8j.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module softmax_invert_tag8j_rom
 INFO: [VRFC 10-311] analyzing module softmax_invert_tag8j
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/td_dense.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module td_dense
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/softmax.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module softmax
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/start_for_myprojemb6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_myprojemb6_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_myprojemb6
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/Block_preheader138_s.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Block_preheader138_s
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/fifo_w16_d3_A.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fifo_w16_d3_A_shiftReg
-INFO: [VRFC 10-311] analyzing module fifo_w16_d3_A
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/fifo_w16_d4_A.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fifo_w16_d4_A_shiftReg
-INFO: [VRFC 10-311] analyzing module fifo_w16_d4_A
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dense_simple_0_0_2
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/lstm_tail_02_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module lstm_tail_02_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/repeat_vector.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module repeat_vector
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/concatenate2d_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module concatenate2d_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/hard_tanh_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hard_tanh_2
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module myproject
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/lstm_tail_02.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module lstm_tail_02
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/sigmoid.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sigmoid
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/fifo_w16_d2_A.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fifo_w16_d2_A_shiftReg
-INFO: [VRFC 10-311] analyzing module fifo_w16_d2_A
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_646dEe.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module myproject_mux_646dEe
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dense_simple_0_0_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/start_for_repeat_ocq.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module start_for_repeat_ocq_shiftReg
-INFO: [VRFC 10-311] analyzing module start_for_repeat_ocq
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/start_for_Loop_TIncg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module start_for_Loop_TIncg_shiftReg
-INFO: [VRFC 10-311] analyzing module start_for_Loop_TIncg
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dense_simple_0_0_0_0
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/start_for_attentipcA.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module start_for_attentipcA_shiftReg
-INFO: [VRFC 10-311] analyzing module start_for_attentipcA
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/hard_tanh_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hard_tanh_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/attention_mult_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module attention_mult_V_ram
-INFO: [VRFC 10-311] analyzing module attention_mult_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_entry343.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module myproject_entry343
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_0_0_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dense_simple_0_0_0_0_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/Loop_TIMESTEP_proc34.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Loop_TIMESTEP_proc34
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/attention.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module attention
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/Loop_TIMESTEP_proc34_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Loop_TIMESTEP_proc34_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_entry3.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module myproject_entry3
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/tanh.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tanh
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_83_fYi.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module myproject_mux_83_fYi
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_646cud.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module myproject_mux_646cud
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/softmax_exp_table10.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module softmax_exp_table10_rom
-INFO: [VRFC 10-311] analyzing module softmax_exp_table10
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/sigmoid_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sigmoid_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/td_dense_acc_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module td_dense_acc_V_ram
-INFO: [VRFC 10-311] analyzing module td_dense_acc_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/hard_tanh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hard_tanh
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_128kbM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_mux_128kbM
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module dense_simple_0_0
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_128jbC.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module myproject_mux_128jbC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/tanh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tanh
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/concatenate2d_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module concatenate2d_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_myproject_top
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/tanh_tanh_table9.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tanh_tanh_table9_rom
 INFO: [VRFC 10-311] analyzing module tanh_tanh_table9
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/sigmoid_1_sigmoidbkb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sigmoid_1_sigmoidbkb_rom
-INFO: [VRFC 10-311] analyzing module sigmoid_1_sigmoidbkb
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject.autotb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module apatb_myproject_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/attention.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module attention
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/lstm_tail_02_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lstm_tail_02_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/fifo_w128_d2_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w128_d2_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w128_d2_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_646dEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_mux_646dEe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/softmax.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module softmax
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/sigmoid_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sigmoid_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dense_simple_0_0_0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/start_for_attentipcA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_attentipcA_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_attentipcA
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/start_for_Loop_TIncg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_Loop_TIncg_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_Loop_TIncg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/start_for_repeat_ocq.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_repeat_ocq_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_repeat_ocq
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_83_fYi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_mux_83_fYi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/hard_tanh_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hard_tanh_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/fifo_w16_d2_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w16_d2_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w16_d2_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/Loop_TIMESTEP_proc34.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loop_TIMESTEP_proc34
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_128jbC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_mux_128jbC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/td_dense.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module td_dense
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_0_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dense_simple_0_0_0_0_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/td_dense_dense_inlbW.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module td_dense_dense_inlbW_ram
 INFO: [VRFC 10-311] analyzing module td_dense_dense_inlbW
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/hard_tanh.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hard_tanh
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/sigmoid_1_sigmoidbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sigmoid_1_sigmoidbkb_rom
+INFO: [VRFC 10-311] analyzing module sigmoid_1_sigmoidbkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/hard_tanh_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hard_tanh_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_646cud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_mux_646cud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dense_simple_0_0_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/Loop_TIMESTEP_proc34_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loop_TIMESTEP_proc34_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/fifo_w16_d3_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w16_d3_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w16_d3_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_entry343.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_entry343
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/fifo_w16_d4_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w16_d4_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w16_d4_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/softmax_exp_table10.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module softmax_exp_table10_rom
+INFO: [VRFC 10-311] analyzing module softmax_exp_table10
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/repeat_vector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module repeat_vector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/attention_mult_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module attention_mult_V_ram
+INFO: [VRFC 10-311] analyzing module attention_mult_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/lstm_tail_02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lstm_tail_02
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/hard_tanh_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hard_tanh_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dense_simple_0_0_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/td_dense_acc_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module td_dense_acc_V_ram
+INFO: [VRFC 10-311] analyzing module td_dense_acc_V
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mul_mulibs.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module myproject_mul_mulibs_DSP48_0
 INFO: [VRFC 10-311] analyzing module myproject_mul_mulibs
@@ -212,8 +212,8 @@ Built simulation snapshot myproject
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] '/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Aug 30 20:51:03 2021. For additional details about this file, please refer to the WebTalk help file at /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Mon Aug 30 20:51:03 2021...
+INFO: [Common 17-186] '/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Aug 30 22:39:35 2021. For additional details about this file, please refer to the WebTalk help file at /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Aug 30 22:39:35 2021...
 
 ****** xsim v2019.2 (64-bit)
   **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
@@ -227,7 +227,7 @@ Time resolution is 1 ps
 source myproject.tcl
 ## log_wave -r /
 WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
-log_wave: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1973.422 ; gain = 256.000 ; free physical = 155164 ; free virtual = 551907
+log_wave: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1973.422 ; gain = 256.000 ; free physical = 152459 ; free virtual = 551302
 ## set designtopgroup [add_wave_group "Design Top Signals"]
 ## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
 ## set const_size_out_1_group [add_wave_group const_size_out_1(wire) -into $coutputgroup]
@@ -321,12 +321,12 @@ log_wave: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 19
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 1 [0.00%] @ "113000"
-// RTL Simulation : 1 / 1 [100.00%] @ "40273000"
+// RTL Simulation : 1 / 1 [100.00%] @ "40283000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 40292500 ps : File "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject.autotb.v" Line 838
-run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1973.422 ; gain = 0.000 ; free physical = 155184 ; free virtual = 551940
+$finish called at time : 40302500 ps : File "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject.autotb.v" Line 838
+run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1973.422 ; gain = 0.000 ; free physical = 152335 ; free virtual = 551192
 ## quit
-INFO: [Common 17-206] Exiting xsim at Mon Aug 30 20:51:32 2021...
+INFO: [Common 17-206] Exiting xsim at Mon Aug 30 22:40:04 2021...
 INFO: Unable to open input/predictions file, using default input.
--0.630859 -0.358398 -0.03125 0.301758 0.615234 0.65332 0.620117 0.570313 
+-0.625977 0.733398 -0.640625 0.629883 -0.640625 0.620117 0.162109 0.829102 
 INFO: Saved inference results to file: tb_data/rtl_cosim_results.log

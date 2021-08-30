@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'Loop_TIMESTEP_proc34'
 ================================================================
-* Date:           Mon Aug 30 20:47:31 2021
+* Date:           Mon Aug 30 22:36:07 2021
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
 * Project:        myproject_prj
@@ -67,20 +67,20 @@
 |DSP                  |        -|      -|        -|       -|    -|
 |Expression           |        -|      -|        0|    1228|    -|
 |FIFO                 |        -|      -|        -|       -|    -|
-|Instance             |       12|    273|     7601|   12899|    -|
+|Instance             |       12|    284|     7757|   12640|    -|
 |Memory               |        -|      -|        -|       -|    -|
 |Multiplexer          |        -|      -|        -|     992|    -|
 |Register             |        -|      -|     3604|       -|    -|
 +---------------------+---------+-------+---------+--------+-----+
-|Total                |       12|    273|    11205|   15119|    0|
+|Total                |       12|    284|    11361|   14860|    0|
 +---------------------+---------+-------+---------+--------+-----+
 |Available SLR        |     2160|   2760|   663360|  331680|    0|
 +---------------------+---------+-------+---------+--------+-----+
-|Utilization SLR (%)  |    ~0   |      9|        1|       4|  100|
+|Utilization SLR (%)  |    ~0   |     10|        1|       4|  100|
 +---------------------+---------+-------+---------+--------+-----+
 |Available            |     4320|   5520|  1326720|  663360|    0|
 +---------------------+---------+-------+---------+--------+-----+
-|Utilization (%)      |    ~0   |      4|    ~0   |       2|    0|
+|Utilization (%)      |    ~0   |      5|    ~0   |       2|    0|
 +---------------------+---------+-------+---------+--------+-----+
 
 + Detail: 
@@ -88,15 +88,15 @@
     +------------------------------------+------------------------+---------+-------+------+------+-----+
     |              Instance              |         Module         | BRAM_18K| DSP48E|  FF  |  LUT | URAM|
     +------------------------------------+------------------------+---------+-------+------+------+-----+
-    |grp_dense_simple_0_0_0_0_1_fu_1227  |dense_simple_0_0_0_0_1  |        0|    221|  4752|  6864|    0|
-    |grp_dense_simple_0_0_1_fu_1321      |dense_simple_0_0_1      |        0|     28|   967|  1209|    0|
+    |grp_dense_simple_0_0_0_0_1_fu_1227  |dense_simple_0_0_0_0_1  |        0|    230|  4880|  6617|    0|
+    |grp_dense_simple_0_0_1_fu_1321      |dense_simple_0_0_1      |        0|     30|   995|  1197|    0|
     |call_ret4_hard_tanh_3_fu_1378       |hard_tanh_3             |        0|      0|     0|   416|    0|
     |grp_lstm_tail_02_1_fu_1326          |lstm_tail_02_1          |        0|     24|  1633|   840|    0|
     |grp_sigmoid_1_fu_1279               |sigmoid_1               |        4|      0|    83|  1190|    0|
     |grp_sigmoid_1_fu_1293               |sigmoid_1               |        4|      0|    83|  1190|    0|
     |grp_sigmoid_1_fu_1307               |sigmoid_1               |        4|      0|    83|  1190|    0|
     +------------------------------------+------------------------+---------+-------+------+------+-----+
-    |Total                               |                        |       12|    273|  7601| 12899|    0|
+    |Total                               |                        |       12|    284|  7757| 12640|    0|
     +------------------------------------+------------------------+---------+-------+------+------+-----+
 
     * DSP48E: 
@@ -130,7 +130,7 @@
     |lshr_ln203_fu_1480_p2              |   lshr   |      0|  0|  423|         128|         128|
     |ap_block_state1                    |    or    |      0|  0|    2|           1|           1|
     |ap_block_state17_pp0_stage6_iter1  |    or    |      0|  0|    2|           1|           1|
-    |empty_346_fu_1398_p2               |    or    |      0|  0|    7|           7|           4|
+    |empty_347_fu_1398_p2               |    or    |      0|  0|    7|           7|           4|
     |select_ln203_1_fu_1454_p3          |  select  |      0|  0|  127|           1|         128|
     |select_ln203_2_fu_1462_p3          |  select  |      0|  0|    8|           1|           8|
     |select_ln203_fu_1446_p3            |  select  |      0|  0|    8|           1|           8|
@@ -818,11 +818,11 @@ ST_3 : Operation 88 [1/1] (0.83ns)   --->   "br label %TIMESTEP_begin" [firmware
 State 4 <SV = 3> <Delay = 2.48>
 ST_4 : Operation 89 [1/1] (0.00ns)   --->   "%its_0_i_i145 = phi i3 [ 0, %entry ], [ %its, %TIMESTEP_end ], [ 0, %.exit ]"   --->   Operation 89 'phi' 'its_0_i_i145' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 90 [1/1] (0.00ns)   --->   "%input_1_V_load_phi = phi i128 [ %input_1_V_read, %rewind_init ], [ %input_1_V_load_rewin, %rewind_header ]" [firmware/nnet_utils/nnet_lstm.h:385->firmware/myproject.cpp:62]   --->   Operation 90 'phi' 'input_1_V_load_phi' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 91 [1/1] (0.00ns)   --->   "%tmp_21 = call i7 @_ssdm_op_BitConcatenate.i7.i3.i4(i3 %its_0_i_i145, i4 0)" [firmware/nnet_utils/nnet_lstm.h:377->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 91 'bitconcatenate' 'tmp_21' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 92 [1/1] (0.00ns)   --->   "%empty_346 = or i7 %tmp_21, 15" [firmware/nnet_utils/nnet_lstm.h:377->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 92 'or' 'empty_346' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 93 [1/1] (0.81ns)   --->   "%icmp_ln203 = icmp ugt i7 %tmp_21, %empty_346" [firmware/nnet_utils/nnet_lstm.h:385->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 93 'icmp' 'icmp_ln203' <Predicate = true> <Delay = 0.81> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 94 [1/1] (0.00ns)   --->   "%zext_ln203 = zext i7 %tmp_21 to i8" [firmware/nnet_utils/nnet_lstm.h:385->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 94 'zext' 'zext_ln203' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 95 [1/1] (0.00ns)   --->   "%zext_ln203_1 = zext i7 %empty_346 to i8" [firmware/nnet_utils/nnet_lstm.h:385->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 95 'zext' 'zext_ln203_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 91 [1/1] (0.00ns)   --->   "%tmp_19 = call i7 @_ssdm_op_BitConcatenate.i7.i3.i4(i3 %its_0_i_i145, i4 0)" [firmware/nnet_utils/nnet_lstm.h:377->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 91 'bitconcatenate' 'tmp_19' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 92 [1/1] (0.00ns)   --->   "%empty_347 = or i7 %tmp_19, 15" [firmware/nnet_utils/nnet_lstm.h:377->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 92 'or' 'empty_347' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 93 [1/1] (0.81ns)   --->   "%icmp_ln203 = icmp ugt i7 %tmp_19, %empty_347" [firmware/nnet_utils/nnet_lstm.h:385->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 93 'icmp' 'icmp_ln203' <Predicate = true> <Delay = 0.81> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 94 [1/1] (0.00ns)   --->   "%zext_ln203 = zext i7 %tmp_19 to i8" [firmware/nnet_utils/nnet_lstm.h:385->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 94 'zext' 'zext_ln203' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 95 [1/1] (0.00ns)   --->   "%zext_ln203_1 = zext i7 %empty_347 to i8" [firmware/nnet_utils/nnet_lstm.h:385->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 95 'zext' 'zext_ln203_1' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 96 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln203)   --->   "%tmp = call i128 @llvm.part.select.i128(i128 %input_1_V_load_phi, i32 127, i32 0)" [firmware/nnet_utils/nnet_lstm.h:385->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 96 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 97 [1/1] (1.20ns)   --->   "%sub_ln203 = sub i8 %zext_ln203, %zext_ln203_1" [firmware/nnet_utils/nnet_lstm.h:385->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 97 'sub' 'sub_ln203' <Predicate = true> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_4 : Operation 98 [1/1] (0.00ns) (grouped into LUT with out node lshr_ln203)   --->   "%xor_ln203 = xor i8 %zext_ln203, 127" [firmware/nnet_utils/nnet_lstm.h:385->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 98 'xor' 'xor_ln203' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
@@ -850,14 +850,14 @@ ST_5 : Operation 117 [1/1] (1.10ns) (out node of the LUT)   --->   "%and_ln203 =
 ST_5 : Operation 118 [1/1] (0.00ns)   --->   "%input_x_0_V = trunc i128 %and_ln203 to i16" [firmware/nnet_utils/nnet_lstm.h:385->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 118 'trunc' 'input_x_0_V' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 119 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([9 x i8]* @p_str23, i32 %tmp_i)" [firmware/nnet_utils/nnet_lstm.h:415->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 119 'specregionend' 'empty' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 120 [1/1] (0.72ns)   --->   "%icmp_ln377 = icmp eq i3 %its_0_i_i145, -1" [firmware/nnet_utils/nnet_lstm.h:377->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 120 'icmp' 'icmp_ln377' <Predicate = true> <Delay = 0.72> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 121 [1/1] (0.00ns)   --->   "%empty_345 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)"   --->   Operation 121 'speclooptripcount' 'empty_345' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 121 [1/1] (0.00ns)   --->   "%empty_346 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)"   --->   Operation 121 'speclooptripcount' 'empty_346' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 122 [1/1] (0.00ns)   --->   "br i1 %icmp_ln377, label %.exit, label %rewind_header" [firmware/nnet_utils/nnet_lstm.h:377->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 122 'br' <Predicate = true> <Delay = 0.00>
 
 State 6 <SV = 5> <Delay = 3.57>
 ST_6 : Operation 123 [2/2] (3.57ns)   --->   "%call_ret1_i = call fastcc { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } @dense_simple.0.0.1(i16 %input_x_0_V)" [firmware/nnet_utils/nnet_lstm.h:388->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 123 'call' 'call_ret1_i' <Predicate = true> <Delay = 3.57> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
-State 7 <SV = 6> <Delay = 2.83>
-ST_7 : Operation 124 [1/2] (2.83ns)   --->   "%call_ret1_i = call fastcc { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } @dense_simple.0.0.1(i16 %input_x_0_V)" [firmware/nnet_utils/nnet_lstm.h:388->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 124 'call' 'call_ret1_i' <Predicate = true> <Delay = 2.83> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+State 7 <SV = 6> <Delay = 2.78>
+ST_7 : Operation 124 [1/2] (2.78ns)   --->   "%call_ret1_i = call fastcc { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } @dense_simple.0.0.1(i16 %input_x_0_V)" [firmware/nnet_utils/nnet_lstm.h:388->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 124 'call' 'call_ret1_i' <Predicate = true> <Delay = 2.78> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_7 : Operation 125 [1/1] (0.00ns)   --->   "%acc_x_0_V = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret1_i, 0" [firmware/nnet_utils/nnet_lstm.h:388->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 125 'extractvalue' 'acc_x_0_V' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 126 [1/1] (0.00ns)   --->   "%acc_x_1_V = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret1_i, 1" [firmware/nnet_utils/nnet_lstm.h:388->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 126 'extractvalue' 'acc_x_1_V' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 127 [1/1] (0.00ns)   --->   "%acc_x_2_V = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret1_i, 2" [firmware/nnet_utils/nnet_lstm.h:388->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 127 'extractvalue' 'acc_x_2_V' <Predicate = true> <Delay = 0.00>
@@ -891,7 +891,7 @@ ST_7 : Operation 154 [1/1] (0.00ns)   --->   "%acc_x_29_V = extractvalue { i16, 
 ST_7 : Operation 155 [1/1] (0.00ns)   --->   "%acc_x_30_V = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret1_i, 30" [firmware/nnet_utils/nnet_lstm.h:388->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 155 'extractvalue' 'acc_x_30_V' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 156 [1/1] (0.00ns)   --->   "%acc_x_31_V = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret1_i, 31" [firmware/nnet_utils/nnet_lstm.h:388->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 156 'extractvalue' 'acc_x_31_V' <Predicate = true> <Delay = 0.00>
 
-State 8 <SV = 7> <Delay = 4.19>
+State 8 <SV = 7> <Delay = 3.57>
 ST_8 : Operation 157 [1/1] (0.00ns)   --->   "%h_pre_V_4_0_i144 = phi i16 [ 0, %entry ], [ %h_pre_4_V, %TIMESTEP_end ], [ 0, %.exit ]"   --->   Operation 157 'phi' 'h_pre_V_4_0_i144' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 158 [1/1] (0.00ns)   --->   "%h_pre_V_3_0_i143 = phi i16 [ 0, %entry ], [ %h_pre_3_V, %TIMESTEP_end ], [ 0, %.exit ]"   --->   Operation 158 'phi' 'h_pre_V_3_0_i143' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 159 [1/1] (0.00ns)   --->   "%h_pre_V_2_0_i142 = phi i16 [ 0, %entry ], [ %h_pre_2_V, %TIMESTEP_end ], [ 0, %.exit ]"   --->   Operation 159 'phi' 'h_pre_V_2_0_i142' <Predicate = true> <Delay = 0.00>
@@ -900,10 +900,10 @@ ST_8 : Operation 161 [1/1] (0.00ns)   --->   "%h_pre_V_0_0_i140 = phi i16 [ 0, %
 ST_8 : Operation 162 [1/1] (0.00ns)   --->   "%h_pre_V_5_0_i139 = phi i16 [ 0, %entry ], [ %h_pre_5_V, %TIMESTEP_end ], [ 0, %.exit ]"   --->   Operation 162 'phi' 'h_pre_V_5_0_i139' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 163 [1/1] (0.00ns)   --->   "%h_pre_V_6_0_i138 = phi i16 [ 0, %entry ], [ %h_pre_6_V, %TIMESTEP_end ], [ 0, %.exit ]"   --->   Operation 163 'phi' 'h_pre_V_6_0_i138' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 164 [1/1] (0.00ns)   --->   "%h_pre_V_7_0_i137 = phi i16 [ 0, %entry ], [ %h_pre_7_V, %TIMESTEP_end ], [ 0, %.exit ]"   --->   Operation 164 'phi' 'h_pre_V_7_0_i137' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 165 [2/2] (4.19ns)   --->   "%call_ret3 = call fastcc { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } @dense_simple.0.0.0.0.1(i16 %h_pre_V_0_0_i140, i16 %h_pre_V_1_0265_i141, i16 %h_pre_V_2_0_i142, i16 %h_pre_V_3_0_i143, i16 %h_pre_V_4_0_i144, i16 %h_pre_V_5_0_i139, i16 %h_pre_V_6_0_i138, i16 %h_pre_V_7_0_i137, i16 %acc_x_0_V, i16 %acc_x_1_V, i16 %acc_x_2_V, i16 %acc_x_3_V, i16 %acc_x_4_V, i16 %acc_x_5_V, i16 %acc_x_6_V, i16 %acc_x_7_V, i16 %acc_x_8_V, i16 %acc_x_9_V, i16 %acc_x_10_V, i16 %acc_x_11_V, i16 %acc_x_12_V, i16 %acc_x_13_V, i16 %acc_x_14_V, i16 %acc_x_15_V, i16 %acc_x_16_V, i16 %acc_x_17_V, i16 %acc_x_18_V, i16 %acc_x_19_V, i16 %acc_x_20_V, i16 %acc_x_21_V, i16 %acc_x_22_V, i16 %acc_x_23_V, i16 %acc_x_24_V, i16 %acc_x_25_V, i16 %acc_x_26_V, i16 %acc_x_27_V, i16 %acc_x_28_V, i16 %acc_x_29_V, i16 %acc_x_30_V, i16 %acc_x_31_V)" [firmware/nnet_utils/nnet_lstm.h:389->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 165 'call' 'call_ret3' <Predicate = true> <Delay = 4.19> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 165 [2/2] (3.57ns)   --->   "%call_ret3 = call fastcc { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } @dense_simple.0.0.0.0.1(i16 %h_pre_V_0_0_i140, i16 %h_pre_V_1_0265_i141, i16 %h_pre_V_2_0_i142, i16 %h_pre_V_3_0_i143, i16 %h_pre_V_4_0_i144, i16 %h_pre_V_5_0_i139, i16 %h_pre_V_6_0_i138, i16 %h_pre_V_7_0_i137, i16 %acc_x_0_V, i16 %acc_x_1_V, i16 %acc_x_2_V, i16 %acc_x_3_V, i16 %acc_x_4_V, i16 %acc_x_5_V, i16 %acc_x_6_V, i16 %acc_x_7_V, i16 %acc_x_8_V, i16 %acc_x_9_V, i16 %acc_x_10_V, i16 %acc_x_11_V, i16 %acc_x_12_V, i16 %acc_x_13_V, i16 %acc_x_14_V, i16 %acc_x_15_V, i16 %acc_x_16_V, i16 %acc_x_17_V, i16 %acc_x_18_V, i16 %acc_x_19_V, i16 %acc_x_20_V, i16 %acc_x_21_V, i16 %acc_x_22_V, i16 %acc_x_23_V, i16 %acc_x_24_V, i16 %acc_x_25_V, i16 %acc_x_26_V, i16 %acc_x_27_V, i16 %acc_x_28_V, i16 %acc_x_29_V, i16 %acc_x_30_V, i16 %acc_x_31_V)" [firmware/nnet_utils/nnet_lstm.h:389->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 165 'call' 'call_ret3' <Predicate = true> <Delay = 3.57> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
-State 9 <SV = 8> <Delay = 3.85>
-ST_9 : Operation 166 [1/2] (3.85ns)   --->   "%call_ret3 = call fastcc { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } @dense_simple.0.0.0.0.1(i16 %h_pre_V_0_0_i140, i16 %h_pre_V_1_0265_i141, i16 %h_pre_V_2_0_i142, i16 %h_pre_V_3_0_i143, i16 %h_pre_V_4_0_i144, i16 %h_pre_V_5_0_i139, i16 %h_pre_V_6_0_i138, i16 %h_pre_V_7_0_i137, i16 %acc_x_0_V, i16 %acc_x_1_V, i16 %acc_x_2_V, i16 %acc_x_3_V, i16 %acc_x_4_V, i16 %acc_x_5_V, i16 %acc_x_6_V, i16 %acc_x_7_V, i16 %acc_x_8_V, i16 %acc_x_9_V, i16 %acc_x_10_V, i16 %acc_x_11_V, i16 %acc_x_12_V, i16 %acc_x_13_V, i16 %acc_x_14_V, i16 %acc_x_15_V, i16 %acc_x_16_V, i16 %acc_x_17_V, i16 %acc_x_18_V, i16 %acc_x_19_V, i16 %acc_x_20_V, i16 %acc_x_21_V, i16 %acc_x_22_V, i16 %acc_x_23_V, i16 %acc_x_24_V, i16 %acc_x_25_V, i16 %acc_x_26_V, i16 %acc_x_27_V, i16 %acc_x_28_V, i16 %acc_x_29_V, i16 %acc_x_30_V, i16 %acc_x_31_V)" [firmware/nnet_utils/nnet_lstm.h:389->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 166 'call' 'call_ret3' <Predicate = true> <Delay = 3.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+State 9 <SV = 8> <Delay = 3.84>
+ST_9 : Operation 166 [1/2] (3.84ns)   --->   "%call_ret3 = call fastcc { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } @dense_simple.0.0.0.0.1(i16 %h_pre_V_0_0_i140, i16 %h_pre_V_1_0265_i141, i16 %h_pre_V_2_0_i142, i16 %h_pre_V_3_0_i143, i16 %h_pre_V_4_0_i144, i16 %h_pre_V_5_0_i139, i16 %h_pre_V_6_0_i138, i16 %h_pre_V_7_0_i137, i16 %acc_x_0_V, i16 %acc_x_1_V, i16 %acc_x_2_V, i16 %acc_x_3_V, i16 %acc_x_4_V, i16 %acc_x_5_V, i16 %acc_x_6_V, i16 %acc_x_7_V, i16 %acc_x_8_V, i16 %acc_x_9_V, i16 %acc_x_10_V, i16 %acc_x_11_V, i16 %acc_x_12_V, i16 %acc_x_13_V, i16 %acc_x_14_V, i16 %acc_x_15_V, i16 %acc_x_16_V, i16 %acc_x_17_V, i16 %acc_x_18_V, i16 %acc_x_19_V, i16 %acc_x_20_V, i16 %acc_x_21_V, i16 %acc_x_22_V, i16 %acc_x_23_V, i16 %acc_x_24_V, i16 %acc_x_25_V, i16 %acc_x_26_V, i16 %acc_x_27_V, i16 %acc_x_28_V, i16 %acc_x_29_V, i16 %acc_x_30_V, i16 %acc_x_31_V)" [firmware/nnet_utils/nnet_lstm.h:389->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 166 'call' 'call_ret3' <Predicate = true> <Delay = 3.84> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_9 : Operation 167 [1/1] (0.00ns)   --->   "%gate_i_0_V = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret3, 0" [firmware/nnet_utils/nnet_lstm.h:389->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 167 'extractvalue' 'gate_i_0_V' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 168 [1/1] (0.00ns)   --->   "%gate_i_1_V = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret3, 1" [firmware/nnet_utils/nnet_lstm.h:389->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 168 'extractvalue' 'gate_i_1_V' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 169 [1/1] (0.00ns)   --->   "%gate_i_2_V = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret3, 2" [firmware/nnet_utils/nnet_lstm.h:389->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62]   --->   Operation 169 'extractvalue' 'gate_i_2_V' <Predicate = true> <Delay = 0.00>
@@ -1569,8 +1569,8 @@ input_1_V_read       (read             ) [ 001111111111111111]
 br_ln377             (br               ) [ 001111111111111111]
 its_0_i_i145         (phi              ) [ 001111111001111111]
 input_1_V_load_phi   (phi              ) [ 011111111111111111]
-tmp_21               (bitconcatenate   ) [ 000000000000000000]
-empty_346            (or               ) [ 000000000000000000]
+tmp_19               (bitconcatenate   ) [ 000000000000000000]
+empty_347            (or               ) [ 000000000000000000]
 icmp_ln203           (icmp             ) [ 000000000000000000]
 zext_ln203           (zext             ) [ 000000000000000000]
 zext_ln203_1         (zext             ) [ 000000000000000000]
@@ -1599,7 +1599,7 @@ and_ln203            (and              ) [ 000000000000000000]
 input_x_0_V          (trunc            ) [ 000000100000000000]
 empty                (specregionend    ) [ 000000000000000000]
 icmp_ln377           (icmp             ) [ 001111111111111111]
-empty_345            (speclooptripcount) [ 000000000000000000]
+empty_346            (speclooptripcount) [ 000000000000000000]
 br_ln377             (br               ) [ 011111111111111111]
 call_ret1_i          (call             ) [ 000000000000000000]
 acc_x_0_V            (extractvalue     ) [ 000000001000000000]
@@ -5307,7 +5307,7 @@ return_ln335         (return           ) [ 000000000000000000]
 </bind>
 </comp>
 
-<comp id="1390" class="1004" name="tmp_21_fu_1390">
+<comp id="1390" class="1004" name="tmp_19_fu_1390">
 <pin_list>
 <pin id="1391" dir="0" index="0" bw="7" slack="0"/>
 <pin id="1392" dir="0" index="1" bw="3" slack="0"/>
@@ -5316,11 +5316,11 @@ return_ln335         (return           ) [ 000000000000000000]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="tmp_21/4 "/>
+<opset="tmp_19/4 "/>
 </bind>
 </comp>
 
-<comp id="1398" class="1004" name="empty_346_fu_1398">
+<comp id="1398" class="1004" name="empty_347_fu_1398">
 <pin_list>
 <pin id="1399" dir="0" index="0" bw="7" slack="0"/>
 <pin id="1400" dir="0" index="1" bw="7" slack="0"/>
@@ -5328,7 +5328,7 @@ return_ln335         (return           ) [ 000000000000000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="empty_346/4 "/>
+<opset="empty_347/4 "/>
 </bind>
 </comp>
 
@@ -12195,8 +12195,8 @@ return_ln335         (return           ) [ 000000000000000000]
 	State 2
 	State 3
 	State 4
-		tmp_21 : 1
-		empty_346 : 2
+		tmp_19 : 1
+		empty_347 : 2
 		icmp_ln203 : 2
 		zext_ln203 : 2
 		zext_ln203_1 : 2
@@ -12480,11 +12480,11 @@ return_ln335         (return           ) [ 000000000000000000]
 |----------|------------------------------------|---------|---------|---------|---------|
 | Operation|           Functional Unit          |  DSP48E |  Delay  |    FF   |   LUT   |
 |----------|------------------------------------|---------|---------|---------|---------|
-|          | grp_dense_simple_0_0_0_0_1_fu_1227 |   223   |    0    |   4239  |   6511  |
+|          | grp_dense_simple_0_0_0_0_1_fu_1227 |   230   |    0    |   4372  |   6295  |
 |          |        grp_sigmoid_1_fu_1279       |    0    |   6.68  |   160   |   1248  |
 |          |        grp_sigmoid_1_fu_1293       |    0    |   6.68  |   160   |   1248  |
 |   call   |        grp_sigmoid_1_fu_1307       |    0    |   6.68  |   160   |   1248  |
-|          |   grp_dense_simple_0_0_1_fu_1321   |    28   |    0    |   458   |   906   |
+|          |   grp_dense_simple_0_0_1_fu_1321   |    30   |    0    |   486   |   899   |
 |          |     grp_lstm_tail_02_1_fu_1326     |    24   |    0    |   640   |   696   |
 |          |    call_ret4_hard_tanh_3_fu_1378   |    0    |    0    |    0    |   416   |
 |----------|------------------------------------|---------|---------|---------|---------|
@@ -12575,9 +12575,9 @@ return_ln335         (return           ) [ 000000000000000000]
 |          |      write_ln335_write_fu_914      |    0    |    0    |    0    |    0    |
 |          |      write_ln335_write_fu_921      |    0    |    0    |    0    |    0    |
 |----------|------------------------------------|---------|---------|---------|---------|
-|bitconcatenate|           tmp_21_fu_1390           |    0    |    0    |    0    |    0    |
+|bitconcatenate|           tmp_19_fu_1390           |    0    |    0    |    0    |    0    |
 |----------|------------------------------------|---------|---------|---------|---------|
-|    or    |          empty_346_fu_1398         |    0    |    0    |    0    |    0    |
+|    or    |          empty_347_fu_1398         |    0    |    0    |    0    |    0    |
 |----------|------------------------------------|---------|---------|---------|---------|
 |          |         zext_ln203_fu_1410         |    0    |    0    |    0    |    0    |
 |   zext   |        zext_ln203_1_fu_1414        |    0    |    0    |    0    |    0    |
@@ -12703,7 +12703,7 @@ return_ln335         (return           ) [ 000000000000000000]
 |----------|------------------------------------|---------|---------|---------|---------|
 |  return  |        return_ln335_fu_2540        |    0    |    0    |    0    |    0    |
 |----------|------------------------------------|---------|---------|---------|---------|
-|   Total  |                                    |   275   |  20.04  |   5817  |  13067  |
+|   Total  |                                    |   284   |  20.04  |   5978  |  12844  |
 |----------|------------------------------------|---------|---------|---------|---------|
 
 Memories:
@@ -12952,10 +12952,10 @@ N/A
 +-----------+--------+--------+--------+--------+
 |           | DSP48E |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+--------+
-|  Function |   275  |   20   |  5817  |  13067 |
+|  Function |   284  |   20   |  5978  |  12844 |
 |   Memory  |    -   |    -   |    -   |    -   |
 |Multiplexer|    -   |   15   |    -   |   171  |
 |  Register |    -   |    -   |  3584  |    -   |
 +-----------+--------+--------+--------+--------+
-|   Total   |   275  |   35   |  9401  |  13238 |
+|   Total   |   284  |   35   |  9562  |  13015 |
 +-----------+--------+--------+--------+--------+

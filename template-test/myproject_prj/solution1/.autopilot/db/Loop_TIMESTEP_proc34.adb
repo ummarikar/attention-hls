@@ -5037,7 +5037,7 @@
             <Obj>
               <type>0</type>
               <id>163</id>
-              <name>tmp_21</name>
+              <name>tmp_19</name>
               <fileName>firmware/nnet_utils/nnet_lstm.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>377</lineNumber>
@@ -5068,7 +5068,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_21_fu_1390_p3</rtlName>
+              <rtlName>tmp_19_fu_1390_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>7</bitwidth>
@@ -5094,7 +5094,7 @@
             <Obj>
               <type>0</type>
               <id>164</id>
-              <name>empty_346</name>
+              <name>empty_347</name>
               <fileName>firmware/nnet_utils/nnet_lstm.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>377</lineNumber>
@@ -5125,7 +5125,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>empty_346_fu_1398_p2</rtlName>
+              <rtlName>empty_347_fu_1398_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>7</bitwidth>
@@ -8005,7 +8005,7 @@
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>1</m_isLCDNode>
           <m_isStartOfPath>1</m_isStartOfPath>
-          <m_delay>4.19</m_delay>
+          <m_delay>3.57</m_delay>
           <m_topoIndex>143</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
@@ -42401,15 +42401,15 @@
             <item_version>0</item_version>
             <item>
               <first>DSP48E</first>
-              <second>221</second>
+              <second>230</second>
             </item>
             <item>
               <first>FF</first>
-              <second>4752</second>
+              <second>4880</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>6864</second>
+              <second>6617</second>
             </item>
           </second>
         </item>
@@ -42420,15 +42420,15 @@
             <item_version>0</item_version>
             <item>
               <first>DSP48E</first>
-              <second>28</second>
+              <second>30</second>
             </item>
             <item>
               <first>FF</first>
-              <second>967</second>
+              <second>995</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>1209</second>
+              <second>1197</second>
             </item>
           </second>
         </item>
@@ -42766,7 +42766,7 @@
           </second>
         </item>
         <item>
-          <first>empty_346_fu_1398_p2 ( or ) </first>
+          <first>empty_347_fu_1398_p2 ( or ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -49523,7 +49523,7 @@
           </second>
         </item>
         <item>
-          <first>empty_346_fu_1398_p2 ( or ) </first>
+          <first>empty_347_fu_1398_p2 ( or ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -57506,7 +57506,7 @@
         </second>
       </item>
       <item>
-        <first>empty_346_fu_1398</first>
+        <first>empty_347_fu_1398</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -58794,7 +58794,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_21_fu_1390</first>
+        <first>tmp_19_fu_1390</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

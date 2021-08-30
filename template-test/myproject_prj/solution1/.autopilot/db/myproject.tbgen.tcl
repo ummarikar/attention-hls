@@ -440,9 +440,9 @@ set RtlHierarchyInfo {[
 					{"Name" : "layer2_out_63_V_out_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "sigmoid_table18", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "8", "SubInstance" : "grp_sigmoid_1_fu_1293", "Port" : "sigmoid_table18"},
+					{"ID" : "10", "SubInstance" : "grp_sigmoid_1_fu_1307", "Port" : "sigmoid_table18"},
 					{"ID" : "6", "SubInstance" : "grp_sigmoid_1_fu_1279", "Port" : "sigmoid_table18"},
-					{"ID" : "10", "SubInstance" : "grp_sigmoid_1_fu_1307", "Port" : "sigmoid_table18"}]}]},
+					{"ID" : "8", "SubInstance" : "grp_sigmoid_1_fu_1293", "Port" : "sigmoid_table18"}]}]},
 	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Loop_TIMESTEP_proc34_U0.grp_dense_simple_0_0_0_0_1_fu_1227", "Parent" : "4",
 		"CDFG" : "dense_simple_0_0_0_0_1",
 		"Protocol" : "ap_ctrl_hs",
@@ -880,7 +880,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1",
 		"Pipeline" : "Rewind", "UnalignedPipeline" : "0", "RewindPipeline" : "1", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "75", "EstimateLatencyMax" : "76",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "77", "EstimateLatencyMax" : "78",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -1146,8 +1146,8 @@ set RtlHierarchyInfo {[
 					{"Name" : "layer4_out_63_V_out_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "sigmoid_table14", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "152", "SubInstance" : "grp_sigmoid_fu_3512", "Port" : "sigmoid_table14"},
 					{"ID" : "150", "SubInstance" : "grp_sigmoid_fu_3498", "Port" : "sigmoid_table14"},
+					{"ID" : "152", "SubInstance" : "grp_sigmoid_fu_3512", "Port" : "sigmoid_table14"},
 					{"ID" : "148", "SubInstance" : "grp_sigmoid_fu_3484", "Port" : "sigmoid_table14"}]}]},
 	{"ID" : "146", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.Loop_TIMESTEP_proc34_1_U0.grp_dense_simple_0_0_0_0_fu_3420", "Parent" : "145",
 		"CDFG" : "dense_simple_0_0_0_0",
@@ -1209,7 +1209,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
 		"Pipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "1",
+		"VariableLatency" : "0", "ExactLatency" : "2", "EstimateLatencyMin" : "2", "EstimateLatencyMax" : "2",
 		"Combinational" : "0",
 		"Datapath" : "1",
 		"ClockEnable" : "1",
@@ -3896,70 +3896,70 @@ set ArgLastReadFirstWriteLatency {
 		p_read61 {Type I LastRead 1 FirstWrite -1}
 		p_read62 {Type I LastRead 1 FirstWrite -1}
 		p_read63 {Type I LastRead 1 FirstWrite -1}
-		layer4_out_7_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_6_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_5_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_4_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_3_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_2_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_1_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_0_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_8_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_16_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_24_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_32_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_40_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_48_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_56_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_9_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_17_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_25_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_33_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_41_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_49_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_57_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_10_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_18_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_26_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_34_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_42_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_50_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_58_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_11_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_19_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_27_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_35_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_43_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_51_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_59_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_12_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_20_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_28_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_36_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_44_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_52_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_60_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_13_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_21_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_29_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_37_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_45_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_53_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_61_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_14_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_22_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_30_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_38_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_46_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_54_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_62_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_15_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_23_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_31_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_39_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_47_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_55_V_out {Type O LastRead -1 FirstWrite 13}
-		layer4_out_63_V_out {Type O LastRead -1 FirstWrite 13}
+		layer4_out_7_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_6_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_5_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_4_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_3_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_2_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_1_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_0_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_8_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_16_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_24_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_32_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_40_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_48_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_56_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_9_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_17_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_25_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_33_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_41_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_49_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_57_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_10_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_18_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_26_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_34_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_42_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_50_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_58_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_11_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_19_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_27_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_35_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_43_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_51_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_59_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_12_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_20_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_28_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_36_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_44_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_52_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_60_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_13_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_21_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_29_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_37_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_45_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_53_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_61_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_14_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_22_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_30_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_38_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_46_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_54_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_62_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_15_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_23_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_31_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_39_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_47_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_55_V_out {Type O LastRead -1 FirstWrite 15}
+		layer4_out_63_V_out {Type O LastRead -1 FirstWrite 15}
 		sigmoid_table14 {Type I LastRead -1 FirstWrite -1}}
 	dense_simple_0_0_0_0 {
 		data_0_V_read {Type I LastRead 0 FirstWrite -1}

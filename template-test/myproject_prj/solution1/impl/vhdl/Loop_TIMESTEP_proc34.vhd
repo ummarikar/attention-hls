@@ -786,8 +786,8 @@ architecture behav of Loop_TIMESTEP_proc34 is
     signal layer2_out_62_V_7_fu_466 : STD_LOGIC_VECTOR (15 downto 0);
     signal layer2_out_63_V_7_fu_470 : STD_LOGIC_VECTOR (15 downto 0);
     signal ap_block_pp0_stage6_01001 : BOOLEAN;
-    signal tmp_21_fu_1390_p3 : STD_LOGIC_VECTOR (6 downto 0);
-    signal empty_346_fu_1398_p2 : STD_LOGIC_VECTOR (6 downto 0);
+    signal tmp_19_fu_1390_p3 : STD_LOGIC_VECTOR (6 downto 0);
+    signal empty_347_fu_1398_p2 : STD_LOGIC_VECTOR (6 downto 0);
     signal zext_ln203_fu_1410_p1 : STD_LOGIC_VECTOR (7 downto 0);
     signal zext_ln203_1_fu_1414_p1 : STD_LOGIC_VECTOR (7 downto 0);
     signal icmp_ln203_fu_1404_p2 : STD_LOGIC_VECTOR (0 downto 0);
@@ -2510,7 +2510,7 @@ begin
         end if; 
     end process;
 
-    empty_346_fu_1398_p2 <= (tmp_21_fu_1390_p3 or ap_const_lv7_F);
+    empty_347_fu_1398_p2 <= (tmp_19_fu_1390_p3 or ap_const_lv7_F);
 
     grp_dense_simple_0_0_0_0_1_fu_1227_ap_ce_assign_proc : process(ap_CS_fsm_pp0_stage6, ap_CS_fsm_pp0_stage7, ap_block_pp0_stage6_11001_ignoreCallOp165, ap_block_pp0_stage7_11001_ignoreCallOp166)
     begin
@@ -2574,7 +2574,7 @@ begin
     end process;
 
     grp_sigmoid_1_fu_1307_ap_start <= grp_sigmoid_1_fu_1307_ap_start_reg;
-    icmp_ln203_fu_1404_p2 <= "1" when (unsigned(tmp_21_fu_1390_p3) > unsigned(empty_346_fu_1398_p2)) else "0";
+    icmp_ln203_fu_1404_p2 <= "1" when (unsigned(tmp_19_fu_1390_p3) > unsigned(empty_347_fu_1398_p2)) else "0";
     icmp_ln377_fu_1504_p2 <= "1" when (its_0_i_i145_reg_960 = ap_const_lv3_7) else "0";
 
     input_1_V_blk_n_assign_proc : process(ap_enable_reg_pp0_iter0, input_1_V_empty_n, ap_CS_fsm_pp0_stage1, ap_block_pp0_stage1, ap_phi_mux_do_init_phi_fu_933_p6)
@@ -3987,7 +3987,7 @@ begin
     sub_ln203_1_fu_1440_p2 <= std_logic_vector(unsigned(zext_ln203_1_fu_1414_p1) - unsigned(zext_ln203_fu_1410_p1));
     sub_ln203_2_fu_1470_p2 <= std_logic_vector(unsigned(ap_const_lv8_7F) - unsigned(select_ln203_fu_1446_p3));
     sub_ln203_fu_1428_p2 <= std_logic_vector(unsigned(zext_ln203_fu_1410_p1) - unsigned(zext_ln203_1_fu_1414_p1));
-    tmp_21_fu_1390_p3 <= (ap_phi_mux_its_0_i_i145_phi_fu_964_p6 & ap_const_lv4_0);
+    tmp_19_fu_1390_p3 <= (ap_phi_mux_its_0_i_i145_phi_fu_964_p6 & ap_const_lv4_0);
     
     tmp_fu_1418_p4_proc : process(ap_phi_reg_pp0_iter0_input_1_V_load_phi_reg_975)
     variable vlo_cpy : STD_LOGIC_VECTOR(128+32 - 1 downto 0);
@@ -4022,8 +4022,8 @@ begin
     end process;
 
     xor_ln203_fu_1434_p2 <= (zext_ln203_fu_1410_p1 xor ap_const_lv8_7F);
-    zext_ln203_1_fu_1414_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(empty_346_fu_1398_p2),8));
+    zext_ln203_1_fu_1414_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(empty_347_fu_1398_p2),8));
     zext_ln203_2_fu_1476_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(select_ln203_2_fu_1462_p3),128));
     zext_ln203_3_fu_1486_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(sub_ln203_2_reg_2931),128));
-    zext_ln203_fu_1410_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_21_fu_1390_p3),8));
+    zext_ln203_fu_1410_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_19_fu_1390_p3),8));
 end behav;

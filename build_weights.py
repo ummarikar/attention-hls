@@ -3,6 +3,8 @@ import numpy as np
 
 model = keras.models.load_model('./model/best_model.hdf5')
 
+print(model.summary())
+
 def print_array_to_cpp(var, name, odir, write_txt_file=True):
     #######################################
     ## Print weight array to C++

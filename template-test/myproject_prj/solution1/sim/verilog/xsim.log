@@ -2,8 +2,8 @@
 # xsim v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Mon Aug 30 20:51:05 2021
-# Process ID: 182444
+# Start of session at: Mon Aug 30 22:39:37 2021
+# Process ID: 110037
 # Current directory: /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog
 # Command line: xsim -mode tcl -source {xsim.dir/myproject/xsim_script.tcl}
 # Log file: /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/xsim.log
@@ -16,7 +16,7 @@ Time resolution is 1 ps
 source myproject.tcl
 ## log_wave -r /
 WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
-log_wave: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1973.422 ; gain = 256.000 ; free physical = 155164 ; free virtual = 551907
+log_wave: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1973.422 ; gain = 256.000 ; free physical = 152459 ; free virtual = 551302
 ## set designtopgroup [add_wave_group "Design Top Signals"]
 ## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
 ## set const_size_out_1_group [add_wave_group const_size_out_1(wire) -into $coutputgroup]
@@ -110,9 +110,9 @@ log_wave: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 19
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 1 [0.00%] @ "113000"
-// RTL Simulation : 1 / 1 [100.00%] @ "40273000"
+// RTL Simulation : 1 / 1 [100.00%] @ "40283000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 40292500 ps : File "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject.autotb.v" Line 838
-run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1973.422 ; gain = 0.000 ; free physical = 155184 ; free virtual = 551940
+$finish called at time : 40302500 ps : File "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject.autotb.v" Line 838
+run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1973.422 ; gain = 0.000 ; free physical = 152335 ; free virtual = 551192
 ## quit
-INFO: [Common 17-206] Exiting xsim at Mon Aug 30 20:51:32 2021...
+INFO: [Common 17-206] Exiting xsim at Mon Aug 30 22:40:04 2021...

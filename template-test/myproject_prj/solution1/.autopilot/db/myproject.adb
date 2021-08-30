@@ -10811,7 +10811,7 @@
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>1.51</m_delay>
+          <m_delay>0.83</m_delay>
           <m_topoIndex>271</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
@@ -52876,15 +52876,15 @@
             </item>
             <item>
               <first>DSP48E</first>
-              <second>477</second>
+              <second>484</second>
             </item>
             <item>
               <first>FF</first>
-              <second>16209</second>
+              <second>17680</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>27225</second>
+              <second>25546</second>
             </item>
           </second>
         </item>
@@ -52899,15 +52899,15 @@
             </item>
             <item>
               <first>DSP48E</first>
-              <second>273</second>
+              <second>284</second>
             </item>
             <item>
               <first>FF</first>
-              <second>11205</second>
+              <second>11361</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>15119</second>
+              <second>14860</second>
             </item>
           </second>
         </item>
@@ -53041,11 +53041,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>465</second>
+              <second>460</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>1636</second>
+              <second>1646</second>
             </item>
             <item>
               <first>URAM</first>

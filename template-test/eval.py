@@ -56,18 +56,18 @@ def get_top_function(x):
 
     return top_function, ctype
 
-def compute_n_samples(x):
-    expected_size = 32*1
+def compute_n_samples(x, timesteps):
+    expected_size = timesteps*1
     x_size = np.prod(x.shape)
     n_samples, rem = divmod(x_size, expected_size)
     if rem != 0:
-        raise Exception('Input size mismatch, got {}, expected {}'.format(x_size.shape, 100*1))
+        raise Exception('Input size mismatch, got {}, expected {}'.format(x_size.shape, timesteps*1))
 
     return n_samples 
 
-def predict(x):
+def predict(x, timesteps):
     top_function, ctype = get_top_function(x)
-    n_samples = compute_n_samples(x)
+    n_samples = compute_n_samples(x, timesteps)
 
     print('no. of samples: ', n_samples)
     curr_dir = os.getcwd()
@@ -76,7 +76,7 @@ def predict(x):
 
     try:
         for i in range(n_samples):
-            predictions = np.zeros(32, dtype=ctype)
+            predictions = np.zeros(timesteps, dtype=ctype)
             top_function(x[i], predictions, ctypes.byref(ctypes.c_ushort()), ctypes.byref(ctypes.c_ushort()))
             output.append(predictions.reshape(-1,1))
             #print(int((i/n_samples)*100))
@@ -125,20 +125,18 @@ def TPR_FPR_arrays_hls(noise_array, injection_array, steps, num_events, num_entr
 
     print('number of events: ', num_events)
     noise_array = noise_array.reshape(-1, steps, 1)
-    noise_array = noise_array[:10000]
     print('noise array format: ', noise_array[:1])
     injection_array = injection_array.reshape(-1, steps, 1)
-    injection_array = injection_array[:10000]
     print("noise_array shape",noise_array.shape)
 
     ### Evaluating on training data to find threshold ### 
     print('Evaluating Model on train data. This make take a while...')
-    X_pred_noise = predict(noise_array)
+    X_pred_noise = predict(noise_array, steps)
 
     print('Finished evaluating model on train data')
     
     #n_noise_events = 10000
-    n_noise_events = 10000
+    n_noise_events = num_events
     # Determine thresholds for FPR quantiles
     loss_fn = MeanSquaredError(reduction='none')
 
@@ -203,9 +201,7 @@ def TPR_FPR_arrays(noise_array, injection_array, model_outdir, steps, num_events
     '''
      
     noise_array = noise_array.reshape(-1, steps, 1)
-    noise_array = noise_array[:10000]
     injection_array = injection_array.reshape(-1, steps, 1)
-    injection_array = injection_array[:10000]
     print("noise_array shape",noise_array.shape)
     
     ### Evaluating on training data to find threshold ### 
@@ -215,7 +211,7 @@ def TPR_FPR_arrays(noise_array, injection_array, model_outdir, steps, num_events
     print('Finished evaluating model on train data')
     
     #n_noise_events = 10000
-    n_noise_events = 10000
+    n_noise_events = num_events
     # Determine thresholds for FPR quantiles
     loss_fn = MeanSquaredError(reduction='none')
     losses = loss_fn(noise_array, X_pred_noise).numpy()
@@ -400,28 +396,26 @@ def main(args):
 #    directory_list = ['all_lstm_tanh_epoch01']
 #    directory_list = ['all_lstm_tanh_epoch02']
 #    directory_list = ['all_lstm_tanh_epoch03']
-    directory_list = ['model']
+    directory_list = ['hls_model', 'model']
     #directory_list = ['temp_qkeras']
    # directory_list = ['temp_gpu_tanh']
 #    directory_list = ['temp']
     #names = ['DNN Autoencoder', 'CNN-DNN Autoencoder']#, 'LSTM Autoencoder']
-    names = ['Attention Autoencoder']
+    names = ['HLS Attention Autoencoder', 'Python Attention Autoencoder']
 
     #names = ['DNN Autoencoder']
     #names = ['CNN Autoencoder']
     #names = ['GRU Autoencoder']
     #timesteps = [100, 108, 100]
-    timesteps = [32]
+    timesteps = [8]
     FPR_set = []
     TPR_set = []
     AUC_set = []
     
     #debug_model(X_train_H1[:, :16000], 'model', 32)
-    debug_hls_model(X_train_H1[:, :16000], 32)
-'''   
     for name, directory, timestep in zip(names, directory_list, timesteps): 
         print('Determining performance for: %s'%(name))
-        if timestep == 32: 
+        if directory == 'hls_model': 
             #TPR, FPR = TPR_FPR_arrays_doubledetector(X_train_L1[:, :16000], X_test_L1[:, :16000], X_train_H1[:, :16000], X_test_H1[:, :16000], directory, timestep)
             print('length: ', len(X_test_H1))
             TPR, FPR = TPR_FPR_arrays_hls(X_train_H1[:, :16000], X_test_H1[:, :16000], timestep, len(X_test_H1))
@@ -487,7 +481,6 @@ def main(args):
         plt.savefig('%s/batchloss_%s.jpg'%(outdir,time))
 
         sys.exit()
-'''
 '''        
         X_pred_test = np.array(model.predict(event))
         

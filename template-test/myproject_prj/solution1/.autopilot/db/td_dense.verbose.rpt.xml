@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'td_dense'" level="0">
-<item name = "Date">Mon Aug 30 20:48:35 2021
+<item name = "Date">Mon Aug 30 22:37:09 2021
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">myproject_prj</item>
@@ -54,7 +54,7 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 89, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">1, 16, 341, 1334, -</column>
+<column name="Instance">1, 16, 336, 1344, -</column>
 <column name="Memory">0, -, 54, 6, 0</column>
 <column name="Multiplexer">-, -, -, 207, -</column>
 <column name="Register">-, -, 70, -, -</column>
@@ -68,7 +68,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
-<column name="grp_dense_simple_0_0_2_fu_1219">dense_simple_0_0_2, 0, 16, 327, 502, 0</column>
+<column name="grp_dense_simple_0_0_2_fu_1219">dense_simple_0_0_2, 0, 16, 322, 512, 0</column>
 <column name="myproject_mux_128jbC_U1738">myproject_mux_128jbC, 0, 0, 0, 673, 0</column>
 <column name="grp_tanh_fu_1224">tanh, 1, 0, 14, 159, 0</column>
 </table>

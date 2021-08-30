@@ -6,7 +6,7 @@
 
 source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/scripts/vivado_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'umm20' on host 'cccad5.doc.ic.ac.uk' (Linux_x86_64 version 3.10.0-957.1.3.el7.x86_64) on Mon Aug 30 20:43:12 BST 2021
+INFO: [HLS 200-10] For user 'umm20' on host 'cccad5.doc.ic.ac.uk' (Linux_x86_64 version 3.10.0-957.1.3.el7.x86_64) on Mon Aug 30 22:31:49 BST 2021
 INFO: [HLS 200-10] On os "CentOS Linux release 7.6.1810 (Core) "
 INFO: [HLS 200-10] In directory '/mnt/ccnas2/bdp/umm20/attention-hls/template-test'
 Sourcing Tcl script 'build_prj.tcl'
@@ -26,11 +26,11 @@ INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
    Compiling ../../../../firmware/myproject.cpp in debug mode
    Generating csim.exe
 INFO: Unable to open input/predictions file, using default input.
--0.630859 -0.358398 -0.03125 0.301758 0.615234 0.65332 0.620117 0.570313 
+-0.625977 0.733398 -0.640625 0.629883 -0.640625 0.620117 0.162109 0.829102 
 INFO: Saved inference results to file: tb_data/csim_results.log
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-***** C SIMULATION COMPLETED IN 0h0m8s *****
+***** C SIMULATION COMPLETED IN 0h0m7s *****
 ***** C/RTL SYNTHESIS *****
 INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
 INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
@@ -48,13 +48,13 @@ WARNING: [HLS 214-113] Either use an argument of the function or declare the var
 WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:37:2
 WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: firmware/myproject.cpp:38:5
 WARNING: [HLS 200-471] Dataflow form checks found 13 issue(s) in file firmware/myproject.cpp
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:27 ; elapsed = 00:00:37 . Memory (MB): peak = 1051.270 ; gain = 529.180 ; free physical = 158289 ; free virtual = 554534
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:27 ; elapsed = 00:00:37 . Memory (MB): peak = 1051.270 ; gain = 529.180 ; free physical = 158289 ; free virtual = 554534
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 1054.238 ; gain = 532.148 ; free physical = 155680 ; free virtual = 553899
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 1054.238 ; gain = 532.148 ; free physical = 155680 ; free virtual = 553899
 INFO: [HLS 200-10] Starting code transformations ...
 INFO: [HLS 200-489] Unrolling loop 'INPUT_X' (firmware/nnet_utils/nnet_lstm.h:382) in function 'void nnet::lstm_06_025<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2>(FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*, FORWARD_REFERENCE*)' completely with a factor of 1.
 INFO: [XFORM 203-603] Inlining function 'nnet::lstm_06_025<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2>' into 'myproject' (firmware/myproject.cpp:62).
 INFO: [XFORM 203-603] Inlining function 'nnet::lstm_06_025<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config1_lstm4, config2_lstm4, config_x_lstm4, config_h_lstm4>' into 'myproject' (firmware/myproject.cpp:70).
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:35 ; elapsed = 00:00:46 . Memory (MB): peak = 1243.270 ; gain = 721.180 ; free physical = 158304 ; free virtual = 554511
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:35 ; elapsed = 00:00:45 . Memory (MB): peak = 1134.242 ; gain = 612.152 ; free physical = 155430 ; free virtual = 553684
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15) automatically.
 INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18) automatically.
@@ -68,7 +68,7 @@ INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::de
 INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_h_lstm4>' (firmware/nnet_utils/nnet_dense.h:78) automatically.
 INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::lstm_tail_02<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config1_lstm4, config2_lstm4>' (firmware/nnet_utils/nnet_lstm.h:95) automatically.
 INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_dense7>' (firmware/nnet_utils/nnet_dense.h:78) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:37 ; elapsed = 00:00:48 . Memory (MB): peak = 1251.793 ; gain = 729.703 ; free physical = 157960 ; free virtual = 554248
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:37 ; elapsed = 00:00:47 . Memory (MB): peak = 1274.125 ; gain = 752.035 ; free physical = 155349 ; free virtual = 553609
 INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'TIMESTEP' (firmware/nnet_utils/nnet_lstm.h:377) in function 'myproject' for pipelining.
 INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'TIMESTEP' (firmware/nnet_utils/nnet_lstm.h:377) in function 'myproject' for pipelining.
 INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_dense7>' (firmware/nnet_utils/nnet_dense.h:55:50).
@@ -300,10 +300,10 @@ INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_activation.h:331:23) to (firmware/nnet_utils/nnet_activation.h:351:1) in function 'nnet::hard_tanh<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_lstm2>'... converting 17 basic blocks.
 INFO: [XFORM 203-11] Balancing expressions in function 'nnet::softmax<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_softmax5>' (firmware/nnet_utils/nnet_activation.h:231:18)...104 expression(s) balanced.
 INFO: [XFORM 203-11] Balancing expressions in function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_x_lstm4>.0.0' (firmware/nnet_utils/nnet_dense.h:70:27)...256 expression(s) balanced.
-INFO: [XFORM 203-11] Balancing expressions in function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_h_lstm4>.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0' (firmware/nnet_utils/nnet_dense.h:70:27)...256 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_h_lstm4>.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0' (firmware/nnet_utils/nnet_dense.h:70:27)...254 expression(s) balanced.
 INFO: [XFORM 203-11] Balancing expressions in function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_h_lstm2>.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0' (firmware/nnet_utils/nnet_dense.h:70:27)...256 expression(s) balanced.
 INFO: [XFORM 203-11] Balancing expressions in function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_dense7>.0.0' (firmware/nnet_utils/nnet_dense.h:70:1)...16 expression(s) balanced.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:23 ; elapsed = 00:01:35 . Memory (MB): peak = 1459.270 ; gain = 937.180 ; free physical = 157525 ; free virtual = 553931
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:22 ; elapsed = 00:01:33 . Memory (MB): peak = 1443.270 ; gain = 921.180 ; free physical = 155238 ; free virtual = 553510
 WARNING: [XFORM 203-631] Renaming function 'nnet::td_dense<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config7, config_tanh7, config_dense7>' to 'td_dense' (firmware/nnet_utils/nnet_time_distributed_dense.h:33:53)
 WARNING: [XFORM 203-631] Renaming function 'nnet::tanh<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_tanh7>' to 'tanh' (firmware/nnet_utils/nnet_activation.h:308:1)
 WARNING: [XFORM 203-631] Renaming function 'nnet::softmax<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_softmax5>' to 'softmax' (firmware/nnet_utils/nnet_activation.h:231:4)
@@ -334,7 +334,7 @@ INFO: [XFORM 203-531] Rewinding loop 'TIMESTEP' (firmware/nnet_utils/nnet_lstm.h
 INFO: [XFORM 203-531] Rewinding loop 'TIMESTEP' (firmware/nnet_utils/nnet_lstm.h:377) in function 'Loop_TIMESTEP_proc34'.
 WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'TIMESTEP' in function 'Loop_TIMESTEP_proc34.1'.
 WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'TIMESTEP' in function 'Loop_TIMESTEP_proc34'.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:02:11 ; elapsed = 00:02:23 . Memory (MB): peak = 1843.270 ; gain = 1321.180 ; free physical = 156753 ; free virtual = 553267
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:02:10 ; elapsed = 00:02:22 . Memory (MB): peak = 1827.270 ; gain = 1305.180 ; free physical = 154789 ; free virtual = 553062
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'myproject' ...
 WARNING: [SYN 201-103] Legalizing function name 'myproject.entry3' to 'myproject_entry3'.
@@ -356,37 +356,37 @@ INFO: [HLS 200-42] -- Implementing module 'myproject_entry3'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 143.69 seconds; current allocated memory: 908.439 MB.
+INFO: [HLS 200-111]  Elapsed time: 142.94 seconds; current allocated memory: 907.912 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 908.496 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 907.969 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'myproject_entry343' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 908.544 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 908.033 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 908.605 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 908.094 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'Block_preheader138_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 908.621 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 908.110 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 908.658 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 908.147 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dense_simple_0_0_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -394,14 +394,14 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'dense_simple.0.0.1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.25 seconds; current allocated memory: 909.257 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 908.717 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 910.037 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 909.490 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dense_simple_0_0_0_0_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -409,14 +409,14 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'dense_simple.0.0.0.0.1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 1.6 seconds; current allocated memory: 913.728 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.51 seconds; current allocated memory: 912.967 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 2.84 seconds; current allocated memory: 922.641 MB.
+INFO: [HLS 200-111]  Elapsed time: 2.71 seconds; current allocated memory: 921.866 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'sigmoid_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -424,13 +424,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'sigmoid.1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 2.81 seconds; current allocated memory: 923.924 MB.
+INFO: [HLS 200-111]  Elapsed time: 2.69 seconds; current allocated memory: 923.177 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 924.760 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.48 seconds; current allocated memory: 924.012 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'hard_tanh_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -438,13 +438,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'hard_tanh.3'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.57 seconds; current allocated memory: 925.117 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.58 seconds; current allocated memory: 924.353 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 925.428 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 924.664 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'hard_tanh_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -452,13 +452,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'hard_tanh.2'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 925.720 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 924.920 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 926.011 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 925.246 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'lstm_tail_02_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -466,14 +466,14 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'lstm_tail_02.1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 926.578 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 925.828 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.39 seconds; current allocated memory: 927.307 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 926.557 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'Loop_TIMESTEP_proc34' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -493,40 +493,40 @@ WARNING: [SCHED 204-68] The II Violation in module 'Loop_TIMESTEP_proc34' (Loop:
    between 'call' operation ('call_ret', firmware/nnet_utils/nnet_lstm.h:405->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62) to 'lstm_tail_02.1' and 'call' operation ('call_ret3', firmware/nnet_utils/nnet_lstm.h:389->firmware/myproject.cpp:62->firmware/nnet_utils/nnet_lstm.h:335->firmware/myproject.cpp:62) to 'dense_simple.0.0.0.0.1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 9, Depth = 16.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 1.95 seconds; current allocated memory: 929.101 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.98 seconds; current allocated memory: 928.352 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 2.6 seconds; current allocated memory: 932.627 MB.
+INFO: [HLS 200-111]  Elapsed time: 2.53 seconds; current allocated memory: 931.893 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'repeat_vector' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 2.83 seconds; current allocated memory: 935.676 MB.
+INFO: [HLS 200-111]  Elapsed time: 2.81 seconds; current allocated memory: 934.891 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 1.55 seconds; current allocated memory: 944.239 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.52 seconds; current allocated memory: 943.454 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dense_simple_0_0' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'dense_simple.0.0'.
-INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 2.64 seconds; current allocated memory: 947.733 MB.
+INFO: [HLS 200-111]  Elapsed time: 2.61 seconds; current allocated memory: 946.850 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 2.84 seconds; current allocated memory: 956.385 MB.
+INFO: [HLS 200-111]  Elapsed time: 2.57 seconds; current allocated memory: 955.505 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dense_simple_0_0_0_0' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -534,14 +534,14 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'dense_simple.0.0.0.0'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 4.03 seconds; current allocated memory: 960.470 MB.
+INFO: [HLS 200-111]  Elapsed time: 3.73 seconds; current allocated memory: 959.470 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 2.9 seconds; current allocated memory: 969.567 MB.
+INFO: [HLS 200-111]  Elapsed time: 2.54 seconds; current allocated memory: 968.387 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'sigmoid' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -549,13 +549,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'sigmoid'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 2.73 seconds; current allocated memory: 970.833 MB.
+INFO: [HLS 200-111]  Elapsed time: 2.66 seconds; current allocated memory: 969.617 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.48 seconds; current allocated memory: 971.720 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.45 seconds; current allocated memory: 970.452 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'hard_tanh_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -563,13 +563,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'hard_tanh.1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.57 seconds; current allocated memory: 972.009 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.55 seconds; current allocated memory: 970.793 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 972.320 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 971.067 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'hard_tanh' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -577,13 +577,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'hard_tanh'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 972.612 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 971.359 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 972.902 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 971.685 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'lstm_tail_02' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -591,14 +591,14 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'lstm_tail_02'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 973.485 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 972.267 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.4 seconds; current allocated memory: 974.198 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 972.996 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'Loop_TIMESTEP_proc34_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -616,15 +616,15 @@ WARNING: [SCHED 204-68] The II Violation in module 'Loop_TIMESTEP_proc34_1' (Loo
    between 'call' operation ('call_ret', firmware/nnet_utils/nnet_lstm.h:405->firmware/myproject.cpp:70) to 'lstm_tail_02' and 'call' operation ('call_ret5', firmware/nnet_utils/nnet_lstm.h:389->firmware/myproject.cpp:70) to 'dense_simple.0.0.0.0'.
 WARNING: [SCHED 204-68] The II Violation in module 'Loop_TIMESTEP_proc34_1' (Loop: TIMESTEP): Unable to enforce a carried dependence constraint (II = 8, distance = 1, offset = 1)
    between 'call' operation ('call_ret', firmware/nnet_utils/nnet_lstm.h:405->firmware/myproject.cpp:70) to 'lstm_tail_02' and 'call' operation ('call_ret5', firmware/nnet_utils/nnet_lstm.h:389->firmware/myproject.cpp:70) to 'dense_simple.0.0.0.0'.
-INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 9, Depth = 13.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 9, Depth = 15.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 2.48 seconds; current allocated memory: 976.470 MB.
+INFO: [HLS 200-111]  Elapsed time: 2.45 seconds; current allocated memory: 975.238 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 3.42 seconds; current allocated memory: 981.502 MB.
+INFO: [HLS 200-111]  Elapsed time: 3.2 seconds; current allocated memory: 980.459 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'softmax' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -632,53 +632,53 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'softmax'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 4.08 seconds; current allocated memory: 987.617 MB.
+INFO: [HLS 200-111]  Elapsed time: 4.11 seconds; current allocated memory: 986.558 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 3.53 seconds; current allocated memory: 994.632 MB.
+INFO: [HLS 200-111]  Elapsed time: 3.44 seconds; current allocated memory: 993.544 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'attention' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 8.29 seconds; current allocated memory: 1012.284 MB.
+INFO: [HLS 200-111]  Elapsed time: 8.37 seconds; current allocated memory: 1011.212 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 6.37 seconds; current allocated memory: 1.016 GB.
+INFO: [HLS 200-111]  Elapsed time: 6.21 seconds; current allocated memory: 1.016 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'concatenate2d_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 8.63 seconds; current allocated memory: 1.025 GB.
+INFO: [HLS 200-111]  Elapsed time: 8.63 seconds; current allocated memory: 1.024 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 6.47 seconds; current allocated memory: 1.081 GB.
+INFO: [HLS 200-111]  Elapsed time: 7.13 seconds; current allocated memory: 1.080 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dense_simple_0_0_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'dense_simple.0.0.2'.
-WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('data_V_load_2', firmware/nnet_utils/nnet_dense.h:96) on array 'data_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'data_V'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('data_V_load', firmware/nnet_utils/nnet_dense.h:96) on array 'data_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'data_V'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 8, Depth = 10.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 4.24 seconds; current allocated memory: 1.082 GB.
+INFO: [HLS 200-111]  Elapsed time: 4.38 seconds; current allocated memory: 1.081 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.31 seconds; current allocated memory: 1.082 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 1.081 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'tanh' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -686,88 +686,88 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'tanh'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 1.082 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 1.081 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 1.082 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 1.081 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'td_dense' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.083 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 1.082 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.44 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.43 seconds; current allocated memory: 1.083 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'myproject' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.64 seconds; current allocated memory: 1.086 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.63 seconds; current allocated memory: 1.085 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 13.46 seconds; current allocated memory: 1.098 GB.
+INFO: [HLS 200-111]  Elapsed time: 13.61 seconds; current allocated memory: 1.097 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'myproject_entry3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject_entry3'.
-INFO: [HLS 200-111]  Elapsed time: 7.55 seconds; current allocated memory: 1.101 GB.
+INFO: [HLS 200-111]  Elapsed time: 7.55 seconds; current allocated memory: 1.100 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'myproject_entry343' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject_entry343'.
-INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.102 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 1.101 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'Block_preheader138_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_preheader138_s'.
-INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.102 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 1.101 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dense_simple_0_0_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_simple_0_0_1'.
-INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 1.105 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 1.104 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dense_simple_0_0_0_0_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_simple_0_0_0_0_1'.
-INFO: [HLS 200-111]  Elapsed time: 0.91 seconds; current allocated memory: 1.118 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.88 seconds; current allocated memory: 1.116 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'sigmoid_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SYN 201-210] Renamed object name 'sigmoid_1_sigmoid_table18' to 'sigmoid_1_sigmoidbkb' due to the length limit 20
 INFO: [RTGEN 206-100] Finished creating RTL model for 'sigmoid_1'.
-INFO: [HLS 200-111]  Elapsed time: 4.67 seconds; current allocated memory: 1.137 GB.
+INFO: [HLS 200-111]  Elapsed time: 4.41 seconds; current allocated memory: 1.135 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'hard_tanh_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'hard_tanh_3'.
-INFO: [HLS 200-111]  Elapsed time: 1.04 seconds; current allocated memory: 1.140 GB.
+INFO: [HLS 200-111]  Elapsed time: 1.04 seconds; current allocated memory: 1.138 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'hard_tanh_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'hard_tanh_2'.
-INFO: [HLS 200-111]  Elapsed time: 0.57 seconds; current allocated memory: 1.142 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.56 seconds; current allocated memory: 1.140 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'lstm_tail_02_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'lstm_tail_02_1'.
-INFO: [HLS 200-111]  Elapsed time: 0.65 seconds; current allocated memory: 1.145 GB.
+INFO: [HLS 200-111]  Elapsed time: 0.61 seconds; current allocated memory: 1.143 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'Loop_TIMESTEP_proc34' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_TIMESTEP_proc34'.
-INFO: [HLS 200-111]  Elapsed time: 1.17 seconds; current allocated memory: 1.154 GB.
+INFO: [HLS 200-111]  Elapsed time: 1.14 seconds; current allocated memory: 1.152 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'repeat_vector' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -776,51 +776,51 @@ INFO: [SYN 201-210] Renamed object name 'myproject_mux_646_1_1_1' to 'myproject_
 INFO: [RTGEN 206-100] Generating core module 'myproject_mux_646cud': 64 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'myproject_mux_646dEe': 64 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'repeat_vector'.
-INFO: [HLS 200-111]  Elapsed time: 3.93 seconds; current allocated memory: 1.198 GB.
+INFO: [HLS 200-111]  Elapsed time: 3.58 seconds; current allocated memory: 1.196 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dense_simple_0_0' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_simple_0_0'.
-INFO: [HLS 200-111]  Elapsed time: 2.77 seconds; current allocated memory: 1.226 GB.
+INFO: [HLS 200-111]  Elapsed time: 2.57 seconds; current allocated memory: 1.223 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dense_simple_0_0_0_0' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_simple_0_0_0_0'.
-INFO: [HLS 200-111]  Elapsed time: 4.99 seconds; current allocated memory: 1.252 GB.
+INFO: [HLS 200-111]  Elapsed time: 4.82 seconds; current allocated memory: 1.249 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'sigmoid' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SYN 201-210] Renamed object name 'sigmoid_sigmoid_table14' to 'sigmoid_sigmoid_teOg' due to the length limit 20
 INFO: [RTGEN 206-100] Finished creating RTL model for 'sigmoid'.
-INFO: [HLS 200-111]  Elapsed time: 5.19 seconds; current allocated memory: 1.271 GB.
+INFO: [HLS 200-111]  Elapsed time: 4.78 seconds; current allocated memory: 1.267 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'hard_tanh_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'hard_tanh_1'.
-INFO: [HLS 200-111]  Elapsed time: 1.62 seconds; current allocated memory: 1.275 GB.
+INFO: [HLS 200-111]  Elapsed time: 1.49 seconds; current allocated memory: 1.271 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'hard_tanh' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'hard_tanh'.
-INFO: [HLS 200-111]  Elapsed time: 1.12 seconds; current allocated memory: 1.276 GB.
+INFO: [HLS 200-111]  Elapsed time: 1 seconds; current allocated memory: 1.273 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'lstm_tail_02' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'lstm_tail_02'.
-INFO: [HLS 200-111]  Elapsed time: 1.18 seconds; current allocated memory: 1.279 GB.
+INFO: [HLS 200-111]  Elapsed time: 1.11 seconds; current allocated memory: 1.276 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'Loop_TIMESTEP_proc34_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SYN 201-210] Renamed object name 'myproject_mux_83_16_1_1' to 'myproject_mux_83_fYi' due to the length limit 20
 INFO: [RTGEN 206-100] Generating core module 'myproject_mux_83_fYi': 8 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_TIMESTEP_proc34_1'.
-INFO: [HLS 200-111]  Elapsed time: 1.76 seconds; current allocated memory: 1.290 GB.
+INFO: [HLS 200-111]  Elapsed time: 1.69 seconds; current allocated memory: 1.286 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'softmax' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SYN 201-210] Renamed object name 'softmax_invert_table11' to 'softmax_invert_tag8j' due to the length limit 20
 INFO: [RTGEN 206-100] Finished creating RTL model for 'softmax'.
-INFO: [HLS 200-111]  Elapsed time: 4.9 seconds; current allocated memory: 1.312 GB.
+INFO: [HLS 200-111]  Elapsed time: 4.82 seconds; current allocated memory: 1.309 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'attention' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -831,7 +831,7 @@ INFO: [RTGEN 206-100] Generating core module 'myproject_mux_646cud': 72 instance
 INFO: [RTGEN 206-100] Generating core module 'myproject_mux_646dEe': 64 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'myproject_mux_83_fYi': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'attention'.
-INFO: [HLS 200-111]  Elapsed time: 8.79 seconds; current allocated memory: 1.386 GB.
+INFO: [HLS 200-111]  Elapsed time: 8.91 seconds; current allocated memory: 1.383 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'concatenate2d_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -841,24 +841,24 @@ INFO: [RTGEN 206-100] Generating core module 'myproject_mux_128jbC': 248 instanc
 INFO: [RTGEN 206-100] Generating core module 'myproject_mux_128kbM': 248 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'myproject_mux_646cud': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'concatenate2d_1'.
-INFO: [HLS 200-111]  Elapsed time: 15.23 seconds; current allocated memory: 1.681 GB.
+INFO: [HLS 200-111]  Elapsed time: 15.49 seconds; current allocated memory: 1.677 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dense_simple_0_0_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_simple_0_0_2'.
-INFO: [HLS 200-111]  Elapsed time: 8.62 seconds; current allocated memory: 1.781 GB.
+INFO: [HLS 200-111]  Elapsed time: 8.59 seconds; current allocated memory: 1.778 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'tanh' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'tanh'.
-INFO: [HLS 200-111]  Elapsed time: 1.67 seconds; current allocated memory: 1.783 GB.
+INFO: [HLS 200-111]  Elapsed time: 1.78 seconds; current allocated memory: 1.779 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'td_dense' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SYN 201-210] Renamed object name 'td_dense_dense_input_V' to 'td_dense_dense_inlbW' due to the length limit 20
 INFO: [RTGEN 206-100] Generating core module 'myproject_mux_128jbC': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'td_dense'.
-INFO: [HLS 200-111]  Elapsed time: 1.47 seconds; current allocated memory: 1.785 GB.
+INFO: [HLS 200-111]  Elapsed time: 1.53 seconds; current allocated memory: 1.781 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -879,7 +879,7 @@ INFO: [SYN 201-210] Renamed object name 'start_for_Loop_TIMESTEP_proc34_U0' to '
 INFO: [SYN 201-210] Renamed object name 'start_for_repeat_vector_U0' to 'start_for_repeat_ocq' due to the length limit 20
 INFO: [SYN 201-210] Renamed object name 'start_for_attention_U0' to 'start_for_attentipcA' due to the length limit 20
 INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject'.
-INFO: [HLS 200-111]  Elapsed time: 6.76 seconds; current allocated memory: 1.807 GB.
+INFO: [HLS 200-111]  Elapsed time: 6.84 seconds; current allocated memory: 1.803 GB.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 228.57 MHz
 INFO: [RTMG 210-279] Implementing memory 'sigmoid_1_sigmoidbkb_rom' using block ROMs.
@@ -1351,10 +1351,10 @@ INFO: [RTMG 210-285] Implementing FIFO 'start_for_myprojemb6_U(start_for_myproje
 INFO: [RTMG 210-285] Implementing FIFO 'start_for_Loop_TIncg_U(start_for_Loop_TIncg)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'start_for_repeat_ocq_U(start_for_repeat_ocq)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'start_for_attentipcA_U(start_for_attentipcA)' using Shift Registers.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:05:15 ; elapsed = 00:06:25 . Memory (MB): peak = 2867.270 ; gain = 2345.180 ; free physical = 156258 ; free virtual = 552730
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:05:12 ; elapsed = 00:06:22 . Memory (MB): peak = 2864.547 ; gain = 2342.457 ; free physical = 153351 ; free virtual = 552026
 INFO: [VHDL 208-304] Generating VHDL RTL for myproject.
 INFO: [VLOG 209-307] Generating Verilog RTL for myproject.
-***** C/RTL SYNTHESIS COMPLETED IN 0h6m8s *****
+***** C/RTL SYNTHESIS COMPLETED IN 0h6m6s *****
 ***** C/RTL SIMULATION *****
 INFO: [HLS 200-10] Adding test bench file 'myproject_test.cpp' to the project
 INFO: [COSIM 212-47] Using XSIM for RTL simulation.
@@ -1366,7 +1366,7 @@ INFO: [COSIM 212-14] Instrumenting C test bench ...
    Generating cosim.tv.exe
 INFO: [COSIM 212-302] Starting C TB testing ... 
 INFO: Unable to open input/predictions file, using default input.
--0.630859 -0.358398 -0.03125 0.301758 0.615234 0.65332 0.620117 0.570313 
+-0.625977 0.733398 -0.640625 0.629883 -0.640625 0.620117 0.162109 0.829102 
 INFO: Saved inference results to file: tb_data/rtl_cosim_results.log
 INFO: [COSIM 212-333] Generating C post check test bench ...
 INFO: [COSIM 212-12] Generating RTL test bench ...
@@ -1380,119 +1380,119 @@ Running: /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab xil
 Multi-threading is on. Using 70 slave threads.
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/fifo_w128_d2_A.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fifo_w128_d2_A_shiftReg
-INFO: [VRFC 10-311] analyzing module fifo_w128_d2_A
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_128kbM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module myproject_mux_128kbM
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/hard_tanh_3.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hard_tanh_3
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/start_for_myprojemb6.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module start_for_myprojemb6_shiftReg
-INFO: [VRFC 10-311] analyzing module start_for_myprojemb6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_entry3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_entry3
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/softmax_invert_tag8j.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module softmax_invert_tag8j_rom
 INFO: [VRFC 10-311] analyzing module softmax_invert_tag8j
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/td_dense.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module td_dense
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/softmax.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module softmax
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/start_for_myprojemb6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_myprojemb6_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_myprojemb6
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/Block_preheader138_s.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Block_preheader138_s
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/fifo_w16_d3_A.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fifo_w16_d3_A_shiftReg
-INFO: [VRFC 10-311] analyzing module fifo_w16_d3_A
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/fifo_w16_d4_A.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fifo_w16_d4_A_shiftReg
-INFO: [VRFC 10-311] analyzing module fifo_w16_d4_A
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dense_simple_0_0_2
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/lstm_tail_02_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module lstm_tail_02_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/repeat_vector.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module repeat_vector
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/concatenate2d_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module concatenate2d_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/hard_tanh_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hard_tanh_2
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module myproject
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/lstm_tail_02.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module lstm_tail_02
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/sigmoid.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sigmoid
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/fifo_w16_d2_A.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fifo_w16_d2_A_shiftReg
-INFO: [VRFC 10-311] analyzing module fifo_w16_d2_A
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_646dEe.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module myproject_mux_646dEe
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dense_simple_0_0_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/start_for_repeat_ocq.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module start_for_repeat_ocq_shiftReg
-INFO: [VRFC 10-311] analyzing module start_for_repeat_ocq
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/start_for_Loop_TIncg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module start_for_Loop_TIncg_shiftReg
-INFO: [VRFC 10-311] analyzing module start_for_Loop_TIncg
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dense_simple_0_0_0_0
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/start_for_attentipcA.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module start_for_attentipcA_shiftReg
-INFO: [VRFC 10-311] analyzing module start_for_attentipcA
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/hard_tanh_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hard_tanh_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/attention_mult_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module attention_mult_V_ram
-INFO: [VRFC 10-311] analyzing module attention_mult_V
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_entry343.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module myproject_entry343
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_0_0_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dense_simple_0_0_0_0_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/Loop_TIMESTEP_proc34.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Loop_TIMESTEP_proc34
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/attention.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module attention
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/Loop_TIMESTEP_proc34_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Loop_TIMESTEP_proc34_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_entry3.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module myproject_entry3
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/tanh.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tanh
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_83_fYi.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module myproject_mux_83_fYi
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_646cud.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module myproject_mux_646cud
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/softmax_exp_table10.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module softmax_exp_table10_rom
-INFO: [VRFC 10-311] analyzing module softmax_exp_table10
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/sigmoid_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sigmoid_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/td_dense_acc_V.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module td_dense_acc_V_ram
-INFO: [VRFC 10-311] analyzing module td_dense_acc_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/hard_tanh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hard_tanh
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_128kbM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_mux_128kbM
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module dense_simple_0_0
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_128jbC.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module myproject_mux_128jbC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/tanh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tanh
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/concatenate2d_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module concatenate2d_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_myproject_top
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/tanh_tanh_table9.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tanh_tanh_table9_rom
 INFO: [VRFC 10-311] analyzing module tanh_tanh_table9
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/sigmoid_1_sigmoidbkb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sigmoid_1_sigmoidbkb_rom
-INFO: [VRFC 10-311] analyzing module sigmoid_1_sigmoidbkb
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject.autotb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module apatb_myproject_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/attention.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module attention
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/lstm_tail_02_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lstm_tail_02_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/fifo_w128_d2_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w128_d2_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w128_d2_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_646dEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_mux_646dEe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/softmax.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module softmax
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/sigmoid_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sigmoid_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dense_simple_0_0_0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/start_for_attentipcA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_attentipcA_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_attentipcA
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/start_for_Loop_TIncg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_Loop_TIncg_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_Loop_TIncg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/start_for_repeat_ocq.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_for_repeat_ocq_shiftReg
+INFO: [VRFC 10-311] analyzing module start_for_repeat_ocq
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_83_fYi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_mux_83_fYi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/hard_tanh_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hard_tanh_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/fifo_w16_d2_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w16_d2_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w16_d2_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/Loop_TIMESTEP_proc34.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loop_TIMESTEP_proc34
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_128jbC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_mux_128jbC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/td_dense.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module td_dense
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_0_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dense_simple_0_0_0_0_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/td_dense_dense_inlbW.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module td_dense_dense_inlbW_ram
 INFO: [VRFC 10-311] analyzing module td_dense_dense_inlbW
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/hard_tanh.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hard_tanh
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/sigmoid_1_sigmoidbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sigmoid_1_sigmoidbkb_rom
+INFO: [VRFC 10-311] analyzing module sigmoid_1_sigmoidbkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/hard_tanh_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hard_tanh_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mux_646cud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_mux_646cud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dense_simple_0_0_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/Loop_TIMESTEP_proc34_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loop_TIMESTEP_proc34_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/fifo_w16_d3_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w16_d3_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w16_d3_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_entry343.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject_entry343
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/fifo_w16_d4_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_w16_d4_A_shiftReg
+INFO: [VRFC 10-311] analyzing module fifo_w16_d4_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/softmax_exp_table10.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module softmax_exp_table10_rom
+INFO: [VRFC 10-311] analyzing module softmax_exp_table10
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/repeat_vector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module repeat_vector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/attention_mult_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module attention_mult_V_ram
+INFO: [VRFC 10-311] analyzing module attention_mult_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/lstm_tail_02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lstm_tail_02
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/hard_tanh_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hard_tanh_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dense_simple_0_0_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/td_dense_acc_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module td_dense_acc_V_ram
+INFO: [VRFC 10-311] analyzing module td_dense_acc_V
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject_mul_mulibs.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module myproject_mul_mulibs_DSP48_0
 INFO: [VRFC 10-311] analyzing module myproject_mul_mulibs
@@ -1584,8 +1584,8 @@ Built simulation snapshot myproject
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] '/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Aug 30 20:51:03 2021. For additional details about this file, please refer to the WebTalk help file at /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Mon Aug 30 20:51:03 2021...
+INFO: [Common 17-186] '/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Aug 30 22:39:35 2021. For additional details about this file, please refer to the WebTalk help file at /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Aug 30 22:39:35 2021...
 
 ****** xsim v2019.2 (64-bit)
   **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
@@ -1599,7 +1599,7 @@ Time resolution is 1 ps
 source myproject.tcl
 ## log_wave -r /
 WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
-log_wave: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1973.422 ; gain = 256.000 ; free physical = 155164 ; free virtual = 551907
+log_wave: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1973.422 ; gain = 256.000 ; free physical = 152459 ; free virtual = 551302
 ## set designtopgroup [add_wave_group "Design Top Signals"]
 ## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
 ## set const_size_out_1_group [add_wave_group const_size_out_1(wire) -into $coutputgroup]
@@ -1693,20 +1693,20 @@ log_wave: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 19
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 1 [0.00%] @ "113000"
-// RTL Simulation : 1 / 1 [100.00%] @ "40273000"
+// RTL Simulation : 1 / 1 [100.00%] @ "40283000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 40292500 ps : File "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject.autotb.v" Line 838
-run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1973.422 ; gain = 0.000 ; free physical = 155184 ; free virtual = 551940
+$finish called at time : 40302500 ps : File "/mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/sim/verilog/myproject.autotb.v" Line 838
+run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1973.422 ; gain = 0.000 ; free physical = 152335 ; free virtual = 551192
 ## quit
-INFO: [Common 17-206] Exiting xsim at Mon Aug 30 20:51:32 2021...
+INFO: [Common 17-206] Exiting xsim at Mon Aug 30 22:40:04 2021...
 INFO: [COSIM 212-316] Starting C post checking ...
 INFO: Unable to open input/predictions file, using default input.
--0.630859 -0.358398 -0.03125 0.301758 0.615234 0.65332 0.620117 0.570313 
+-0.625977 0.733398 -0.640625 0.629883 -0.640625 0.620117 0.162109 0.829102 
 INFO: Saved inference results to file: tb_data/rtl_cosim_results.log
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
 INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
-***** C/RTL SIMULATION COMPLETED IN 0h1m58s *****
+***** C/RTL SIMULATION COMPLETED IN 0h1m56s *****
 ***** C/RTL VALIDATION *****
 INFO: Test PASSED
-INFO: [HLS 200-112] Total elapsed time: 505.42 seconds; peak allocated memory: 1.807 GB.
-INFO: [Common 17-206] Exiting vivado_hls at Mon Aug 30 20:51:36 2021...
+INFO: [HLS 200-112] Total elapsed time: 500.04 seconds; peak allocated memory: 1.803 GB.
+INFO: [Common 17-206] Exiting vivado_hls at Mon Aug 30 22:40:08 2021...

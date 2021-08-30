@@ -756,8 +756,8 @@ struct Loop_TIMESTEP_proc34 : public sc_module {
     sc_signal< sc_lv<16> > layer2_out_62_V_7_fu_466;
     sc_signal< sc_lv<16> > layer2_out_63_V_7_fu_470;
     sc_signal< bool > ap_block_pp0_stage6_01001;
-    sc_signal< sc_lv<7> > tmp_21_fu_1390_p3;
-    sc_signal< sc_lv<7> > empty_346_fu_1398_p2;
+    sc_signal< sc_lv<7> > tmp_19_fu_1390_p3;
+    sc_signal< sc_lv<7> > empty_347_fu_1398_p2;
     sc_signal< sc_lv<8> > zext_ln203_fu_1410_p1;
     sc_signal< sc_lv<8> > zext_ln203_1_fu_1414_p1;
     sc_signal< sc_lv<1> > icmp_ln203_fu_1404_p2;
@@ -961,7 +961,7 @@ struct Loop_TIMESTEP_proc34 : public sc_module {
     void thread_ap_phi_mux_its_0_i_i145_phi_fu_964_p6();
     void thread_ap_ready();
     void thread_ap_reset_idle_pp0();
-    void thread_empty_346_fu_1398_p2();
+    void thread_empty_347_fu_1398_p2();
     void thread_grp_dense_simple_0_0_0_0_1_fu_1227_ap_ce();
     void thread_grp_dense_simple_0_0_1_fu_1321_ap_ce();
     void thread_grp_lstm_tail_02_1_fu_1326_ap_ce();
@@ -1181,7 +1181,7 @@ struct Loop_TIMESTEP_proc34 : public sc_module {
     void thread_sub_ln203_1_fu_1440_p2();
     void thread_sub_ln203_2_fu_1470_p2();
     void thread_sub_ln203_fu_1428_p2();
-    void thread_tmp_21_fu_1390_p3();
+    void thread_tmp_19_fu_1390_p3();
     void thread_tmp_fu_1418_p4();
     void thread_xor_ln203_fu_1434_p2();
     void thread_zext_ln203_1_fu_1414_p1();

@@ -25109,10 +25109,10 @@ _ZN8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi12ELb1ELS0_5ELS1_
 
 <Node id="1914" bw="26" op_0_bw="16">
 <![CDATA[
-_ZN8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi12ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i:5  %sext_ln1118_137 = sext i16 %tmp_9 to i26
+_ZN8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi12ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i:5  %sext_ln1118_124 = sext i16 %tmp_9 to i26
 
 ]]></Node>
-<StgValue><ssdm name="sext_ln1118_137"/></StgValue>
+<StgValue><ssdm name="sext_ln1118_124"/></StgValue>
 </operation>
 
 <operation id="1589" st_id="28" stage="1" lat="1">
@@ -25124,7 +25124,7 @@ _ZN8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi12ELb1ELS0_5ELS1_
 
 <Node id="1915" bw="26" op_0_bw="26" op_1_bw="26">
 <![CDATA[
-_ZN8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi12ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i:6  %r_V_1 = mul i26 %sext_ln1118_137, %sext_ln101
+_ZN8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi12ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i:6  %r_V_1 = mul i26 %sext_ln1118_124, %sext_ln101
 
 ]]></Node>
 <StgValue><ssdm name="r_V_1"/></StgValue>
