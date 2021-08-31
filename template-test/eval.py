@@ -154,7 +154,7 @@ def TPR_FPR_arrays_hls(noise_array, injection_array, steps, num_events, num_entr
     #print("thresholds", thresholds)
     
     print('Evaluating Model on test data. This make take a while...')
-    X_pred_injection = predict(injection_array)
+    X_pred_injection = predict(injection_array, steps)
     print('Finished evaluating model on test data')
     
     n_injection_events = 10000
@@ -396,18 +396,18 @@ def main(args):
 #    directory_list = ['all_lstm_tanh_epoch01']
 #    directory_list = ['all_lstm_tanh_epoch02']
 #    directory_list = ['all_lstm_tanh_epoch03']
-    directory_list = ['hls_model', 'model']
+    directory_list = ['model','hls_model']
     #directory_list = ['temp_qkeras']
    # directory_list = ['temp_gpu_tanh']
 #    directory_list = ['temp']
     #names = ['DNN Autoencoder', 'CNN-DNN Autoencoder']#, 'LSTM Autoencoder']
-    names = ['HLS Attention Autoencoder', 'Python Attention Autoencoder']
+    names = ['Python Attention Autoencoder', 'HLS Attention Autoencoder']
 
     #names = ['DNN Autoencoder']
     #names = ['CNN Autoencoder']
     #names = ['GRU Autoencoder']
     #timesteps = [100, 108, 100]
-    timesteps = [8]
+    timesteps = [8,8]
     FPR_set = []
     TPR_set = []
     AUC_set = []
@@ -422,7 +422,7 @@ def main(args):
             #TPR, FPR = TPR_FPR_arrays(X_train_H1[:, :16000], X_test_H1[:, :16000], directory, timestep, len(X_test_H1))
         else: 
             #TPR, FPR = TPR_FPR_arrays_doubledetector(X_train_L1, X_test_L1, X_train_H1, X_test_H1, directory, timestep)
-            TPR, FPR = TPR_FPR_arrays(X_train_H1, X_test_H1, directory, timestep, len(X_test_H1))
+            TPR, FPR = TPR_FPR_arrays(X_train_H1[:, :16000], X_test_H1[:, :16000], directory, timestep, len(X_test_H1))
         TPR_set.append(TPR)
         FPR_set.append(FPR)
         AUC_set.append(auc(FPR, TPR))
