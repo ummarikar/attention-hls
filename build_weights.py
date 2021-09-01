@@ -1,3 +1,5 @@
+# script from hls4ml altered slightly for this task - https://github.com/fastmachinelearning/hls4ml 
+
 from tensorflow import keras
 import numpy as np
 
