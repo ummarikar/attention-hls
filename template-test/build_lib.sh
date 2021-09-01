@@ -1,4 +1,5 @@
 #!/bin/bash
+# Shell script from HLS4ML https://github.com/fastmachinelearning/hls4ml
 
 CC=g++
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
