@@ -1,1 +1,0 @@
-set ::AESL_AUTOSIM::gTopFileName /mnt/ccnas2/bdp/umm20/attention-hls/template-test/myproject_prj/solution1/./sim/autowrap/testbench/myproject.cpp_pre.cpp.tb.cpp

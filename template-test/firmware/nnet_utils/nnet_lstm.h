@@ -1,4 +1,4 @@
-
+// By Zhiqiang Que
 #ifndef NNET_LSTM_H_
 #define NNET_LSTM_H_
 

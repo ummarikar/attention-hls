@@ -1,5 +1,7 @@
-""" Evaluation of model trained for anomaly detection. """
-
+""" Evaluation of model trained for anomaly detection.
+Evaluation script by Eric Moreno - https://github.com/eric-moreno/Anomaly-Detection-Autoencoder
+The script was altered in order to test the hls model
+"""
 import os, sys
 import argparse
 #import pandas as pd
